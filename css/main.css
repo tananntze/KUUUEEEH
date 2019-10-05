@@ -12,6 +12,7 @@ body{
     font-family: "Garamond";
     font-size: 100%;
     background-color: white;
+    margin:auto
 }
 .header {
     background-color: #efdb0;
@@ -20,8 +21,12 @@ body{
     background-color: #efdb0;
 }
 .jumbotronbg{
-    background-image: url("http://localhost/img/bg2.jpg");
-    background-size: cover;
+    background-image: url("../img/banner.jpg");
+    background-size: 100% 100%;
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
     color: whitesmoke;
     text-shadow: 2px 3px 2px black;
 }
@@ -62,7 +67,7 @@ a.navbar-brand{
     min-width: 100%;
     left: 0;
     top: 0;
-    background: #fcfcdc;
+    background: black;
 }
 .form-control,
 input {
@@ -99,5 +104,10 @@ fa-directions{
 }
 
 .contactInfo{
-    color: #1c3c54;
+    color: black;
+
+}
+
+#paragraph{
+    background-color: white;
 }
