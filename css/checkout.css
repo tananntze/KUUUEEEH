@@ -8,9 +8,12 @@ and open the template in the editor.
     Author     : User
 */
 #checkout {
-    background: #efdeb0;
+    background: #FCFCDC;
     font-family: "Garamond";
     text-shadow: 0.3px 0.3px 0.3px black;
+}
+label, p {
+    font-size: 18px;
 }
 #txtCheckout {
     display: inline;

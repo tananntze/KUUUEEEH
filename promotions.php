@@ -17,21 +17,28 @@ and open the template in the editor.
         // put your code here
         ?>
         <h2 id="txtPromotions">Add New Promotions Dashboard</h2>
+        <button id="btnLogout" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"></span> Logout</button>
         <section id="dashboard" class="col-md-8 col-md-offset-2">
-            <form id="step1Form" action="" method="post">
+            <form id="promoForm" action="" method="post">
                 <section class="form-group">
                     <label for="title">*Promotion Title:</label>
                     <input class="form-control" id="title" name="title" placeholder="Enter promotion title">
                 </section>
                 <section class="form-group">
                     <label for="description">*Promotion Description:</label>
-                    <input class="form-control" id="description" name="description" placeholder="Enter promotion description">
+                    <textarea class="form-control" id="description" name="description" placeholder="Enter promotion description" rows="2"></textarea>
                 </section>
                 <section class="form-group">
-                    <label for="banner_file">*Promotion Banner:</label>
+                    <label>*Promotion Banner:</label>
+                    <input id="file_input" type="file" accept="image/*" style="display:none;"/>
+                    <button id="banner_file_upload" type="button" class="btn btn-info">Upload Promotion Banner <span class="glyphicon glyphicon-upload"></span></button>
+                    <section id="banner_dropzone">
+                        <img id="banner">
+                    </section>
+                    <p id="filePath">No File Path specified</p>
                 </section>
+                <button id="btnOrder" type="button" class="btn btn-block btn-success">Add Promotion <span class="glyphicon glyphicon-plus-sign"></span></button>
             </form>
         </section>
     </body>
 </html>
-
