@@ -1,0 +1,17 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 5 Oct 2019, 4:03:48 PM
+    Author     : Jerone Poh
+*/
+#promotions {
+    background: #efdeb0;
+    font-family: "Garamond";
+    text-shadow: 0.3px 0.3px 0.3px black;
+}
+#txtPromotions {
+    text-align: center;
+}
