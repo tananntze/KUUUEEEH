@@ -12,7 +12,8 @@
     </head>
 
     <body class="overlay">
-        <header >
+        <?php include 'header.php';?>
+        <!--<header >
             <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
                 <a class="navbar-brand" href="#">Kuey Logo</a>
                 <button class ="navbar-toggler" type = 'button' data-toggle="collapse" data-target ="#navbar">
@@ -33,7 +34,7 @@
                     </ul>
                 </div>  
             </nav>
-        </header>
+        </header> -->
         <div class="jumbotron text-center jumbotronbg" style = "margin-bottom:0"> 
             <h1>Kuey Lai Liao</h1>
             <h3>The legendary area of kueys</h3>

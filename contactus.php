@@ -10,15 +10,13 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/main.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        <link rel="stylesheet" href="css/main.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script defer src="http://localhost/main.js"></script>
     </head>
 
     <body class="overlay">
-        <header >
+        <header>
             <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
                 <a class="navbar-brand" href="#">Kuey Logo</a>
                 <button class ="navbar-toggler" type = 'button' data-toggle="collapse" data-target ="#navbar">
@@ -34,7 +32,7 @@ and open the template in the editor.
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
-                            <a class ="nav-link" href="#"><span class="fas fa-directions"></span> Login</a>
+                            <a class ="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
                         </li>
                     </ul>
                 </div>  
@@ -48,18 +46,18 @@ and open the template in the editor.
             <div class="container-fluid" style= 'margin-top:20px'>
                 <div class =" row sectionheader standardfont text-center">
                     <div class="col-md-12">
-                        <h2 class = fontheader>CONTACT</h2>
+                        <h2 class = "fontheader">CONTACT</h2>
                     </div>
                 </div>
                 <div class ="row justify-content-left ml-4 standardfont">
                     <div class ="col-md-6">
                         <h3 class ="subheader">Contact Information</h3>
-                        <p >Telephone number : +65 6599 5599</p>
-                        <p> Email : Kueh_for_you@kuey4you.com</p>
-                        <p> 172 Ang Mo Kio Avenue 8, Singapore 567739</p>
-                        <p> Business Hours: Mondays to Sundays 10.00 AM to 10.00 PM</p>
-                        <p> Instagram : www.instagram.com/Kuey4you </p>
-                        <p> Facebook : www.facebook.com/Kuey4you </p>
+                        <p class="contactInfo">Telephone number : +65 6599 5599</p>
+                        <p class="contactInfo"> Email : Kueh_for_you@kuey4you.com</p>
+                        <p class="contactInfo"> 172 Ang Mo Kio Avenue 8, Singapore 567739</p>
+                        <p class="contactInfo"> Business Hours: Mondays to Sundays 10.00 AM to 10.00 PM</p>
+                        <p class="contactInfo"> Instagram : www.instagram.com/Kuey4you </p>
+                        <p class="contactInfo"> Facebook : www.facebook.com/Kuey4you </p>
                     </div>
                     <div class ="col-md-6">
                         <h3 class ="subheader"> Location </h3>
