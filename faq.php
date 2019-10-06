@@ -31,9 +31,8 @@
                 </div>  
             </nav>
         </header>
-        <div class="jumbotron text-center jumbotronbg" style = "margin-bottom:0"> 
-            <h1>Kuey Lai Liao</h1>
-            <h3>The legendary area of kueys</h3>
+        <div class="container">
+            <img src="img/banner.jpg" alt="" class="responsive">
         </div>
         <section>
             <div class="container-fluid" style= 'margin-top:20px'>
