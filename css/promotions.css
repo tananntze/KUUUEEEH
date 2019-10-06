@@ -7,11 +7,24 @@ and open the template in the editor.
     Created on : 5 Oct 2019, 4:03:48 PM
     Author     : Jerone Poh
 */
+p, label {
+    font-size: 18px;
+}
 #promotions {
-    background: #efdeb0;
+    background: #FCFCDC;
     font-family: "Garamond";
     text-shadow: 0.3px 0.3px 0.3px black;
 }
 #txtPromotions {
     text-align: center;
+}
+#banner_dropzone {
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
+    border: 1.5px solid black;
+    text-align: center;
+}
+#txtImage {
+    vertical-align: center;
 }

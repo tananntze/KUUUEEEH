@@ -24,11 +24,10 @@ and open the template in the editor.
                 </button>
                 <div class ="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav">
-                        <li class ="nav-item"><a href ="#">Home</a></li>
-                        <li class ="nav-item"><a href="#">About Us</a></li>
-                        <li class ="nav-item"><a href="#">Contact</a></li>
-                        <li class ="nav-item"><a href="#">FAQ's</a></li>
-
+                        <li class ="nav-item"><a href ="home.php">Home</a></li>
+                        <li class ="nav-item"><a href="aboutus.php">About Us</a></li>
+                        <li class ="nav-item"><a href="#">Contact Us</a></li>
+                        <li class ="nav-item"><a href="faq.php">FAQ's</a></li>
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
@@ -38,9 +37,9 @@ and open the template in the editor.
                 </div>  
             </nav>
         </header>
-        <div class="jumbotron text-center jumbotronbg" style = "margin-bottom:0"> 
-            <h1>Kuey Lai Liao</h1>
-            <h3>The legendary area of kueys</h3>
+
+        <div class="jumbotron text-center jumbotronbg"> 
+            
         </div>
         <section>
             <div class="container-fluid" style= 'margin-top:20px'>
@@ -52,12 +51,15 @@ and open the template in the editor.
                 <div class ="row justify-content-left ml-4 standardfont">
                     <div class ="col-md-6">
                         <h3 class ="subheader">Contact Information</h3>
-                        <p class="contactInfo">Telephone number : +65 6599 5599</p>
-                        <p class="contactInfo"> Email : Kueh_for_you@kuey4you.com</p>
-                        <p class="contactInfo"> 172 Ang Mo Kio Avenue 8, Singapore 567739</p>
-                        <p class="contactInfo"> Business Hours: Mondays to Sundays 10.00 AM to 10.00 PM</p>
-                        <p class="contactInfo"> Instagram : www.instagram.com/Kuey4you </p>
-                        <p class="contactInfo"> Facebook : www.facebook.com/Kuey4you </p>
+                        <div id="paragraph">
+                            <p class="contactInfo">Telephone number : +65 6599 5599</p>
+                            <p class="contactInfo"> Email : Kueh_for_you@kuey4you.com</p>
+                            <p class="contactInfo"> 172 Ang Mo Kio Avenue 8, Singapore 567739</p>
+                            <p class="contactInfo"> Business Hours: Mondays to Sundays 10.00 AM to 10.00 PM</p>
+                            <p class="contactInfo"> Instagram : www.instagram.com/Kuey4you </p>
+                            <p class="contactInfo"> Facebook : www.facebook.com/Kuey4you </p>
+                        </div>
+                        
                     </div>
                     <div class ="col-md-6">
                         <h3 class ="subheader"> Location </h3>

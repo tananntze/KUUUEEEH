@@ -13,9 +13,6 @@ and open the template in the editor.
         <script src="js/checkout.js"></script>   
     </head>
     <body id="checkout">
-        <?php
-        // put your code here
-        ?>
         <h2 id="txtCheckout">Checkout</h2>
         <button id="btnShopping" type="button" class="btn btn-warning"><span class="glyphicon glyphicon-arrow-left"></span> Continue Shopping</button>
         <section id="steps" class="col-sm-6">
