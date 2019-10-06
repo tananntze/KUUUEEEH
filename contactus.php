@@ -24,11 +24,10 @@ and open the template in the editor.
                 </button>
                 <div class ="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav">
-                        <li class ="nav-item"><a href ="#">Home</a></li>
-                        <li class ="nav-item"><a href="#">About Us</a></li>
-                        <li class ="nav-item"><a href="#">Contact</a></li>
-                        <li class ="nav-item"><a href="#">FAQ's</a></li>
-
+                        <li class ="nav-item"><a href ="home.php">Home</a></li>
+                        <li class ="nav-item"><a href="aboutus.php">About Us</a></li>
+                        <li class ="nav-item"><a href="#">Contact Us</a></li>
+                        <li class ="nav-item"><a href="faq.php">FAQ's</a></li>
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">

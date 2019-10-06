@@ -21,7 +21,7 @@ body{
     background-color: #efdb0;
 }
 .jumbotronbg{
-    background-image: url("../img/banner.jpg");
+    background-image: url("../img/Banner.png");
     background-size: 100% 100%;
     width: 80%;
     height: 100%;
@@ -99,15 +99,16 @@ input {
     font-weight: bold;
 }
 
-fa-directions{
+fa-directions {
     color: #f7536b;
 }
 
-.contactInfo{
+.contactInfo {
     color: black;
 
 }
 
-#paragraph{
+#paragraph {
     background-color: white;
+    padding: 10px;
 }

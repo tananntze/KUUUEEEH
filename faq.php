@@ -5,15 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script defer src="http://localhost/main.js"></script>
     </head>
 
     <body class="overlay">
-        <?php include 'header.php';?>
-        <!--<header >
+        <header>
             <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
                 <a class="navbar-brand" href="#">Kuey Logo</a>
                 <button class ="navbar-toggler" type = 'button' data-toggle="collapse" data-target ="#navbar">
@@ -21,20 +18,19 @@
                 </button>
                 <div class ="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav">
-                        <li class ="nav-item"><a href ="#">Home</a></li>
-                        <li class ="nav-item"><a href="#">About Us</a></li>
-                        <li class ="nav-item"><a href="#">Contact Us</a></li>
+                        <li class ="nav-item"><a href ="home.php">Home</a></li>
+                        <li class ="nav-item"><a href="aboutus.php">About Us</a></li>
+                        <li class ="nav-item"><a href="contactus.php">Contact Us</a></li>
                         <li class ="nav-item"><a href="#">FAQ's</a></li>
-
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
-                            <a class ="nav-link" href="#"><span class="fas fa-directions"></span> Login</a>
+                            <a class ="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
                         </li>
                     </ul>
                 </div>  
             </nav>
-        </header> -->
+        </header>
         <div class="jumbotron text-center jumbotronbg" style = "margin-bottom:0"> 
             <h1>Kuey Lai Liao</h1>
             <h3>The legendary area of kueys</h3>
