@@ -12,7 +12,13 @@ body{
     font-family: "Garamond";
     font-size: 100%;
     background-color: white;
-    margin:auto
+    margin:auto;
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: black;
 }
 .header {
     background-color: #efdb0;
@@ -65,14 +71,7 @@ a.navbar-brand{
     font-size: 1.3rem;
     line-height:1.5;
 }
-.overlay {
-    position: absolute;
-    min-height: 100%;
-    min-width: 100%;
-    left: 0;
-    top: 0;
-    background: black;
-}
+
 .form-control,
 input {
     border-radius: 10px;
@@ -115,4 +114,93 @@ fa-directions {
 #paragraph {
     background-color: white;
     padding: 10px;
+}
+
+.img-cake{
+    height: 30%;
+}
+
+.carousel-inner{
+    height: 500px;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+
+.aboutSection{
+    margin: auto;
+}
+
+#about_us_header{
+    text-align: center;
+    color: #f7536b;
+    font-size: 50px;
+}
+
+.aboutus{
+    float: right;
+    margin-top: 2.5%;
+    text-align:center;
+}
+
+.aboutus p{
+    color: white;
+    margin-right: 10%;
+    text-align: center;
+    font-size: 25px;
+    margin: auto;
+}
+
+.about-img{
+    animation: about-img 5s linear;
+    margin-top: 10px;
+    opacity: 1;
+}
+
+.aboutSection:hover .about-img{
+    opacity: 0.3;
+}
+
+
+.button {
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    top: 45%;
+    text-align: center;
+    opacity: 0;
+}
+  
+.button a {
+    width: 200px;
+    padding: 12px 30px;
+    text-align: center;
+    color: white;
+    border: solid 2px white;
+    z-index: 1;
+    font-size: 30px;
+}
+  
+.aboutSection:hover .button {
+    opacity: 1;
+  }
+
+@keyframes about-img {
+    0%   { 
+    transform: translateX(200%); 		
+    }
+    100% { 
+    transform: translateX(0%); 
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
 }

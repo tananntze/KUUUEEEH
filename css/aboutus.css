@@ -20,15 +20,16 @@ body {
     background-color: #efdb0;
 }
 .jumbotronbg {
-    background-image: url("../img/Banner.png");
     background-size: 100% 100%;
-    width: 80%;
+    width: 800px;
     height: 100%;
-    margin-left: 10%;
-    margin-right: 10%;
     color: whitesmoke;
     text-shadow: 2px 3px 2px black;
 }
+.responsive {
+    width: 100%;
+    height: auto;
+  }
 .standardfont {
     color: hsl(0,100%,0%);
     font-family: Garamond;
