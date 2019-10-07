@@ -38,9 +38,11 @@ and open the template in the editor.
                 </div>  
             </nav>
         </header>
+
         <div class="container">
             <img src="img/banner.jpg" alt="" class="responsive">
         </div>
+        
         <section>
             <div class="container-fluid" style= 'margin-top:20px'>
                 <div class =" row sectionheader standardfont text-center">

@@ -13,9 +13,7 @@ and open the template in the editor.
         <script src="js/promotions.js"></script>   
     </head>
     <body id="promotions">
-        <?php
-        // put your code here
-        ?>
+       
         <h2 id="txtPromotions">Add New Promotions Dashboard</h2>
         <button id="btnLogout" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"></span> Logout</button>
         <section id="dashboard" class="col-md-8 col-md-offset-2">
