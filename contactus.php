@@ -41,7 +41,7 @@ and open the template in the editor.
 
         
         <div class="container">
-            <img src="img/banner.jpg" alt="" class="responsive">
+            <img id="faqimg" src="img/banner.jpg" alt="" class="responsive">
         </div>
         
         <section>

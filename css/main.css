@@ -231,6 +231,11 @@ fa-directions {
 		transform: rotate(180deg);
 	}
 
+        #faqimg {
+            width: 100%;
+            height: auto;
+        }
+        
 @keyframes about-img {
     0%   { 
     transform: translateX(200%); 		
@@ -245,4 +250,10 @@ fa-directions {
     [class*="col-"] {
       width: 100%;
     }
+    
+    #faqimg {
+            width: 100%;
+            height: 380px;
+        }
+    
 }
