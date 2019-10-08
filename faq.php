@@ -11,10 +11,19 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
         <link rel="stylesheet" href="css/main.css">
+<<<<<<< Updated upstream
 
+=======
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+>>>>>>> Stashed changes
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<<<<<<< Updated upstream
+=======
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script defer src="js/main.js"></script>
+>>>>>>> Stashed changes
 
     </head>
 
@@ -83,6 +92,7 @@
                     </div>
 
                 </div>
+<<<<<<< Updated upstream
 
                 <div class ="row justify-content-left standardfont">
 
@@ -114,9 +124,47 @@
 
 
 
+=======
+        </section>
+        <section>
+            <div class ="row justify-content-center standardfont">
+                <div class ="col-md-6">
+                    <div class="accordion mt-4" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="clearfix mb-0">
+                                    <a class="btn btn-link mt-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Ordering Information <span class="fa fa-angle-down"></span></a>									
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>All orders will take approximately 3 to 5 working days upon ordering.</p></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h2 class="clearfix mb-0">
+                                    <a class="btn btn-link mt-0" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Product Information <span class="fa fa-angle-down"></span></a>									
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div class="card-body">Will be including the information here.</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h2 class="clearfix mb-0">
+                                    <a class="btn btn-link mt-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Business Opportunities<span class="fa fa-angle-down"></span></a>									
+                                </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">Will be including the information here.</div>
+                            </div>
+>>>>>>> Stashed changes
                         </div>
 
                     </div>
+<<<<<<< Updated upstream
 
                 </div>
 
@@ -155,3 +203,12 @@
     </body>
 
 </html>
+=======
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+>>>>>>> Stashed changes
