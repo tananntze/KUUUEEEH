@@ -16,13 +16,13 @@ and open the template in the editor.
     <body id="checkout">
         <h2 id="txtCheckout">Checkout</h2>
         <button id="btnShopping" type="button" class="btn btn-warning"><span class="glyphicon glyphicon-arrow-left"></span> Continue Shopping</button>
-        <section id="steps" class="col-sm-6">
+        <form id="billingForm" action="" method="post">
+            <section id="step12" class="col-md-4">
             <section id="step1">
-                <h3>1) Enter Shipping Details</h3>
-                <form id="step1Form" action="" method="post">
+                <h3>1) Enter Billing Details</h3>
                     <section class="form-group">
                         <label for="email">*Email address:</label>
-                        <input class="form-control" id="email" name="email" placeholder="Enter your email address">
+                        <input class="form-control" id="email" name="email" tabindex="1" placeholder="Enter your email address">
                     </section>
                     <section class="form-group">
                         <label for="first_name">*First Name:</label>
@@ -44,8 +44,6 @@ and open the template in the editor.
                         <label for="mobile_no">*Mobile Number:</label>
                         <input class="form-control" id="mobile_no" name="mobile_no" placeholder="Enter your mobile number" maxLength="10">
                     </section>
-                    <button id="btnStep2" type="button" class="btn btn-block btn-primary">Proceed to Step 2 <span class="glyphicon glyphicon-arrow-right"></span></button>
-                </form>
             </section>
             <section id="step2">
                 <h3>2) Select Delivery Type</h3>
@@ -70,34 +68,54 @@ and open the template in the editor.
                     </section>
                 </section>
             </section>
+            </section>
+            <section id="step34" class="col-md-4">
             <section id="step3">
-                <h3>3) Select Payment Method</h3>
+                <h3>3) Enter Payment Details</h3>
                 <section id="step3Radio">
                     <section class="radio_grp">
-                        <input class="radio_set" type="radio" name="radioPayment" id="payVisa" value="Visa" checked="true"><label class="radio_lbl" for="delVisa">Visa</label>
+                            <input class="radio_set" type="radio" name="radioPayment" id="payVisa" value="Visa" checked="true"><label class="radio_lbl" for="delVisa">Visa</label><img class="card_logo" src="img/visa.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
+                        </section>
+                        <section class="radio_grp">
+                            <input class="radio_set" type="radio" name="radioPayment" id="payMaster" value="MasterCard"><label class="radio_lbl" for="delMaster">MasterCard</label><img class="card_logo" src="img/mastercard.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
+                        </section>
+                        <section class="form-group">
+                            <label for="card_name">*Name Of Card:</label>
+                            <input class="form-control" id="card_name" name="card_name" placeholder="Enter your name of the card">
+                        </section>
+                        <section class="form-group">
+                            <label for="card_number">*16-Digit Card Number:</label>
+                            <input class="form-control" id="card_number" name="card_number" placeholder="Enter your 16 digit card number" maxlength="16">
+                        </section>
+                        <section class="form-group">
+                            <label for="first_name">*CCV Number:</label>
+                            <input class="form-control" id="ccv" name="ccv" placeholder="Enter your CCV card number" maxlength="3">
+                        </section>
+                        <section class="form-group">
+                            <label for="expiry_date">*Card Expiry Date:</label>
+                        </section>  
                     </section>
-                    <section class="radio_grp">
-                        <input class="radio_set" type="radio" name="radioPayment" id="payMaster" value="MasterCard"><label class="radio_lbl" for="delMaster">MasterCard</label>
+                    <section id="step4">
+                        <h3>4) Place An Order</h3>                
+                        <section id="step4Order">
+                            <p>Please confirm your order. Once done, click Place Order.
+                                <button id="btnOrder" type="button" class="btn btn-block btn-success">Place Order <span class="glyphicon glyphicon-ok-circle"></span></button>
+                            </p>
+                        </section>
                     </section>
                 </section>
             </section>
-            <section id="step4">
-                <h3>4) Place An Order</h3>                
-                <section id="step4Order">
-                    <p>Please confirm your order. Once done, click Place Order.
-                    <button id="btnOrder" type="button" class="btn btn-block btn-success">Place Order <span class="glyphicon glyphicon-ok-circle"></span></button>
-                </section>
-            </section>
-        </section>
-        <section id="order_sidebar" class="col-sm-6 bg-info">
+        </form>
+        <section id="order_sidebar" class="sticky-top col-md-4 bg-info">
             <section id="myOrder">
-                <h4 id="txtOrder">My Order</h4>
-                <p id="quantity">Quantity:</p>
+                <h3 id="txtOrder">My Order</h3>
+                <p id="quantity">Total Quantity:</p>
+                <table id="tblOrders"></table>
                 <button type="button" id="btnEdit" class="btn btn-block btn-primary">Edit Order <span class="glyphicon glyphicon-file"></span></button>
             </section>
             <p id="subTotal">Subtotal:</p>
             <p id="delivery">Delivery:</p>
-            <h4 id="totalAmt">Total Amount:</>
+            <h4 id="totalAmt">Total Amount:</h4>
         </section>
     </body>
 </html>
