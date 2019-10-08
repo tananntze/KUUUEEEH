@@ -12,6 +12,7 @@ and open the template in the editor.
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <script src="js/checkout.js"></script>   
     </head>
+    
     <body id="checkout">
         <h2 id="txtCheckout">Checkout</h2>
         <button id="btnShopping" type="button" class="btn btn-warning"><span class="glyphicon glyphicon-arrow-left"></span> Continue Shopping</button>
