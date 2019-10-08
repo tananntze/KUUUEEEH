@@ -16,7 +16,7 @@
                 <button class ="navbar-toggler" type = 'button' data-toggle="collapse" data-target ="#navbar">
                     <span class ="navbar-toggler-icon"></span>
                 </button>
-                <div class ="collapse navbar-collapse" id="navbar">
+                <nav class ="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav">
                         <li class ="nav-item"><a href ="home.php">Home</a></li>
                         <li class ="nav-item"><a href="aboutus.php">About Us</a></li>
@@ -28,38 +28,39 @@
                             <a class ="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
                         </li>
                     </ul>
-                </div>  
+                </nav>  
             </nav>
         </header>
-        <div class="jumbotron text-center jumbotronbg" style = "margin-bottom:0"> 
-            <h1>Kuey Lai Liao</h1>
-            <h3>The legendary area of kueys</h3>
+     
+        <div class="container">
+            <img src="img/banner.jpg" alt="" class="responsive">
         </div>
+
         <section>
-            <div class="container-fluid" style= 'margin-top:20px'>
-                <div class =" row sectionheader standardfont text-center">
-                    <div class="col-md-12">
-                        <h1 class = fontheader>FAQ</h1>
-                    </div>
-                </div>
-                <div class ="row justify-content-left standardfont">
-                    <div class ="col-md-4">
+            <section class="container-fluid" style= 'margin-top:20px'>
+                <section class =" row sectionheader standardfont text-center">
+                    <section class="col-md-12">
+                        <h1 class = fontheader>FAQ's</h1>
+                    </section>
+                </section>
+                <section class ="row justify-content-left standardfont">
+                    <section class ="col-md-4">
                         <h3 class ="subheader ml-4">Ordering Information</h3>
-                        <p >Telephone number: +65 9212 9999</p>
-                    </div>
-                    <div class ="col-md-4">
+                        <p>Telephone number: +65 9212 9999</p>
+                    </section>
+                    <section class ="col-md-4">
                         <h3 class ="subheader"> Product Information </h3>
-                        <div>
+                        <section>
 
-                        </div>
-                    </div>
-                    <div class ="col-md-4">
+                        </section>
+                    </section>
+                    <section class ="col-md-4">
                         <h3 class ="subheader"> Events Information </h3>
-                        <div>
+                        <section>
 
-                        </div>
-                    </div>
-                </div>
+                        <section>
+                    <section>
+                <section>
 <!--                <div class ="row justify-content-center ml-4 standardfont pt-5">
 
 
