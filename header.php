@@ -22,7 +22,6 @@
                         <li class ="nav-item"><a href="#">About Us</a></li>
                         <li class ="nav-item"><a href="#">Contact</a></li>
                         <li class ="nav-item"><a href="#">FAQ's</a></li>
-
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
