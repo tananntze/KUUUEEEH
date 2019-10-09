@@ -29,3 +29,14 @@ $(document).ready(function(){
 			$(this).parents(".card-header").toggleClass("highlight");
 		});
 	});
+        
+        
+$(document).ready(function($){
+    $("#hoverimg").on("mouseover", function() {
+        document.getElementById("togglecaption").style.visibility = "visible";
+        
+    });
+    $("#hoverimg").on("mouseout", function() {
+        document.getElementById("togglecaption").style.visibility = "hidden";
+    });
+});

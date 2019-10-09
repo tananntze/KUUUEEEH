@@ -59,4 +59,25 @@ h1 {
 
 .zoom:hover {
   transform: scale(1.5); 
+  opacity: 0.8;
+}
+
+#togglecaption{
+    visibility: hidden;
+}
+
+.centered{
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    text-align: center;
+}
+
+.imgholder{
+    position: relative;
+    text-align: center;
+    color: black;
 }

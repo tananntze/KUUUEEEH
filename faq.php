@@ -102,7 +102,7 @@
                                     </div>
                                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <p>All orders will take approximately 3 to 5 working days upon ordering.</p>
+                                            <p class="standardfont">All orders will take approximately 3 to 5 working days upon ordering.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -113,7 +113,7 @@
                                         </h2>
                                     </div>
                                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                        <div class="card-body">Will be including the information here.</div>
+                                        <div class="card-body standardfont">Will be including the information here.</div>
                                     </div>
                                 </div>
                                 <div class="card">
@@ -123,7 +123,7 @@
                                         </h2>
                                     </div>
                                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                        <div class="card-body">Will be including the information here.</div>
+                                        <div class="card-body standardfont">Will be including the information here.</div>
                                     </div>
                                 </div>
                             </div>

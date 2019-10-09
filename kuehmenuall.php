@@ -74,9 +74,11 @@ and open the template in the editor.
                
                 <div class="col-md-2">
 
-                    <figure>
-                        <img class="zoom" src = "img/The Basic Kuehs/Ang Ku Kueh.jpg" alt = "Ang Ku Kueh" style="max-width: 100%">
-                        <figcaption>A typical and popular chinese snack. Stir fried crunchy jicama (yam bean) wrapped in soft, chewy and crystal skin.</figcaption>
+                    <figure class="imgholder">
+                        <img class="zoom" id="hoverimg" src = "img/The Basic Kuehs/Ang Ku Kueh.jpg" alt = "Ang Ku Kueh" style="max-width: 100%">
+                        <div class="centeredbg">
+                        <div class="centered" id="togglecaption">A typical and popular chinese snack. Stir fried crunchy jicama (yam bean) wrapped in soft, chewy and crystal skin.</div>
+                        </div>
                     </figure>
                     
                                        
