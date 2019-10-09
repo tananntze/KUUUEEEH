@@ -30,7 +30,8 @@ $(document).ready(function(){
 		});
 	});
         
-        
+
+//Function: Hover images on menu page to zoom and display caption
 $(document).ready(function($){
     $("#hoverimg").on("mouseover", function() {
         document.getElementById("togglecaption").style.visibility = "visible";

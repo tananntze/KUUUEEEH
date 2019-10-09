@@ -40,16 +40,6 @@ and open the template in the editor.
                         <li class ="nav-item"><a href ="home.php">Home</a></li>
                         <li class ="nav-item"><a href="aboutus.php">About Us</a></li>
                         <li class ="nav-item"><a href="kuehmenuall.php">Kueh</a></li>
-                        <!--                            <li class="dropdown nav-item">
-                                                        <a href="" class="dropdown-toggle nav-item" data-toggle="dropdown">
-                        
-                                                        </a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="#">The Basics</a></li>
-                                                            <li><a href="#">The Ones with Character</a></li>
-                                                            <li><a href="#">The Heavyweights</a></li>
-                                                        </ul>
-                                                    </li>-->
                         <li class ="nav-item"><a href="contactus.php">Contact Us</a></li>
                         <li class ="nav-item"><a href="faq.php">FAQ's</a></li>
                     </ul>
@@ -92,32 +82,28 @@ and open the template in the editor.
             <!-- The Basic Kueh -->      
             <div class="row" id ="basickueh" >
                 <div class =" col-md-12 text-center">
-                    
-                
-                <h1 id="border">The Basic Kuehs</h1>
+                    <h1 id="border">The Basic Kuehs</h1>
                 </div>
             </div>
+            
             <div class="row">
                 <div class="col-md-2"></div>
 
                 <div class="col-md-2">
 
                     <figure class="imgholder">
-                        <img class="zoom" id="hoverimg" src = "img/The Basic Kuehs/Ang Ku Kueh.jpg" alt = "Ang Ku Kueh" style="max-width: 100%">
-                        <div class="centeredbg">
-                            <div class="centered" id="togglecaption">A typical and popular chinese snack. Stir fried crunchy jicama (yam bean) wrapped in soft, chewy and crystal skin.</div>
-                        </div>
+                        <img class="zoom" id="hoverimg" src = "img/The Basic Kuehs/Ang Ku Kueh.jpg" alt = "Ang Ku Kueh">
+                        <div class="centered" id="togglecaption">Ang Ku Kueh ($0.50): Small round or oval shaped pastry with soft sticky glutinous rice flour skin wrapped around a sweet filling in the centre.</div>
                     </figure>
-
-
-                    <figure>
-                        <img  class="zoom" src = "img/The Basic Kuehs/Chai Kueh.jpg" alt = "Chai Kueh" style="max-width: 100%">
-                        <figcaption>A typical and popular chinese snack. Stir fried crunchy jicama (yam bean) wrapped in soft, chewy and crystal skin.</figcaption>
+                    
+                    <figure class="imgholder">
+                        <img  class="zoom" id="hoverimg" src = "img/The Basic Kuehs/Chai Kueh.jpg" alt = "Chai Kueh">
+                        <div class="centered" id="togglecaption">Chai Kueh (S0.50): A typical and popular chinese snack. Stir fried crunchy jicama (yam bean) wrapped in soft, chewy and crystal skin.</div>
                     </figure>
 
                     <figure>
                         <img class="zoom" src = "img/The Basic Kuehs/Kueh Ambon.jpg" alt = "Kueh Ambon" style="max-width: 100%">
-                        <figcaption></figcaption>
+                        <figcaption>This is a soft, springy, and chewy yeast cake originated from Medan (Indonesia).</figcaption>
                     </figure>
 
                     <figure>
