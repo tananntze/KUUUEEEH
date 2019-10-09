@@ -31,7 +31,7 @@ and open the template in the editor.
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
-                            <a class ="nav-link" href="home.php"><span class="fas fa-directions">Logout</span></a>
+                            <a class ="nav-link" href="home.php"><span class="fas fa-sign-in-alt">Logout</span></a>
                         </li>
                     </ul>
                 </nav>  
