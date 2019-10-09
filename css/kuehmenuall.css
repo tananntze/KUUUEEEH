@@ -19,21 +19,25 @@ and open the template in the editor.
 
 body
 {
+<<<<<<< HEAD
     background-image: url(../img/Pink Dots Tumblr BG.jpg);
+=======
+    background-image: url(../img/pinkDotsBG.jpg);
+>>>>>>> 0216ce1cd00e50d6bdf6d472dce2daf6c7c3f354
     background-repeat: repeat;
 }
 
-.navbar {
+/*.navbar {
    background-color: transparent;
    background: transparent;
    border-color: transparent;
    
    font-size: 18px;
-}
+}*/
 
 /* Specific to kuehmenuall */
 /*Header design*/
-h1 {
+.name {
     color: #008000;
     font-family: Times New Roman;
     font-style: italic;
