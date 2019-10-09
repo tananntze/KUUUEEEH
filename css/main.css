@@ -7,24 +7,31 @@ and open the template in the editor.
     Created on : 2 Oct 2019, 10:50:54 AM
     Author     : Joel
 */
-body{
 
 body{ 
-
     font-family: "Garamond";
     font-size: 100%;
-    background-color: green;
     margin:auto;
     position: absolute;
     min-height: 100%;
     min-width: 100%;
     left: 0;
     top: 0;
-    background: black;    /*this is for making a standardized background*/
+    background-image: url(../img/pinkDotsBG.jpg);
+    background-repeat:repeat;    /*this is for making a standardized background*/
 }
 .header {
     background-color: #efdb0;
 }
+
+.navbar {
+    background-color: transparent;
+    background: transparent;
+    border-color: transparent;
+    
+    font-size: 18px;
+ }
+
 .containercolor{
     background-color: #efdb0;
 }
