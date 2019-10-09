@@ -7,6 +7,90 @@ and open the template in the editor.
     Created on : 5 Oct 2019, 4:02:27 PM
     Author     : Jerone Poh
 */
+<<<<<<< HEAD
+=======
+body {
+    font-family: "Garamond";
+    font-size: 100%;
+    background-color: white;
+    margin: auto;
+}
+.header {
+    background-color: #efdb0;
+}
+.containercolor {
+    background-color: #efdb0;
+}
+.jumbotronbg {
+    background-size: 100% 100%;
+    width: 800px;
+    height: 100%;
+    color: whitesmoke;
+    text-shadow: 2px 3px 2px black;
+}
+.responsive {
+    width: 100%;
+    height: auto;
+}
+.standardfont {
+    color: hsl(0,100%,0%);
+    font-family: Garamond;
+}
+.fontheader {
+    font-family: "Garamond";
+    text-align: center; 
+    font-weight: bold;
+    color: #bce4dc;
+    text-shadow: black;
+}
+.subheader {
+    font-family: "Garamond";
+    text-align: left; 
+    font-weight: bold;
+    color: #b4ac9c
+}
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    color: black;
+}
+a.navbar-brand {
+    color:#f7536b
+}
+.description p {
+    color: #fff;
+    font-size: 1.3rem;
+    line-height:1.5;
+}
+.overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: black;
+}
+.nav-item{
+    margin: 10px;
+}
+.nav-item a {
+    color: #f7536b;
+}
+.nav-item a:hover {
+    color: #ec5772;
+    font-weight: bold;
+}
+fa-directions {
+    color: #f7536b;
+}
+.contactInfo {
+    color: black;
+}
+#paragraph {
+    background-color: white;
+    padding: 10px;
+}
+>>>>>>> b0f97d076368cb3b7317a83fb3242d8aa406a2ff
 #bon_appetit {
     font-size: 32px;
     font-style: italic;
@@ -18,4 +102,9 @@ and open the template in the editor.
     padding: 10px;
     width: 45%;
     height: 200px;
+}
+
+#faqimg {
+    width: 100%;
+    height: auto;
 }

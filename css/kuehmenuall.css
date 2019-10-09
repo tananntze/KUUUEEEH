@@ -1,0 +1,63 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 7, 2019, 11:01:38 PM
+    Author     : NPStudent
+*/
+/*Can be copied into common CSS file*/
+
+/*Banner design*/
+#bannerresize {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+body
+{
+    background-image: url(img/Pink Dots Tumblr BG.jpg);
+    background-repeat: repeat;
+    background: 
+}
+
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+   
+   font-size: 18px;
+}
+
+/* Specific to kuehmenuall */
+/*Header design*/
+h1 {
+    color: #008000;
+    font-family: Times New Roman;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+/* Header border design */
+#border {
+    border-bottom-style: dotted;
+    border-bottom-color: black;
+    border-bottom-width: thick;
+}
+
+.zoom {
+  padding: 5px;
+  transition: transform .2s;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.zoom:hover {
+  transform: scale(1.5); 
+}

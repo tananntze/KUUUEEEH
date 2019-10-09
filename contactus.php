@@ -13,6 +13,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/main.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script defer src="js/main.js"></script>
     </head>
 
     <body class="overlay">
@@ -40,7 +41,7 @@ and open the template in the editor.
 
         
         <div class="container">
-            <img src="img/banner.jpg" alt="" class="responsive">
+            <img id="faqimg" src="img/banner.jpg" alt="" class="responsive">
         </div>
         
         <section>
