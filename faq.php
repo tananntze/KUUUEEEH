@@ -84,19 +84,10 @@
 
             </nav>
         </header>
-<<<<<<< HEAD
         
         <div class="container">
             <img src="img/Banner - White.png" alt="bannerimg" class="responsive">
         </div>
-=======
-
-        <section>
-            <div class="container">
-                <img id="faqimg" src="img/banner.jpg" alt="bannerimg" class="responsive">
-            </div>
-        </section>
->>>>>>> b8f23a73ba6c8ceea78e64c05730c3cd920e263f
 
         <section>
             <div class="container-fluid">

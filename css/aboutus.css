@@ -16,11 +16,11 @@ and open the template in the editor.
 .abtUsSubHeader {
     font-family: "Garamond";
     font-weight: bold;
-    color: #FDDCD7;
+    color: #000080;
     text-align: center;
 }
 .abtUsCaption {
-    color: #bce4dc;
+    color: brown;
 }
 .nav-item{
     margin: 10px;
@@ -47,7 +47,7 @@ fa-directions {
     font-style: italic;
     text-align: center;
     font-family: "Garamond";
-    color: #bce4dc;
+    color: brown;
 }
 .img_kueh {
     padding: 10px;

@@ -27,6 +27,7 @@ and open the template in the editor.
                     <ul class="nav navbar-nav">
                         <li class ="nav-item"><a href ="home.php">Home</a></li>
                         <li class ="nav-item"><a href="#">About Us</a></li>
+                        <li class ="nav-item"><a href="kuehmenuall.php">Kueh</a></li>
                         <li class ="nav-item"><a href="contactus.php">Contact Us</a></li>
                         <li class ="nav-item"><a href="faq.php">FAQ's</a></li>
                     </ul>
