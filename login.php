@@ -16,10 +16,10 @@
 <header>
         <nav class="nav navbar navbar-expand-md bg-pink navbar-dark" role="navigation">
             <a class="navbar-brand" href="#">Kuey Logo</a>
-            <button class="navbar-toggler" type='button' data-toggle="collapse" data-target="#navbar">
+            <button class="navbar-toggler" type='button' data-toggle="collapse" data-target="#navbar1">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbar">
+            <div class="collapse navbar-collapse" id="navbar1">
                 <ul class="nav navbar-nav">
                     <li class="nav-item"><a href="home.php">Home</a></li>
                     <li class="nav-item"><a href="aboutus.php">About Us</a></li>
@@ -44,7 +44,7 @@
             <h2>STAFF LOGIN</h2>
 
             <!-- Login Form -->
-            <form>
+            <form action="promotions.php">
                 <input type="text" id="login" class="fadeIn second" name="login" placeholder="Email Address">
                 <input type="text" id="password" class="fadeIn third" name="login" placeholder="Password">
                 <input type="submit" class="fadeIn fourth" value="Log In">

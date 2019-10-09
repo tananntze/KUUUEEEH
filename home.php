@@ -73,7 +73,11 @@ and open the template in the editor.
 
         <div class="aboutus col-md-6 d-inline-block">
             <h1 id="about_us_header">ABOUT US</h1>
-            <p>US Foods® is one of America's great food companies and a leading foodservice distributor, partnering with approximately 250,000 restaurants and foodservice operators to help their businesses succeed.</p>
+            <p>Founded in 2019 by an avid kueh lover, KUUUEEEH has been offering a tempting array of sumptuous kuehs till today!
+
+Customers have been savoring our kuehs through our unique blend of flavors and we are proud that our kuehs are generally well-received.
+
+Still we are 100% committed in continuously combining new flavors with tradition and improving based on customer's feedback.</p>
         </div>   
         
     </section>
