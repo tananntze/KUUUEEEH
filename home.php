@@ -62,17 +62,20 @@ and open the template in the editor.
     </div>
 
     <section class="aboutSection">
+        
+        <div class="view overlay col-md-6 d-inline-block">            
+            <img src="img/cake.jpeg" class="about-img  img-cake rounded-circle responsive" alt="">
+            <div class="mask flex-center rgba-white-strong">
+                <div class="button responsive"><a class="white-text"href="aboutus.php">About us</a></div>
+            </div>
+        </div>
+
         <div class="aboutus col-md-6 d-inline-block">
             <h1 id="about_us_header">ABOUT US</h1>
             <p>US Foods® is one of America's great food companies and a leading foodservice distributor, partnering with approximately 250,000 restaurants and foodservice operators to help their businesses succeed.</p>
         </div>   
         
-        <div class="view overlay col-md-6">            
-            <img src="img/cake.jpeg" class="about-img d-inline-block img-cake rounded-circle responsive" alt="">
-            <div class="mask flex-center rgba-white-strong">
-                <div class="button responsive"><a class="white-text"href="aboutus.php">About us</a></div>
-            </div>
-        </div>
+       
 
 
 

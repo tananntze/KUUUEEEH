@@ -46,8 +46,8 @@ and open the template in the editor.
             <div class="container-fluid" style= 'margin-top:20px'>
                 <div class =" row sectionheader standardfont text-center">
                     <div class="col-md-12">
->>>>>>> f5db5a89dd6473ad390b5383817626c31bbb7b2a
                         <h2 class = "fontheader">ABOUT US</h2>
+                    </div>
                     </section>
                 </section>
                 <section class ="row justify-content-left ml-4 standardfont">

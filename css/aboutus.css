@@ -29,7 +29,7 @@ body {
 .responsive {
     width: 100%;
     height: auto;
-  }
+}
 .standardfont {
     color: hsl(0,100%,0%);
     font-family: Garamond;
@@ -99,4 +99,9 @@ fa-directions {
     padding: 10px;
     width: 45%;
     height: 200px;
+}
+
+#faqimg {
+    width: 100%;
+    height: auto;
 }
