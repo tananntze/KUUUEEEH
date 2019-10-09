@@ -11,9 +11,12 @@ and open the template in the editor.
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/home.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="css/checkout.css"/>
+=======
+    <link rel="stylesheet" href="css/main.css">
+>>>>>>> b9624d1e20af1365c79893552511fcb6dab6b0bb
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="js/myorderspopup.js"></script>
@@ -36,8 +39,12 @@ and open the template in the editor.
                 </ul>
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav navbar-nav">
+<<<<<<< HEAD
                         <a class="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
                         <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="glyphicon glyphicon-shopping-cart" id="logIcon"></span>My Order</a>
+=======
+                        <a class="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
+>>>>>>> b9624d1e20af1365c79893552511fcb6dab6b0bb
                     </li>
                 </ul>
             </div>
@@ -98,11 +105,11 @@ and open the template in the editor.
             <p>US Foods® is one of America's great food companies and a leading foodservice distributor, partnering with approximately 250,000 restaurants and foodservice operators to help their businesses succeed.</p>
         </div>   
         
-       
-        
-
-
     </section>
+
+    
+
+
 </body>
 
 </html>
