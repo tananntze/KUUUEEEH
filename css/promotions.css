@@ -7,13 +7,8 @@ and open the template in the editor.
     Created on : 5 Oct 2019, 4:03:48 PM
     Author     : Jerone Poh
 */
-p, label {
-    font-size: 18px;
-}
-#promotions {
-    background: #FCFCDC;
-    font-family: "Garamond";
-    text-shadow: 0.3px 0.3px 0.3px black;
+.promotions {
+    margin: auto;
 }
 #txtPromotions {
     text-align: center;

@@ -27,6 +27,7 @@ and open the template in the editor.
                     <ul class="nav navbar-nav">
                         <li class ="nav-item"><a href ="home.php">Home</a></li>
                         <li class ="nav-item"><a href="aboutus.php">About Us</a></li>
+                        <li class ="nav-item"><a href="kuehmenuall.php">Kueh</a></li>
                         <li class ="nav-item"><a href="#">Contact Us</a></li>
                         <li class ="nav-item"><a href="faq.php">FAQ's</a></li>
                     </ul>
@@ -41,7 +42,7 @@ and open the template in the editor.
 
         
         <div class="container">
-            <img id="faqimg" src="img/banner.jpg" alt="" class="responsive">
+            <img src="img/Banner - White.png" alt="" class="responsive">
         </div>
         
         <section>
