@@ -16,8 +16,7 @@ and open the template in the editor.
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="js/checkout.js"></script>
     </head>
-<<<<<<< HEAD
-    <body id="overlay">
+    <body>
         <header>
             <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
                 <a class="navbar-brand" href="#">Kuey Logo</a>
@@ -49,49 +48,6 @@ and open the template in the editor.
                 <section class =" row sectionheader standardfont text-center">
                     <section class="col-md-12">
                         <h2 class="fontheader">KUEH CHECKOUT</h2>
-=======
-    
-    <body id="checkout">
-        <h2 id="txtCheckout">Checkout</h2>
-        <button id="btnShopping" type="button" class="btn btn-warning"><span class="glyphicon glyphicon-arrow-left"></span> Continue Shopping</button>
-        <form id="billingForm" action="" method="post">
-            <section id="step12" class="col-md-4">
-            <section id="step1">
-                <h3>1) Enter Billing Details</h3>
-                    <section class="form-group">
-                        <label for="email">*Email address:</label>
-                        <input class="form-control" id="email" name="email" tabindex="1" placeholder="Enter your email address">
-                    </section>
-                    <section class="form-group">
-                        <label for="first_name">*First Name:</label>
-                        <input class="form-control" id="first_name" name="first_name" placeholder="Enter your first name">
-                    </section>
-                    <section class="form-group">
-                        <label for="last_name">*Last Name:</label>
-                        <input class="form-control" id="last_name" name="last_name" placeholder="Enter your last name">
-                    </section>
-                    <section class="form-group">
-                        <label for="address">*Address:</label>
-                        <input class="form-control" id="address" name="address" placeholder="Enter your full address">
-                    </section>
-                    <section class="form-group">
-                        <label for="postal_code">*Postal Code:</label>
-                        <input class="form-control" id="postal_code" name="postal_code" placeholder="Enter your postal code" maxLength="6">
-                    </section>
-                    <section class="form-group">
-                        <label for="mobile_no">*Mobile Number:</label>
-                        <input class="form-control" id="mobile_no" name="mobile_no" placeholder="Enter your mobile number" maxLength="10">
-                    </section>
-            </section>
-            <section id="step2">
-                <h3>2) Select Delivery Type</h3>
-                <section id="step2Radio">
-                    <section class="radio_grp">
-                        <input class="radio_set" type="radio" name="radioDel" id="radioHome" value="delFast" checked="true"><label class="radio_lbl" for="delHome">Home Delivery</label>
-                        <p id="txtHomeAddress"></p>
-                        <p id="txtHomeDuration">Approximately 45-60 minutes</p>
-                        <p id="deliveryHomeCost">Delivery Cost: $5.00</p>
->>>>>>> b0f97d076368cb3b7317a83fb3242d8aa406a2ff
                     </section>
                     <section class="col-md-12 text-right">
                         <button id="btnShopping" type="button" class="btn btn-warning">Continue Shopping</button>

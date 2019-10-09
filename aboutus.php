@@ -44,16 +44,13 @@ and open the template in the editor.
         </div>
         
         <section>
-<<<<<<< HEAD
             <section class="container-fluid" style= 'margin-top:20px'>
                 <section class =" row sectionheader standardfont text-center">
                     <section class="col-md-12">
 
-=======
             <div class="container-fluid" style= 'margin-top:20px'>
                 <div class =" row sectionheader standardfont text-center">
                     <div class="col-md-12">
->>>>>>> b0f97d076368cb3b7317a83fb3242d8aa406a2ff
                         <h2 class = "fontheader">ABOUT US</h2>
                     </div>
                     </section>
