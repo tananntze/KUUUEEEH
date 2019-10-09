@@ -8,11 +8,6 @@ and open the template in the editor.
     Author     : PeiMin
 */
 
-
-fa-sign-out-alt{
-    color: #f7536b;
-}
-
 .fa-edit, .fa-trash-alt, .fa-close{
     color: black;
     margin-top: 15px;
@@ -28,6 +23,10 @@ fa-sign-out-alt{
 
 .container {
     overflow-x: auto;
+}
+
+.card{
+    margin-top: 30px;
 }
 
 .card-header {
@@ -56,8 +55,12 @@ thead th{
     display: block !important;
 }
 
+strong, label {
+    font-size: 18px;
+}
+
 .data {
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .btn:hover{

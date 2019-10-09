@@ -29,6 +29,7 @@
                 </ul>
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav navbar-nav">
+                        <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions">My Order</span></a>
                         <a class="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
                     </li>
                 </ul>

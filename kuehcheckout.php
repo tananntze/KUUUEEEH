@@ -33,8 +33,8 @@ and open the template in the editor.
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
+                            <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions">My Order</span></a>
                             <a class ="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
-                            <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="glyphicon glyphicon-shopping-cart" id="logIcon"></span>My Order</a>
                         </li>
                     </ul>
                 </nav>  
@@ -162,12 +162,11 @@ and open the template in the editor.
                                     </section>
                                 </section>
                             </section>
+                            <p id="txtConfirm">Please confirm your order. Once done, click Place Order.</p>
+                            <button id="btnOrder" type="button" class="btn btn-block btn-success">Place Order</button>
                         </div>
                     </section>
                 </form>
-                <p id="txtConfirm">Please confirm your order. Once done, click Place Order.
-                </p>
-                <button id="btnOrder" type="button" class="btn btn-block btn-success">Place Order</button>
             </section>
         </section>
     </body>

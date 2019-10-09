@@ -13,10 +13,10 @@ function displayOrder() {
     var getQuantity = 7;
     var noOfDiffKuehs = 4;
     quantity.innerHTML = "Total Quantity: " + getQuantity;
-    var kuehImg = ["img/The Basic Kuehs/Ang Ku Kueh.jpg", "img/The Basic Kuehs/Kueh Lapis.jpg", "img/The Heavyweight Kuehs/Getuk Getuk.jpg", "img/Kueh with Character/Kueh Tutu.jpg"];
-    var kuehCategory = ["The Basic Kuehs", "The Basic Kuehs", "The Heavyweight Kuehs", "Kueh with Character"];
-    var kuehNames = ["Ang Ku Kueh", "Kueh Lapis", "Getuk Getuk", "Kueh Tutu"];
-    var cost = [4.00, 2.50, 3.60, 3.20];
+    var kuehImg = ["img/The Basic Kuehs/Ang Ku Kueh.jpg", "img/Kueh with Character/Png Kueh.jpg", "img/Kueh with Character/Chwee Kueh.jpg", "img/The Heavyweight Kuehs/Kueh Talam Ubi.jpg"];
+    var kuehCategory = ["The Basic Kuehs", "Kueh with Character", "Kueh with Character", "The Heavweight Kuehs"];
+    var kuehNames = ["Ang Ku Kueh", "Png Kueh", "Chwee Kueh", "Kueh Talam Ubi"];
+    var cost = [0.50, 0.60, 0.70, 0.50];
     var quantities = [1, 2, 1, 3];
     var header = tblOrders.createTHead();
     var headerRow = header.insertRow(0);

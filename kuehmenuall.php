@@ -51,8 +51,8 @@ and open the template in the editor.
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
+                            <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions">My Order</span></a>
                             <a class ="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
-                            <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="glyphicon glyphicon-shopping-cart" id="logIcon"></span>My Order</a>
                         </li>
                     </ul>
                 </div>  
@@ -215,7 +215,7 @@ and open the template in the editor.
                 <div class =" col-md-12 text-center">
                     
                 
-                <h1 id="border">The Basic Kuehs</h1>
+                <h1 id="border">Kuehs with Character</h1>
                 </div>
             </div>
             
@@ -339,7 +339,7 @@ and open the template in the editor.
                 <div class =" col-md-12 text-center">
                     
                 
-                <h1 id="border">The Basic Kuehs</h1>
+                <h1 id="border">The Heavyweight Kuehs</h1>
                 </div>
             </div>
             
