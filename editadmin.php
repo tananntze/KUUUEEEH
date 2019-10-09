@@ -35,11 +35,11 @@ and open the template in the editor.
                     <ul class="nav navbar-nav">
                         <li class ="nav-item"><a href ="#">Orders of the day </a></li>
                         <li class ="nav-item"><a href="editadmin.php">Kueh Menu</a></li>
-                        <li class ="nav-item"><a href="#">Promotions</a></li>
+                        <li class ="nav-item"><a href="promotions.php">Promotions</a></li>
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
-                            <a class ="nav-link" href="#"><span class="fas fa-sign-out-alt"> Log Out</span></a>
+                            <a class ="nav-link" href="home.php"><span class="fas fa-directions">Logout</span></a>
                         </li>
                     </ul>
                 </div>  
@@ -125,7 +125,6 @@ and open the template in the editor.
                                 </section>         
                             </section>
                     </aside>
-            <hr>
         
             <section class="container standardfont">
                 <section class="card">
