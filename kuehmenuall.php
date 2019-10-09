@@ -22,7 +22,7 @@ and open the template in the editor.
          <script defer src="js/main.js" type="text/javascript"></script>
     </head>
     
-    <body background="img/Pink Dots Tumblr BG.jpg">
+    <body>
         <header>
             <nav class="navbar">
                 <div class="container-fluid">
