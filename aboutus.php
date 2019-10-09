@@ -78,16 +78,16 @@ and open the template in the editor.
                 </div>
                 <section>
                     <div class ="row ml-12 standardfont">
-                        <div class ="col-md-3 center-block">
+                        <div class ="col-md-3 text-center">
                             <img class="img_kueh rounded-circle" src="img/The Basic Kuehs/Ang Ku Kueh.jpg" alt="Ang Ku Kueh">
                         </div>
-                        <div class ="col-md-3 center-block">
+                        <div class ="col-md-3 text-center">
                             <img class="img_kueh rounded-circle" src="img/The Basic Kuehs/Kueh Lapis.jpg" alt="Kueh Lapis">
                         </div>
-                        <div class ="col-md-3 center-block">
+                        <div class ="col-md-3 text-center">
                             <img class="img_kueh rounded-circle" src="img/Kueh with Character/Chwee Kueh.JPG" alt="Chwee Kueh">
                         </div>
-                        <div class ="col-md-3 center-block">
+                        <div class ="col-md-3 text-center">
                             <img class="img_kueh rounded-circle" src="img/Kueh with Character/Png Kueh.jpg" alt="Png Kueh">
                         </div>
                     </div>
