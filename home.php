@@ -18,37 +18,27 @@ and open the template in the editor.
 </head>
 
 <body>
-        <header>
-            <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
-                <a class="navbar-brand" href="#">Kuey Logo</a>
-                <button class ="navbar-toggler" type = 'button' data-toggle="collapse" data-target ="#navbar">
-                    <span class ="navbar-toggler-icon"></span>
-                </button>
-                <nav class ="collapse navbar-collapse" id="navbar">
-                    <ul class="nav navbar-nav">
-                        <li class ="nav-item"><a href ="home.php">Home</a></li>
-                        <li class ="nav-item"><a href="aboutus.php">About Us</a></li>
-                        <li class="nav-item dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    Kuehs<span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">The Basics</a></li>
-                                    <li><a href="#">The Ones with Character</a></li>
-                                    <li><a href="#">The Heavyweights</a></li>
-                                </ul>
-                        </li>
-                        <li class ="nav-item"><a href="#">Contact Us</a></li>
-                        <li class ="nav-item"><a href="faq.php">FAQ's</a></li>
-                    </ul>
-                    <ul class ="nav navbar-nav ml-auto">
-                        <li class="nav navbar-nav">
-                            <a class ="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
-                        </li>
-                    </ul>
-                </nav>  
-            </nav>
-        </header>
+    <header>
+        <nav class="nav navbar navbar-expand-md bg-pink navbar-dark" role="navigation">
+            <a class="navbar-brand" href="#">Kuey Logo</a>
+            <button class="navbar-toggler" type='button' data-toggle="collapse" data-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a href="home.php">Home</a></li>
+                    <li class="nav-item"><a href="aboutus.php">About Us</a></li>
+                    <li class="nav-item"><a href="#">Contact Us</a></li>
+                    <li class="nav-item"><a href="faq.php">FAQ's</a></li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav navbar-nav">
+                        <a class="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
 
     <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
