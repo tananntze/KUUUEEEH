@@ -51,9 +51,22 @@
 
                         <li class ="nav-item"><a href="aboutus.php">About Us</a></li>
 
+                        <li class ="nav-item"><a href="kuehmenuall.php">Kueh</a></li>
+
+<!--                            <li class="dropdown nav-item">
+                                <a href="" class="dropdown-toggle nav-item" data-toggle="dropdown">
+
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">The Basics</a></li>
+                                    <li><a href="#">The Ones with Character</a></li>
+                                    <li><a href="#">The Heavyweights</a></li>
+                                </ul>
+                            </li>-->
+
                         <li class ="nav-item"><a href="contactus.php">Contact Us</a></li>
 
-                        <li class ="nav-item"><a href="#">FAQ's</a></li>
+                        <li class ="nav-item"><a href="faq.php">FAQ's</a></li>
 
                     </ul>
 
@@ -71,10 +84,19 @@
 
             </nav>
         </header>
+<<<<<<< HEAD
         
         <div class="container">
             <img src="img/Banner - White.png" alt="bannerimg" class="responsive">
         </div>
+=======
+
+        <section>
+            <div class="container">
+                <img id="faqimg" src="img/banner.jpg" alt="bannerimg" class="responsive">
+            </div>
+        </section>
+>>>>>>> b8f23a73ba6c8ceea78e64c05730c3cd920e263f
 
         <section>
             <div class="container-fluid">
@@ -100,7 +122,7 @@
                                     </div>
                                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <p>All orders will take approximately 3 to 5 working days upon ordering.</p>
+                                            <p class="standardfont">All orders will take approximately 3 to 5 working days upon ordering.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -111,7 +133,7 @@
                                         </h2>
                                     </div>
                                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                        <div class="card-body">Will be including the information here.</div>
+                                        <div class="card-body standardfont">Will be including the information here.</div>
                                     </div>
                                 </div>
                                 <div class="card">
@@ -121,7 +143,7 @@
                                         </h2>
                                     </div>
                                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                        <div class="card-body">Will be including the information here.</div>
+                                        <div class="card-body standardfont">Will be including the information here.</div>
                                     </div>
                                 </div>
                             </div>

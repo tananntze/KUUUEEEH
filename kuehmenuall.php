@@ -9,77 +9,110 @@ and open the template in the editor.
     <head>
         <title>All Kuehs</title>
         <meta charset="UTF-8">
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/kuehmenuall.css">
+
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script defer src="js/main.js"></script>
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>        
-             
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        
-        <link href="css/kuehmenuall.css" rel="stylesheet">
-         <script defer src="js/main.js" type="text/javascript"></script>
     </head>
-    
+
     <body background="img/Pink Dots Tumblr BG.jpg">
         <header>
-            <nav class="navbar">
-                <div class="container-fluid">
-                    
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                            <span class="icon-bar"></span>
-                            
-                        </button>
-                        <a class="navbar-brand" href="#">KUUUEEEH</a>
-                    </div>
-                    
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav">
-                            <li><a href=home.php>Home</a></li>
-                            <li><a href=aboutus.php>About Us</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    Kuehs<span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">The Basics</a></li>
-                                    <li><a href="#">The Ones with Character</a></li>
-                                    <li><a href="#">The Heavyweights</a></li>
-                                </ul>
-                            </li>
-                            <li><a href=contactus.php>Contact Us</a></li>
-                            <li><a href=faq.php>FAQ</a></li>
-                        </ul>
+
+            <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
+
+                <a class="navbar-brand" href="#">Kuey Logo</a>
+
+                <button class ="navbar-toggler" type = 'button' data-toggle="collapse" data-target ="#navbar">
+
+                    <span class ="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class ="collapse navbar-collapse" id="navbar">
+
+                    <ul class="nav navbar-nav">
+
+                        <li class ="nav-item"><a href ="home.php">Home</a></li>
+
+                        <li class ="nav-item"><a href="aboutus.php">About Us</a></li>
+
+                        <li class ="nav-item"><a href="kuehmenuall.php">Kueh</a></li>
+
+                        <!--                            <li class="dropdown nav-item">
+                                                        <a href="" class="dropdown-toggle nav-item" data-toggle="dropdown">
                         
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>              
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#">The Basics</a></li>
+                                                            <li><a href="#">The Ones with Character</a></li>
+                                                            <li><a href="#">The Heavyweights</a></li>
+                                                        </ul>
+                                                    </li>-->
+
+                        <li class ="nav-item"><a href="contactus.php">Contact Us</a></li>
+
+                        <li class ="nav-item"><a href="faq.php">FAQ's</a></li>
+
+                    </ul>
+
+                    <ul class ="nav navbar-nav ml-auto">
+
+                        <li class="nav navbar-nav">
+
+                            <a class ="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
+
+                        </li>
+
+                    </ul>
+
+                </div>  
+
+            </nav>
         </header>
-        
+
         <div class="container">
             <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
         </div>
-        
+
         <div class="container-fluid">
-            
-<!-- The Basic Kueh -->      
-            <div class="row">
+
+            <!-- The Basic Kueh -->      
+            <div class="row" id ="basickueh" >
+                <div class =" col-md-12 text-center">
+                    
+                
                 <h1 id="border">The Basic Kuehs</h1>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-2"></div>
-               
+
                 <div class="col-md-2">
 
-                    <figure>
-                        <img class="zoom" src = "img/The Basic Kuehs/Ang Ku Kueh.jpg" alt = "Ang Ku Kueh" style="max-width: 100%">
-                        <figcaption>A typical and popular chinese snack. Stir fried crunchy jicama (yam bean) wrapped in soft, chewy and crystal skin.</figcaption>
+                    <figure class="imgholder">
+                        <img class="zoom" id="hoverimg" src = "img/The Basic Kuehs/Ang Ku Kueh.jpg" alt = "Ang Ku Kueh" style="max-width: 100%">
+                        <div class="centeredbg">
+                            <div class="centered" id="togglecaption">A typical and popular chinese snack. Stir fried crunchy jicama (yam bean) wrapped in soft, chewy and crystal skin.</div>
+                        </div>
                     </figure>
-                    
-                                       
+
+
                     <figure>
                         <img  class="zoom" src = "img/The Basic Kuehs/Chai Kueh.jpg" alt = "Chai Kueh" style="max-width: 100%">
                         <figcaption>A typical and popular chinese snack. Stir fried crunchy jicama (yam bean) wrapped in soft, chewy and crystal skin.</figcaption>
@@ -100,7 +133,7 @@ and open the template in the editor.
                         <figcaption>Made from grated tapioca (cassava), baked until the top and sides are crispy brown. Soft and chewy inside which makes a great texture. One of the many Nyonya delicacies of the Peranakans and goes well with coffee or tea.</figcaption>
                     </figure>
                 </div>
-                
+
                 <div class="col-md-2">
                     <figure>
                         <img class="zoom" src = "img/The Basic Kuehs/Kueh Bongkong.jpg" alt = "Kueh Bongkong" style="max-width: 100%">
@@ -127,7 +160,7 @@ and open the template in the editor.
                         <figcaption>Known as Kueh Ko Swee, made from tapioca starch and rice flour and sweetened with Gula Melaka sugar. Served with freshly grated coconuts for more texture and taste.</figcaption>
                     </figure>
                 </div>
-                
+
                 <div class="col-md-2">
                     <figure>
                         <img class="zoom" src = "img/The Basic Kuehs/Kueh Lapis.jpg" alt = "Kueh Lapis" style="max-width: 100%">
@@ -154,7 +187,7 @@ and open the template in the editor.
                         <figcaption>Two-layer Nyonya Kueh, top white layer made from coconut milk and rice flour and a bottom green layer made from rice and mung bean flour with natural green colouring from pandan leaves.</figcaption>
                     </figure>
                 </div>
-                
+
                 <div class="col-md-2">
                     <figure>
                         <img class="zoom" src = "img/The Basic Kuehs/Lepat Pisang.jpg" alt = "Lepat Pisang" style="max-width: 100%">
@@ -184,11 +217,19 @@ and open the template in the editor.
                 <div class="col-md-2"></div>
             </div>
 
-<!-- The Kuehs with Character -->             
+            <!-- The Kuehs with Character -->       
+            <div class="row" id ="kuehcharc" >
+                <div class =" col-md-12 text-center">
+                    
+                
+                <h1 id="border">The Basic Kuehs</h1>
+                </div>
+            </div>
+            
             <div class="row">
-                <h1 id="border">The Kuehs with Character</h1>
-                <div class="col-md-2"></div>
                
+                <div class="col-md-2"></div>
+
                 <div class="col-md-2">
 
                     <figure>
@@ -216,7 +257,7 @@ and open the template in the editor.
                         <figcaption>Soft and tender texture, made from coconut cream, mung bean flour and corn, wrapped in banana leaf.</figcaption>
                     </figure>
                 </div>
-                
+
                 <div class="col-md-2">
                     <figure>
                         <img class="zoom" src = "img/Kueh with Character/Huat Kueh.jpg" alt = "Huat Kueh" style="max-width: 100%">
@@ -243,7 +284,7 @@ and open the template in the editor.
                         <figcaption>It’s a Peranakan sweet and crispy snacks, known as fragile rice krispies. Made from rice flour and sugar syrup.</figcaption>
                     </figure>
                 </div>
-                
+
                 <div class="col-md-2">
                     <figure>
                         <img class="zoom" src = "img/Kueh with Character/Kueh Keria.jpg" alt = "Kueh Keria" style="max-width: 100%">
@@ -270,7 +311,7 @@ and open the template in the editor.
                         <figcaption>Melt in your mouth shortcrust pastry shells filled with homemade pineapple jam.</figcaption>
                     </figure>
                 </div>
-                
+
                 <div class="col-md-2">
                     <figure>
                         <img class="zoom" src = "img/Kueh with Character/Kueh Tutu.jpg" alt = "Kueh Tutu" style="max-width: 100%">
@@ -300,11 +341,20 @@ and open the template in the editor.
                 <div class="col-md-2"></div>
             </div>
 
-<!-- The Heavyweight Kuehs --> 
+            <!-- The Heavyweight Kuehs --> 
+            <div class="row" id ="heavyweight" >
+                <div class =" col-md-12 text-center">
+                    
+                
+                <h1 id="border">The Basic Kuehs</h1>
+                </div>
+            </div>
+            
             <div class="row">
-                <h1 id="border">The Heavyweight Kuehs</h1>
+                
+                
                 <div class="col-md-2"></div>
-               
+
                 <div class="col-md-2">
 
                     <figure>
@@ -332,7 +382,7 @@ and open the template in the editor.
                         <figcaption>Known as Nian Gao, prepared from glutinous rice flour and sugar. Giving a sticky, chewy and sweet texture and taste. This snack can be eaten in many ways.</figcaption>
                     </figure>
                 </div>
-                
+
                 <div class="col-md-2">
                     <figure>
                         <img class="zoom" src = "img/The Heavyweight Kuehs/Kueh Bulan.jpg" alt = "Kueh Bulan" style="max-width: 100%">
@@ -359,7 +409,7 @@ and open the template in the editor.
                         <figcaption>Typical food Pemalang origin Arab countries. This cake is made of flour dough, butter, and eggs, mixed with ingredients such as bananas or tape.</figcaption>
                     </figure>
                 </div>
-                
+
                 <div class="col-md-2">
                     <figure>
                         <img class="zoom" src = "img/The Heavyweight Kuehs/Kueh Kapit.jpg" alt = "Kueh Kapit" style="max-width: 100%">
@@ -386,7 +436,7 @@ and open the template in the editor.
                         <figcaption>This belongs to steamed bun family and has distinctively tangy or sour taste. Combined it with brown sugar give a sweet and sour taste.</figcaption>
                     </figure>
                 </div>
-                
+
                 <div class="col-md-2">
                     <figure>
                         <img class="zoom" src = "img/The Heavyweight Kuehs/Kueh Neng Ko.jpg" alt = "Kueh Neng Ko" style="max-width: 100%">
@@ -415,9 +465,9 @@ and open the template in the editor.
                 </div>
                 <div class="col-md-2"></div>
             </div>
-        
+
         </div>
     </body>
-    
+
 </html>
 
