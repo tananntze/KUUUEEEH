@@ -49,7 +49,8 @@ function displayOrder() {
     var kuehNames = ["Ang Ku Kueh", "Kueh Lapis", "Getuk Getuk", "Kueh Tutu"];
     var cost = [4.00, 2.50, 3.60, 3.20];
     var quantities = [1, 2, 1, 3];
-    var headerRow = tblOrders.insertRow(0);
+    var header = tblOrders.createTHead();
+    var headerRow = header.insertRow(0);
     var headerCellImg = headerRow.insertCell(0);
     var headerCellCategory = headerRow.insertCell(1);
     var headerCellName = headerRow.insertCell(2);

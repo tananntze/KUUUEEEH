@@ -34,11 +34,33 @@ and open the template in the editor.
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
                             <a class ="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
+                            <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="glyphicon glyphicon-shopping-cart" id="logIcon"></span>My Order</a>
                         </li>
                     </ul>
                 </nav>  
             </nav>
         </header>
+        
+        <section class="modal fade" id="orderPopup" role="dialog">
+            <section class="modal-dialog">
+                <section class="modal-content">
+                    <section class="modal-header text-center d-block">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 id ="orderHeader">My Order</h3>
+                    </section>
+                    <section id="paragraph" class="modal-body">
+                        <section id="myOrder">
+                            <p id="quantity">Total Quantity:</p>
+                            <table id="tblOrders"></table>
+                        </section>
+                        <p id="subTotal">Subtotal:</p>
+                        <p id="delivery">Delivery:</p>
+                        <h4 id="totalAmt">Total Amount:</h4>
+                        <button type="button" class="btn btn-block btn-primary">Edit Order</button>
+                    </section>
+                </section>
+            </section>
+        </section>
         
         <div class="container">
             <img src="img/Banner - White.png" alt="" class="responsive">
@@ -71,6 +93,7 @@ and open the template in the editor.
                                     </section>
                                     <section id="collectionInstruction">
                                         <h4>Collection Address</h4>
+                                        <p id="txtCollectionAddress">
                                         <h4>Collection Instructions</h4>
                                         <p>For those waiting to collect their orders, kindly wait for notification before pickup. For both home delivery and collection, feel free to contact us @+6592129999 to enquire both your delivery and pickup timings. Thank you!</p>
                                     </section>
@@ -142,12 +165,10 @@ and open the template in the editor.
                         </div>
                     </section>
                 </form>
-            </section>
-            <div class="col-md-12">
                 <p id="txtConfirm">Please confirm your order. Once done, click Place Order.
                 </p>
                 <button id="btnOrder" type="button" class="btn btn-block btn-success">Place Order</button>
-            </div>
+            </section>
         </section>
     </body>
 </html>
