@@ -80,7 +80,7 @@ function displayOrder() {
         cellPriceFor1.innerHTML = "$" + (cost[i]).toFixed(2);
         cellQuantity.innerHTML = quantities[i];
         cellPriceForAll.innerHTML = "$" + (quantities[i] * cost[i]).toFixed(2);
-        cellPriceAction.innerHTML = "<a href='#' class='edit'><span class='fa fa-edit'> Edit Order</span></a>";
+        cellPriceAction.innerHTML = "<a href='#' class='edit'><span class='fa fa-edit'> Edit</span></a>";
         txtOrderList += kuehNames[i] + "   " + quantities[i] + "   " + (quantities[i] * cost[i]).toFixed(2) + "\n";
         subtotal += (quantities[i] * cost[i]);
     }

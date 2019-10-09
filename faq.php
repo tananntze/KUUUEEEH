@@ -85,6 +85,7 @@
                             <table id="tblOrders"></table>
                         </section>
                         <p id="subTotal">Subtotal:</p>
+                        <a href="kuehcheckout.php" id="btnCheckout" class="btn btn-block btn-primary">Proceed to Checkout</a>
                     </section>
                 </section>
             </section>

@@ -50,7 +50,7 @@ function displayOrder() {
         cellPriceFor1.innerHTML = "$" + (cost[i]).toFixed(2);
         cellQuantity.innerHTML = quantities[i];
         cellPriceForAll.innerHTML = "$" + (quantities[i] * cost[i]).toFixed(2);
-        cellPriceAction.innerHTML = "<a id='btnEdit' href='#'><span class='fa fa-edit'> Edit Order</span></a><a id='btnCheckout' href='kuehcheckout.php'><span class='fa fa-check-square-o'> Proceed to Checkout</span></a>";
+        cellPriceAction.innerHTML = "<a id='btnEdit' href='#'><span class='fa fa-edit'> Edit</span></a><a href ='#' class='delete'><span class='fa fa-trash-o'> Delete</span></a>";
         subtotal += (quantities[i] * cost[i]);
     }
     document.getElementById("subTotal").innerHTML = "Subtotal: $" + subtotal.toFixed(2);
