@@ -75,6 +75,16 @@ and open the template in the editor.
         <div class="container">
             <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
         </div>
+        
+        <section>
+            <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
+                <ul class="nav navbar-nav">
+                        <li class ="nav-item"><a href ="#basickueh">Basics</a></li>
+                        <li class ="nav-item"><a href="#kuehcharacter">Character</a></li>
+                        <li class ="nav-item"><a href="#heavyweight">Heavyweight</a></li>
+                </ul>
+            </nav>
+        </section>
 
         <div class="container-fluid">
 
@@ -200,7 +210,7 @@ and open the template in the editor.
             </div>
 
             <!-- The Kuehs with Character -->       
-            <div class="row" id ="kuehcharc" >
+            <div class="row" id ="kuehcharacter" >
                 <div class =" col-md-12 text-center">
                     
                 

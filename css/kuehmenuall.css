@@ -50,7 +50,7 @@ body
     border-bottom-width: thick;
 }
 
-/*Hover image zoom*/
+/*Hover image zoom and blur*/
 .zoom {
   padding: 5px;
   transition: transform .2s;
@@ -90,3 +90,8 @@ body
     color: black;
 }
 
+/*Kueh Navigation*/
+#navbar2 {
+    background: transparent;
+    text-align: center;
+}
