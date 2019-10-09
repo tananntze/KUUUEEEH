@@ -13,8 +13,10 @@ and open the template in the editor.
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/checkout.css"/>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/myorderspopup.js"></script>
 </head>
 
 <body>
@@ -35,12 +37,32 @@ and open the template in the editor.
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav navbar-nav">
                         <a class="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
+                        <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="glyphicon glyphicon-shopping-cart" id="logIcon"></span>My Order</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
 
+    <section class="modal fade" id="orderPopup" role="dialog">
+        <section class="modal-dialog">
+            <section class="modal-content">
+                <section class="modal-header text-center d-block">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 id ="orderHeader">My Order</h3>
+                </section>
+                <section id="paragraph" class="modal-body">
+                    <section id="myOrder">
+                        <p id="quantity">Total Quantity:</p>
+                        <table id="tblOrders"></table>
+                    </section>
+                    <p id="subTotal">Subtotal:</p>
+                    <button type="button" class="btn btn-block btn-primary">Edit Order</button>
+                    <a href="kuehcheckout.php" id="btnCheckout" class="btn btn-block btn-primary">Proceed to Checkout</a>
+                </section>
+            </section>
+        </section>
+    </section>
 
     <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
