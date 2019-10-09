@@ -52,7 +52,7 @@ and open the template in the editor.
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
                             <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions">My Order</span></a>
-                            <a class ="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
+                            <a class ="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
                         </li>
                     </ul>
                 </div>  
@@ -72,8 +72,6 @@ and open the template in the editor.
                             <table id="tblOrders"></table>
                         </section>
                         <p id="subTotal">Subtotal:</p>
-                        <button type="button" class="btn btn-block btn-primary">Edit Order</button>
-                        <a href="kuehcheckout.php" id="btnCheckout" class="btn btn-block btn-primary">Proceed to Checkout</a>
                     </section>
                 </section>
             </section>
@@ -198,7 +196,7 @@ and open the template in the editor.
                     </figure>
 
                     <figure>
-                        <img class="zoom" src = "img/The Basic Kuehsr/Pulut Tekan.jpg" alt = "Pulut Tekan" style="max-width: 100%">
+                        <img class="zoom" src = "img/The Basic Kuehs/Pulut Tekan.jpg" alt = "Pulut Tekan" style="max-width: 100%">
                         <figcaption>Presented in a pyramid shaped dessert that wrapped with the banana leaf. Made from a mound of steamed glutinous rice topped with inti, a sweet coconut filling.</figcaption>
                     </figure>
 

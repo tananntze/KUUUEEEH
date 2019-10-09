@@ -57,12 +57,14 @@ function displayOrder() {
     var headerCellPriceFor1 = headerRow.insertCell(3);
     var headerCellQuantity = headerRow.insertCell(4);
     var headerCellPriceForAll = headerRow.insertCell(5);
-    headerCellImg.innerHTML = "Kueh Image";
-    headerCellCategory.innerHTML = "Kueh Category";
-    headerCellName.innerHTML = "Kueh Name";
+    var headerAction = headerRow.insertCell(6);
+    headerCellImg.innerHTML = "Image";
+    headerCellCategory.innerHTML = "Category";
+    headerCellName.innerHTML = "Name";
     headerCellPriceFor1.innerHTML = "Price of 1";
     headerCellQuantity.innerHTML = "Quantity";
     headerCellPriceForAll.innerHTML = "Total Price";
+    headerAction.innerHTML = "Action";
     for (var i = 0; i < noOfDiffKuehs; i++) {
         var row = tblOrders.insertRow(i + 1);
         var cellImg = row.insertCell(0);
@@ -71,12 +73,14 @@ function displayOrder() {
         var cellPriceFor1 = row.insertCell(3);
         var cellQuantity = row.insertCell(4);
         var cellPriceForAll = row.insertCell(5);
+        var cellPriceAction = row.insertCell(6);
         cellImg.innerHTML = "<img id='imgKueh' src='" + kuehImg[i] + "' alt='kueh'/>";
         cellCategory.innerHTML = kuehCategory[i];
         cellKueh.innerHTML = kuehNames[i];
         cellPriceFor1.innerHTML = "$" + (cost[i]).toFixed(2);
         cellQuantity.innerHTML = quantities[i];
         cellPriceForAll.innerHTML = "$" + (quantities[i] * cost[i]).toFixed(2);
+        cellPriceAction.innerHTML = "<a href='#' class='edit'><span class='fa fa-edit'> Edit Order</span></a>";
         txtOrderList += kuehNames[i] + "   " + quantities[i] + "   " + (quantities[i] * cost[i]).toFixed(2) + "\n";
         subtotal += (quantities[i] * cost[i]);
     }
