@@ -30,13 +30,12 @@ and open the template in the editor.
         <script defer src="js/main.js"></script>
         
     </head>
-<<<<<<< HEAD
+
     
     <body>
-=======
+
 
     <body background="img/Pink Dots Tumblr BG.jpg">
->>>>>>> 0216ce1cd00e50d6bdf6d472dce2daf6c7c3f354
         <header>
 
             <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">

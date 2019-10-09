@@ -19,11 +19,9 @@ and open the template in the editor.
 
 body
 {
-<<<<<<< HEAD
+
     background-image: url(../img/Pink Dots Tumblr BG.jpg);
-=======
     background-image: url(../img/pinkDotsBG.jpg);
->>>>>>> 0216ce1cd00e50d6bdf6d472dce2daf6c7c3f354
     background-repeat: repeat;
 }
 
