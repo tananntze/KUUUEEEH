@@ -11,10 +11,13 @@ and open the template in the editor.
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/checkout.css"/>
+    <link rel="stylesheet" href="css/main.css">
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/myorderspopup.js"></script>
 </head>
 
 <body>
@@ -29,18 +32,38 @@ and open the template in the editor.
                     <li class="nav-item"><a href="home.php">Home</a></li>
                     <li class="nav-item"><a href="aboutus.php">About Us</a></li>
                     <li class ="nav-item"><a href="kuehmenuall.php">Kueh</a></li>
-                    <li class="nav-item"><a href="#">Contact Us</a></li>
+                    <li class="nav-item"><a href="contactus.php">Contact Us</a></li>
                     <li class="nav-item"><a href="faq.php">FAQ's</a></li>
                 </ul>
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav navbar-nav">
-                        <a class="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
+                        <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions">My Order</span></a>
+                        <a class="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
 
+    <section class="modal fade" id="orderPopup" role="dialog">
+        <section class="modal-dialog">
+            <section class="modal-content">
+                <section class="modal-header text-center d-block">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 id ="orderHeader">My Order</h3>
+                </section>
+                <section id="paragraph" class="modal-body">
+                    <section id="myOrder">
+                        <p id="quantity">Total Quantity:</p>
+                        <table id="tblOrders"></table>
+                    </section>
+                    <p id="subTotal">Subtotal:</p>
+                    <button type="button" class="btn btn-block btn-primary">Edit Order</button>
+                    <a href="kuehcheckout.php" id="btnCheckout" class="btn btn-block btn-primary">Proceed to Checkout</a>
+                </section>
+            </section>
+        </section>
+    </section>
 
     <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -73,14 +96,18 @@ and open the template in the editor.
 
         <div class="aboutus col-md-6 d-inline-block">
             <h1 id="about_us_header">ABOUT US</h1>
-            <p>US Foods® is one of America's great food companies and a leading foodservice distributor, partnering with approximately 250,000 restaurants and foodservice operators to help their businesses succeed.</p>
+            <p>Founded in 2019 by an avid kueh lover, KUUUEEEH has been offering a tempting array of sumptuous kuehs till today!
+
+Customers have been savoring our kuehs through our unique blend of flavors and we are proud that our kuehs are generally well-received.
+
+Still we are 100% committed in continuously combining new flavors with tradition and improving based on customer's feedback.</p>
         </div>   
         
-       
-        
-
-
     </section>
+
+    
+
+
 </body>
 
 </html>
