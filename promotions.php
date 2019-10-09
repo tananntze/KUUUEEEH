@@ -26,7 +26,7 @@ and open the template in the editor.
                 <nav class ="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav">
                         <li class ="nav-item"><a href ="#">Orders of the Day</a></li>
-                        <li class ="nav-item"><a href ="#">Kueh Menu</a></li>
+                        <li class ="nav-item"><a href ="editadmin.php">Kueh Menu</a></li>
                         <li class ="nav-item"><a href ="#">Promotions</a></li>
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
