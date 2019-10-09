@@ -26,8 +26,8 @@ and open the template in the editor.
                 <nav class ="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav">
                         <li class ="nav-item"><a href ="#">Orders of the Day</a></li>
-                        <li class ="nav-item"><a href ="#">Update Kueh Menu</a></li>
-                        <li class ="nav-item"><a href ="#">Add Promotions</a></li>
+                        <li class ="nav-item"><a href ="#">Kueh Menu</a></li>
+                        <li class ="nav-item"><a href ="#">Promotions</a></li>
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
@@ -37,33 +37,46 @@ and open the template in the editor.
                 </nav>  
             </nav>
         </header>
-        <h2 id="txtPromotions">Add New Promotions Dashboard</h2>
-        <button id="btnLogout" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"></span> Logout</button>
-        <section id="dashboard" class="col-md-8 col-md-offset-2">
-            <form id="promoForm" action="" method="post">
-                <section class="form-group">
-                    <label for="title">*Promotion Title:</label>
-                    <input class="form-control" id="title" name="title" placeholder="Enter promotion title">
-                </section>
-                <section class="form-group">
-                    <label for="description">*Promotion Description:</label>
-                    <textarea class="form-control" id="description" name="description" placeholder="Enter promotion description" rows="2"></textarea>
-                </section>
-                <section class="form-group">
-                    <label>*Promotion Banner:</label>
-                    <input id="file_input" type="file" accept="image/*" style="display:none;"/>
-                    <button id="banner_file_upload" type="button" class="btn btn-primary">Upload Promotion Banner <span class="glyphicon glyphicon-upload"></span></button>
-                    <section id="banner_dropzone">
-                        <img id="banner">
-                    </section>
-                    <p id="filePath">No File Path specified</p>
-                </section>
-                <section class="form-group">
-                    <label for="title">*Date of Promotion:</label>
-                    
-                </section>
-                <button id="btnAdd" type="button" class="btn btn-block btn-success">Add Promotion <span class="glyphicon glyphicon-plus-sign"></span></button>
-            </form>
+        
+        <div class="container">
+            <img src="img/Banner - White.png" alt="" class="responsive">
+        </div>
+        
+        <section>
+            <div class="container-fluid" style= 'margin-top:20px'>
+                <div class ="row justify-content-center standardfont">
+                    <div class="col-md-12">
+                        <h2 class="fontheader">Add New Promotions Dashboard</h2>
+                    </div>
+                    <div class="col-md-10">
+                        <section id="paragraph">
+                            <form id="promoForm" action="" method="post">
+                                <section class="form-group">
+                                    <label for="title">*Promotion Title:</label>
+                                    <input class="form-control" id="title" name="title" placeholder="Enter promotion title">
+                                </section>
+                                <section class="form-group">
+                                    <label for="description">*Promotion Description:</label>
+                                    <textarea class="form-control" id="description" name="description" placeholder="Enter promotion description" rows="2"></textarea>
+                                </section>
+                                <section class="form-group">
+                                    <label>*Promotion Banner:</label>
+                                    <input id="file_input" type="file" accept="image/*" style="display:none;"/>
+                                    <button id="banner_file_upload" type="button" class="btn btn-primary">Upload Promotion Banner <span class="glyphicon glyphicon-upload"></span></button>
+                                    <section id="banner_dropzone">
+                                        <img id="banner">
+                                    </section>
+                                    <p id="filePath">No File Path specified</p>
+                                </section>
+                                <section class="form-group">
+                                    <label for="title">*Date of Promotion:</label>
+                                </section>
+                                <button id="btnAdd" type="button" class="btn btn-block">Add Promotion <span class="glyphicon glyphicon-plus-sign"></span></button>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
         </section>
     </body>
 </html>

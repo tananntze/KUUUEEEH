@@ -7,66 +7,20 @@ and open the template in the editor.
     Created on : 5 Oct 2019, 4:02:27 PM
     Author     : Jerone Poh
 */
-body {
-    font-family: "Garamond";
-    font-size: 100%;
-    background-color: white;
-    margin: auto;
-}
-.header {
-    background-color: #efdb0;
-}
-.containercolor {
-    background-color: #efdb0;
-}
-.jumbotronbg {
-    background-size: 100% 100%;
-    width: 800px;
-    height: 100%;
-    color: whitesmoke;
-    text-shadow: 2px 3px 2px black;
-}
-.responsive {
-    width: 100%;
-    height: auto;
-}
-.standardfont {
-    color: hsl(0,100%,0%);
-    font-family: Garamond;
-}
-.fontheader {
+.abtUsHeader {
     font-family: "Garamond";
     text-align: center; 
     font-weight: bold;
-    color: #bce4dc;
-    text-shadow: black;
+    color: #ec5772;
 }
-.subheader {
+.abtUsSubHeader {
     font-family: "Garamond";
-    text-align: left; 
     font-weight: bold;
-    color: #b4ac9c
+    color: #FDDCD7;
+    text-align: center;
 }
-.navbar {
-    margin-bottom: 0;
-    border-radius: 0;
-    color: black;
-}
-a.navbar-brand {
-    color:#f7536b
-}
-.description p {
-    color: #fff;
-    font-size: 1.3rem;
-    line-height:1.5;
-}
-.overlay {
-    position: absolute;
-    min-height: 100%;
-    min-width: 100%;
-    left: 0;
-    top: 0;
-    background: black;
+.abtUsCaption {
+    color: #bce4dc;
 }
 .nav-item{
     margin: 10px;
@@ -93,12 +47,12 @@ fa-directions {
     font-style: italic;
     text-align: center;
     font-family: "Garamond";
+    color: #bce4dc;
 }
 .img_kueh {
-    display: inline-block;
     padding: 10px;
-    width: 45%;
-    height: 200px;
+    width: 90%;
+    height: 250px;
 }
 
 #faqimg {

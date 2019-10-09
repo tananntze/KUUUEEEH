@@ -83,5 +83,5 @@ function displayBanner(input) {
             filePath.innerHTML = "Invalid file path!";
             alert("Error, please upload only image files with .jpg, .jpeg, .png or .gif extensions!");
         }
-   }
+    }
 }

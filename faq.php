@@ -72,11 +72,9 @@
             </nav>
         </header>
         
-        <section>
-            <div class="container">
-                <img id="faqimg" src="img/banner.jpg" alt="bannerimg" class="responsive">
-            </div>
-        </section>
+        <div class="container">
+            <img src="img/Banner - White.png" alt="bannerimg" class="responsive">
+        </div>
 
         <section>
             <div class="container-fluid">
@@ -85,7 +83,7 @@
 
                     <div class="col-md-12">
 
-                        <h1 class = fontheader>FAQ</h1>
+                        <h2 class = fontheader>FAQ</h2>
 
                     </div>
 

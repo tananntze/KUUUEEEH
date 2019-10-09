@@ -7,6 +7,9 @@ and open the template in the editor.
     Created on : 30 Sep 2019, 11:32:26 PM
     Author     : User
 */
+#txtConfirm {
+     color: #ec5772;
+}
 .radio_grp {
     border: 1.5px solid #D3D3D3;
     padding: 8px;
@@ -32,10 +35,10 @@ and open the template in the editor.
     margin-top: 30px;
 }
 table {
-    width: 550px;
+    width: 700px;
 }
 td {
-  width: 110px;
+  width: 140px;
 } 
 table, th, td {
     border: solid 1.5px black;
@@ -44,7 +47,7 @@ table, th, td {
 }
 #imgKueh {
     width: 100%;
-    height: 110px;
+    height: 120px;
 }
 #btnEdit {
     margin-top: 15px;

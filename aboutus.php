@@ -14,8 +14,8 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/aboutus.css"/> 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     </head>
-    
     <body class="overlay">
         <header>
             <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
@@ -40,59 +40,48 @@ and open the template in the editor.
         </header>
 
         <div class="container">
-            <img src="img/banner.jpg" alt="" class="responsive">
+            <img src="img/Banner - White.png" alt="" class="responsive">
         </div>
         
         <section>
-            <section class="container-fluid" style= 'margin-top:20px'>
-                <section class =" row sectionheader standardfont text-center">
-                    <section class="col-md-12">
-
             <div class="container-fluid" style= 'margin-top:20px'>
-                <div class =" row sectionheader standardfont text-center">
+                <div class =" row sectionheader text-center">
                     <div class="col-md-12">
-                        <h2 class = "fontheader">ABOUT US</h2>
+                        <h2 class="abtUsHeader">ABOUT KUUUEEEH</h2>
+                        <p class="abtUsCaption">Founded in 2019 by an avid kueh lover, KUUUEEEH has been offering a tempting array of sumptuous kuehs till today!</p>
+                        <p class="abtUsCaption">Customers have been savoring our kuehs through our unique blend of flavors and we are proud that our kuehs are generally well-received.</p>
+                        <p class="abtUsCaption">Still we are 100% committed in continuously combining new flavors with tradition and improving based on customer's feedback.</p>
                     </div>
-                    </section>
-                </section>
-                <section class ="row justify-content-left ml-4 standardfont">
-                    <section class ="col-md-6">
-                        <h3 class ="subheader">About KUUUEEEH</h1>
-                        <section id="paragraph">
-                            <p>Founded in 2019 by an avid kueh lover, KUUUEEEH has been offering a tempting array of sumptuous kuehs till today!</p>
-                            <p>Customers have been savoring our kuehs through our unique blend of flavors and we are proud that our kuehs are generally well-received.</p>
-                            <p>Still we are 100% committed in continuously combining new flavors with tradition and improving based on customer's feedback.</p>
-                        </section>
-                    </section>
-                    <section class="col-md-6">
-                        <h3 class ="subheader">Why Choose KUUUEEEH?</h3>                       
-                        <section id="paragraph">
-                            <p>At KUUUEEEH, we use ingredients that are natural and our kuehs are always freshly made from the oven.</p> 
-                            <p>Uniquely to our kueh shop, our kuehs do not contain preservatives, artificial flavors and contains less sugar and oil. This is in part of our way of ensuring our kuehs are delicious yet promoting healthy lifestyle in Singapore to our valued customers!</p>
-                        </section>
-                    </section>
-                </section>
-                <section class ="row justify-content-left ml-4 standardfont">
-                    <section class="col-md-6">  
-                        <h3 class ="subheader">What kuehs are we selling?</h3>                        
-                        <section id="paragraph">
-                            <p>Our menu offers a wide range of kuehs that you, your family and friends are surely craving for!</p>
-                            <p>Some of our signature kuehs from our menu includes: Ang Ku Kueh, Chwee Kueh, Kueh Lapis, Kueh Tako and many more that are highly recommended for y'all to try out!</p>
+                </div>
+                <section>
+                    <div class ="row ml-12 standardfont">
+                        <div class ="col-md-3 center-block">
+                            <img class="img_kueh rounded-circle" src="img/The Basic Kuehs/Ang Ku Kueh.jpg" alt="Ang Ku Kueh">
+                        </div>
+                        <div class ="col-md-3 center-block">
+                            <img class="img_kueh rounded-circle" src="img/The Basic Kuehs/Kueh Lapis.jpg" alt="Kueh Lapis">
+                        </div>
+                        <div class ="col-md-3 center-block">
+                            <img class="img_kueh rounded-circle" src="img/Kueh with Character/Chwee Kueh.JPG" alt="Chwee Kueh">
+                        </div>
+                        <div class ="col-md-3 center-block">
+                            <img class="img_kueh rounded-circle" src="img/Kueh with Character/Png Kueh.jpg" alt="Png Kueh">
+                        </div>
+                    </div>
+                    <div class ="row ml-6 standardfont">
+                        <div class ="col-md-6">
+                            <h2 class="abtUsSubHeader">Why Choose KUUUEEEH?</h2>
+                            <p class="abtUsCaption">At KUUUEEEH, we use ingredients that are natural and our kuehs are always freshly made from the oven.</p> 
+                            <p class="abtUsCaption">Uniquely to our kueh shop, our kuehs do not contain preservatives, artificial flavors and contains less sugar and oil. This is in part of our way of ensuring our kuehs are delicious yet promoting healthy lifestyle in Singapore to our valued customers!</p>
+                        </div>
+                        <div class ="col-md-6">
+                            <h2 class="abtUsSubHeader">What kuehs are we selling?</h2>
+                            <p class="abtUsCaption">Our menu offers a wide range of kuehs that you, your family and friends are surely craving for!</p>
+                            <p class="abtUsCaption">Some of our signature kuehs from our menu includes: Ang Ku Kueh, Chwee Kueh, Kueh Lapis, Kueh Tako and many more that are highly recommended for y'all to try out!</p>
                             <p id="bon_appetit">"Bon Appétit!"</p>
-                        </section>
-                    </section>
-                    <section class="col-md-6">
-                        <h3 class ="subheader">MUST TRY!!!</h3>
-                        <section id="paragraph">
-                            <p>Here are a few of our signature kuehs from our menu that y'all must try:</p>
-                            <img class="img_kueh" src="img/Ang Ku Kueh.jpg" alt="Ang Ku Kueh">
-                            <img class="img_kueh" src="img/Chwee Kueh.jpg" alt="Chwee Kueh">
-                            <img class="img_kueh" src="img/Kueh Lapis.jpg" alt="Kueh Lapis">
-                            <img class="img_kueh" src="img/Png Kueh.jpg" alt="Png Kueh">
-                        </section>
-                    </section>
-                </section>
-            </section>
+                        </div>
+                    </div>
+            </div>
         </section>
     </body>
 </html>

@@ -40,78 +40,76 @@ and open the template in the editor.
         </header>
         
         <div class="container">
-            <img src="img/banner.jpg" alt="" class="responsive">
+            <img src="img/Banner - White.png" alt="" class="responsive">
         </div>
         
         <section>
             <section class="container-fluid" style= 'margin-top:20px'>
-                <section class =" row sectionheader standardfont text-center">
-                    <section class="col-md-12">
+                <div class =" row sectionheader standardfont text-center">
+                    <div class="col-md-12">
                         <h2 class="fontheader">KUEH CHECKOUT</h2>
-                    </section>
-                    <section class="col-md-12 text-right">
-                        <button id="btnShopping" type="button" class="btn btn-warning">Continue Shopping</button>
-                    </section>
-                </section>               
+                    </div>
+                </div>
                 <form id="billingForm" action="" method="post">
-                    <section class ="row justify-content-left ml-4 standardfont">
-                        <section id="step12" class="col-md-4">
+                    <section class ="row justify-content-center ml-4 standardfont">
+                        <div class="col-md-12">
                             <section id="step1">
-                                <h3 class ="subheader">1) Enter Billing Details</h3>
-                                <section id="paragraph">
-                                    <section class="form-group">
-                                        <label for="email">*Email address:</label>
-                                        <input class="form-control" id="email" name="email" tabindex="1" placeholder="Enter your email address">
+                            <h3 class ="subheader">1) Select Delivery Type</h3>
+                            <section id="paragraph">
+                                <section id="step2Radio">
+                                    <section class="radio_grp">
+                                        <input class="radio_set" type="radio" name="radioDel" id="radioHome" value="delFast" checked="true"><label class="radio_lbl" for="delHome">Home Delivery</label>
+                                        <p id="txtHomeAddress"></p>
+                                        <p id="txtHomeDuration">Approximately 45-60 minutes</p>
+                                        <p id="deliveryHomeCost">Delivery Cost: $5.00</p>
                                     </section>
-                                    <section class="form-group">
-                                        <label for="first_name">*First Name:</label>
-                                        <input class="form-control" id="first_name" name="first_name" placeholder="Enter your first name">
+                                    <section class="radio_grp">
+                                        <input class="radio_set" type="radio" name="radioDel" id="radioStore" value="delNormal"><label class="radio_lbl" for="delNormal">Collect at our store</label>
+                                        <p id="txtStoreAddress"></p>
+                                        <p id="deliveryHomeCost">Delivery Cost: Free</p>
                                     </section>
-                                    <section class="form-group">
-                                        <label for="last_name">*Last Name:</label>
-                                        <input class="form-control" id="last_name" name="last_name" placeholder="Enter your last name">
-                                    </section>
-                                    <section class="form-group">
-                                        <label for="address">*Address:</label>
-                                        <input class="form-control" id="address" name="address" placeholder="Enter your full address">
-                                    </section>
-                                    <section class="form-group">
-                                        <label for="postal_code">*Postal Code:</label>
-                                        <input class="form-control" id="postal_code" name="postal_code" placeholder="Enter your postal code" maxLength="6">
-                                    </section>
-                                    <section class="form-group">
-                                        <label for="mobile_no">*Mobile Number:</label>
-                                        <input class="form-control" id="mobile_no" name="mobile_no" placeholder="Enter your mobile number" maxLength="10">
-                                    </section>
-                                </section>
-                            </section>
-                            <section id="step2">
-                                <h3 class ="subheader">2) Select Delivery Type</h3>
-                                <section id="paragraph">
-                                    <section id="step2Radio">
-                                        <section class="radio_grp">
-                                            <input class="radio_set" type="radio" name="radioDel" id="radioHome" value="delFast" checked="true"><label class="radio_lbl" for="delHome">Home Delivery</label>
-                                            <p id="txtHomeAddress"></p>
-                                            <p id="txtHomeDuration">Approximately 45-60 minutes</p>
-                                            <p id="deliveryHomeCost">Delivery Cost: $5.00</p>
-                                        </section>
-                                        <section class="radio_grp">
-                                            <input class="radio_set" type="radio" name="radioDel" id="radioStore" value="delNormal"><label class="radio_lbl" for="delNormal">Collect at our store</label>
-                                            <p id="txtStoreAddress"></p>
-                                            <p id="deliveryHomeCost">Delivery Cost: Free</p>
-                                        </section>
-                                        <section id="collectionInstruction">
-                                            <h4>Collection Address</h4>
-                                            <p id="txtCollectionAddress">    
-                                            </p>
-                                            <h4>Collection Instructions</h4>
-                                            <p>For those waiting to collect their orders, kindly wait for notification before pickup. For both home delivery and collection, feel free to contact us @+6592129999 to enquire both your delivery and pickup timings. Thank you!</p>
-                                        </section>
+                                    <section id="collectionInstruction">
+                                        <h4>Collection Address</h4>
+                                        <h4>Collection Instructions</h4>
+                                        <p>For those waiting to collect their orders, kindly wait for notification before pickup. For both home delivery and collection, feel free to contact us @+6592129999 to enquire both your delivery and pickup timings. Thank you!</p>
                                     </section>
                                 </section>
                             </section>
                         </section>
-                        <section id="step34" class="col-md-4">
+                        </div>
+                    </section>
+                    <section class ="row justify-content-left ml-4 standardfont">
+                        <div class="col-md-6">
+                            <section id="step2">
+                                <h3 class ="subheader">2) Enter Billing Details</h3>
+                                <section id="paragraph">
+                                    <section class="form-group">
+                                        <label for="email">*Email address:</label>
+                                        <input class="form-control" id="email" name="email" tabindex="1" placeholder="Enter your email address"></section>
+                                        <section class="form-group">
+                                            <label for="first_name">*First Name:</label>
+                                            <input class="form-control" id="first_name" name="first_name" placeholder="Enter your first name">
+                                        </section>
+                                        <section class="form-group">
+                                            <label for="last_name">*Last Name:</label>
+                                            <input class="form-control" id="last_name" name="last_name" placeholder="Enter your last name">
+                                        </section>
+                                        <section class="form-group">
+                                            <label for="address">*Address:</label>
+                                            <input class="form-control" id="address" name="address" placeholder="Enter your full address">
+                                        </section>
+                                        <section class="form-group">
+                                            <label for="postal_code">*Postal Code:</label>
+                                            <input class="form-control" id="postal_code" name="postal_code" placeholder="Enter your postal code" maxLength="6">
+                                        </section>
+                                        <section class="form-group">
+                                            <label for="mobile_no">*Mobile Number:</label>
+                                            <input class="form-control" id="mobile_no" name="mobile_no" placeholder="Enter your mobile number" maxLength="10">
+                                        </section>
+                                </section>
+                            </section>
+                        </div>
+                        <div class="col-md-6">
                             <section id="step3">
                                 <h3 class ="subheader">3) Enter Payment Details</h3>
                                 <section id="paragraph">
@@ -139,34 +137,16 @@ and open the template in the editor.
                                         </section>  
                                     </section>
                                 </section>
-                                <section id="step4">
-                                    <h3 class ="subheader">4) Place An Order</h3>  
-                                    <section id="paragraph">
-                                        <section id="step4Order">
-                                            <p>Please confirm your order. Once done, click Place Order.
-                                                <button id="btnOrder" type="button" class="btn btn-block btn-success">Place Order</button>
-                                            </p>
-                                        </section>
-                                    </section>
-                                </section>
                             </section>
-                        </section>
-                        <section class="sticky-top col-md-4">
-                            <h3 class ="subheader">My Order</h3>
-                            <section id="paragraph">
-                                <section id="myOrder">
-                                    <p id="quantity">Total Quantity:</p>
-                                    <table id="tblOrders"></table>
-                                    <button type="button" id="btnEdit" class="btn btn-block btn-primary">Edit Order</button>
-                                </section>
-                                <p id="subTotal">Subtotal:</p>
-                                <p id="delivery">Delivery:</p>
-                                <h4 id="totalAmt">Total Amount:</h4>
-                            </section>
-                        </section>
+                        </div>
                     </section>
                 </form>
             </section>
+            <div class="col-md-12">
+                <p id="txtConfirm">Please confirm your order. Once done, click Place Order.
+                    <button id="btnOrder" type="button" class="btn btn-block btn-success">Place Order</button>
+                </p>
+            </div>
         </section>
     </body>
 </html>
