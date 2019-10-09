@@ -7,40 +7,17 @@ and open the template in the editor.
     Created on : 30 Sep 2019, 11:32:26 PM
     Author     : User
 */
-#checkout {
-    background: #FCFCDC;
-    font-family: "Garamond";
-    text-shadow: 0.25px 0.15px 0.15px black;
-}
-label, p {
-    font-size: 16px;
-}
-#btnShopping {
-    display: inline;
-    float: right;
-    margin-right: 40px;
-}
-#txtCheckout {
-    text-align: center;
-}
 .radio_grp {
-    border: 1px solid #D3D3D3;
-    padding: 15px;
+    border: 1.5px solid #D3D3D3;
+    padding: 8px;
 }
 .radio_lbl {
-    margin: 10px;
-}
-#collectionInstruction {
-    margin-top: 15px;
-    padding: 10px;
+    margin: 8px;
 }
 .card_logo {
     float: right;
-    width: 80px;
-    height: 50px;
-}
-#order_sidebar {
-    margin-top: 20px;
+    width: 65px;
+    height: 40px;
 }
 #myOrder {
     overflow-y: scroll;

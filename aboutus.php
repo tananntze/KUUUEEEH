@@ -10,6 +10,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css"/> 
         <link rel="stylesheet" href="css/aboutus.css"/> 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -43,10 +44,10 @@ and open the template in the editor.
         </div>
         
         <section>
-            <div class="container-fluid" style= 'margin-top:20px'>
-                <div class =" row sectionheader standardfont text-center">
-                    <div class="col-md-12">
->>>>>>> f5db5a89dd6473ad390b5383817626c31bbb7b2a
+            <section class="container-fluid" style= 'margin-top:20px'>
+                <section class =" row sectionheader standardfont text-center">
+                    <section class="col-md-12">
+
                         <h2 class = "fontheader">ABOUT US</h2>
                     </section>
                 </section>
@@ -88,6 +89,6 @@ and open the template in the editor.
                     </section>
                 </section>
             </section>
-        </article>
+        </section>
     </body>
 </html>

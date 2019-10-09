@@ -8,12 +8,35 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>Add New Promotion</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/promotions.css"/> 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="js/promotions.js"></script>   
     </head>
-    <body id="promotions">
-       
+    <body id="overlay">
+        <header>
+            <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
+                <a class="navbar-brand" href="#">Kuey Logo</a>
+                <button class ="navbar-toggler" type = 'button' data-toggle="collapse" data-target ="#navbar">
+                    <span class ="navbar-toggler-icon"></span>
+                </button>
+                <nav class ="collapse navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class ="nav-item"><a href ="#">Orders of the Day</a></li>
+                        <li class ="nav-item"><a href ="#">Update Kueh Menu</a></li>
+                        <li class ="nav-item"><a href ="#">Add Promotions</a></li>
+                    </ul>
+                    <ul class ="nav navbar-nav ml-auto">
+                        <li class="nav navbar-nav">
+                            <a class ="nav-link" href="home.php"><span class="fas fa-directions">Logout</span></a>
+                        </li>
+                    </ul>
+                </nav>  
+            </nav>
+        </header>
         <h2 id="txtPromotions">Add New Promotions Dashboard</h2>
         <button id="btnLogout" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"></span> Logout</button>
         <section id="dashboard" class="col-md-8 col-md-offset-2">
