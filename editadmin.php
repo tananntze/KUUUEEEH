@@ -46,7 +46,8 @@ and open the template in the editor.
             </nav>
         </header>
         
-        <div class="jumbotron text-center jumbotronbg"> 
+        <div class="container">
+            <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
         </div>
         
         <section class="container standardfont">
