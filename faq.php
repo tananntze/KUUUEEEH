@@ -53,16 +53,7 @@
 
                         <li class ="nav-item"><a href="kuehmenuall.php">Kueh</a></li>
 
-<!--                            <li class="dropdown nav-item">
-                                <a href="" class="dropdown-toggle nav-item" data-toggle="dropdown">
 
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">The Basics</a></li>
-                                    <li><a href="#">The Ones with Character</a></li>
-                                    <li><a href="#">The Heavyweights</a></li>
-                                </ul>
-                            </li>-->
 
                         <li class ="nav-item"><a href="contactus.php">Contact Us</a></li>
 
