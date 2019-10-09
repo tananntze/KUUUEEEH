@@ -215,7 +215,7 @@ and open the template in the editor.
                 <div class =" col-md-12 text-center">
                     
                 
-                <h1 id="border">The Basic Kuehs</h1>
+                <h1 id="border">Kuehs with Character</h1>
                 </div>
             </div>
             
@@ -339,7 +339,7 @@ and open the template in the editor.
                 <div class =" col-md-12 text-center">
                     
                 
-                <h1 id="border">The Basic Kuehs</h1>
+                <h1 id="border">The Heavyweight Kuehs</h1>
                 </div>
             </div>
             

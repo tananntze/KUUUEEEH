@@ -162,12 +162,11 @@ and open the template in the editor.
                                     </section>
                                 </section>
                             </section>
+                            <p id="txtConfirm">Please confirm your order. Once done, click Place Order.</p>
+                            <button id="btnOrder" type="button" class="btn btn-block btn-success">Place Order</button>
                         </div>
                     </section>
                 </form>
-                <p id="txtConfirm">Please confirm your order. Once done, click Place Order.
-                </p>
-                <button id="btnOrder" type="button" class="btn btn-block btn-success">Place Order</button>
             </section>
         </section>
     </body>
