@@ -66,7 +66,7 @@ and open the template in the editor.
                             <table id="tblOrders"></table>
                         </section>
                         <p id="subTotal">Subtotal:</p>
-                        <a href="kuehcheckout.php" id="btnCheckout" class="btn btn-block btn-primary">Proceed to Checkout  <span class="fa fa-arrow-circle-right"></span></a></a>
+                        <a href="kuehcheckout.php" id="btnCheckout" class="btn btn-block btn-success">Proceed to Checkout  <span class="fa fa-arrow-circle-right"></span></a></a>
                     </section>
                 </section>
             </section>
@@ -98,7 +98,7 @@ and open the template in the editor.
                 <div class="col-md-2">
 
                     <figure class="imgholder">
-                        <img class="zoom" src = "img/The Basic Kuehs/Ang Ku Kueh.jpg" alt = "Ang Ku Kueh">
+                        <img class="zoom" id="angKK" src = "img/The Basic Kuehs/Ang Ku Kueh.jpg" alt = "Ang Ku Kueh">
                         <figcaption>Ang Ku Kueh ($0.50/pc): Small round or oval shaped pastry with soft sticky glutinous rice flour skin wrapped around a sweet filling in the centre.</figcaption>
                         <button class="btn"><i class="fa fa-shopping-cart"></i></button>
                     </figure>
@@ -163,7 +163,7 @@ and open the template in the editor.
 
                 <div class="col-md-2">
                     <figure class="imgholder">
-                        <img class="zoom" src = "img/The Basic Kuehs/Kueh Lapis.jpg" alt = "Kueh Lapis">
+                        <img class="zoom" id="lapis" src = "img/The Basic Kuehs/Kueh Lapis.jpg" alt = "Kueh Lapis">
                         <figcaption>Kueh Lapis ($0.50/pc): Most popular and well-loved Nonya dessert for all people known as ‘thousand-layer cake’. Made with tapioca, rice flour, coconut milk and natural colouring to make it pretty for eating.</figcaption>
                         <button class="btn"><i class="fa fa-shopping-cart"></i></button>
                     </figure>
@@ -248,7 +248,7 @@ and open the template in the editor.
                     </figure>
 
                     <figure class="imgholder">
-                        <img class="zoom" src = "img/Kueh with Character/Chwee Kueh.JPG" alt = "Chwee Kueh">
+                        <img class="zoom" id="chwee" src = "img/Kueh with Character/Chwee Kueh.JPG" alt = "Chwee Kueh">
                         <figcaption>Chwee Kueh ($0.70/pc): A popular breakfast item which rice cakes are topped with diced preserved radish and served with chilli sauce.</figcaption>
                         <button class="btn"><i class="fa fa-shopping-cart"></i></button>
                     </figure>
@@ -356,7 +356,7 @@ and open the template in the editor.
                     </figure>
 
                     <figure class="imgholder">
-                        <img class="zoom" src = "img/Kueh with Character/Png Kueh.jpg" alt = "Png Kueh" style="max-width: 100%">
+                        <img class="zoom"  id="png" src = "img/Kueh with Character/Png Kueh.jpg" alt = "Png Kueh" style="max-width: 100%">
                         <figcaption>Png Kueh ($0.60/pc): Soft and tender and the glutinous rice filling with full of mushroom and dried shrimp flavour. Added some fried shallots, chopped spring onions and a trickle of sweet soy sauce.</figcaption>
                         <button class="btn"><i class="fa fa-shopping-cart"></i></button>
                     </figure>

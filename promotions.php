@@ -41,8 +41,8 @@ and open the template in the editor.
         </header>
 
         <div class="container">
-            <img src="img/Banner - White.png" alt="" class="responsive">
-        </div>
+        <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
+    </div>
 
         <section>
             <div class="container-fluid" style= 'margin-top:20px'>
@@ -73,7 +73,7 @@ and open the template in the editor.
                                 <section class="form-group">
                                     <label for="title">*Date of Promotion:</label>
                                 </section>
-                                <button id="btnAdd" type="button" class="btn btn-block"><span class="fa fa-plus-circle"></span> Add Promotion</button>
+                                <button id="btnAdd" type="button" class="btn btn-block btn-success"><span class="fa fa-plus-circle"></span> Add Promotion</button>
                             </form>
                         </section>
                     </div>
