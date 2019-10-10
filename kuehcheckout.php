@@ -12,6 +12,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css"/> 
         <link rel="stylesheet" href="css/checkout.css"/> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="js/checkout.js"></script>
@@ -34,7 +35,7 @@ and open the template in the editor.
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
                             <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions">My Order</span></a>
-                            <a class ="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
+                            <a class ="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
                         </li>
                     </ul>
                 </nav>  
@@ -56,7 +57,6 @@ and open the template in the editor.
                         <p id="subTotal">Subtotal:</p>
                         <p id="delivery">Delivery:</p>
                         <h4 id="totalAmt">Total Amount:</h4>
-                        <button type="button" class="btn btn-block btn-primary">Edit Order</button>
                     </section>
                 </section>
             </section>

@@ -19,6 +19,8 @@ and open the template in the editor.
 
 body
 {
+
+    background-image: url(../img/Pink Dots Tumblr BG.jpg);
     background-image: url(../img/pinkDotsBG.jpg);
     background-repeat: repeat;
 }
@@ -48,6 +50,7 @@ body
     border-bottom-width: thick;
 }
 
+/*Hover image zoom and blur*/
 .zoom {
   padding: 5px;
   transition: transform .2s;
@@ -59,18 +62,23 @@ body
 
 .zoom:hover {
   transform: scale(1.5); 
-  opacity: 0.8;
+  filter: blur(5px);
 }
 
+/*Hover image caption appears*/
 #togglecaption{
+    font-style: oblique;
+    font-weight: bold;
     visibility: hidden;
+    z-index: 1;
 }
 
 .centered{
-    background-color: white;
+    background-color: transparent;
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 100%;
     transform: translate(-50%, -50%);
     pointer-events: none;
     text-align: center;
@@ -80,4 +88,10 @@ body
     position: relative;
     text-align: center;
     color: black;
+}
+
+/*Kueh Navigation*/
+#navbar2 {
+    background: transparent;
+    text-align: center;
 }

@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//This is the code to display the populated table of my orders
 var subtotal = 0.0;
 window.onload = function() {
     displayOrder();
@@ -26,12 +27,14 @@ function displayOrder() {
     var headerCellPriceFor1 = headerRow.insertCell(3);
     var headerCellQuantity = headerRow.insertCell(4);
     var headerCellPriceForAll = headerRow.insertCell(5);
-    headerCellImg.innerHTML = "Kueh Image";
-    headerCellCategory.innerHTML = "Kueh Category";
-    headerCellName.innerHTML = "Kueh Name";
+    var headerCellPriceAction = headerRow.insertCell(6);
+    headerCellImg.innerHTML = "Image";
+    headerCellCategory.innerHTML = "Category";
+    headerCellName.innerHTML = "Name";
     headerCellPriceFor1.innerHTML = "Price of 1";
     headerCellQuantity.innerHTML = "Quantity";
     headerCellPriceForAll.innerHTML = "Total Price";
+    headerCellPriceAction.innerHTML = "Action";
     for (var i = 0; i < noOfDiffKuehs; i++) {
         var row = tblOrders.insertRow(i + 1);
         var cellImg = row.insertCell(0);
@@ -40,12 +43,14 @@ function displayOrder() {
         var cellPriceFor1 = row.insertCell(3);
         var cellQuantity = row.insertCell(4);
         var cellPriceForAll = row.insertCell(5);
+        var cellPriceAction = row.insertCell(6);
         cellImg.innerHTML = "<img id='imgKueh' src='" + kuehImg[i] + "' alt='kueh'/>";
         cellCategory.innerHTML = kuehCategory[i];
         cellKueh.innerHTML = kuehNames[i];
         cellPriceFor1.innerHTML = "$" + (cost[i]).toFixed(2);
         cellQuantity.innerHTML = quantities[i];
         cellPriceForAll.innerHTML = "$" + (quantities[i] * cost[i]).toFixed(2);
+        cellPriceAction.innerHTML = "<a id='btnEdit' href='#'><span class='fa fa-edit'> Edit</span></a><a href ='#' class='delete'><span class='fa fa-trash-o'> Delete</span></a>";
         subtotal += (quantities[i] * cost[i]);
     }
     document.getElementById("subTotal").innerHTML = "Subtotal: $" + subtotal.toFixed(2);

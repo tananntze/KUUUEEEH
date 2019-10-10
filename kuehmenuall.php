@@ -22,6 +22,10 @@ and open the template in the editor.
         <script src="js/myorderspopup.js"></script>
     </head>
 
+    
+    <body>
+
+
     <body background="img/Pink Dots Tumblr BG.jpg">
         <header>
             <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
@@ -36,14 +40,13 @@ and open the template in the editor.
                         <li class ="nav-item"><a href ="home.php">Home</a></li>
                         <li class ="nav-item"><a href="aboutus.php">About Us</a></li>
                         <li class ="nav-item"><a href="kuehmenuall.php">Kueh</a></li>
-                        
                         <li class ="nav-item"><a href="contactus.php">Contact Us</a></li>
                         <li class ="nav-item"><a href="faq.php">FAQ's</a></li>
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
                             <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions">My Order</span></a>
-                            <a class="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
+                            <a class ="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
                         </li>
                     </ul>
                 </div>  
@@ -63,7 +66,6 @@ and open the template in the editor.
                             <table id="tblOrders"></table>
                         </section>
                         <p id="subTotal">Subtotal:</p>
-                        <button type="button" class="btn btn-block btn-primary">Edit Order</button>
                         <a href="kuehcheckout.php" id="btnCheckout" class="btn btn-block btn-primary">Proceed to Checkout</a>
                     </section>
                 </section>
@@ -73,38 +75,44 @@ and open the template in the editor.
         <div class="container">
             <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
         </div>
+        
+        <section>
+            <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
+                <ul class="nav navbar-nav">
+                        <li class ="nav-item"><a href ="#basickueh">Basics</a></li>
+                        <li class ="nav-item"><a href="#kuehcharacter">Character</a></li>
+                        <li class ="nav-item"><a href="#heavyweight">Heavyweight</a></li>
+                </ul>
+            </nav>
+        </section>
 
         <div class="container-fluid">
 
             <!-- The Basic Kueh -->      
             <div class="row" id ="basickueh" >
                 <div class =" col-md-12 text-center">
-                    
-                
-                <h1 id="border">The Basic Kuehs</h1>
+                    <h1 id="border">The Basic Kuehs</h1>
                 </div>
             </div>
+            
             <div class="row">
                 <div class="col-md-2"></div>
 
                 <div class="col-md-2">
 
                     <figure class="imgholder">
-                        <img class="zoom" id="hoverimg" src = "img/The Basic Kuehs/Ang Ku Kueh.jpg" alt = "Ang Ku Kueh" style="max-width: 100%">
-                        <div class="centeredbg">
-                            <div class="centered" id="togglecaption">A typical and popular chinese snack. Stir fried crunchy jicama (yam bean) wrapped in soft, chewy and crystal skin.</div>
-                        </div>
+                        <img class="zoom" id="hoverimg" src = "img/The Basic Kuehs/Ang Ku Kueh.jpg" alt = "Ang Ku Kueh">
+                        <div class="centered" id="togglecaption">Ang Ku Kueh ($0.50): Small round or oval shaped pastry with soft sticky glutinous rice flour skin wrapped around a sweet filling in the centre.</div>
                     </figure>
-
-
-                    <figure>
-                        <img  class="zoom" src = "img/The Basic Kuehs/Chai Kueh.jpg" alt = "Chai Kueh" style="max-width: 100%">
-                        <figcaption>A typical and popular chinese snack. Stir fried crunchy jicama (yam bean) wrapped in soft, chewy and crystal skin.</figcaption>
+                    
+                    <figure class="imgholder">
+                        <img  class="zoom" id="hoverimg" src = "img/The Basic Kuehs/Chai Kueh.jpg" alt = "Chai Kueh">
+                        <div class="centered" id="togglecaption">Chai Kueh (S0.50): A typical and popular chinese snack. Stir fried crunchy jicama (yam bean) wrapped in soft, chewy and crystal skin.</div>
                     </figure>
 
                     <figure>
                         <img class="zoom" src = "img/The Basic Kuehs/Kueh Ambon.jpg" alt = "Kueh Ambon" style="max-width: 100%">
-                        <figcaption></figcaption>
+                        <figcaption>This is a soft, springy, and chewy yeast cake originated from Medan (Indonesia).</figcaption>
                     </figure>
 
                     <figure>
@@ -189,7 +197,7 @@ and open the template in the editor.
                     </figure>
 
                     <figure>
-                        <img class="zoom" src = "img/The Basic Kuehsr/Pulut Tekan.jpg" alt = "Pulut Tekan" style="max-width: 100%">
+                        <img class="zoom" src = "img/The Basic Kuehs/Pulut Tekan.jpg" alt = "Pulut Tekan" style="max-width: 100%">
                         <figcaption>Presented in a pyramid shaped dessert that wrapped with the banana leaf. Made from a mound of steamed glutinous rice topped with inti, a sweet coconut filling.</figcaption>
                     </figure>
 
@@ -202,7 +210,7 @@ and open the template in the editor.
             </div>
 
             <!-- The Kuehs with Character -->       
-            <div class="row" id ="kuehcharc" >
+            <div class="row" id ="kuehcharacter" >
                 <div class =" col-md-12 text-center">
                     
                 

@@ -24,13 +24,13 @@
                     <li class="nav-item"><a href="home.php">Home</a></li>
                     <li class="nav-item"><a href="aboutus.php">About Us</a></li>
                     <li class ="nav-item"><a href="kuehmenuall.php">Kueh</a></li>
-                    <li class="nav-item"><a href="contactus">Contact Us</a></li>
+                    <li class="nav-item"><a href="contactus.php">Contact Us</a></li>
                     <li class="nav-item"><a href="faq.php">FAQ's</a></li>
                 </ul>
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav navbar-nav">
                         <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions">My Order</span></a>
-                        <a class="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
+                        <a class="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
                     </li>
                 </ul>
             </div>
@@ -51,7 +51,7 @@
                 <input type="submit" class="fadeIn fourth" value="Log In">
             </form>
 
-            <!-- Remind Passowrd -->
+            <!-- Remind Password -->
             <div id="formFooter">
                 <a class="underlineHover" href="#">Forgot Password?</a>
             </div>
