@@ -30,13 +30,14 @@ $(document).ready(function(){
 		});
 	});
         
-        
-$(document).ready(function($){
-    $("#hoverimg").on("mouseover", function() {
-        document.getElementById("togglecaption").style.visibility = "visible";
-        
-    });
-    $("#hoverimg").on("mouseout", function() {
-        document.getElementById("togglecaption").style.visibility = "hidden";
-    });
-});
+//
+////Function: Hover images on menu page to zoom and display caption
+//$(document).ready(function($){
+//    $("#hoverimg").on("mouseover", function() {
+//        document.getElementById("togglecaption").style.visibility = "visible";
+//        
+//    });
+//    $("#hoverimg").on("mouseout", function() {
+//        document.getElementById("togglecaption").style.visibility = "hidden";
+//    });
+//});

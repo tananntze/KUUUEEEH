@@ -21,7 +21,7 @@ and open the template in the editor.
         <header>
             <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
                 <a class="navbar-brand" href="#">Kuey Logo</a>
-                <button class ="navbar-toggler" type = 'button' data-toggle="collapse" data-target ="#navbar">
+                <button class ="navbar-toggler custom-toggler" type = 'button' data-toggle="collapse" data-target ="#navbar">
                     <span class ="navbar-toggler-icon"></span>
                 </button>
                 <nav class ="collapse navbar-collapse" id="navbar">

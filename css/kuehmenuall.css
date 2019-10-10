@@ -17,12 +17,6 @@ and open the template in the editor.
   width: 50%;
 }
 
-body
-{
-    background-image: url(../img/pinkDotsBG.jpg);
-    background-repeat: repeat;
-}
-
 /*.navbar {
    background-color: transparent;
    background: transparent;
@@ -44,10 +38,11 @@ body
 /* Header border design */
 #border {
     border-bottom-style: dotted;
-    border-bottom-color: black;
+    border-bottom-color: grey;
     border-bottom-width: thick;
 }
 
+/*Hover image zoom and blur*/
 .zoom {
   padding: 5px;
   transition: transform .2s;
@@ -59,25 +54,64 @@ body
 
 .zoom:hover {
   transform: scale(1.5); 
-  opacity: 0.8;
+  filter: blur(5px);
+  opacity: 0.6;
 }
 
-#togglecaption{
+/*Hover image caption appears*/
+.zoom + figcaption {
+    font-style: oblique;
+    font-weight: bold;
     visibility: hidden;
-}
-
-.centered{
-    background-color: white;
+    z-index: 1;
+    background-color: transparent;
+    
+    /*Center the text*/
     position: absolute;
-    top: 50%;
+    top: 38%;
     left: 50%;
+    width: 200px;
     transform: translate(-50%, -50%);
     pointer-events: none;
     text-align: center;
+}
+
+.zoom:hover + figcaption {
+    
+    visibility: visible; 
 }
 
 .imgholder{
     position: relative;
     text-align: center;
     color: black;
+    font-size: 20px;
+}
+
+/*Nav bar design*/
+.nav2{
+    background-color: transparent;
+}
+
+nav li {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav a {
+    color: #ec5772;
+}
+
+nav a:hover{
+    color: #ec5772;
+    font-weight: bold;
+}
+
+/*For <h1> tag*/
+.fontheader {
+    font-family: "Garamond";
+    text-align: center;
+    font-weight: bold;
+    color: #B39283;
+    text-shadow: black;
 }

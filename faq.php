@@ -23,7 +23,7 @@
 
                 <a class="navbar-brand" href="#">Kuey Logo</a>
 
-                <button class ="navbar-toggler" type = 'button' data-toggle="collapse" data-target ="#navbar">
+                <button class ="navbar-toggler custom-toggler" type = 'button' data-toggle="collapse" data-target ="#navbar">
 
                     <span class ="navbar-toggler-icon"></span>
 
@@ -39,16 +39,6 @@
 
                         <li class ="nav-item"><a href="kuehmenuall.php">Kueh</a></li>
 
-<!--                            <li class="dropdown nav-item">
-                                <a href="" class="dropdown-toggle nav-item" data-toggle="dropdown">
-
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">The Basics</a></li>
-                                    <li><a href="#">The Ones with Character</a></li>
-                                    <li><a href="#">The Heavyweights</a></li>
-                                </ul>
-                            </li>-->
 
                         <li class ="nav-item"><a href="contactus.php">Contact Us</a></li>
 
@@ -59,8 +49,13 @@
                     <ul class ="nav navbar-nav ml-auto">
 
                         <li class="nav navbar-nav">
+<<<<<<< HEAD
                             <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions"> <span id="badgeQuantity" class="badge badge-danger"> </span> My Order </span></a>
                             <a class ="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
+=======
+                            <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions">My Order</span></a>
+                            <a class="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
+>>>>>>> aaf832ff16b3fb64ae78d0cee4ae42e44077f5be
 
                         </li>
 
@@ -91,7 +86,7 @@
         </section>
         
         <div class="container">
-            <img src="img/Banner - White.png" alt="bannerimg" class="responsive">
+            <img src="img/Banner - White.png" alt="bannerimg" class="responsive" id="bannerresize">
         </div>
 
         <section>
@@ -117,9 +112,12 @@
                                         </h2>
                                     </div>
                                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <p class="standardfont">All orders will take approximately 3 to 5 working days upon ordering.</p>
-                                        </div>
+                                        <article class="card-body standardfont">
+                                            <p>All orders will take approximately 3 to 5 working days upon ordering.</p>
+                                            <p>All deliveries will be subjected to a $SGD 5.00 fee without a minimum order criteria.</p>
+                                            <p>Our deliveries take approximately 45 to 60 minutes in accordance with when the order was made.</p>
+                                            <p>Take note that there is a no refund policy applied after an order is made.</p>
+                                        </article>
                                     </div>
                                 </div>
                                 <div class="card">
@@ -129,7 +127,12 @@
                                         </h2>
                                     </div>
                                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                        <div class="card-body standardfont">Will be including the information here.</div>
+                                        <article class="card-body standardfont">
+                                            <p>At KUUUEEEH, we use ingredients that are natural and our kuehs are always freshly made from the oven.</p>
+                                            <p>Uniquely to our kueh shop, our kuehs do not contain preservatives, artificial flavors and contains less sugar and oil.</p>
+                                            <p>This is in part of our way of ensuring our kuehs are delicious yet promoting healthy lifestyle in Singapore to our valued customers!</p>
+                                            
+                                        </article>
                                     </div>
                                 </div>
                                 <div class="card">
@@ -139,7 +142,12 @@
                                         </h2>
                                     </div>
                                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                        <div class="card-body standardfont">Will be including the information here.</div>
+                                        <article class="card-body standardfont">
+                                            <p>For any business opportunities kindly <a href="contactus.php">Contact Us.</a>
+                                                </p>
+                                            
+                                            
+                                        </article>
                                     </div>
                                 </div>
                             </div>

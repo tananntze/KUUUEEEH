@@ -15,6 +15,7 @@
     <script src="js/myorderspopup.js"></script>
 </head>
 
+<<<<<<< HEAD
 <body class="overlay"><header>
             <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
                 <a class="navbar-brand" href="#">Kuey Logo</a>
@@ -38,6 +39,32 @@
                 </nav>  
             </nav>
         </header>
+=======
+<body>
+<header>
+        <nav class="nav navbar navbar-expand-md bg-pink navbar-dark" role="navigation">
+            <a class="navbar-brand" href="#">Kuey Logo</a>
+            <button class="navbar-toggler custom-toggler" type='button' data-toggle="collapse" data-target="#navbar1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar1">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a href="home.php">Home</a></li>
+                    <li class="nav-item"><a href="aboutus.php">About Us</a></li>
+                    <li class ="nav-item"><a href="kuehmenuall.php">Kueh</a></li>
+                    <li class="nav-item"><a href="contactus.php">Contact Us</a></li>
+                    <li class="nav-item"><a href="faq.php">FAQ's</a></li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav navbar-nav">
+                        <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions">My Order</span></a>
+                        <a class="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+>>>>>>> aaf832ff16b3fb64ae78d0cee4ae42e44077f5be
 
 
 

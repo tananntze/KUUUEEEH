@@ -23,7 +23,7 @@ and open the template in the editor.
         <header>
             <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
                 <a class="navbar-brand" href="#">Kuey Logo</a>
-                <button class ="navbar-toggler" type = 'button' data-toggle="collapse" data-target ="#navbar">
+                <button class ="navbar-toggler custom-toggler" type = 'button' data-toggle="collapse" data-target ="#navbar">
                     <span class ="navbar-toggler-icon"></span>
                 </button>
                 <nav class ="collapse navbar-collapse" id="navbar">
@@ -36,8 +36,13 @@ and open the template in the editor.
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
+<<<<<<< HEAD
                             <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions"> <span id="badgeQuantity" class="badge badge-danger"> </span> My Order </span></a>
                             <a class ="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
+=======
+                            <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions">My Order</span></a>
+                            <a class="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
+>>>>>>> aaf832ff16b3fb64ae78d0cee4ae42e44077f5be
                         </li>
                     </ul>
                 </nav>  
@@ -97,19 +102,19 @@ and open the template in the editor.
                     <section class =' col-md-4'>
                     </section>
                     <section class =' col-md-4'>
-                        <h3 class ="fontheader">Get in Touch with us here!</h3>
-                        <form name="myForm" action="demo_form.asp"
+                        <h3 class ="subheader">Get in Touch with us here!</h3>
+                        <form name="myForm" action=""
                               onsubmit="return validateForm()" method="post">
                             <section class="form-group">
-                                <input type="text" class="form-control" placeholder="Name" name="">
+                                <input type="text" class="form-control" placeholder="Name" name="" maxlength="30">
                             </section>
                             <section class="form-group">
-                                <input type="email" class="form-control" placeholder="Email Address" name="email">
+                                <input type="email" class="form-control" placeholder="Email Address" name="email"maxlength="50">
                             </section>
                             <section class="form-group">
-                                <textarea class="form-control" rows="3"></textarea>
+                                <textarea class="form-control"maxlength="450" rows="3"></textarea>
                             </section>
-                            <input type="submit" class="btn btn-secondary btn-block"  value="Send" name="">
+                            <input type="submit" class="btn btn-secondary btn-block"  value="Submit" >
                         </form>
                     </section>
                     <section class =' col-md-4'></section>
