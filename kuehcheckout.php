@@ -34,7 +34,7 @@ and open the template in the editor.
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
-                            <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions">My Order</span></a>
+                            <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions"> <span id="badgeQuantity" class="badge badge-danger"> </span> My Order </span></a>
                             <a class ="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
                         </li>
                     </ul>
@@ -170,4 +170,35 @@ and open the template in the editor.
             </section>
         </section>
     </body>
+    <footer class="footer-bs p-2 mb-0">
+
+        <div class="row mx-0">
+            <div class="col-md-3 footer-brand animated fadeInLeft">
+
+                <p>© 2019 KUUUEEH</p>
+            </div>
+            <div class="col-md-4 footer-nav animated fadeInUp">
+                <h4>Menu —</h4>
+
+                <div class="col-md-6">
+                    <ul class="list">
+                        <li><a href="home.php">Home</a></li>
+                        <li><a href="aboutus.php">About Us</a></li>
+                        <li><a href="kuehmenuall.php">Kueh</a></li>
+                        <li><a href="contactus.php">Contact Us</a></li>
+                        <li><a href="faq.php">FAQ's</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 footer-social animated fadeInDown">
+                <h4>Follow Us @</h4>
+                <ul class= "list-inline">
+                    <li><a class ="fa fa-facebook-square" href="#"> Facebook</a></li>
+                    <li><a class="fa fa-twitter-square" href="#"> Twitter</a></li>
+                    <li ><a class= "fa fa-instagram" href="#"> Instagram</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
 </html>

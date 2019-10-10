@@ -5,13 +5,18 @@
  */
 //This is the code to display the populated table of my orders
 var subtotal = 0.0;
+var getQuantity = 7;
 window.onload = function() {
     displayOrder();
+    document.getElementById("badgeQuantity").innerHTML = getQuantity.toString(); //displays quantity similar to notification icon
+    btnCart = document.getElementsByClassName("btn");
+    for (var i = 0; i < btnCart.length; i++) {
+        btnCart[i].addEventListener('click', incrementCount, false);
+    }
 };
 function displayOrder() {
     var quantity = document.getElementById("quantity");
     var tblOrders = document.getElementById("tblOrders");
-    var getQuantity = 7;
     var noOfDiffKuehs = 4;
     quantity.innerHTML = "Total Quantity: " + getQuantity;
     var kuehImg = ["img/The Basic Kuehs/Ang Ku Kueh.jpg", "img/Kueh with Character/Png Kueh.jpg", "img/Kueh with Character/Chwee Kueh.jpg", "img/The Heavyweight Kuehs/Kueh Talam Ubi.jpg"];
@@ -54,4 +59,8 @@ function displayOrder() {
         subtotal += (quantities[i] * cost[i]);
     }
     document.getElementById("subTotal").innerHTML = "Subtotal: $" + subtotal.toFixed(2);
+}
+function incrementCount() {
+    getQuantity += 1;
+    document.getElementById("badgeQuantity").innerHTML = getQuantity.toString();
 }

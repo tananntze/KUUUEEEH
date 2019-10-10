@@ -16,7 +16,6 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/editadmin.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -52,10 +51,13 @@ and open the template in the editor.
             <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
         </div>
         
+        
+<!--        Search by category or food name and add food item function-->
         <section class="container standardfont">
+                <h2 class="fontheader" id="editadmin_header">Admin Panel</h2>
                 <section class="card">
                     <section class="card-header">
-                            <span class="fas fa-search"></span><strong> Search by</strong> 
+                            <span class="fas fa-search" id="searchIcon"></span><strong> Search by</strong> 
                             <a href="#" class="btn btn-dark addItem btn-sm" role="button" data-toggle="modal" data-target="#addModal"><span class="fa fa-plus-circle"></span> Add New Item</a>
                     </section>
                 <section class="card-body">
@@ -127,7 +129,7 @@ and open the template in the editor.
                                 </section>         
                             </section>
                     </aside>
-        
+<!--        Edit/update & delete food items in the menu table-->
             <section class="container standardfont">
                 <section class="card">
                 <table class="table table-hover table-responsive">
@@ -285,4 +287,35 @@ and open the template in the editor.
                 </section>
             </aside>
     </body>
+    <footer class="footer-bs p-2 mb-0">
+
+        <div class="row mx-0">
+            <div class="col-md-3 footer-brand animated fadeInLeft">
+
+                <p>© 2019 KUUUEEH</p>
+            </div>
+            <div class="col-md-4 footer-nav animated fadeInUp">
+                <h4>Menu —</h4>
+
+                <div class="col-md-6">
+                    <ul class="list">
+                        <li><a href="home.php">Home</a></li>
+                        <li><a href="aboutus.php">About Us</a></li>
+                        <li><a href="kuehmenuall.php">Kueh</a></li>
+                        <li><a href="contactus.php">Contact Us</a></li>
+                        <li><a href="faq.php">FAQ's</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 footer-social animated fadeInDown">
+                <h4>Follow Us @</h4>
+                <ul class= "list-inline">
+                    <li><a class ="fa fa-facebook-square" href="#"> Facebook</a></li>
+                    <li><a class="fa fa-twitter-square" href="#"> Twitter</a></li>
+                    <li ><a class= "fa fa-instagram" href="#"> Instagram</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
 </html>

@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/checkout.css"/> 
-        <link rel="stylesheet" href="css/myorderspopup.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -50,7 +49,7 @@
                     <ul class ="nav navbar-nav ml-auto">
 
                         <li class="nav navbar-nav">
-                            <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions">My Order</span></a>
+                            <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions"> <span id="badgeQuantity" class="badge badge-danger"> </span> My Order </span></a>
                             <a class="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
 
                         </li>
@@ -61,7 +60,7 @@
 
             </nav>
         </header>
-        
+
         <section class="modal fade" id="orderPopup" role="dialog">
             <section class="modal-dialog">
                 <section class="modal-content">
@@ -80,7 +79,7 @@
                 </section>
             </section>
         </section>
-        
+
         <div class="container">
             <img src="img/Banner - White.png" alt="bannerimg" class="responsive" id="bannerresize">
         </div>
@@ -127,7 +126,7 @@
                                             <p>At KUUUEEEH, we use ingredients that are natural and our kuehs are always freshly made from the oven.</p>
                                             <p>Uniquely to our kueh shop, our kuehs do not contain preservatives, artificial flavors and contains less sugar and oil.</p>
                                             <p>This is in part of our way of ensuring our kuehs are delicious yet promoting healthy lifestyle in Singapore to our valued customers!</p>
-                                            
+
                                         </article>
                                     </div>
                                 </div>
@@ -140,9 +139,9 @@
                                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                         <article class="card-body standardfont">
                                             <p>For any business opportunities kindly <a href="contactus.php">Contact Us.</a>
-                                                </p>
-                                            
-                                            
+                                            </p>
+
+
                                         </article>
                                     </div>
                                 </div>
@@ -159,4 +158,37 @@
         </section>
 
     </body>
+
+    <footer class="footer-bs p-2 mb-0">
+
+        <div class="row mx-0">
+            <div class="col-md-3 footer-brand animated fadeInLeft">
+
+                <p>© 2019 KUUUEEH</p>
+            </div>
+            <div class="col-md-4 footer-nav animated fadeInUp">
+                <h4>Menu —</h4>
+
+                <div class="col-md-6">
+                    <ul class="list">
+                        <li><a href="home.php">Home</a></li>
+                        <li><a href="aboutus.php">About Us</a></li>
+                        <li><a href="kuehmenuall.php">Kueh</a></li>
+                        <li><a href="contactus.php">Contact Us</a></li>
+                        <li><a href="faq.php">FAQ's</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 footer-social animated fadeInDown">
+                <h4>Follow Us @</h4>
+                <ul class= "list-inline">
+                    <li><a class ="fa fa-facebook-square" href="#"> Facebook</a></li>
+                    <li><a class="fa fa-twitter-square" href="#"> Twitter</a></li>
+                    <li ><a class= "fa fa-instagram" href="#"> Instagram</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+</div>
 </html>
