@@ -32,7 +32,7 @@ and open the template in the editor.
                 </button>
                 <div class ="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav">
-                        <li class ="nav-item"><a href ="#">Orders of the day </a></li>
+                        <li class ="nav-item"><a href ="orders.php">Orders of the day </a></li>
 
                         <li class ="nav-item"><a href="editadmin.php">Kueh Menu</a></li>
 

@@ -17,11 +17,11 @@ and open the template in the editor.
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/editadmin.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="js/checkout.js"></script>
 
 
 </head>
@@ -54,38 +54,25 @@ and open the template in the editor.
         <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
     </div>
 
+  
+
+
     <section class="container standardfont">
+        <h2 class="fontheader" id="order_header">Orders & Deliveries</h2>
         <section class="card">
             <section class="card-body">
                 <form>
-                    <div class="dropdown row">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Please select a search field
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <button class="dropdown-item" type="button" value="OrderId">OrderId</button>
-                            <button class="dropdown-item" type="button" value="CustomerEmail">CustomerEmail</button>
-                        </div>
-                    </div>
-
-                    <div class="row col-2">
-                        <section class="form-group">
-                            <label for="OrderId" class="label">Order Id:</label>
-                            <input type="text" id="OrderId" class="form-control" placeholder="Enter OrderId:">
-                        </section>
-                       
-                        <section class="form-group">
-                        <label for="OrderId" class="label">Customer Email:</label>
-                        <input type="text" id="CustomerEmail" class="form-control" placeholder="Enter Customer Email:">
-                        </section>    
-                    </div>
-                        
-                        
-
                     <div class="row">
                         <div class="col-4">
+                            <section class="form-group">
+                                <label for="OrderId">Order Id</label>
+                                <input type="text" name="orderId" id="orderId" class="form-control" value="" placeholder="Enter Order Id">
+                            </section>
+                        </div>
+
+                        <div class="col-4">
                             <button type="submit" name="submit" value="search" id="submit" class="btn btn-primary"><span class="fas fa-search"></span> Search</button>
-                            <a href="editadmin.php" class="btn btn-danger"><span class="fas fa-sync-alt"></span> Clear</a>
+                            <a href="#" class="btn btn-danger"><span class="fas fa-sync-alt"></span> Clear</a>
                         </div>
                     </div>
                 </form>

@@ -76,14 +76,6 @@ strong, label {
     color: red;
 }
 
-#OrderId{
-  /*display: none;*/
-}
-
-.label{
-
-}
-
-#CustomerEmail{
-    display: none;
+#order_header{
+    margin: auto;
 }
