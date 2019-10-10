@@ -16,7 +16,7 @@
 <header>
         <nav class="nav navbar navbar-expand-md bg-pink navbar-dark" role="navigation">
             <a class="navbar-brand" href="#">Kuey Logo</a>
-            <button class="navbar-toggler" type='button' data-toggle="collapse" data-target="#navbar1">
+            <button class="navbar-toggler custom-toggler" type='button' data-toggle="collapse" data-target="#navbar1">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbar1">
