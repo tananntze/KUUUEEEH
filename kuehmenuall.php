@@ -488,7 +488,7 @@ and open the template in the editor.
                     <figure class="imgholder">
                         <img class="zoom" src = "img/The Heavyweight Kuehs/Kueh Tako.jpg" alt = "Kueh Tako" style="max-width: 100%">
                         <figcaption>Kueh Tako ($0.50/pc): A traditional two layered coconut and pandan jelly dessert made of mung bean flour with bits of Chinese turnips. Each layer tastes differently as one is salty while the other is sweet.</figcaption>
-                        <button class="btn><i class="fa fa-shopping-cart"></i></button>
+                        <button class="btn"><i class="fa fa-shopping-cart"></i></button>
                     </figure>
 
                     <figure class="imgholder">
