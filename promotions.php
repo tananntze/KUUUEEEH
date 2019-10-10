@@ -38,11 +38,11 @@ and open the template in the editor.
                 </nav>  
             </nav>
         </header>
-        
+
         <div class="container">
             <img src="img/Banner - White.png" alt="" class="responsive">
         </div>
-        
+
         <section>
             <div class="container-fluid" style= 'margin-top:20px'>
                 <div class ="row justify-content-center standardfont">
@@ -80,4 +80,35 @@ and open the template in the editor.
             </div>
         </section>
     </body>
+    <footer class="footer-bs p-2 mb-0">
+
+        <div class="row mx-0">
+            <div class="col-md-3 footer-brand animated fadeInLeft">
+
+                <p>© 2019 KUUUEEH</p>
+            </div>
+            <div class="col-md-4 footer-nav animated fadeInUp">
+                <h4>Menu —</h4>
+
+                <div class="col-md-6">
+                    <ul class="list">
+                        <li><a href="home.php">Home</a></li>
+                        <li><a href="aboutus.php">About Us</a></li>
+                        <li><a href="kuehmenuall.php">Kueh</a></li>
+                        <li><a href="contactus.php">Contact Us</a></li>
+                        <li><a href="faq.php">FAQ's</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 footer-social animated fadeInDown">
+                <h4>Follow Us @</h4>
+                <ul class= "list-inline">
+                    <li><a class ="fa fa-facebook-square" href="#"> Facebook</a></li>
+                    <li><a class="fa fa-twitter-square" href="#"> Twitter</a></li>
+                    <li ><a class= "fa fa-instagram" href="#"> Instagram</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
 </html>
