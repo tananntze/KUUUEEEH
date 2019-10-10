@@ -36,8 +36,8 @@ and open the template in the editor.
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
-                            <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions">My Order</span></a>
-                            <a class ="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
+                            <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions"> <span id="badgeQuantity" class="badge badge-danger"> </span> My Order </span></a>
+                            <a class ="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
                         </li>
                     </ul>
                 </nav>  
