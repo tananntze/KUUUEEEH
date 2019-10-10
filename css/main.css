@@ -57,16 +57,27 @@ body{
     /*text-shadow: 2px 2px 2px black; can include this if want to style the fonts with shadow*/
     color: #b4ac9c
 }
+
+nav{
+    background-color: white;
+    font-size: 25px;
+}
+
 .navbar{
     margin-bottom: 0;
     border-radius: 0;
     color: black;
-   
 }
 
 a.navbar-brand{
-    color:#f7536b
+    color:#f7536b;
 }
+
+.custom-toggler.navbar-toggler{
+    background-color:white !important; 
+    color: #f7536b !important;
+}
+
 
     
 
@@ -106,9 +117,10 @@ input {
     font-weight: bold;
 }
 
-fa-directions {
+.fa-directions {
     color: #f7536b;
 }
+
 
 .contactInfo {
     color: black;
@@ -120,9 +132,12 @@ fa-directions {
     padding: 10px;
 }
 
+/* This is for styling for HOME */
+
 .img-cake{
     height: 30%;
 }
+
 
 .carousel-inner{
     height: 500px;
@@ -153,7 +168,7 @@ fa-directions {
 }
 
 .aboutus p{
-    color: white;
+    color: black;
     margin-right: 10%;
     text-align: center;
     font-size: 25px;
@@ -192,7 +207,17 @@ fa-directions {
   
 .aboutSection:hover .button {
     opacity: 1;
-  }
+}
+
+
+@keyframes about-img {
+    0%   { 
+    transform: translateX(200%); 		
+    }
+    100% { 
+    transform: translateX(0%); 
+    }
+}
   
   /*The following is for the FAQ Accordion function*/
   	.accordion .card {
@@ -241,14 +266,7 @@ fa-directions {
             height: auto;
         }
         
-@keyframes about-img {
-    0%   { 
-    transform: translateX(200%); 		
-    }
-    100% { 
-    transform: translateX(0%); 
-    }
-}
+
 
 @media only screen and (min-width: 600px) {
     /* For mobile phones: */

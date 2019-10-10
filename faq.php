@@ -1,33 +1,19 @@
 <html class="header">
 
     <head>
-
         <title>FAQ</title>
-
         <meta charset="UTF-8">
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
         <link rel="stylesheet" href="css/main.css">
-
-
-
+        <link rel="stylesheet" href="css/checkout.css"/> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
         <script defer src="js/main.js"></script>
-
-
+        <script src="js/myorderspopup.js"></script>
     </head>
-
-
 
     <body class="overlay">
 
@@ -53,7 +39,16 @@
 
                         <li class ="nav-item"><a href="kuehmenuall.php">Kueh</a></li>
 
+<!--                            <li class="dropdown nav-item">
+                                <a href="" class="dropdown-toggle nav-item" data-toggle="dropdown">
 
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">The Basics</a></li>
+                                    <li><a href="#">The Ones with Character</a></li>
+                                    <li><a href="#">The Heavyweights</a></li>
+                                </ul>
+                            </li>-->
 
                         <li class ="nav-item"><a href="contactus.php">Contact Us</a></li>
 
@@ -64,8 +59,8 @@
                     <ul class ="nav navbar-nav ml-auto">
 
                         <li class="nav navbar-nav">
-
-                            <a class ="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
+                            <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions">My Order</span></a>
+                            <a class="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
 
                         </li>
 
@@ -75,6 +70,26 @@
 
             </nav>
         </header>
+        
+        <section class="modal fade" id="orderPopup" role="dialog">
+            <section class="modal-dialog">
+                <section class="modal-content">
+                    <section class="modal-header text-center d-block">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 id ="orderHeader">My Order</h3>
+                    </section>
+                    <section id="paragraph" class="modal-body">
+                        <section id="myOrder">
+                            <p id="quantity">Total Quantity:</p>
+                            <table id="tblOrders"></table>
+                        </section>
+                        <p id="subTotal">Subtotal:</p>
+                        <button type="button" class="btn btn-block btn-primary">Edit Order</button>
+                        <a href="kuehcheckout.php" id="btnCheckout" class="btn btn-block btn-primary">Proceed to Checkout</a>
+                    </section>
+                </section>
+            </section>
+        </section>
         
         <div class="container">
             <img src="img/Banner - White.png" alt="bannerimg" class="responsive">
