@@ -1,0 +1,81 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 Oct 2019, 9:03:54 PM
+    Author     : PeiMin
+*/
+
+.fa-edit, .fa-trash-alt, .fa-close, .fa-eye{
+    color: black;
+    margin-top: 15px;
+}
+
+.fa-edit:hover {
+    color: dodgerblue;
+}
+
+.fa-trash-alt:hover {
+    color: red;
+}
+
+.fa-eye:hover{
+    color: dodgerblue;
+}
+
+.container {
+    overflow-x: auto;
+}
+
+.card{
+    margin-top: 30px;
+}
+
+.card-header {
+    padding: 12px 0px;
+    margin-bottom: 0;
+    border-bottom: 1px solid lightgrey;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0px;
+    background-color: white;
+}
+
+.addItem {
+    float: right;
+    margin-top: 0;
+}
+
+thead th{
+    background-color: lightsalmon;
+}
+
+.table {
+    display: block !important;
+}
+
+strong, label {
+    font-size: 20px;
+}
+
+.data {
+    font-size: 20px;
+}
+
+.btn:hover{
+    display: inline-block;
+    border: 1px solid transparent;
+}
+
+#warning {
+    color: red;
+}
+
+#order_header{
+    margin: auto;
+}

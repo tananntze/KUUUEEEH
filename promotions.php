@@ -17,6 +17,7 @@ and open the template in the editor.
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="js/promotions.js"></script>   
     </head>
+    
     <body id="overlay">
         <header>
             <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
@@ -26,7 +27,7 @@ and open the template in the editor.
                 </button>
                 <nav class ="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav">
-                        <li class ="nav-item"><a href ="#">Orders of the Day</a></li>
+                        <li class ="nav-item"><a href ="orders.php">Orders of the Day</a></li>
                         <li class ="nav-item"><a href ="editadmin.php">Kueh Menu</a></li>
                         <li class ="nav-item"><a href ="#">Promotions</a></li>
                     </ul>
