@@ -9,14 +9,6 @@ and open the template in the editor.
 */
 /*Can be copied into common CSS file*/
 
-/*Banner design*/
-#bannerresize {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
 /*.navbar {
    background-color: transparent;
    background: transparent;
@@ -26,20 +18,21 @@ and open the template in the editor.
 }*/
 
 /* Specific to kuehmenuall */
-/*Header design*/
-.name {
-    color: #008000;
-    font-family: Times New Roman;
-    font-style: italic;
-    text-align: center;
-    padding-bottom: 5px;
-}
-
 /* Header border design */
 #border {
     border-bottom-style: dotted;
     border-bottom-color: grey;
     border-bottom-width: thick;
+    margin-bottom: 30px;
+}
+
+/*For <h1> tag*/
+.fontheader {
+    font-family: "Garamond";
+    text-align: center;
+    font-weight: bold;
+    color: #B39283;
+    text-shadow: black;
 }
 
 /*Hover image zoom and blur*/
@@ -105,13 +98,4 @@ nav a {
 nav a:hover{
     color: #ec5772;
     font-weight: bold;
-}
-
-/*For <h1> tag*/
-.fontheader {
-    font-family: "Garamond";
-    text-align: center;
-    font-weight: bold;
-    color: #B39283;
-    text-shadow: black;
 }
