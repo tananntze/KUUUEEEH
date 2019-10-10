@@ -9,6 +9,10 @@ var getQuantity = 7;
 window.onload = function() {
     displayOrder();
     document.getElementById("badgeQuantity").innerHTML = getQuantity.toString(); //displays quantity similar to notification icon
+    btnCart = document.getElementsByClassName("btn");
+    for (var i = 0; i < btnCart.length; i++) {
+        btnCart[i].addEventListener('click', incrementCount, false);
+    }
 };
 function displayOrder() {
     var quantity = document.getElementById("quantity");
@@ -55,4 +59,8 @@ function displayOrder() {
         subtotal += (quantities[i] * cost[i]);
     }
     document.getElementById("subTotal").innerHTML = "Subtotal: $" + subtotal.toFixed(2);
+}
+function incrementCount() {
+    getQuantity += 1;
+    document.getElementById("badgeQuantity").innerHTML = getQuantity.toString();
 }
