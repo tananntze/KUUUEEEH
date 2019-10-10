@@ -38,7 +38,7 @@ and open the template in the editor.
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
-                            <a class ="nav-link" href="home.php"><span class="fas fa-directions">Logout</span></a>
+                            <a class ="nav-link" href="index.php"><span class="fas fa-directions">Logout</span></a>
                         </li>
                     </ul>
                 </nav>  
@@ -106,6 +106,38 @@ and open the template in the editor.
         </section>
     </section>
 
-</body>
+    </body>
+
+    <footer class="footer-bs p-2 mb-0">
+
+        <div class="row mx-0">
+            <div class="col-md-3 footer-brand animated fadeInLeft">
+
+                <p>© 2019 KUUUEEH</p>
+            </div>
+            <div class="col-md-4 footer-nav animated fadeInUp">
+                <h4>Menu —</h4>
+
+                <div class="col-md-6">
+                    <ul class="list">
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="aboutus.php">About Us</a></li>
+                        <li><a href="kuehmenuall.php">Kueh</a></li>
+                        <li><a href="contactus.php">Contact Us</a></li>
+                        <li><a href="faq.php">FAQ's</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 footer-social animated fadeInDown">
+                <h4>Follow Us @</h4>
+                <ul class= "list-inline">
+                    <li><a class ="fa fa-facebook-square" href="#"> Facebook</a></li>
+                    <li><a class="fa fa-twitter-square" href="#"> Twitter</a></li>
+                    <li ><a class= "fa fa-instagram" href="#"> Instagram</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
 
 </html>

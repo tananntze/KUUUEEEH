@@ -33,7 +33,7 @@ and open the template in the editor.
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
-                            <a class ="nav-link" href="home.php"><span class="fas fa-directions">Logout</span></a>
+                            <a class ="nav-link" href="index.php"><span class="fas fa-directions">Logout</span></a>
                         </li>
                     </ul>
                 </nav>  
@@ -93,7 +93,7 @@ and open the template in the editor.
 
                 <div class="col-md-6">
                     <ul class="list">
-                        <li><a href="home.php">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="aboutus.php">About Us</a></li>
                         <li><a href="kuehmenuall.php">Kueh</a></li>
                         <li><a href="contactus.php">Contact Us</a></li>
