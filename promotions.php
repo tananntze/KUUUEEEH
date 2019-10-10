@@ -17,6 +17,7 @@ and open the template in the editor.
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="js/promotions.js"></script>   
     </head>
+    
     <body id="overlay">
         <header>
             <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
