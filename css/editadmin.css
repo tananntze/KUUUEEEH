@@ -21,8 +21,16 @@ and open the template in the editor.
     color: red;
 }
 
+#searchIcon {
+    color: black;
+}
+
 .container {
     overflow-x: auto;
+}
+
+#editadmin_header {
+    margin-top: 20px;
 }
 
 .card{
@@ -57,6 +65,7 @@ thead th{
 
 strong, label {
     font-size: 18px;
+    color: black;
 }
 
 .data {
