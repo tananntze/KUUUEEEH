@@ -64,7 +64,7 @@ and open the template in the editor.
                                 <section class="form-group">
                                     <label>*Promotion Banner:</label>
                                     <input id="file_input" type="file" accept="image/*" style="display:none;"/>
-                                    <button id="banner_file_upload" type="button" class="btn btn-primary">Upload Promotion Banner <span class="glyphicon glyphicon-upload"></span></button>
+                                    <button id="banner_file_upload" type="button" class="btn btn-primary"><span class="fa fa-upload"></span> Upload Promotion Banner</button>
                                     <section id="banner_dropzone">
                                         <img id="banner">
                                     </section>
@@ -73,7 +73,7 @@ and open the template in the editor.
                                 <section class="form-group">
                                     <label for="title">*Date of Promotion:</label>
                                 </section>
-                                <button id="btnAdd" type="button" class="btn btn-block">Add Promotion <span class="glyphicon glyphicon-plus-sign"></span></button>
+                                <button id="btnAdd" type="button" class="btn btn-block"><span class="fa fa-plus-circle"></span> Add Promotion</button>
                             </form>
                         </section>
                     </div>

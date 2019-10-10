@@ -163,7 +163,7 @@ and open the template in the editor.
                                 </section>
                             </section>
                             <p id="txtConfirm">Please confirm your order. Once done, click Place Order.</p>
-                            <button id="btnOrder" type="button" class="btn btn-block btn-success">Place Order</button>
+                            <button id="btnOrder" type="button" class="btn btn-block btn-success">Place Order  <span class="fa fa-clipboard"></span></button>
                         </div>
                     </section>
                 </form>

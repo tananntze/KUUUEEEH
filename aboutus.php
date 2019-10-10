@@ -57,7 +57,7 @@ and open the template in the editor.
                             <table id="tblOrders"></table>
                         </section>
                         <p id="subTotal">Subtotal:</p>
-                        <a href="kuehcheckout.php" id="btnCheckout" class="btn btn-block btn-primary">Proceed to Checkout</a>
+                        <a href="kuehcheckout.php" id="btnCheckout" class="btn btn-block btn-primary">Proceed to Checkout <span class="fa fa-arrow-circle-right"></span></a>
                     </section>
                 </section>
             </section>
@@ -77,18 +77,24 @@ and open the template in the editor.
                     </div>
                 </div>
                 <section>
+                    <!--<div class="col-md-3 hover">
+                        <figure class="imgholder">
+                            <img class="zoom rounded-circle" src="img/The Basic Kuehs/Ang Ku Kueh.jpg" alt="Ang Ku Kueh">
+                            <button type="button" class="btn-success btnCheckout">Check Us Out!</button>
+                        </figure>
+                    </div>-->
                     <div class ="row ml-12 standardfont">
                         <div class ="col-md-3 text-center">
-                            <img class="img_kueh rounded-circle" src="img/The Basic Kuehs/Ang Ku Kueh.jpg" alt="Ang Ku Kueh">
+                            <img class="zoom rounded-circle" src="img/The Basic Kuehs/Ang Ku Kueh.jpg" alt="Ang Ku Kueh">
                         </div>
                         <div class ="col-md-3 text-center">
-                            <img class="img_kueh rounded-circle" src="img/The Basic Kuehs/Kueh Lapis.jpg" alt="Kueh Lapis">
+                            <img class="zoom rounded-circle" src="img/The Basic Kuehs/Kueh Lapis.jpg" alt="Kueh Lapis">
                         </div>
                         <div class ="col-md-3 text-center">
-                            <img class="img_kueh rounded-circle" src="img/Kueh with Character/Chwee Kueh.JPG" alt="Chwee Kueh">
+                            <img class="zoom rounded-circle" src="img/Kueh with Character/Chwee Kueh.JPG" alt="Chwee Kueh">
                         </div>
                         <div class ="col-md-3 text-center">
-                            <img class="img_kueh rounded-circle" src="img/Kueh with Character/Png Kueh.jpg" alt="Png Kueh">
+                            <img class="zoom rounded-circle" src="img/Kueh with Character/Png Kueh.jpg" alt="Png Kueh">
                         </div>
                     </div>
                     <div class ="row ml-6 standardfont">
@@ -104,6 +110,7 @@ and open the template in the editor.
                             <p id="bon_appetit">"Bon Appétit!"</p>
                         </div>
                     </div>
+                </section>
             </div>
         </section>
     </body>

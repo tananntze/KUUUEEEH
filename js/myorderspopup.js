@@ -36,7 +36,7 @@ function displayOrder() {
     headerCellImg.innerHTML = "Image";
     headerCellCategory.innerHTML = "Category";
     headerCellName.innerHTML = "Name";
-    headerCellPriceFor1.innerHTML = "Price of 1";
+    headerCellPriceFor1.innerHTML = "Price";
     headerCellQuantity.innerHTML = "Quantity";
     headerCellPriceForAll.innerHTML = "Total Price";
     headerCellPriceAction.innerHTML = "Action";
@@ -52,7 +52,7 @@ function displayOrder() {
         cellImg.innerHTML = "<img id='imgKueh' src='" + kuehImg[i] + "' alt='kueh'/>";
         cellCategory.innerHTML = kuehCategory[i];
         cellKueh.innerHTML = kuehNames[i];
-        cellPriceFor1.innerHTML = "$" + (cost[i]).toFixed(2);
+        cellPriceFor1.innerHTML = "$" + (cost[i]).toFixed(2) + "/pc";
         cellQuantity.innerHTML = quantities[i];
         cellPriceForAll.innerHTML = "$" + (quantities[i] * cost[i]).toFixed(2);
         cellPriceAction.innerHTML = "<a id='btnEdit' href='#'><span class='fa fa-edit'> Edit</span></a><a href ='#' class='delete'><span class='fa fa-trash-o'> Delete</span></a>";
