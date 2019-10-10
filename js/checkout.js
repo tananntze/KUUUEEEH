@@ -15,10 +15,12 @@ var subtotal = 0.0;
 var delivery = 0.00;
 var totalAmt = 0.0;
 var cardType = "Visa";
+var getQuantity = 7;
 window.onload = function() {
     attachListeners();
     displayOrder();
     updateDelivery();
+    document.getElementById("badgeQuantity").innerHTML = getQuantity.toString(); //displays quantity similar to notification icon
 };
 function attachListeners() {
     var btnOrder = document.getElementById("btnOrder");
@@ -41,7 +43,6 @@ function attachListeners() {
 function displayOrder() {
     var quantity = document.getElementById("quantity");
     var tblOrders = document.getElementById("tblOrders");
-    var getQuantity = 7;
     var noOfDiffKuehs = 4;
     quantity.innerHTML = "Total Quantity: " + getQuantity;
     var kuehImg = ["img/The Basic Kuehs/Ang Ku Kueh.jpg", "img/Kueh with Character/Png Kueh.jpg", "img/Kueh with Character/Chwee Kueh.jpg", "img/The Heavyweight Kuehs/Kueh Talam Ubi.jpg"];
