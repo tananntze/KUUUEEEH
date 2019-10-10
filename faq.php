@@ -61,11 +61,7 @@
 
                         <li class="nav navbar-nav">
                             <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions">My Order</span></a>
-<<<<<<< HEAD
                             <a class="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
-=======
-                            <a class ="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
->>>>>>> 5f055492ba5683647bd8c1d101175454bba375be
 
                         </li>
 
