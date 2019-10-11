@@ -22,6 +22,7 @@ and open the template in the editor.
 </head>
 
 <body>
+    <!-- Nav Bar-->
     <header>
         <nav class="nav navbar navbar-expand-md bg-pink navbar-dark" role="navigation">
             <a class="navbar-brand" href="#">Kuey Logo</a>
@@ -45,7 +46,7 @@ and open the template in the editor.
             </div>
         </nav>
     </header>
-
+    <!--Shopping cart -->
     <section class="modal fade" id="orderPopup" role="dialog">
         <section class="modal-dialog">
             <section class="modal-content">
@@ -65,11 +66,14 @@ and open the template in the editor.
         </section>
     </section>
 
+    <!--This is the banner for inserting of promotion-->
     <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
+            <!--https://www.pexels.com/search/cake/-->
             <div class="carousel-item active" data-interval="2000">
                 <img src="img/cake.jpeg" class="d-block w-100" alt="...">
             </div>
+            <!--https://www.pexels.com/search/cake/-->
             <div class="carousel-item" data-interval="2000">
                 <img src="img/bg2.jpg" class="d-block w-100" alt="...">
             </div>
@@ -85,6 +89,7 @@ and open the template in the editor.
         </a>
     </div>
 
+    <!--This is a brief section on about us-->
     <section class="aboutSection">
         
         <div class="view overlay col-md-6 d-inline-block">            

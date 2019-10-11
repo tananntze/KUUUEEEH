@@ -18,7 +18,7 @@ body{
     min-width: 100%;
     left: 0;
     top: 0;
-    background-image: url(../img/pinkDotsBG.jpg);
+    background-image: url(../img/pinkDotsBG.jpg); 
     background-repeat: repeat;   /*this is for making a standardized background*/
 }
 .header {
@@ -27,6 +27,8 @@ body{
 .containercolor{
     background-color: #efdb0;
 }
+
+/*jumbotron from bootstrap*/
 .jumbotron{  
     width: 800px;
     height: 100%;
@@ -37,17 +39,20 @@ body{
 }
 
 /* Resize of banner to a suitable dimensions */
+/*for all the banner sizing*/
 #bannerresize{
     display: inherit;
     margin-left: auto;
     margin-right: auto;
     width: 70%;}
 
+/*makes the banner responsive*/
 .responsive {
     width: 100%;
     height: auto;
 }
 
+/* font used in text contents*/
 .standardfont{
     color: #A52A2A;
     font-family: Garamond;
@@ -58,6 +63,7 @@ body{
     color: #ec5772;
     text-shadow: black;
 }
+
 .subheader{
     font-family: "Garamond";
     text-align: center; font-weight: bold;
@@ -79,7 +85,7 @@ nav{
 a.navbar-brand{
     color:#f7536b;
 }
-
+/*color coding for navbar-toggler*/
 .custom-toggler.navbar-toggler{
     background-color:white !important; 
     color: #f7536b !important;
@@ -93,7 +99,7 @@ a.navbar-brand{
     font-size: 1.3rem;
     line-height:1.5;
 }
-
+/*this is for the form on Contact us page*/
 .form-control,
 input {
     border-radius: 10px;
@@ -114,7 +120,7 @@ input {
 .nav-item{
     margin: 10px;
 }
-
+/* Custom toggler- for dropdown*/
 .custom-toggler.navbar-toggler {
     border-color: rgb(255,102,203);
 }
@@ -122,6 +128,7 @@ input {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     /*credits to CodePLY*/
 }
+
 .nav-item a{
     color: #f7536b;
 }
@@ -139,6 +146,7 @@ input {
     color: brown;
 
 }
+/* used for most of the areas that includes text*/
 
 #paragraph {
     background-color: transparent;
@@ -224,7 +232,7 @@ input {
     opacity: 1;
 }
 
-/*our footer*/
+/*our footer quoted from bootstrap*/
 .footer-bs {
     background-color: white;
     padding: 60px 40px;
