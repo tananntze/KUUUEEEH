@@ -7,11 +7,11 @@ var isPicValid = false;
 window.onload = function() {
     attachListeners();
 };
-function attachListeners() {
+function attachListeners() { //this is to initialize the buttons by attaching an event and call function
     var btnAdd = document.getElementById("btnAdd");
     var fileInput = document.getElementById("file_input");
     var uploadBanner = document.getElementById("banner_file_upload");
-    uploadBanner.addEventListener("click", function() {
+    uploadBanner.addEventListener("click", function() { //this is to prompt user to show the dialog to select a file once user clicks a button
         fileInput.click();
     });
     fileInput.addEventListener("change", function() {
@@ -19,7 +19,7 @@ function attachListeners() {
     });
     btnAdd.addEventListener("click", checkForms);
 }
-function checkForms() {
+function checkForms() { //this is the function for the form validation
     var promoForm = document.getElementById("promoForm");
     var title = document.getElementById("title");
     txtTitle = title.value;
@@ -53,7 +53,7 @@ function checkForms() {
         promoForm.submit();
     }
 }
-function displayBanner(input) {
+function displayBanner(input) { //this is to check whether the file extension is an image or not. If it is an image, the image that is selected will be displayed out to the user.
     var fileInput = document.getElementById("file_input");
     var imgExtensionTypes = ['jpg', 'jpeg', 'png', 'gif'];
     var bannerImg = document.getElementById("banner");

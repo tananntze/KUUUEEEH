@@ -5,7 +5,7 @@
  */
 var subtotal = 0.0;
 var getQuantity = 7;
-function attachListeners() {
+function attachListeners() { //this is to add link to the pictures in about us to link to kuehs in the menu
     btnAngkk = document.getElementById("btnAngKk").addEventListener("click", function() {
          document.location.href = "kuehmenuall.php#angKK";
     });
@@ -23,12 +23,12 @@ window.onload = function() {
     attachListeners();
     displayOrder();
     document.getElementById("badgeQuantity").innerHTML = getQuantity.toString(); //displays quantity similar to notification icon
-    btnCart = document.getElementsByClassName("btn");
+    btnCart = document.getElementsByClassName("btn"); //for the add to order button, the button will call to same function when it is clicked to incremenet count
     for (var i = 0; i < btnCart.length; i++) {
         btnCart[i].addEventListener('click', incrementCount, false);
     }
 };
-function displayOrder() {
+function displayOrder() { //this is the code to dynamically create rows and columns to populate the table content for my orders
     var quantity = document.getElementById("quantity");
     var tblOrders = document.getElementById("tblOrders");
     var noOfDiffKuehs = 4;
@@ -74,7 +74,7 @@ function displayOrder() {
     }
     document.getElementById("subTotal").innerHTML = "Subtotal: $" + subtotal.toFixed(2);
 }
-function incrementCount() {
+function incrementCount() { //this is the function to increment the count for the quantity shown beside "My Orders" link
     getQuantity += 1;
     document.getElementById("badgeQuantity").innerHTML = getQuantity.toString();
 }

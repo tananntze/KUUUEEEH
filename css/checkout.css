@@ -16,6 +16,8 @@ and open the template in the editor.
     font-weight: bold;
     color: #ec5772;
 }
+
+/* Radio Buttons */
 .radio_grp {
     border: 1.5px solid #D3D3D3;
     padding: 8px;
@@ -23,26 +25,33 @@ and open the template in the editor.
 .radio_lbl {
     margin: 8px;
 }
+
 .card_logo {
     float: right;
     width: 65px;
     height: 40px;
 }
+
 #myOrder {
     overflow-y: scroll;
     overflow-x: scroll;
     height: 450px;
     width: auto;
 }
+
 #txtOrder {
     margin-top: 10px;
 }
+
 #subTotal {
     margin-top: 30px;
 }
+
+/* Display of table and setting dimensions */
 table {
     width: 750px;
 }
+
 td {
   width: 150px;
 } 

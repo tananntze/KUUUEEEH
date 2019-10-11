@@ -10,7 +10,7 @@ window.onload = function() {
     displayOrder();
     document.getElementById("badgeQuantity").innerHTML = getQuantity.toString(); //displays quantity similar to notification icon
 };
-function displayOrder() {
+function displayOrder() { //this is the code to dynamically create rows and oclumns to populate the table content for my orders
     var quantity = document.getElementById("quantity");
     var tblOrders = document.getElementById("tblOrders");
     var noOfDiffKuehs = 4;

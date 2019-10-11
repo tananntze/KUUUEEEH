@@ -7,6 +7,8 @@ and open the template in the editor.
     Created on : 5 Oct 2019, 4:02:27 PM
     Author     : Jerone Poh
 */
+
+/* Setting of header and subheader colors */
 .abtUsHeader {
     font-family: "Garamond";
     text-align: center; 
@@ -65,7 +67,7 @@ fa-directions {
   cursor: pointer;
 }
 
-/*Hover image button appears */
+/*Hover image, text appears to prompt user to click to menu page */
 .zoom + figcaption {
     color: brown;
     font-size: 30px;

@@ -140,9 +140,11 @@ and open the template in the editor.
                                     <section id="step3Radio">
                                         <section class="radio_grp">
                                             <input class="radio_set" type="radio" name="radioPayment" id="payVisa" value="Visa" checked="true"><label class="radio_lbl" for="delVisa">Visa</label><img class="card_logo" src="img/visa.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
+                                            <!--Cite: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
                                         </section>
                                         <section class="radio_grp">
                                             <input class="radio_set" type="radio" name="radioPayment" id="payMaster" value="MasterCard"><label class="radio_lbl" for="delMaster">MasterCard</label><img class="card_logo" src="img/mastercard.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
+                                            <!--Cite: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
                                         </section>
                                         <section class="form-group">
                                             <label for="card_name">*Name Of Card:</label>
