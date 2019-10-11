@@ -74,7 +74,7 @@
                             <table id="tblOrders"></table>
                         </section>
                         <p id="subTotal">Subtotal:</p>
-                        <a href="kuehcheckout.php" id="btnCheckout" class="btn btn-block btn-primary">Proceed to Checkout  <span class="fa fa-arrow-circle-right"></span></a></a>
+                        <a href="kuehcheckout.php" id="btnCheckout" class="btn btn-block btn-success">Proceed to Checkout  <span class="fa fa-arrow-circle-right"></span></a></a>
                     </section>
                 </section>
             </section>
@@ -159,7 +159,7 @@
 
     </body>
 
-    <footer class="footer-bs p-2 mb-0">
+<footer class="footer-bs p-2 mb-0"> <!--cited from https://codepen.io/nonelittlesong/pen/dLQVeJ-->
 
         <div class="row mx-0">
             <div class="col-md-3 footer-brand animated fadeInLeft">
