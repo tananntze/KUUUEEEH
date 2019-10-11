@@ -22,7 +22,7 @@ window.onload = function() {
     updateDelivery();
     document.getElementById("badgeQuantity").innerHTML = getQuantity.toString(); //displays quantity similar to notification icon
 };
-function attachListeners() {
+function attachListeners() { //this is to add event listeners for the radio buttons of selecting type of delivery and type of payment
     var btnOrder = document.getElementById("btnOrder");
     var radioHome = document.getElementById("radioHome");
     var radioStore = document.getElementById("radioStore");
@@ -40,7 +40,7 @@ function attachListeners() {
     radioVisa.addEventListener("click", updateCard);
     radioMc.addEventListener("click", updateCard);
 }
-function displayOrder() {
+function displayOrder() { //this is the code to dynamically create rows and oclumns to populate the table content for my orders
     var quantity = document.getElementById("quantity");
     var tblOrders = document.getElementById("tblOrders");
     var noOfDiffKuehs = 4;
@@ -90,7 +90,7 @@ function displayOrder() {
     totalAmt = subtotal + delivery;
     document.getElementById("totalAmt").innerHTML = "Total Amount: $" + totalAmt.toFixed(2);
 }
-function checkForms() {
+function checkForms() { //this is the function for the form validation
     var billingForm = document.getElementById("billingForm");
     var email = document.getElementById("email");
     txtEmail = email.value;
@@ -119,16 +119,16 @@ function checkForms() {
     var cardCCV = document.getElementById("ccv");
     var txtCCV = cardCCV.value;
     var isCCVValid = false;
-    if (txtEmail == "") {
+    if (txtEmail == "") { //this is to check if one of the text fields is left blank and the textfield will display respective indications of changing border color and showing tooltip to indicate error message
         email.style.borderColor = "red";
         email.setCustomValidity("This is a required field!");
         isEmailValid = false;
     } else {
-        if (!(chkEmailSyntax(txtEmail))) {
+        if (!(chkEmailSyntax(txtEmail))) { //this is to check if the email does not follow the syntax and the textfield will display respective indications of changing border color and showing tooltip to indicate error message
             email.style.borderColor = "red";
             email.setCustomValidity("Please enter a proper email address!");
             isEmailValid = false;
-        } else {
+        } else { //this is to indicate that the user has keyed in proper email address and textfield turns green
             email.style.borderColor = "green";
             email.setCustomValidity("");
             isEmailValid = true;
@@ -240,7 +240,7 @@ function checkForms() {
             isCCVValid = true;
         }
     }
-    if (isEmailValid && isFirstNameValid && isLastNameValid && isAddressValid && isPcValid && isMobileNoValid && isCardNameValid && isCardNumValid && isCCVValid) {
+    if (isEmailValid && isFirstNameValid && isLastNameValid && isAddressValid && isPcValid && isMobileNoValid && isCardNameValid && isCardNumValid && isCCVValid) { //if all the textfields are valid, then form submission will take place and there will be a alert to display in a form of e-receipt to show that an order has been made successfully
         alert("Thank you for buying with KUUUEEEH!" + "\n\n\
               Order Successful!\n\n\
               Full Name: " + txtFirstName + " " + txtLastName + "\n\n\
@@ -254,16 +254,16 @@ function checkForms() {
         billingForm.submit();
     }
 }
-function chkEmailSyntax(email) {
+function chkEmailSyntax(email) { //this is to check whether syntax of email is correct or not
     return /\S+@\S+\.\S+/.test(email);
 }
-function chkNameSyntax(name) {
+function chkNameSyntax(name) { //this is to check whether syntax of namee is correct or not
     return /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/.test(name);
 }
-function chkNumSyntax(num) {
+function chkNumSyntax(num) { //this is to check whether syntax of number is correct or not
     return /^[0-9]*$/.test(num);
 }
-function updateAddress() {
+function updateAddress() { //this is to update the address depending on radio button
     var getAddress = document.getElementById("address").value;
     var getPc = document.getElementById("postal_code").value;
     var radioHome = document.getElementById("radioHome");
@@ -279,7 +279,7 @@ function updateAddress() {
         collectionAddress.innerHTML = txtCollectionAddress; 
     }
 }
-function updateDelivery() {
+function updateDelivery() { //this is to update the delivery depending on radio button
     var radioHome = document.getElementById("radioHome");
     var radioStore = document.getElementById("radioStore");
     if (radioHome.checked) {
@@ -292,7 +292,7 @@ function updateDelivery() {
     totalAmt = subtotal + delivery;
     document.getElementById("totalAmt").innerHTML = "Total Amount: $" + totalAmt.toFixed(2);
 }
-function updateCard() {
+function updateCard() { //this is to update the type of card depednding on radio button
     var radioVisa = document.getElementById("payVisa");
     var radioMc = document.getElementById("payMaster");
     if (radioVisa.checked) {

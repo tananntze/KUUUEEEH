@@ -14,7 +14,7 @@ window.onload = function() {
         btnCart[i].addEventListener('click', incrementCount, false);
     }
 };
-function displayOrder() {
+function displayOrder() { //this is the code to dynamically create rows and columns to populate the table content for my orders
     var quantity = document.getElementById("quantity");
     var tblOrders = document.getElementById("tblOrders");
     var noOfDiffKuehs = 4;
@@ -60,7 +60,7 @@ function displayOrder() {
     }
     document.getElementById("subTotal").innerHTML = "Subtotal: $" + subtotal.toFixed(2);
 }
-function incrementCount() {
+function incrementCount() { //this is to increment count for quantity of orders after button clicked
     getQuantity += 1;
     document.getElementById("badgeQuantity").innerHTML = getQuantity.toString();
 }

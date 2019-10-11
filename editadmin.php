@@ -10,6 +10,7 @@ and open the template in the editor.
         <title>Kueh Menu</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name ="KUUUEEEH website where you find the best kuehs">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/editadmin.css">
@@ -26,14 +27,14 @@ and open the template in the editor.
     <body class="overlay">
         <header>
             <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
-                <a class="navbar-brand" href="#">Kuey Logo</a>
+                <a class="navbar-brand logocolor" href="index.php">KUUUEEEH</a>
                 <button class ="navbar-toggler custom-toggler" type ='button' data-toggle="collapse" data-target ="#navbar">
                     <span class ="navbar-toggler-icon"></span>
                 </button>
                 <nav class ="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav">
                         <li class ="nav-item"><a href ="orders.php">Orders of the Day</a></li>
-                        <li class ="nav-item"><a href ="#">Kueh Menu</a></li>
+                        <li class ="nav-item"><a href ="editadmin.php">Kueh Menu</a></li>
                         <li class ="nav-item"><a href ="promotions.php">Promotions</a></li>
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
@@ -46,6 +47,7 @@ and open the template in the editor.
         </header>
         
         <div class="container">
+            <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
             <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
         </div>
         
@@ -147,9 +149,9 @@ and open the template in the editor.
                             <td class="col-1 data">1</td>
                             <td class="col-2 data">Kueh with Character</td>
                             <td class="col-2 data">Chwee Kueh</td>
-                            <td class="col-2 data">A popular breakfast item which rice cakes are topped with diced preserved radish and served with chili sauce.</td>
+                            <td class="col-2 data">A popular breakfast item which rice cakes are topped with diced preserved radish and served with chili sauce.</td> <!--https://en.wikipedia.org/wiki/Chwee_kueh-->
                             <td class="col-2 data">$0.50/pc</td>
-                            <td class="col-2"><img src="img/Kueh with Character/Chwee Kueh.jpg" class="img-fluid img-thumbnail" alt="Chwee Kueh"></td>
+                            <td class="col-2"><img src="img/Kueh with Character/Chwee Kueh.jpg" class="img-fluid img-thumbnail" alt="Chwee Kueh"></td> <!--http://www.mykitchensnippets.com/2011/04/chwee-kuehquar-ko-kuehsteamed-rice-cake.html-->
                             <td class="col-1"><a href = # class="edit" data-toggle="modal" data-target="#editModal"><span class="fa fa-edit"> Edit</span></a> 
                                 <a href = # class="delete" data-toggle="modal" data-target="#deleteModal"><span class="fas fa-trash-alt"> Delete</span></a></td>
                         </tr>
@@ -157,9 +159,9 @@ and open the template in the editor.
                             <td class="col-1 data">2</td>
                             <td class="col-2 data">Kueh with Character</td>
                             <td class="col-2 data">Png Kueh</td>
-                            <td class="col-2 data">Soft and tender and the glutinous rice filling with full of mushroom and dried shrimp flavour. Added some fried shallots, chopped spring onions and a trickle of sweet soy sauce.</td>
+                            <td class="col-2 data">Soft and tender and the glutinous rice filling with full of mushroom and dried shrimp flavour. Added some fried shallots, chopped spring onions and a trickle of sweet soy sauce.</td> <!-- http://ieatishootipost.sg/teochew-kueh-why-is-there-red-and-white-png-kueh/-->
                             <td class="col-2 data">$0.60/pc</td>
-                            <td class="col-2"><img src="img/Kueh with Character/Png Kueh.jpg" class="img-fluid img-thumbnail" alt="Png Kueh"></td>
+                            <td class="col-2"><img src="img/Kueh with Character/Png Kueh.jpg" class="img-fluid img-thumbnail" alt="Png Kueh"></td> <!-- http://www.pbs.org/food/fresh-tastes/hungry-ghost-festival-singapore/-->
                             <td class="col-1"><a href = # class="edit"><span class="fa fa-edit"> Edit</span></a>
                                 <a href = # class="delete"><span class="fas fa-trash-alt"> Delete</span></a></td>
                         </tr>
@@ -167,9 +169,9 @@ and open the template in the editor.
                             <td class="col-1 data">3</td>
                             <td class="col-2 data">The Basic Kuehs</td>
                             <td class="col-2 data">Ang Ku Kueh</td>
-                            <td class="col-2 data">Small round or oval shaped pastry with soft sticky glutinous rice flour skin wrapped around a sweet filling in the centre.</td>
+                            <td class="col-2 data">Small round or oval shaped pastry with soft sticky glutinous rice flour skin wrapped around a sweet filling in the centre.</td> <!-- https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
                             <td class="col-2 data">$0.50/pc</td>
-                            <td class="col-2"><img src="img/The Basic Kuehs/Ang Ku Kueh.jpg" class="img-fluid img-thumbnail" alt="Ang Ku Kueh"></td>
+                            <td class="col-2"><img src="img/The Basic Kuehs/Ang Ku Kueh.jpg" class="img-fluid img-thumbnail" alt="Ang Ku Kueh"></td> <!-- https://www.stovve.com/peranakan-patisserie -->
                             <td class="col-1"><a href = # class="edit"><span class="fa fa-edit"> Edit</span></a>
                                 <a href = # class="delete"><span class="fas fa-trash-alt"> Delete</span></a></td>
                         </tr>
@@ -177,9 +179,9 @@ and open the template in the editor.
                             <td class="col-1 data">4</td>
                             <td class="col-2 data">The Basic Kuehs</td>
                             <td class="col-2 data">Ondeh Ondeh</td>
-                            <td class="col-2 data">One of the all-time favourite Nonya desserts, soft glutinous rice balls, infused in pandan juice, filled with aromatic palm sugar, then coated in a sweet, fresh and pleasant taste of grated white coconut.</td>
+                            <td class="col-2 data">One of the all-time favourite Nonya desserts, soft glutinous rice balls, infused in pandan juice, filled with aromatic palm sugar, then coated in a sweet, fresh and pleasant taste of grated white coconut.</td> <!-- https://www.ladyironchef.com/2015/08/guide-traditional-kueh/ -->
                             <td class="col-2 data">$0.30/pc</td>
-                            <td class="col-2"><img src="img/The Basic Kuehs/Ondeh Ondeh.jpg" class="img-fluid img-thumbnail" alt="Ondeh Ondeh"></td>
+                            <td class="col-2"><img src="img/The Basic Kuehs/Ondeh Ondeh.jpg" class="img-fluid img-thumbnail" alt="Ondeh Ondeh"></td> <!-- https://www.elmundoeats.com/pandan-balls-with-coconut-sugar-ondeh-ondeh/-->
                             <td class="col-1"><a href = # class="edit"><span class="fa fa-edit"> Edit</span></a>
                                 <a href = # class="delete"><span class="fas fa-trash-alt"> Delete</span></a></td>
                         </tr>
@@ -187,9 +189,9 @@ and open the template in the editor.
                             <td class="col-1 data">5</td>
                             <td class="col-2 data">The Heavyweight Kuehs</td>
                             <td class="col-2 data">Apam Balik</td>
-                            <td class="col-2 data">A Southeast Asian fluffy pancake with cream corn or peanuts. This soft pancake has a thick surface with thin and crispy side.</td>
+                            <td class="col-2 data">A Southeast Asian fluffy pancake with cream corn or peanuts. This soft pancake has a thick surface with thin and crispy side.</td> <!-- https://www.nyonyacooking.com/recipes/apam-balik~SJ5WuvsDf9WQ -->
                             <td class="col-2 data">$0.70/pc</td>
-                            <td class="col-2"><img src="img/The Heavyweight Kuehs/Apam Balik.jpg" class="img-fluid img-thumbnail" alt="Apam Balik"></td>
+                            <td class="col-2"><img src="img/The Heavyweight Kuehs/Apam Balik.jpg" class="img-fluid img-thumbnail" alt="Apam Balik"></td> <!-- https://www.elmundoeats.com/asian-peanut-pancake-turnover-apam-balik/ -->
                             <td class="col-1"><a href = # class="edit"><span class="fa fa-edit"> Edit</span></a>
                                 <a href = # class="delete"><span class="fas fa-trash-alt"> Delete</span></a></td>
                         </tr>
@@ -197,9 +199,9 @@ and open the template in the editor.
                             <td class="col-1 data">6</td>
                             <td class="col-2 data">The Heavyweight Kuehs</td>
                             <td class="col-2 data">Kueh Cara</td>
-                            <td class="col-2 data">Made from pure coconut milk and vanilla juice and stuffed with chopped coconut sugar for the explosion filling.</td>
+                            <td class="col-2 data">Made from pure coconut milk and vanilla juice and stuffed with chopped coconut sugar for the explosion filling.</td> <!-- https://www.tasteatlas.com/kuih-cara-manis -->
                             <td class="col-2 data">$0.40/pc</td>
-                            <td class="col-2"><img src="img/The Heavyweight Kuehs/Kueh Cara.jpg" class="img-fluid img-thumbnail" alt="Kueh Cara"></td>
+                            <td class="col-2"><img src="img/The Heavyweight Kuehs/Kueh Cara.jpg" class="img-fluid img-thumbnail" alt="Kueh Cara"></td> <!-- https://www.kuali.com/recipe/kuih-cara-manis-pandan-sponge-cake/ -->
                             <td class="col-1"><a href = # class="edit"><span class="fa fa-edit"> Edit</span></a>
                                 <a href = # class="delete"><span class="fas fa-trash-alt"> Delete</span></a></td>
                         </tr>
@@ -207,9 +209,9 @@ and open the template in the editor.
                             <td class="col-1 data">7</td>
                             <td class="col-2 data">The Heavyweight Kuehs</td>
                             <td class="col-2 data">Kueh Talam Ubi</td>
-                            <td class="col-2 data">It’s a 2 layered steamed kueh, fresh coconut milk at the top and tapioca at the bottom. Sweet and savoury at the same time.</td>
+                            <td class="col-2 data">It’s a 2 layered steamed kueh, fresh coconut milk at the top and tapioca at the bottom. Sweet and savoury at the same time.</td> <!-- http://fuzzymazing.blogspot.com/2011/10/talam-ubi.html-->
                             <td class="col-2 data">$0.50/pc</td>
-                            <td class="col-2"><img src="img/The Heavyweight Kuehs/Kueh Talam Ubi.jpg" class="img-fluid img-thumbnail" alt="Kueh Talam Ubi"></td>
+                            <td class="col-2"><img src="img/The Heavyweight Kuehs/Kueh Talam Ubi.jpg" class="img-fluid img-thumbnail" alt="Kueh Talam Ubi"></td> <!-- https://www.aynorablogs.com/2018/11/resepi-kuih-talam-ubi-yang-sedap.html-->
                             <td class="col-1"><a href = # class="edit"><span class="fa fa-edit"> Edit</span></a>
                                 <a href = # class="delete"><span class="fas fa-trash-alt"> Delete</span></a></td>
                         </tr>

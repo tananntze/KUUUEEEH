@@ -4,6 +4,7 @@
         <title>Home</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name ="KUUUEEEH website where you find the best kuehs">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/login.css">
@@ -17,7 +18,7 @@
 
     <header>
         <nav class="nav navbar navbar-expand-md bg-pink navbar-dark" role="navigation">
-            <a class="navbar-brand" href="#">Kuey Logo</a>
+            <a class="navbar-brand logocolor" href="index.php">KUUUEEEH</a>
             <button class="navbar-toggler custom-toggler" type='button' data-toggle="collapse" data-target="#navbar1">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,7 +41,8 @@
     </header>
 
 
-
+    <!--https://bootsnipp.com/snippets/dldxB --> 
+    <!-- Login Page -->
     <div class="wrapper fadeInDown">
         <div id="formContent">
             <!-- Tabs Titles -->
@@ -53,14 +55,14 @@
                 <input type="submit" class="fadeIn fourth" value="Log In">
             </form>
 
-            <!-- Remind Password -->
+            <!-- Forget Password -->
             <div id="formFooter">
                 <a class="underlineHover" href="#">Forgot Password?</a>
             </div>
 
         </div>
     </div>
-
+    <!-- Shopping cart -->
     <section class="modal fade" id="orderPopup" role="dialog">
         <section class="modal-dialog">
             <section class="modal-content">
@@ -80,6 +82,7 @@
         </section>
     </section>
 </body>
+
 <footer class="footer-bs p-2 mb-0">
 
     <div class="row mx-0">

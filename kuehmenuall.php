@@ -10,6 +10,7 @@ and open the template in the editor.
         <title>All Kuehs</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name ="KUUUEEEH website where you find the best kuehs">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/kuehmenuall.css">
@@ -29,7 +30,7 @@ and open the template in the editor.
     <body background="img/Pink Dots Tumblr BG.jpg">
         <header>
             <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
-                <a class="navbar-brand" href="#">Kuey Logo</a>
+                <a class="navbar-brand logocolor" href="index.php">KUUUEEEH</a>
                 <button class ="navbar-toggler custom-toggler" type = 'button' data-toggle="collapse" data-target ="#navbar">
                     <span class ="navbar-toggler-icon"></span>
                 </button>
@@ -73,6 +74,7 @@ and open the template in the editor.
         </section>
 
         <div class="container">
+            <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
             <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
         </div>
         
