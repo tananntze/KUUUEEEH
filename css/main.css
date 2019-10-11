@@ -138,6 +138,10 @@ input {
     font-weight: bold;
 }
 
+.logocolor{
+    color: #f7536b !important;
+}
+
 .fa-directions {
     color: #f7536b;
 }
