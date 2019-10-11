@@ -3,12 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//This is the code to display the populated table of my orders
 var subtotal = 0.0;
 var getQuantity = 7;
+function attachListeners() {
+    btnAngkk = document.getElementById("btnAngKk").addEventListener("click", function() {
+         document.location.href = "kuehmenuall.php#angKK";
+    });
+    btnLapis = document.getElementById("btnLapis").addEventListener("click", function() {
+         document.location.href = "kuehmenuall.php#lapis";
+    });
+    btnChwee = document.getElementById("btnChwee").addEventListener("click", function() {
+         document.location.href = "kuehmenuall.php#chwee";
+    });
+    btnPng = document.getElementById("btnPng").addEventListener("click", function() {
+         document.location.href = "kuehmenuall.php#png";
+    });
+}
 window.onload = function() {
+    attachListeners();
     displayOrder();
     document.getElementById("badgeQuantity").innerHTML = getQuantity.toString(); //displays quantity similar to notification icon
+    btnCart = document.getElementsByClassName("btn");
+    for (var i = 0; i < btnCart.length; i++) {
+        btnCart[i].addEventListener('click', incrementCount, false);
+    }
 };
 function displayOrder() {
     var quantity = document.getElementById("quantity");
@@ -55,4 +73,8 @@ function displayOrder() {
         subtotal += (quantities[i] * cost[i]);
     }
     document.getElementById("subTotal").innerHTML = "Subtotal: $" + subtotal.toFixed(2);
+}
+function incrementCount() {
+    getQuantity += 1;
+    document.getElementById("badgeQuantity").innerHTML = getQuantity.toString();
 }

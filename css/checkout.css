@@ -41,10 +41,10 @@ and open the template in the editor.
     margin-top: 30px;
 }
 table {
-    width: 700px;
+    width: 900px;
 }
 td {
-  width: 140px;
+  width: 180px;
 } 
 table, tr, td {
     border: solid 1.5px black;

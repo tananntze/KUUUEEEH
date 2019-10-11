@@ -28,7 +28,7 @@ and open the template in the editor.
                 </button>
                 <nav class ="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav">
-                        <li class ="nav-item"><a href ="home.php">Home</a></li>
+                        <li class ="nav-item"><a href ="index.php">Home</a></li>
                         <li class ="nav-item"><a href="aboutus.php">About Us</a></li>
                         <li class ="nav-item"><a href="kuehmenuall.php">Kueh</a></li>
                         <li class ="nav-item"><a href="#">Contact Us</a></li>
@@ -57,7 +57,7 @@ and open the template in the editor.
                             <table id="tblOrders"></table>
                         </section>
                         <p id="subTotal">Subtotal:</p>
-                        <a href="kuehcheckout.php" id="btnCheckout" class="btn btn-block btn-primary">Proceed to Checkout</a>
+                        <a href="kuehcheckout.php" id="btnCheckout" class="btn btn-block btn-success">Proceed to Checkout  <span class="fa fa-arrow-circle-right"></span></a></a>
                     </section>
                 </section>
             </section>
@@ -128,7 +128,7 @@ and open the template in the editor.
 
                 <div class="col-md-6">
                     <ul class="list">
-                        <li><a href="home.php">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="aboutus.php">About Us</a></li>
                         <li><a href="kuehmenuall.php">Kueh</a></li>
                         <li><a href="contactus.php">Contact Us</a></li>

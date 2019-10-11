@@ -33,7 +33,7 @@ and open the template in the editor.
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">
-                            <a class ="nav-link" href="home.php"><span class="fas fa-directions">Logout</span></a>
+                            <a class ="nav-link" href="index.php"><span class="fas fa-directions">Logout</span></a>
                         </li>
                     </ul>
                 </nav>  
@@ -41,8 +41,8 @@ and open the template in the editor.
         </header>
 
         <div class="container">
-            <img src="img/Banner - White.png" alt="" class="responsive">
-        </div>
+        <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
+    </div>
 
         <section>
             <div class="container-fluid" style= 'margin-top:20px'>
@@ -64,7 +64,7 @@ and open the template in the editor.
                                 <section class="form-group">
                                     <label>*Promotion Banner:</label>
                                     <input id="file_input" type="file" accept="image/*" style="display:none;"/>
-                                    <button id="banner_file_upload" type="button" class="btn btn-primary">Upload Promotion Banner <span class="glyphicon glyphicon-upload"></span></button>
+                                    <button id="banner_file_upload" type="button" class="btn btn-primary"><span class="fa fa-upload"></span> Upload Promotion Banner</button>
                                     <section id="banner_dropzone">
                                         <img id="banner">
                                     </section>
@@ -73,7 +73,7 @@ and open the template in the editor.
                                 <section class="form-group">
                                     <label for="title">*Date of Promotion:</label>
                                 </section>
-                                <button id="btnAdd" type="button" class="btn btn-block">Add Promotion <span class="glyphicon glyphicon-plus-sign"></span></button>
+                                <button id="btnAdd" type="button" class="btn btn-block btn-success"><span class="fa fa-plus-circle"></span> Add Promotion</button>
                             </form>
                         </section>
                     </div>
@@ -93,7 +93,7 @@ and open the template in the editor.
 
                 <div class="col-md-6">
                     <ul class="list">
-                        <li><a href="home.php">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="aboutus.php">About Us</a></li>
                         <li><a href="kuehmenuall.php">Kueh</a></li>
                         <li><a href="contactus.php">Contact Us</a></li>

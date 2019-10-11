@@ -26,7 +26,7 @@ and open the template in the editor.
                 </button>
                 <nav class ="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav">
-                        <li class ="nav-item"><a href ="home.php">Home</a></li>
+                        <li class ="nav-item"><a href ="index.php">Home</a></li>
                         <li class ="nav-item"><a href="aboutus.php">About Us</a></li>
                         <li class ="nav-item"><a href="kuehmenuall.php">Kueh</a></li>
                         <li class ="nav-item"><a href="contactus.php">Contact Us</a></li>
@@ -163,7 +163,7 @@ and open the template in the editor.
                                 </section>
                             </section>
                             <p id="txtConfirm">Please confirm your order. Once done, click Place Order.</p>
-                            <button id="btnOrder" type="button" class="btn btn-block btn-success">Place Order</button>
+                            <button id="btnOrder" type="button" class="btn btn-block btn-success">Place Order  <span class="fa fa-clipboard"></span></button>
                         </div>
                     </section>
                 </form>
@@ -182,7 +182,7 @@ and open the template in the editor.
 
                 <div class="col-md-6">
                     <ul class="list">
-                        <li><a href="home.php">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="aboutus.php">About Us</a></li>
                         <li><a href="kuehmenuall.php">Kueh</a></li>
                         <li><a href="contactus.php">Contact Us</a></li>

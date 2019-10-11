@@ -17,7 +17,7 @@ and open the template in the editor.
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-        <script src="js/myorderspopup.js"></script>
+        <script src="js/aboutus.js"></script>
     </head>
     <body class="overlay">
         <header>
@@ -28,7 +28,7 @@ and open the template in the editor.
                 </button>
                 <nav class ="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav">
-                        <li class ="nav-item"><a href ="home.php">Home</a></li>
+                        <li class ="nav-item"><a href ="index.php">Home</a></li>
                         <li class ="nav-item"><a href="#">About Us</a></li>
                         <li class ="nav-item"><a href="kuehmenuall.php">Kueh</a></li>
                         <li class ="nav-item"><a href="contactus.php">Contact Us</a></li>
@@ -57,7 +57,7 @@ and open the template in the editor.
                             <table id="tblOrders"></table>
                         </section>
                         <p id="subTotal">Subtotal:</p>
-                        <a href="kuehcheckout.php" id="btnCheckout" class="btn btn-block btn-primary">Proceed to Checkout</a>
+                        <a href="kuehcheckout.php" id="btnCheckout" class="btn btn-block btn-success">Proceed to Checkout <span class="fa fa-arrow-circle-right"></span></a>
                     </section>
                 </section>
             </section>
@@ -79,16 +79,20 @@ and open the template in the editor.
                 <section>
                     <div class ="row ml-12 standardfont">
                         <div class ="col-md-3 text-center">
-                            <img class="img_kueh rounded-circle" src="img/The Basic Kuehs/Ang Ku Kueh.jpg" alt="Ang Ku Kueh">
+                            <img class="zoom rounded-circle" id="btnAngKk" src="img/The Basic Kuehs/Ang Ku Kueh.jpg" alt="Ang Ku Kueh">
+                            <figcaption>Check Us Out In Our Menus!</figcaption>
                         </div>
                         <div class ="col-md-3 text-center">
-                            <img class="img_kueh rounded-circle" src="img/The Basic Kuehs/Kueh Lapis.jpg" alt="Kueh Lapis">
+                            <img class="zoom rounded-circle" id="btnLapis" src="img/The Basic Kuehs/Kueh Lapis.jpg" alt="Kueh Lapis">
+                            <figcaption>Check Us Out In Our Menus!</figcaption>
                         </div>
                         <div class ="col-md-3 text-center">
-                            <img class="img_kueh rounded-circle" src="img/Kueh with Character/Chwee Kueh.JPG" alt="Chwee Kueh">
+                            <img class="zoom rounded-circle" id="btnChwee" src="img/Kueh with Character/Chwee Kueh.JPG" alt="Chwee Kueh">
+                            <figcaption>Check Us Out In Our Menus!</figcaption>
                         </div>
                         <div class ="col-md-3 text-center">
-                            <img class="img_kueh rounded-circle" src="img/Kueh with Character/Png Kueh.jpg" alt="Png Kueh">
+                            <img class="zoom rounded-circle" id="btnPng" src="img/Kueh with Character/Png Kueh.jpg" alt="Png Kueh">
+                            <figcaption>Check Us Out In Our Menus!</figcaption>
                         </div>
                     </div>
                     <div class ="row ml-6 standardfont">
@@ -104,6 +108,7 @@ and open the template in the editor.
                             <p id="bon_appetit">"Bon Appétit!"</p>
                         </div>
                     </div>
+                </section>
             </div>
         </section>
     </body>
@@ -119,7 +124,7 @@ and open the template in the editor.
 
                 <div class="col-md-6">
                     <ul class="list">
-                        <li><a href="home.php">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="aboutus.php">About Us</a></li>
                         <li><a href="kuehmenuall.php">Kueh</a></li>
                         <li><a href="contactus.php">Contact Us</a></li>

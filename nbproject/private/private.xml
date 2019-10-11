@@ -2,11 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group>
             <file>file:/D:/SIT/Semester%201/Softwares/XAMPP/xampp/htdocs/1004-Project/KUUUEEEH/js/main.js</file>
             <file>file:/D:/SIT/Semester%201/Softwares/XAMPP/xampp/htdocs/1004-Project/KUUUEEEH/kuehmenuall.php</file>
             <file>file:/D:/SIT/Semester%201/Softwares/XAMPP/xampp/htdocs/1004-Project/KUUUEEEH/css/kuehmenuall.css</file>
             <file>file:/D:/SIT/Semester%201/Softwares/XAMPP/xampp/htdocs/1004-Project/KUUUEEEH/css/main.css</file>
         </group>
+=======
+        <group/>
+>>>>>>> cac0320b2955fc31846bdde35ab5c3b56a45a6e1
     </open-files>
 </project-private>
