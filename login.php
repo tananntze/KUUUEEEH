@@ -40,7 +40,8 @@
     </header>
 
 
-
+    <!--https://bootsnipp.com/snippets/dldxB --> 
+    <!-- Login Page -->
     <div class="wrapper fadeInDown">
         <div id="formContent">
             <!-- Tabs Titles -->
@@ -53,14 +54,14 @@
                 <input type="submit" class="fadeIn fourth" value="Log In">
             </form>
 
-            <!-- Remind Password -->
+            <!-- Forget Password -->
             <div id="formFooter">
                 <a class="underlineHover" href="#">Forgot Password?</a>
             </div>
 
         </div>
     </div>
-
+    <!-- Shopping cart -->
     <section class="modal fade" id="orderPopup" role="dialog">
         <section class="modal-dialog">
             <section class="modal-content">
@@ -80,6 +81,7 @@
         </section>
     </section>
 </body>
+
 <footer class="footer-bs p-2 mb-0">
 
     <div class="row mx-0">
