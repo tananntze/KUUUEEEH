@@ -70,6 +70,7 @@ fa-directions {
     color: brown;
     font-size: 30px;
     font-weight: bold;
+    font-style: italic;
     visibility: hidden;
     z-index: 1;
     background-color: transparent;
