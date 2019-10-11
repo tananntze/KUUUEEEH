@@ -20,7 +20,7 @@ and open the template in the editor.
     <body>
         <header>
             <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
-                <a class="navbar-brand" href="#">Kuey Logo</a>
+                <a class="navbar-brand" href="#">KUUUEEEH</a>
                 <button class ="navbar-toggler custom-toggler" type = 'button' data-toggle="collapse" data-target ="#navbar">
                     <span class ="navbar-toggler-icon"></span>
                 </button>
@@ -139,12 +139,12 @@ and open the template in the editor.
                                 <section id="paragraph">
                                     <section id="step3Radio">
                                         <section class="radio_grp">
+                                            <!--The Image source is taken and credited by: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
                                             <input class="radio_set" type="radio" name="radioPayment" id="payVisa" value="Visa" checked="true"><label class="radio_lbl" for="delVisa">Visa</label><img class="card_logo" src="img/visa.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
-                                            <!--Cite: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
                                         </section>
                                         <section class="radio_grp">
+                                            <!--The Image source is taken and credited by: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
                                             <input class="radio_set" type="radio" name="radioPayment" id="payMaster" value="MasterCard"><label class="radio_lbl" for="delMaster">MasterCard</label><img class="card_logo" src="img/mastercard.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
-                                            <!--Cite: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
                                         </section>
                                         <section class="form-group">
                                             <label for="card_name">*Name Of Card:</label>
