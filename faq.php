@@ -159,7 +159,7 @@
 
     </body>
 
-    <footer class="footer-bs p-2 mb-0">
+<footer class="footer-bs p-2 mb-0"> <!--cited from https://codepen.io/nonelittlesong/pen/dLQVeJ-->
 
         <div class="row mx-0">
             <div class="col-md-3 footer-brand animated fadeInLeft">
