@@ -29,7 +29,7 @@ and open the template in the editor.
                     <ul class="nav navbar-nav">
                         <li class ="nav-item"><a href ="orders.php">Orders of the Day</a></li>
                         <li class ="nav-item"><a href ="editadmin.php">Kueh Menu</a></li>
-                        <li class ="nav-item"><a href ="#">Promotions</a></li>
+                        <li class ="nav-item"><a href ="promotions.php">Promotions</a></li>
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
                         <li class="nav navbar-nav">

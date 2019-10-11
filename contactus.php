@@ -31,7 +31,7 @@ and open the template in the editor.
                         <li class ="nav-item"><a href ="index.php">Home</a></li>
                         <li class ="nav-item"><a href="aboutus.php">About Us</a></li>
                         <li class ="nav-item"><a href="kuehmenuall.php">Kueh</a></li>
-                        <li class ="nav-item"><a href="#">Contact Us</a></li>
+                        <li class ="nav-item"><a href="contactus.php">Contact Us</a></li>
                         <li class ="nav-item"><a href="faq.php">FAQ's</a></li>
                     </ul>
                     <ul class ="nav navbar-nav ml-auto">
