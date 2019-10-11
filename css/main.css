@@ -38,11 +38,8 @@ body{
     text-shadow: 2px 3px 2px black;
 }
 
-<<<<<<< HEAD
-=======
 /* Resize of banner to a suitable dimensions */
 /*for all the banner sizing*/
->>>>>>> 38bcf3b6b84504090f994ebd1d8f7a3fc61ec303
 #bannerresize{
     display: inherit;
     margin-left: auto;
