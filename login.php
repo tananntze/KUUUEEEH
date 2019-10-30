@@ -28,7 +28,7 @@
             <!-- Login Form -->
             <form action="orders.php">
                 <input type="text" id="login" class="fadeIn second" name="login" placeholder="Email Address">
-                <input type="text" id="password" class="fadeIn third" name="login" placeholder="Password">
+                <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password">
                 <input type="submit" class="fadeIn fourth" value="Log In">
             </form>
 
