@@ -9,6 +9,7 @@ and open the template in the editor.
         <title>Kueh Checkout</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name ="KUUUEEEH website where you find the best kuehs">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css"/> 
         <link rel="stylesheet" href="css/checkout.css"/> 
@@ -20,7 +21,7 @@ and open the template in the editor.
     <body>
         <header>
             <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
-                <a class="navbar-brand" href="#">Kuey Logo</a>
+                <a class="navbar-brand logocolor" href="index.php">KUUUEEEH</a>
                 <button class ="navbar-toggler custom-toggler" type = 'button' data-toggle="collapse" data-target ="#navbar">
                     <span class ="navbar-toggler-icon"></span>
                 </button>
@@ -63,6 +64,7 @@ and open the template in the editor.
         </section>
         
         <div class="container">
+            <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
             <img src="img/Banner - White.png" alt="" class="responsive">
         </div>
         
@@ -139,12 +141,12 @@ and open the template in the editor.
                                 <section id="paragraph">
                                     <section id="step3Radio">
                                         <section class="radio_grp">
+                                            <!--The Image source is taken and credited by: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
                                             <input class="radio_set" type="radio" name="radioPayment" id="payVisa" value="Visa" checked="true"><label class="radio_lbl" for="delVisa">Visa</label><img class="card_logo" src="img/visa.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
-                                            <!--Cite: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
                                         </section>
                                         <section class="radio_grp">
+                                            <!--The Image source is taken and credited by: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
                                             <input class="radio_set" type="radio" name="radioPayment" id="payMaster" value="MasterCard"><label class="radio_lbl" for="delMaster">MasterCard</label><img class="card_logo" src="img/mastercard.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
-                                            <!--Cite: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
                                         </section>
                                         <section class="form-group">
                                             <label for="card_name">*Name Of Card:</label>
