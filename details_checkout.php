@@ -53,80 +53,36 @@ and open the template in the editor.
                         <h2 class="fontheader">KUEH CHECKOUT</h2>
                     </div>
                 </div>
-                <form id="customerForm" action="process_customer_checkout.php" method="post">
+                <form id="detailsForm" action="process_details_checkout.php" method="post">
                     <section class ="row justify-content-center ml-4 standardfont">
                         <div class="col-md-12">
-                            <section id="step1">
-                            <h3 class ="subheader">1) Select Delivery Type</h3>
-                            <section id="paragraph">
-                                <section id="step2Radio">
-                                    <section class="radio_grp">
-                                        <input class="radio_set" type="radio" name="radioDel" id="radioHome" value="delFast" checked="true"><label class="radio_lbl" for="delHome">Home Delivery</label>
-                                        <p id="txtHomeAddress"></p>
-                                        <p id="txtHomeDuration">Approximately 45-60 minutes</p>
-                                        <p id="deliveryHomeCost">Delivery Cost: $5.00</p>
-                                    </section>
-                                    <section class="radio_grp">
-                                        <input class="radio_set" type="radio" name="radioDel" id="radioStore" value="delNormal"><label class="radio_lbl" for="delNormal">Collect at our store</label>
-                                        <p id="txtStoreAddress"></p>
-                                        <p id="deliveryHomeCost">Delivery Cost: Free</p>
-                                    </section>
-                                    <!--<section id="collectionInstruction">
+                            <section id="step3">
+                                <h3 class ="subheader">Step 3) Select Delivery Type</h3>
+                                <section id="paragraph">
+                                    <section id="collectionInstruction">
                                         <h4>Collection Address</h4>
                                         <p id="txtCollectionAddress">
                                         <h4>Collection Instructions</h4>
                                         <p>For those waiting to collect their orders, kindly wait for notification before pickup. For both home delivery and collection, feel free to contact us @+6592129999 to enquire both your delivery and pickup timings. Thank you!</p>
-                                    </section>-->
+                                    </section>
                                 </section>
-                            </section>
-                        </section>
-                        </div>
-                    </section>
-                    <section class ="row justify-content-left ml-4 standardfont">
-                        <div class="col-md-12">
-                            <section id="step2">
-                                <h3 class ="subheader">2) Enter Customer's Details</h3>
-                                <section id="paragraph">
-                                    <section class="form-group">
-                                        <label for="email">*Email address:</label>
-                                        <input class="form-control" id="email" name="email" placeholder="Enter your email address" type="email" required="true"></section>
-                                        <section class="form-group">
-                                            <label for="first_name">*First Name:</label>
-                                            <input class="form-control" id="first_name" name="first_name" placeholder="Enter your first name" required="true" pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
-                                        </section>
-                                        <section class="form-group">
-                                            <label for="last_name">*Last Name:</label>
-                                            <input class="form-control" id="last_name" name="last_name" placeholder="Enter your last name" required="true" pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
-                                        </section>
-                                        <!--<section class="form-group">
-                                            <label for="address">*Address:</label>
-                                            <input class="form-control" id="address" name="address" placeholder="Enter your full address" type="text" required="true">
-                                        </section>-->
-                                        <!--<section class="form-group">
-                                            <label for="postal_code">*Postal Code:</label>
-                                            <input class="form-control" id="postal_code" name="postal_code" placeholder="Enter your postal code" type="tel" maxLength="6" required="true" pattern="[0-9]{6}">
-                                        </section>-->
-                                        <section class="form-group">
-                                            <label for="mobile_no">*Mobile Number:</label>
-                                            <input class="form-control" id="mobile_no" name="mobile_no" placeholder="Enter your mobile number" type="tel" maxLength="8" required="true" pattern="[0-9]{8}">
-                                        </section>
-                                    <button id="btnDetails" type="submit" class="btn btn-block btn-success">Proceed to Step 3  <span class="fa fa-arrow-circle-right"></span></button>
+                                <section class="form-group">
+                                    <label for="address">*Address:</label>
+                                    <input class="form-control" id="address" name="address" placeholder="Enter your full address" type="text" required="true">
                                 </section>
-                            </section>
-                    </section>
-                </form>
-                        <!--<div class="col-md-6">
-                            <section id="step3">
-                                <h3 class ="subheader">3) Enter Payment Details</h3>
+                                <section class="form-group">
+                                    <label for="postal_code">*Postal Code:</label>
+                                    <input class="form-control" id="postal_code" name="postal_code" placeholder="Enter your postal code" type="tel" maxLength="6" required="true" pattern="[0-9]{6}">
+                                </section>
                                 <section id="paragraph">
                                     <section id="step3Radio">
-                                        <section class="radio_grp">-->
+                                        <section class="radio_grp">
                                             <!--The Image source is taken and credited by: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
-                                            <!--<input class="radio_set" type="radio" name="radioPayment" id="payVisa" value="Visa" checked="true"><label class="radio_lbl" for="delVisa">Visa</label><img class="card_logo" src="img/visa.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
+                                            <input class="radio_set" type="radio" name="radioPayment" id="payVisa" value="Visa" checked="true"><label class="radio_lbl" for="delVisa">Visa</label><img class="card_logo" src="img/visa.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
                                         </section>
-                                        <section class="radio_grp">-->
+                                        <section class="radio_grp">
                                             <!--The Image source is taken and credited by: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
-                                            <!--<input class="radio_set" type="radio" name="radioPayment" id="payMaster" value="MasterCard"><label class="radio_lbl" for="delMaster">MasterCard</label><img class="card_logo" src="img/mastercard.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
+                                            <input class="radio_set" type="radio" name="radioPayment" id="payMaster" value="MasterCard"><label class="radio_lbl" for="delMaster">MasterCard</label><img class="card_logo" src="img/mastercard.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
                                         </section>
                                         <section class="form-group">
                                             <label for="card_name">*Name Of Card:</label>
@@ -179,13 +135,15 @@ and open the template in the editor.
                                             </select>
                                         </section>  
                                     </section>
+                                    <p id="txtConfirm">Please confirm your order. Once done, click Place Order.</p>
+                                    <button id="btnOrder" type="submit" class="btn btn-block btn-success">Place Order  <span class="fa fa-clipboard"></span></button>
                                 </section>
                             </section>
-                            <p id="txtConfirm">Please confirm your order. Once done, click Place Order.</p>
-                            <button id="btnOrder" type="submit" class="btn btn-block btn-success">Place Order  <span class="fa fa-clipboard"></span></button>
-                        </div>-->
+                        </div>
                     </section>
+                </form>
             </section>
+        </section>
     </body>
     <footer class="footer-bs p-2 mb-0">
 
