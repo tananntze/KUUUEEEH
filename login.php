@@ -16,31 +16,8 @@
         <script src="js/myorderspopup.js"></script>
     </head>
 
-    <header>
-        <nav class="nav navbar navbar-expand-md bg-pink navbar-dark" role="navigation">
-            <a class="navbar-brand logocolor" href="index.php">KUUUEEEH</a>
-            <button class="navbar-toggler custom-toggler" type='button' data-toggle="collapse" data-target="#navbar1">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar1">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item"><a href="index.php">Home</a></li>
-                    <li class="nav-item"><a href="aboutus.php">About Us</a></li>
-                    <li class ="nav-item"><a href="kuehmenuall.php">Kueh</a></li>
-                    <li class="nav-item"><a href="contactus.php">Contact Us</a></li>
-                    <li class="nav-item"><a href="faq.php">FAQ's</a></li>
-                </ul>
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav navbar-nav">
-                        <a class ="nav-link" href="javascript:displayOrder()" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions"> <span id="badgeQuantity" class="badge badge-danger"> </span> My Order </span></a>
-                        <a class="nav-link" href="#"><span class="fas fa-directions">Login</span></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-
+<body>
+    <?php include "header.php"?>
     <!--https://bootsnipp.com/snippets/dldxB --> 
     <!-- Login Page -->
     <div class="wrapper fadeInDown">
@@ -51,7 +28,7 @@
             <!-- Login Form -->
             <form action="orders.php">
                 <input type="text" id="login" class="fadeIn second" name="login" placeholder="Email Address">
-                <input type="text" id="password" class="fadeIn third" name="login" placeholder="Password">
+                <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password">
                 <input type="submit" class="fadeIn fourth" value="Log In">
             </form>
 
