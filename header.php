@@ -1,7 +1,7 @@
  <!-- Nav Bar-->
  <header>
         <nav class="nav navbar navbar-expand-md bg-pink navbar-dark" role="navigation">
-            <a class="navbar-brand" href="#">Kuey Logo</a>
+            <a class="navbar-brand logocolor" href="#">KUUUEEEH</a>
             <button class="navbar-toggler custom-toggler" type='button' data-toggle="collapse" data-target="#navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>

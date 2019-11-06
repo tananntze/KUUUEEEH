@@ -13,7 +13,8 @@
     <body>
         <main>
             <?php 
-            $email = $first_name = $last_name = $address = $postal_code = $mobile_no = $card_type = $card_name = $card_no = $ccv = $exp_month = $exp_year = $exp_date = $errorMsg = ""; 
+            $email = $first_name = $last_name  = $mobile_no = $errorMsg = ""; 
+            //$email = $first_name = $last_name = $address = $postal_code = $mobile_no = $card_type = $card_name = $card_no = $ccv = $exp_month = $exp_year = $exp_date = $errorMsg = ""; 
             $success = true; 
             $date_now = new DateTime("now", new DateTimeZone('Asia/Singapore')); //retrieves current date
             if (isset($_POST["radioPayment"])) {
@@ -45,7 +46,7 @@
                     $errorMsg .= "Please enter a proper last name.<br>";     
                     $success = false; 
                 }
-            } if (empty($_POST["address"])) {
+            } /*if (empty($_POST["address"])) {
                 $errorMsg .= "Delivery Address is required.<br>";     
                 $success = false; 
             } else {
@@ -59,7 +60,7 @@
                     $errorMsg .= "Please enter a proper postal code.<br>";     
                     $success = false; 
                 }
-            } if (empty($_POST["mobile_no"])) {
+            }*/ if (empty($_POST["mobile_no"])) {
                 $errorMsg .= "Mobile Number is required.<br>";     
                 $success = false; 
             } else {
@@ -68,7 +69,7 @@
                     $errorMsg .= "Please enter a proper mobile number.<br>";     
                     $success = false; 
                 }
-            } if (empty($_POST["card_name"])) {
+            } /*if (empty($_POST["card_name"])) {
                 $errorMsg .= "Card Name is required.<br>";     
                 $success = false; 
             } else {
@@ -107,14 +108,14 @@
             if ($exp_date < $date_now) {
                 $success = false;
                 $errorMsg .= "Your card has expired!<br>";  
-            }
+            }*/
             if (!$success) {
                 echo "<h1>Error processing checkout!</h1>";
                 echo "<h4>The following input errors were detected:</h4>";     
                 echo "<p>" . $errorMsg . "</p>";
             } else {
-                echo "<h1>Successful checkout!</h1>";
-                echo "<p>Bon Appetit!</p>";
+                /*echo "<h1>Successful checkout!</h1>";
+                echo "<p>Bon Appetit!</p>";*/
             }
             //Helper function that checks input for malicious or unwanted content. 
             function sanitize_input($data) {   

@@ -10,7 +10,6 @@ and open the template in the editor.
     <title>Home</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name ="KUUUEEEH website where you find the best kuehs">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/checkout.css"/>
@@ -38,7 +37,7 @@ and open the template in the editor.
                         <table id="tblOrders"></table>
                     </section>
                     <p id="subTotal">Subtotal:</p>
-                    <a href="kuehcheckout.php" id="btnCheckout" class="btn btn-block btn-success">Proceed to Checkout  <span class="fa fa-arrow-circle-right"></span></a></a>
+                    <a href="customer_checkout.php" id="btnCheckout" class="btn btn-block btn-success">Proceed to Checkout  <span class="fa fa-arrow-circle-right"></span></a></a>
                 </section>
             </section>
         </section>

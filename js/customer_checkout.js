@@ -6,10 +6,10 @@
 var txtEmail;
 var txtFirstName;
 var txtLastName;
-var txtAddress;
-var txtPc;
+//var txtAddress;
+//var txtPc;
 var txtMobileNo;
-var txtCollectionAddress;
+//var txtCollectionAddress;
 var txtOrderList = "";
 var subtotal = 0.0;
 var delivery = 0.00;
@@ -23,22 +23,24 @@ window.onload = function() {
     document.getElementById("badgeQuantity").innerHTML = getQuantity.toString(); //displays quantity similar to notification icon
 };
 function attachListeners() { //this is to add event listeners for the radio buttons of selecting type of delivery and type of payment
-    var btnOrder = document.getElementById("btnOrder");
+    //var btnOrder = document.getElementById("btnOrder");
+    var btnDetails = document.getElementById("btnDetails");
     var radioHome = document.getElementById("radioHome");
     var radioStore = document.getElementById("radioStore");
-    var address = document.getElementById("address");
-    var pc = document.getElementById("postal_code");
-    var radioVisa = document.getElementById("payVisa");
-    var radioMc = document.getElementById("payMaster");
-    address.addEventListener("input", updateAddress);
-    pc.addEventListener("input", updateAddress);
-    btnOrder.addEventListener("click", checkForms);
-    radioHome.addEventListener("click", updateAddress);
-    radioHome.addEventListener("click", updateDelivery);
-    radioStore.addEventListener("click", updateAddress);
-    radioStore.addEventListener("click", updateDelivery);
-    radioVisa.addEventListener("click", updateCard);
-    radioMc.addEventListener("click", updateCard);
+    btnDetails.addEventListener("click", checkForms);
+    //var address = document.getElementById("address");
+    //var pc = document.getElementById("postal_code");
+    //var radioVisa = document.getElementById("payVisa");
+    //var radioMc = document.getElementById("payMaster");
+    //address.addEventListener("input", updateAddress);
+    //pc.addEventListener("input", updateAddress);
+    //btnOrder.addEventListener("click", checkForms);
+    //radioHome.addEventListener("click", updateAddress);
+    //radioHome.addEventListener("click", updateDelivery);
+    ///radioStore.addEventListener("click", updateAddress);
+    //radioStore.addEventListener("click", updateDelivery);
+    //radioVisa.addEventListener("click", updateCard);
+    //radioMc.addEventListener("click", updateCard);
 }
 function displayOrder() { //this is the code to dynamically create rows and oclumns to populate the table content for my orders
     /*var quantity = document.getElementById("quantity");
@@ -91,7 +93,7 @@ function displayOrder() { //this is the code to dynamically create rows and oclu
     document.getElementById("totalAmt").innerHTML = "Total Amount: $" + totalAmt.toFixed(2);*/
 }
 function checkForms() { //this is the function for the form validation
-    var billingForm = document.getElementById("billingForm");
+    var customerForm = document.getElementById("customerForm");
     var email = document.getElementById("email");
     txtEmail = email.value;
     var isEmailValid = false;
@@ -101,16 +103,16 @@ function checkForms() { //this is the function for the form validation
     var lastName = document.getElementById("last_name");
     txtLastName = lastName.value;
     var isLastNameValid = false;
-    var address = document.getElementById("address");
+    /*var address = document.getElementById("address");
     txtAddress = address.value;
     var isAddressValid = false;
     var pc = document.getElementById("postal_code");
     txtPc = pc.value;
-    var isPcValid = false;
+    var isPcValid = false;*/
     var mobileNo = document.getElementById("mobile_no");
     txtMobileNo = mobileNo.value;
     var isMobileNoValid = false;
-    var cardName = document.getElementById("card_name");
+    /*var cardName = document.getElementById("card_name");
     var txtCardName = cardName.value;
     var isCardNameValid = false;
     var cardNum = document.getElementById("card_number");
@@ -124,7 +126,7 @@ function checkForms() { //this is the function for the form validation
     var expiryYear = document.getElementById("expiry_year");
     var txtExpiryYear = expiryYear.value;
     var expiryDate = new Date(txtExpiryYear + '-' + txtExpiryMonth + '-01'); //this excerpt of code is taken from: https://www.freecodecamp.org/forum/t/trying-to-validate-a-credit-card-expiry-month-against-current-date/191434/2
-    var isNotExpired = false;
+    var isNotExpired = false;*/
     if (txtEmail == "") { //this is to check if one of the text fields is left blank and the textfield will display respective indications of changing border color and showing tooltip to indicate error message
         email.setCustomValidity("This is a required field!");
         isEmailValid = false;
@@ -161,7 +163,7 @@ function checkForms() { //this is the function for the form validation
             lastName.setCustomValidity("");
             isLastNameValid = true;
         }
-    } if (txtAddress == "") {
+    } /*if (txtAddress == "") {
         address.setCustomValidity("This is a required field!");
         isAddressValid = false;
     } else {     
@@ -180,7 +182,7 @@ function checkForms() { //this is the function for the form validation
             pc.setCustomValidity("");
             isPcValid = true;
         }
-    } if (txtMobileNo == "") {
+    }*/ if (txtMobileNo == "") {
         mobileNo.setCustomValidity("This is a required field!");
         isMobileNoValid = false;
     } else {     
@@ -192,7 +194,7 @@ function checkForms() { //this is the function for the form validation
             mobileNo.setCustomValidity("");
             isMobileNoValid = true;
         }
-    } if (txtCardName == "") {
+    } /*if (txtCardName == "") {
         cardName.setCustomValidity("This is a required field!");
         isCardNameValid = false;
     } else {     
@@ -243,7 +245,7 @@ function checkForms() { //this is the function for the form validation
     }
     if (isEmailValid && isFirstNameValid && isLastNameValid && isAddressValid && isPcValid && isMobileNoValid && isCardNameValid && isCardNumValid && isCCVValid && isNotExpired) { //if all the textfields are valid, then form submission will take place and there will be a alert to display in a form of e-receipt to show that an order has been made successfully
             billingForm.submit();
-            /*alert("Thank you for ordering with KUUUEEEH!" + "\n\n\
+            alert("Thank you for ordering with KUUUEEEH!" + "\n\n\
               Order Successful!\n\n\
               Full Name: " + txtFirstName + " " + txtLastName + "\n\n\
               Address: " + txtAddress + " Singapore " + txtPc + "\n\n\
@@ -252,7 +254,10 @@ function checkForms() { //this is the function for the form validation
               My Order:\n" + txtOrderList + "\n\n\
               Total Amount: " + totalAmt.toFixed(2) + "\n\n\
               Payment By: " + cardType + "\n\n\
-              Delivered in: About 45-60 minutes");*/
+              Delivered in: About 45-60 minutes");
+    }*/
+    if (isEmailValid && isFirstNameValid && isLastNameValid && isMobileNoValid) {
+        customerForm.submit();
     }
 }
 function chkEmailSyntax(email) { //this is to check whether syntax of email is correct format or not
