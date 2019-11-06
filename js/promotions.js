@@ -25,12 +25,12 @@ function checkForms() { //this is the function for the form validation
     txtStart = start.value;
     startDate = new Date(txtStart);
     startDate.setHours(0, 0, 0);
-    var isStartDateValid = true;
+    var isStartDateValid = false;
     var end = document.getElementById("end_date");
     txtEnd = end.value;
     endDate = new Date(txtEnd);
     endDate.setHours(23, 59, 59);
-    var isEndDateValid = true;
+    var isEndDateValid = false;
     var bannerDropZone = document.getElementById("banner_dropzone");
     if (!isPicValid) {
         bannerDropZone.style.borderColor = "red";
@@ -66,13 +66,10 @@ function checkForms() { //this is the function for the form validation
             end.setCustomValidity("");
             isEndDateValid = true;
         }
-    }
-    if (isPicValid && isStartDateValid && isEndDateValid) {
+    } if (isPicValid && isStartDateValid && isEndDateValid) {
         alert("You have successfully added a new KUUUEEEH promotion!");
         promoForm.submit();
     }
-    var promoForm = document.getElementById("promoForm");
-    promoForm.submit();
 }
 function displayBanner(input) { //this is to check whether the file extension is an image or not. If it is an image, the image that is selected will be displayed out to the user.
     var fileInput = document.getElementById("file_input");

@@ -54,7 +54,7 @@
                 }
             }
             if (!$success) {
-                echo "<h1>Error processing checkout!</h1>";
+                echo "<h1>Error processing promotions!</h1>";
                 echo "<h4>The following input errors were detected:</h4>";     
                 echo "<p>" . $errorMsg . "</p>";
             } else {
