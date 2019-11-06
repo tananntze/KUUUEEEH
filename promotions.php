@@ -43,8 +43,8 @@ and open the template in the editor.
 
         <div class="container">
             <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
-        <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
-    </div>
+            <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
+        </div>
 
         <section>
             <div class="container-fluid" style= 'margin-top:20px'>
@@ -54,18 +54,10 @@ and open the template in the editor.
                     </div>
                     <div class="col-md-10">
                         <section id="paragraph">
-                            <form id="promoForm" action="" method="post">
-                                <section class="form-group">
-                                    <label for="title">*Promotion Title:</label>
-                                    <input class="form-control" id="title" name="title" placeholder="Enter promotion title">
-                                </section>
-                                <section class="form-group">
-                                    <label for="description">*Promotion Description:</label>
-                                    <textarea class="form-control" id="description" name="description" placeholder="Enter promotion description" rows="2"></textarea>
-                                </section>
+                            <form id="promoForm" action="processpromotions.php" method="post" enctype="multipart/form-data">
                                 <section class="form-group">
                                     <label>*Promotion Banner:</label>
-                                    <input id="file_input" type="file" accept="image/*" style="display:none;"/>
+                                    <input id="file_input" type="file" name="file_input" accept="image/*" style="display:none;"/>
                                     <button id="banner_file_upload" type="button" class="btn btn-primary"><span class="fa fa-upload"></span> Upload Promotion Banner</button>
                                     <section id="banner_dropzone">
                                         <img id="banner">
@@ -73,9 +65,14 @@ and open the template in the editor.
                                     <p id="filePath">No File Path specified</p>
                                 </section>
                                 <section class="form-group">
-                                    <label for="title">*Date of Promotion:</label>
+                                    <label for="start_date">*Promotion Start Date: </label>
+                                    <input id="start_date" min="2019-10-01" max="2029-01-01" type="date" name="start_date"/>
                                 </section>
-                                <button id="btnAdd" type="button" class="btn btn-block btn-success"><span class="fa fa-plus-circle"></span> Add Promotion</button>
+                                <section class="form-group">
+                                    <label for="end_date">*Promotion End Date: </label>
+                                    <input id="end_date" min="2019-10-01" max="2029-01-01" type="date" name="end_date"/>
+                                </section>
+                                <button id="btnAdd" type="submit" class="btn btn-block btn-success"><span class="fa fa-plus-circle"></span> Add Promotion</button>
                             </form>
                         </section>
                     </div>

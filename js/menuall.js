@@ -5,7 +5,7 @@
  */
 //This is the code to display the populated table of my orders
 var subtotal = 0.0;
-var getQuantity = 7;
+var getQuantity = 0;
 window.onload = function() {
     displayOrder();
     document.getElementById("badgeQuantity").innerHTML = getQuantity.toString(); //displays quantity similar to notification icon
@@ -15,7 +15,7 @@ window.onload = function() {
     }
 };
 function displayOrder() { //this is the code to dynamically create rows and columns to populate the table content for my orders
-    var quantity = document.getElementById("quantity");
+    /*var quantity = document.getElementById("quantity");
     var tblOrders = document.getElementById("tblOrders");
     var noOfDiffKuehs = 4;
     quantity.innerHTML = "Total Quantity: " + getQuantity;
@@ -58,7 +58,7 @@ function displayOrder() { //this is the code to dynamically create rows and colu
         cellPriceAction.innerHTML = "<a id='btnEdit' href='#'><span class='fa fa-edit'> Edit</span></a><a href ='#' class='delete'><span class='fa fa-trash-o'> Delete</span></a>";
         subtotal += (quantities[i] * cost[i]);
     }
-    document.getElementById("subTotal").innerHTML = "Subtotal: $" + subtotal.toFixed(2);
+    document.getElementById("subTotal").innerHTML = "Subtotal: $" + subtotal.toFixed(2);*/
 }
 function incrementCount() { //this is to increment count for quantity of orders after button clicked
     getQuantity += 1;

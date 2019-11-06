@@ -75,7 +75,7 @@ and open the template in the editor.
                         <h2 class="fontheader">KUEH CHECKOUT</h2>
                     </div>
                 </div>
-                <form id="billingForm" action="" method="post">
+                <form id="billingForm" action="processcheckout.php" method="post">
                     <section class ="row justify-content-center ml-4 standardfont">
                         <div class="col-md-12">
                             <section id="step1">
@@ -111,26 +111,26 @@ and open the template in the editor.
                                 <section id="paragraph">
                                     <section class="form-group">
                                         <label for="email">*Email address:</label>
-                                        <input class="form-control" id="email" name="email" tabindex="1" placeholder="Enter your email address"></section>
+                                        <input class="form-control" id="email" name="email" placeholder="Enter your email address" type="email" required="true"></section>
                                         <section class="form-group">
                                             <label for="first_name">*First Name:</label>
-                                            <input class="form-control" id="first_name" name="first_name" placeholder="Enter your first name">
+                                            <input class="form-control" id="first_name" name="first_name" placeholder="Enter your first name" required="true" pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
                                         </section>
                                         <section class="form-group">
                                             <label for="last_name">*Last Name:</label>
-                                            <input class="form-control" id="last_name" name="last_name" placeholder="Enter your last name">
+                                            <input class="form-control" id="last_name" name="last_name" placeholder="Enter your last name" required="true" pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
                                         </section>
                                         <section class="form-group">
                                             <label for="address">*Address:</label>
-                                            <input class="form-control" id="address" name="address" placeholder="Enter your full address">
+                                            <input class="form-control" id="address" name="address" placeholder="Enter your full address" type="text" required="true">
                                         </section>
                                         <section class="form-group">
                                             <label for="postal_code">*Postal Code:</label>
-                                            <input class="form-control" id="postal_code" name="postal_code" placeholder="Enter your postal code" maxLength="6">
+                                            <input class="form-control" id="postal_code" name="postal_code" placeholder="Enter your postal code" type="tel" maxLength="6" required="true" pattern="[0-9]{6}">
                                         </section>
                                         <section class="form-group">
                                             <label for="mobile_no">*Mobile Number:</label>
-                                            <input class="form-control" id="mobile_no" name="mobile_no" placeholder="Enter your mobile number" maxLength="10">
+                                            <input class="form-control" id="mobile_no" name="mobile_no" placeholder="Enter your mobile number" type="tel" maxLength="8" required="true" pattern="[0-9]{8}">
                                         </section>
                                 </section>
                             </section>
@@ -150,24 +150,59 @@ and open the template in the editor.
                                         </section>
                                         <section class="form-group">
                                             <label for="card_name">*Name Of Card:</label>
-                                            <input class="form-control" id="card_name" name="card_name" placeholder="Enter your name of the card">
+                                            <input class="form-control" id="card_name" name="card_name" placeholder="Enter your name of the card" type="name" required="true" pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
                                         </section>
                                         <section class="form-group">
                                             <label for="card_number">*16-Digit Card Number:</label>
-                                            <input class="form-control" id="card_number" name="card_number" placeholder="Enter your 16 digit card number" maxlength="16">
+                                            <input class="form-control" id="card_number" name="card_number" placeholder="Enter your 16 digit card number" type="tel" maxlength="16" required="true" pattern="[0-9]{16}">
                                         </section>
                                         <section class="form-group">
                                             <label for="first_name">*CCV Number:</label>
-                                            <input class="form-control" id="ccv" name="ccv" placeholder="Enter your CCV card number" maxlength="3">
+                                            <input class="form-control" id="ccv" name="ccv" placeholder="Enter your CCV card number" type="tel" maxlength="3" required="true" pattern="[0-9]{3}">
                                         </section>
                                         <section class="form-group">
-                                            <label for="expiry_date">*Card Expiry Date:</label>
+                                            <label for="expiry_month">*Card Expiry Month (in MM):</label>
+                                            <select class="custom-select" id="expiry_month" name="expiry_month">
+                                                <option selected>01</option>
+                                                <option>02</option>
+                                                <option>03</option>
+                                                <option>04</option>
+                                                <option>05</option>
+                                                <option>06</option>
+                                                <option>07</option>
+                                                <option>08</option>
+                                                <option>09</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option selected>12</option>
+                                            </select>
+                                        </section>
+                                        <section class="form-group">
+                                            <label for="expiry_year">*Card Expiry Year (in YYYY):</label>
+                                            <select class="custom-select" id="expiry_year" name="expiry_year">
+                                                <option selected>2019</option>
+                                                <option>2020</option>
+                                                <option>2021</option>
+                                                <option>2022</option>
+                                                <option>2023</option>
+                                                <option>2024</option>
+                                                <option>2025</option>
+                                                <option>2026</option>
+                                                <option>2027</option>
+                                                <option>2028</option>
+                                                <option>2029</option>
+                                                <option>2030</option>
+                                                <option>2031</option>
+                                                <option>2032</option>
+                                                <option>2033</option>
+                                                <option>2034</option>
+                                            </select>
                                         </section>  
                                     </section>
                                 </section>
                             </section>
                             <p id="txtConfirm">Please confirm your order. Once done, click Place Order.</p>
-                            <button id="btnOrder" type="button" class="btn btn-block btn-success">Place Order  <span class="fa fa-clipboard"></span></button>
+                            <button id="btnOrder" type="submit" class="btn btn-block btn-success">Place Order  <span class="fa fa-clipboard"></span></button>
                         </div>
                     </section>
                 </form>
@@ -202,7 +237,6 @@ and open the template in the editor.
                     <li ><a class= "fa fa-instagram" href="#"> Instagram</a></li>
                 </ul>
             </div>
-
         </div>
     </footer>
 </html>

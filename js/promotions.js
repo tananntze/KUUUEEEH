@@ -21,45 +21,65 @@ function attachListeners() { //this is to initialize the buttons by attaching an
 }
 function checkForms() { //this is the function for the form validation
     var promoForm = document.getElementById("promoForm");
-    var title = document.getElementById("title");
-    txtTitle = title.value;
-    var isTitleValid = false;
-    var description = document.getElementById("description");
-    txtDescription = description.value;
-    var isDescriptionValid = false;
+    var start = document.getElementById("start_date");
+    txtStart = start.value;
+    startDate = new Date(txtStart);
+    startDate.setHours(0, 0, 0);
+    var isStartDateValid = true;
+    var end = document.getElementById("end_date");
+    txtEnd = end.value;
+    endDate = new Date(txtEnd);
+    endDate.setHours(23, 59, 59);
+    var isEndDateValid = true;
     var bannerDropZone = document.getElementById("banner_dropzone");
-    if (txtTitle == "") {
-        title.style.borderColor = "red";
-        title.setCustomValidity("This is a required field!");
-        isTitleValid = false;
-    } else {
-        title.style.borderColor = "green";
-        title.setCustomValidity("");
-        isTitleValid = true;
-    } if (txtDescription == "") {
-        description.style.borderColor = "red";
-        description.setCustomValidity("This is a required field!");
-        isDescriptionValid = false;
-    } else {
-        description.style.borderColor = "green";
-        description.setCustomValidity("");
-        isDescriptionValid = true;
-    } if (!isPicValid) {
+    if (!isPicValid) {
         bannerDropZone.style.borderColor = "red";
     } else {
         bannerDropZone.style.borderColor = "green";
-    } if (isTitleValid && isDescriptionValid && isPicValid) {
+    } if (txtStart == "") {
+        start.setCustomValidity("This is a required field!");
+        isStartDateValid = false;
+    } else {
+        if (startDate <= new Date().setHours(0, 0, 0)) { //if user keys in date before current date
+            start.style.borderColor = "red";
+            start.setCustomValidity("Please enter the start date that is later than the current date");
+            isStartDateValid = false;
+        } else {
+            start.style.borderColor = "green";
+            start.setCustomValidity("");
+            isStartDateValid = true;
+        }
+    } if (txtEnd == "") {
+        end.setCustomValidity("This is a required field!");
+        isEndDateValid = false;
+    } else {
+        if (endDate <= new Date().setHours(0, 0, 0)) { //if user keys in date before current date
+            end.style.borderColor = "red";
+            end.setCustomValidity("Please enter the end date that is later than the current date");
+            isEndDateValid = false;
+        } else if (endDate < startDate) { //if user keys in end date before start date
+            end.style.borderColor = "red";
+            end.setCustomValidity("Please enter the end date that is later than the start date");
+            isEndDateValid = false;
+        } else {
+            end.style.borderColor = "green";
+            end.setCustomValidity("");
+            isEndDateValid = true;
+        }
+    }
+    if (isPicValid && isStartDateValid && isEndDateValid) {
         alert("You have successfully added a new KUUUEEEH promotion!");
         promoForm.submit();
     }
+    var promoForm = document.getElementById("promoForm");
+    promoForm.submit();
 }
 function displayBanner(input) { //this is to check whether the file extension is an image or not. If it is an image, the image that is selected will be displayed out to the user.
     var fileInput = document.getElementById("file_input");
-    var imgExtensionTypes = ['jpg', 'jpeg', 'png', 'gif'];
+    var imgExtensionTypes = ["jpg", "png", "gif", "jpeg"];
     var bannerImg = document.getElementById("banner");
     var bannerDropZone = document.getElementById("banner_dropzone");
     var filePath = document.getElementById("filePath");
-    isPicValid = false;
     var reader;
     if (input.files && input.files[0]) {
         var extension = input.files[0].name.split('.').pop().toLowerCase();
@@ -77,6 +97,7 @@ function displayBanner(input) { //this is to check whether the file extension is
             filePath.innerHTML = input.files[0].name;
         } else {
             isPicValid = false;
+            fileInput.value = "";
             bannerImg.setAttribute("src", "");
             bannerDropZone.style.height = "auto";
             bannerDropZone.style.borderColor = "red";

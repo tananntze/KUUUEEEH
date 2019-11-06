@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 var subtotal = 0.0;
-var getQuantity = 7;
+var getQuantity = 0;
 function attachListeners() { //this is to add link to the pictures in about us to link to kuehs in the menu
     btnAngkk = document.getElementById("btnAngKk").addEventListener("click", function() {
          document.location.href = "kuehmenuall.php#angKK";
@@ -29,7 +29,7 @@ window.onload = function() {
     }
 };
 function displayOrder() { //this is the code to dynamically create rows and columns to populate the table content for my orders
-    var quantity = document.getElementById("quantity");
+    /*var quantity = document.getElementById("quantity");
     var tblOrders = document.getElementById("tblOrders");
     var noOfDiffKuehs = 4;
     quantity.innerHTML = "Total Quantity: " + getQuantity;
@@ -72,7 +72,7 @@ function displayOrder() { //this is the code to dynamically create rows and colu
         cellPriceAction.innerHTML = "<a id='btnEdit' href='#'><span class='fa fa-edit'> Edit</span></a><a href ='#' class='delete'><span class='fa fa-trash-o'> Delete</span></a>";
         subtotal += (quantities[i] * cost[i]);
     }
-    document.getElementById("subTotal").innerHTML = "Subtotal: $" + subtotal.toFixed(2);
+    document.getElementById("subTotal").innerHTML = "Subtotal: $" + subtotal.toFixed(2);*/
 }
 function incrementCount() { //this is the function to increment the count for the quantity shown beside "My Orders" link
     getQuantity += 1;

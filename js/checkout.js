@@ -15,7 +15,7 @@ var subtotal = 0.0;
 var delivery = 0.00;
 var totalAmt = 0.0;
 var cardType = "Visa";
-var getQuantity = 7;
+var getQuantity = 0;
 window.onload = function() {
     attachListeners();
     displayOrder();
@@ -41,7 +41,7 @@ function attachListeners() { //this is to add event listeners for the radio butt
     radioMc.addEventListener("click", updateCard);
 }
 function displayOrder() { //this is the code to dynamically create rows and oclumns to populate the table content for my orders
-    var quantity = document.getElementById("quantity");
+    /*var quantity = document.getElementById("quantity");
     var tblOrders = document.getElementById("tblOrders");
     var noOfDiffKuehs = 4;
     quantity.innerHTML = "Total Quantity: " + getQuantity;
@@ -88,7 +88,7 @@ function displayOrder() { //this is the code to dynamically create rows and oclu
     document.getElementById("subTotal").innerHTML = "Subtotal: $" + subtotal.toFixed(2);
     document.getElementById("delivery").innerHTML = "Delivery: $" + delivery.toFixed(2);
     totalAmt = subtotal + delivery;
-    document.getElementById("totalAmt").innerHTML = "Total Amount: $" + totalAmt.toFixed(2);
+    document.getElementById("totalAmt").innerHTML = "Total Amount: $" + totalAmt.toFixed(2);*/
 }
 function checkForms() { //this is the function for the form validation
     var billingForm = document.getElementById("billingForm");
@@ -119,13 +119,17 @@ function checkForms() { //this is the function for the form validation
     var cardCCV = document.getElementById("ccv");
     var txtCCV = cardCCV.value;
     var isCCVValid = false;
+    var expiryMonth = document.getElementById("expiry_month");
+    var txtExpiryMonth = expiryMonth.value;
+    var expiryYear = document.getElementById("expiry_year");
+    var txtExpiryYear = expiryYear.value;
+    var expiryDate = new Date(txtExpiryYear + '-' + txtExpiryMonth + '-01'); //this excerpt of code is taken from: https://www.freecodecamp.org/forum/t/trying-to-validate-a-credit-card-expiry-month-against-current-date/191434/2
+    var isNotExpired = false;
     if (txtEmail == "") { //this is to check if one of the text fields is left blank and the textfield will display respective indications of changing border color and showing tooltip to indicate error message
-        email.style.borderColor = "red";
         email.setCustomValidity("This is a required field!");
         isEmailValid = false;
     } else {
         if (!(chkEmailSyntax(txtEmail))) { //this is to check if the email does not follow the syntax and the textfield will display respective indications of changing border color and showing tooltip to indicate error message
-            email.style.borderColor = "red";
             email.setCustomValidity("Please enter a proper email address!");
             isEmailValid = false;
         } else { //this is to indicate that the user has keyed in proper email address and textfield turns green
@@ -134,12 +138,10 @@ function checkForms() { //this is the function for the form validation
             isEmailValid = true;
         }
     } if (txtFirstName == "") {
-        firstName.style.borderColor = "red";
         firstName.setCustomValidity("This is a required field!");
         isFirstNameValid = false;
     } else {
         if (!(chkNameSyntax(txtFirstName))) {
-            firstName.style.borderColor = "red";
             firstName.setCustomValidity("Please enter a proper name!");
             isFirstNameValid = false;
         } else {
@@ -148,12 +150,10 @@ function checkForms() { //this is the function for the form validation
             isFirstNameValid = true;
         }
     } if (txtLastName == "") {
-        lastName.style.borderColor = "red";
         lastName.setCustomValidity("This is a required field!");
         isLastNameValid = false;
     } else {
         if (!(chkNameSyntax(txtLastName))) {
-            lastName.style.borderColor = "red";
             lastName.setCustomValidity("Please enter a proper name!");
             isLastNameValid = false;
         } else {
@@ -162,7 +162,6 @@ function checkForms() { //this is the function for the form validation
             isLastNameValid = true;
         }
     } if (txtAddress == "") {
-        address.style.borderColor = "red";
         address.setCustomValidity("This is a required field!");
         isAddressValid = false;
     } else {     
@@ -170,12 +169,10 @@ function checkForms() { //this is the function for the form validation
         address.setCustomValidity("");
         isAddressValid = true;
     } if (txtPc == "") {
-        pc.style.borderColor = "red";
         pc.setCustomValidity("This is a required field!");
         isPcValid = false;
     } else {     
-        if (!(chkNumSyntax(txtPc))) {
-            pc.style.borderColor = "red";
+        if (!(chkPostalCodeSyntax(txtPc))) {
             pc.setCustomValidity("Please enter a proper postal code!");
             isPcValid = false;
         } else {
@@ -184,12 +181,10 @@ function checkForms() { //this is the function for the form validation
             isPcValid = true;
         }
     } if (txtMobileNo == "") {
-        mobileNo.style.borderColor = "red";
         mobileNo.setCustomValidity("This is a required field!");
         isMobileNoValid = false;
     } else {     
-        if (!(chkNumSyntax(txtMobileNo))) {
-            mobileNo.style.borderColor = "red";
+        if (!(chkMobileNoSyntax(txtMobileNo))) {
             mobileNo.setCustomValidity("Please enter a proper mobile number!");
             isMobileNoValid = false;
         } else {
@@ -198,12 +193,10 @@ function checkForms() { //this is the function for the form validation
             isMobileNoValid = true;
         }
     } if (txtCardName == "") {
-        cardName.style.borderColor = "red";
         cardName.setCustomValidity("This is a required field!");
         isCardNameValid = false;
     } else {     
         if (!(chkNameSyntax(txtCardName))) {
-            cardName.style.borderColor = "red";
             cardName.setCustomValidity("Please enter a proper name!");
             isCardNameValid = false;
         } else {
@@ -212,12 +205,10 @@ function checkForms() { //this is the function for the form validation
             isCardNameValid = true;
         }
     } if (txtCardNum == "") {
-        cardNum.style.borderColor = "red";
         cardNum.setCustomValidity("This is a required field!");
         isCardNumValid = false;
     } else {     
-        if (!(chkNumSyntax(txtCardNum))) {
-            cardNum.style.borderColor = "red";
+        if (!(chkCardNoSyntax(txtCardNum))) {
             cardNum.setCustomValidity("Please enter a proper card number!");
             isCardNumValid = false;
         } else {
@@ -226,22 +217,33 @@ function checkForms() { //this is the function for the form validation
             isCardNumValid = true;
         }
     } if (txtCCV == "") {
-        cardCCV.style.borderColor = "red";
         cardCCV.setCustomValidity("This is a required field!");
         isCCVValid = false;
     } else {     
-        if (!(chkNumSyntax(txtCCV))) {
-            cardCCV.style.borderColor = "red";
-            cardCCV.setCustomValidity("Please enter a proper CVC number!");
+        if (!(chkCCVSyntax(txtCCV))) {
+            cardCCV.setCustomValidity("Please enter a proper CCV number!");
             isCCVValid = false;
         } else {
             cardCCV.style.borderColor = "green";
             cardCCV.setCustomValidity("");
             isCCVValid = true;
         }
+    } if (expiryDate < new Date().setHours(0,0,0,0)) {
+        expiryMonth.style.borderColor = "red";
+        expiryYear.style.borderColor = "red";
+        expiryMonth.setCustomValidity("Please enter an expiry date later than current date!");
+        expiryYear.setCustomValidity("Please enter an expiry date later than current date!");
+        isNotExpired = false;
+    } else {
+        expiryMonth.style.borderColor = "green";
+        expiryYear.style.borderColor = "green";
+        expiryMonth.setCustomValidity("");
+        expiryYear.setCustomValidity("");
+        isNotExpired = true;
     }
-    if (isEmailValid && isFirstNameValid && isLastNameValid && isAddressValid && isPcValid && isMobileNoValid && isCardNameValid && isCardNumValid && isCCVValid) { //if all the textfields are valid, then form submission will take place and there will be a alert to display in a form of e-receipt to show that an order has been made successfully
-        alert("Thank you for buying with KUUUEEEH!" + "\n\n\
+    if (isEmailValid && isFirstNameValid && isLastNameValid && isAddressValid && isPcValid && isMobileNoValid && isCardNameValid && isCardNumValid && isCCVValid && isNotExpired) { //if all the textfields are valid, then form submission will take place and there will be a alert to display in a form of e-receipt to show that an order has been made successfully
+            billingForm.submit();
+            /*alert("Thank you for ordering with KUUUEEEH!" + "\n\n\
               Order Successful!\n\n\
               Full Name: " + txtFirstName + " " + txtLastName + "\n\n\
               Address: " + txtAddress + " Singapore " + txtPc + "\n\n\
@@ -250,18 +252,26 @@ function checkForms() { //this is the function for the form validation
               My Order:\n" + txtOrderList + "\n\n\
               Total Amount: " + totalAmt.toFixed(2) + "\n\n\
               Payment By: " + cardType + "\n\n\
-              Delivered in: About 45-60 minutes");
-        billingForm.submit();
+              Delivered in: About 45-60 minutes");*/
     }
 }
-function chkEmailSyntax(email) { //this is to check whether syntax of email is correct or not
+function chkEmailSyntax(email) { //this is to check whether syntax of email is correct format or not
     return /\S+@\S+\.\S+/.test(email);
 }
-function chkNameSyntax(name) { //this is to check whether syntax of namee is correct or not
-    return /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/.test(name);
+function chkNameSyntax(name) { //this is to check whether syntax of name is correct format or not
+    return /^[a-zA-Z][a-zA-Z .,'-]*$/.test(name);
 }
-function chkNumSyntax(num) { //this is to check whether syntax of number is correct or not
-    return /^[0-9]*$/.test(num);
+function chkPostalCodeSyntax(num) { //this is to check whether syntax of 6-digit Singapore postal code is in correct format or not
+    return /^[0-9]{6}$/.test(num);
+}
+function chkMobileNoSyntax(num) { //this is to check whether syntax of 8-digit Singapore format is in correct format or not
+    return /^[0-9]{8}$/.test(num);
+}
+function chkCardNoSyntax(num) { //this is to check whether syntax of 16-digit card number is in correct format or not
+    return /^[0-9]{16}$/.test(num);
+}
+function chkCCVSyntax(num) { //this is to check whether syntax of 3-digit ccv is in correct format or not
+    return /^[0-9]{3}$/.test(num);
 }
 function updateAddress() { //this is to update the address depending on radio button
     var getAddress = document.getElementById("address").value;
