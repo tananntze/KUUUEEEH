@@ -229,7 +229,7 @@ function updateAddress() { //this is to update the address depending on radio bu
     }*/
 }
 function updateDelivery() { //this is to update the delivery depending on radio button
-    /*var radioHome = document.getElementById("radioHome");
+    var radioHome = document.getElementById("radioHome");
     var radioStore = document.getElementById("radioStore");
     if (radioHome.checked) {
         delivery = 5.00;
@@ -239,7 +239,7 @@ function updateDelivery() { //this is to update the delivery depending on radio 
     document.getElementById("subTotal").innerHTML = "Subtotal: $" + subtotal.toFixed(2);
     document.getElementById("delivery").innerHTML = "Delivery: $" + delivery.toFixed(2);
     totalAmt = subtotal + delivery;
-    document.getElementById("totalAmt").innerHTML = "Total Amount: $" + totalAmt.toFixed(2);*/
+    document.getElementById("totalAmt").innerHTML = "Total Amount: $" + totalAmt.toFixed(2);
 }
 function updateCard() { //this is to update the type of card depednding on radio button
     var radioVisa = document.getElementById("payVisa");

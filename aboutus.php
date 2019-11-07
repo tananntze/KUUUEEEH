@@ -18,7 +18,7 @@ and open the template in the editor.
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-        <script src="js/aboutus.js"></script>
+        <script src="js/myorderspopup.js"></script>
     </head>
     <body class="overlay">
         <?php include "header.php"?>
@@ -59,20 +59,20 @@ and open the template in the editor.
                 <section>
                     <div class ="row ml-12 standardfont">
                         <div class ="col-md-3 text-center">
-                            <img class="zoom rounded-circle" id="btnAngKk" src="img/The Basic Kuehs/Ang Ku Kueh.jpg" alt="Ang Ku Kueh">
-                            <figcaption>Check Us Out In Our Menus!</figcaption>
+                            <a href="kuehmenuall.php"><img class="zoom rounded-circle" id="btnAngKk" src="img/The Basic Kuehs/Ang Ku Kueh.jpg" alt="Ang Ku Kueh">
+                            <figcaption>Check Us Out In Our Menus!</figcaption></a>
                         </div>
                         <div class ="col-md-3 text-center">
-                            <img class="zoom rounded-circle" id="btnLapis" src="img/The Basic Kuehs/Kueh Lapis.jpg" alt="Kueh Lapis">
-                            <figcaption>Check Us Out In Our Menus!</figcaption>
+                            <a href="kuehmenuall.php"><img class="zoom rounded-circle" id="btnLapis" src="img/The Basic Kuehs/Kueh Lapis.jpg" alt="Kueh Lapis">
+                            <figcaption>Check Us Out In Our Menus!</figcaption></a>
                         </div>
                         <div class ="col-md-3 text-center">
-                            <img class="zoom rounded-circle" id="btnChwee" src="img/Kueh with Character/Chwee Kueh.JPG" alt="Chwee Kueh">
-                            <figcaption>Check Us Out In Our Menus!</figcaption>
+                            <a href="kuehmenuall.php"><img class="zoom rounded-circle" id="btnChwee" src="img/Kueh with Character/Chwee Kueh.JPG" alt="Chwee Kueh">
+                            <figcaption>Check Us Out In Our Menus!</figcaption></a>
                         </div>
                         <div class ="col-md-3 text-center">
-                            <img class="zoom rounded-circle" id="btnPng" src="img/Kueh with Character/Png Kueh.jpg" alt="Png Kueh">
-                            <figcaption>Check Us Out In Our Menus!</figcaption>
+                            <a href="kuehmenuall.php"><img class="zoom rounded-circle" id="btnPng" src="img/Kueh with Character/Png Kueh.jpg" alt="Png Kueh">
+                            <figcaption>Check Us Out In Our Menus!</figcaption></a>
                         </div>
                     </div>
                     <div class ="row ml-6 standardfont">
