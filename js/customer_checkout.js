@@ -7,17 +7,15 @@ var txtEmail;
 var txtFirstName;
 var txtLastName;
 var txtMobileNo;
-var txtOrderList = "";
-var subtotal = 0.0;
-var delivery = 0.00;
-var totalAmt = 0.0;
-var cardType = "Visa";
-var getQuantity = 0;
+//var txtOrderList = "";
+//var subtotal = 0.0;
+//var delivery = 0.00;
+//var totalAmt = 0.0;
+//var cardType = "Visa";
 window.onload = function() {
     attachListeners();
-    displayOrder();
-    updateDelivery();
-    document.getElementById("badgeQuantity").innerHTML = getQuantity.toString(); //displays quantity similar to notification icon
+    //displayOrder();
+    //updateDelivery();
 };
 function attachListeners() { //this is to add event listeners for the radio buttons of selecting type of delivery and type of payment
     var btnDetails = document.getElementById("btnDetails");
@@ -80,16 +78,16 @@ function displayOrder() { //this is the code to dynamically create rows and oclu
 function checkForms() { //this is the function for the form validation
     var customerForm = document.getElementById("customerForm");
     var email = document.getElementById("email");
-    txtEmail = email.value;
+    var txtEmail = email.value;
     var isEmailValid = false;
     var firstName = document.getElementById("first_name");
-    txtFirstName = firstName.value;
+    var txtFirstName = firstName.value;
     var isFirstNameValid = false;
     var lastName = document.getElementById("last_name");
-    txtLastName = lastName.value;
+    var txtLastName = lastName.value;
     var isLastNameValid = false;
     var mobileNo = document.getElementById("mobile_no");
-    txtMobileNo = mobileNo.value;
+    var txtMobileNo = mobileNo.value;
     var isMobileNoValid = false;
     if (txtEmail == "") { //this is to check if one of the text fields is left blank and the textfield will display respective indications of changing border color and showing tooltip to indicate error message
         email.setCustomValidity("This is a required field!");

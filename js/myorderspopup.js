@@ -4,11 +4,9 @@
  * and open the template in the editor.
  */
 //This is the code to display the populated table of my orders
-var subtotal = 0.0;
-var getQuantity = 0;
+//var subtotal = 0.0;
 window.onload = function() {
-    displayOrder();
-    document.getElementById("badgeQuantity").innerHTML = getQuantity.toString(); //displays quantity similar to notification icon
+    //displayOrder();
 };
 function displayOrder() { //this is the code to dynamically create rows and oclumns to populate the table content for my orders
     /*var quantity = document.getElementById("quantity");

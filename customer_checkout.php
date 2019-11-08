@@ -30,11 +30,11 @@ and open the template in the editor.
                     </section>
                     <section id="paragraph" class="modal-body">
                         <section id="myOrder">
-                            <p id="quantity">Total Quantity:</p>
+                            <p id="quantity">Total Quantity: <?php echo $_SESSION["kuehqty"]?></p>
                             <table id="tblOrders"></table>
                         </section>
                         <p id="subTotal">Subtotal:</p>
-                        <p id="delivery">Delivery:</p>
+                        <p id="delivery">Delivery: Not Selected</p>
                         <h4 id="totalAmt">Total Amount:</h4>
                     </section>
                 </section>

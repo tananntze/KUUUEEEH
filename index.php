@@ -33,11 +33,25 @@ and open the template in the editor.
                 </section>
                 <section id="paragraph" class="modal-body">
                     <section id="myOrder">
-                        <p id="quantity">Total Quantity:</p>
-                        <table id="tblOrders"></table>
+                        <p id="quantity">Total Quantity: <?php echo $_SESSION["kuehqty"]?></p>
+                        <?php //display message cart is empty
+                            if ($_SESSION["kuehqty"] == 0) {
+                                echo "<section class='alert alert-danger' role='alert'>
+                                <span class='fa fa-times-circle fa-2x'></span><p> Sorry, your shopping cart is empty!</p>
+                                </section>";
+                            } else {
+                                echo "<table id='tblOrders'></table>"; 
+                            }
+                            ?>
                     </section>
                     <p id="subTotal">Subtotal:</p>
-                    <a href="customer_checkout.php" id="btnCheckout" class="btn btn-block btn-success">Proceed to Checkout  <span class="fa fa-arrow-circle-right"></span></a></a>
+                    <?php 
+                    if ($_SESSION["kuehqty"] == 0) {
+                        echo "<a style='pointer-events: none; cursor: default;' id='btnCheckout' class='btn btn-block text-muted'>Proceed to Checkout  <span class='fa fa-arrow-circle-right'></span></a></a>";                      
+                    } else {
+                        echo "<a href='customer_checkout.php' id='btnCheckout' class='btn btn-block btn-success'>Proceed to Checkout  <span class='fa fa-arrow-circle-right'></span></a></a>";                        
+                    }
+                    ?>
                 </section>
             </section>
         </section>

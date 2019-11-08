@@ -4,15 +4,15 @@
  * and open the template in the editor.
  */
 //This is the code to display the populated table of my orders
-var subtotal = 0.0;
-var getQuantity = 0;
+//var subtotal = 0.0;
+//var getQuantity = 0;
 window.onload = function() {
-    displayOrder();
-    document.getElementById("badgeQuantity").innerHTML = getQuantity.toString(); //displays quantity similar to notification icon
-    btnCart = document.getElementsByClassName("btn");
+    //displayOrder();
+    //document.getElementById("badgeQuantity").innerHTML = getQuantity.toString(); //displays quantity similar to notification icon
+    /*btnCart = document.getElementsByClassName("btn");
     for (var i = 0; i < btnCart.length; i++) {
-        btnCart[i].addEventListener('click', incrementCount, false);
-    }
+        btnCart[i].addEventListener('click', addKueh, false);
+    }*/
 };
 function displayOrder() { //this is the code to dynamically create rows and columns to populate the table content for my orders
     /*var quantity = document.getElementById("quantity");
@@ -59,8 +59,4 @@ function displayOrder() { //this is the code to dynamically create rows and colu
         subtotal += (quantities[i] * cost[i]);
     }
     document.getElementById("subTotal").innerHTML = "Subtotal: $" + subtotal.toFixed(2);*/
-}
-function incrementCount() { //this is to increment count for quantity of orders after button clicked
-    getQuantity += 1;
-    document.getElementById("badgeQuantity").innerHTML = getQuantity.toString();
 }

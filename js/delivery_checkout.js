@@ -7,23 +7,23 @@ var txtAddress;
 var txtPc;
 var txtMobileNo;
 var txtCollectionAddress;
-var txtOrderList = "";
-var subtotal = 0.0;
-var delivery = 0.00;
-var totalAmt = 0.0;
-var cardType = "Visa";
-var getQuantity = 0;
+//var txtOrderList = "";
+//var subtotal = 0.0;
+//var delivery = 0.00;
+//var totalAmt = 0.0;
+//var cardType = "Visa";
 window.onload = function() {
     attachListeners();
-    displayOrder();
+    //displayOrder();
     updateDelivery();
-    document.getElementById("badgeQuantity").innerHTML = getQuantity.toString(); //displays quantity similar to notification icon
 };
 function attachListeners() { //this is to add event listeners for the radio buttons of selecting type of delivery and type of payment
     var btnOrder = document.getElementById("btnOrder");
     btnOrder.addEventListener("click", checkForms);
     var address = document.getElementById("address");
     var pc = document.getElementById("postal_code");
+    var radioHome = document.getElementById("radioHome");
+    var radioStore = document.getElementById("radioStore");
     var radioVisa = document.getElementById("payVisa");
     var radioMc = document.getElementById("payMaster");
     address.addEventListener("input", updateAddress);
@@ -89,10 +89,10 @@ function displayOrder() { //this is the code to dynamically create rows and oclu
 function checkForms() { //this is the function for the form validation
     var detailsForm = document.getElementById("detailsForm");
     var address = document.getElementById("address");
-    txtAddress = address.value;
+    var txtAddress = address.value;
     var isAddressValid = false;
     var pc = document.getElementById("postal_code");
-    txtPc = pc.value;
+    var txtPc = pc.value;
     var isPcValid = false;
     var cardName = document.getElementById("card_name");
     var txtCardName = cardName.value;

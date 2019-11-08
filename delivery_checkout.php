@@ -30,7 +30,7 @@ and open the template in the editor.
                     </section>
                     <section id="paragraph" class="modal-body">
                         <section id="myOrder">
-                            <p id="quantity">Total Quantity:</p>
+                            <p id="quantity">Total Quantity: <?php echo $_SESSION["kuehqty"]?></p>
                             <table id="tblOrders"></table>
                         </section>
                         <p id="subTotal">Subtotal:</p>
@@ -79,7 +79,7 @@ and open the template in the editor.
                     <section class ="row justify-content-center ml-4 standardfont">
                         <div class="col-md-12">
                             <section id="step3">
-                                <h3 class ="subheader">Step 3: Enter Delivery Details</h3>
+                                <h3 class ="subheader">Step 3: Enter Delivery & Billing Details</h3>
                                 <section id="paragraph">
                                     <section id="collectionInstruction">
                                         <h4>Collection Address</h4>
