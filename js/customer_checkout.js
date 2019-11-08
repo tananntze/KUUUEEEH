@@ -21,10 +21,10 @@ window.onload = function() {
 };
 function attachListeners() { //this is to add event listeners for the radio buttons of selecting type of delivery and type of payment
     var btnDetails = document.getElementById("btnDetails");
-    var radioHome = document.getElementById("radioHome");
-    var radioStore = document.getElementById("radioStore");
-    radioHome.addEventListener("click", updateDelivery);
-    radioStore.addEventListener("click", updateDelivery);
+    //var radioHome = document.getElementById("radioHome");
+    //var radioStore = document.getElementById("radioStore");
+    //radioHome.addEventListener("click", updateDelivery);
+    //radioStore.addEventListener("click", updateDelivery);
     btnDetails.addEventListener("click", checkForms);
 }
 function displayOrder() { //this is the code to dynamically create rows and oclumns to populate the table content for my orders
@@ -178,7 +178,7 @@ function updateAddress() { //this is to update the address depending on radio bu
     }
 }
 function updateDelivery() { //this is to update the delivery depending on radio button
-    var radioHome = document.getElementById("radioHome");
+    /*var radioHome = document.getElementById("radioHome");
     var radioStore = document.getElementById("radioStore");
     if (radioHome.checked) {
         delivery = 5.00;
@@ -188,14 +188,14 @@ function updateDelivery() { //this is to update the delivery depending on radio 
     document.getElementById("subTotal").innerHTML = "Subtotal: $" + subtotal.toFixed(2);
     document.getElementById("delivery").innerHTML = "Delivery: $" + delivery.toFixed(2);
     totalAmt = subtotal + delivery;
-    document.getElementById("totalAmt").innerHTML = "Total Amount: $" + totalAmt.toFixed(2);
+    document.getElementById("totalAmt").innerHTML = "Total Amount: $" + totalAmt.toFixed(2);*/
 }
 function updateCard() { //this is to update the type of card depednding on radio button
-    var radioVisa = document.getElementById("payVisa");
+    /*var radioVisa = document.getElementById("payVisa");
     var radioMc = document.getElementById("payMaster");
     if (radioVisa.checked) {
         cardType = radioVisa.value;
     } else if (radioMc.checked) {
         cardType = radioMc.value;
-    }
+    }*/
 }

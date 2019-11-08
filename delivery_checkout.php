@@ -16,7 +16,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="js/details_checkout.js"></script>
+        <script src="js/delivery_checkout.js"></script>
     </head>
     <body>
         <?php include "header.php"?>
@@ -50,14 +50,36 @@ and open the template in the editor.
             <section class="container-fluid" style= 'margin-top:20px'>
                 <div class =" row sectionheader standardfont text-center">
                     <div class="col-md-12">
-                        <h2 class="fontheader">KUEH CHECKOUT</h2>
+                        <h2 class="fontheader">KUEH CHECKOUT (DELIVERY DETAILS)</h2>
                     </div>
                 </div>
                 <form id="detailsForm" action="process_details_checkout.php" method="post">
                     <section class ="row justify-content-center ml-4 standardfont">
+                        <section class="col-md-12">
+                            <section id="step2">
+                                <h3 class ="subheader">Step 2: Select Delivery Type</h3>
+                                <section id="paragraph">
+                                    <section id="step2Radio">
+                                        <section class="radio_grp">
+                                            <input class="radio_set" type="radio" name="radioDel" id="radioHome" value="delFast" checked="true"><label class="radio_lbl" for="delHome">Home Delivery</label>
+                                            <p id="txtHomeAddress"></p>
+                                            <p id="txtHomeDuration">Approximately 45-60 minutes</p>
+                                            <p id="deliveryHomeCost">Delivery Cost: $5.00</p>
+                                        </section>
+                                        <section class="radio_grp">
+                                            <input class="radio_set" type="radio" name="radioDel" id="radioStore" value="delNormal"><label class="radio_lbl" for="delNormal">Collect at our store</label>
+                                            <p id="txtStoreAddress"></p>
+                                            <p id="deliveryHomeCost">Delivery Cost: Free</p>
+                                        </section>
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                    <section class ="row justify-content-center ml-4 standardfont">
                         <div class="col-md-12">
                             <section id="step3">
-                                <h3 class ="subheader">Step 3) Select Delivery Type</h3>
+                                <h3 class ="subheader">Step 3: Enter Delivery Details</h3>
                                 <section id="paragraph">
                                     <section id="collectionInstruction">
                                         <h4>Collection Address</h4>
@@ -72,7 +94,7 @@ and open the template in the editor.
                                 </section>
                                 <section class="form-group">
                                     <label for="postal_code">*Postal Code:</label>
-                                    <input class="form-control" id="postal_code" name="postal_code" placeholder="Enter your postal code" type="tel" maxLength="6" required="true" pattern="[0-9]{6}">
+                                    <input class="form-control" id="postal_code" name="postal_code" placeholder="Enter the 6 digit Singapore postal code" type="tel" maxLength="6" required="true" pattern="[0-9]{6}">
                                 </section>
                                 <section id="paragraph">
                                     <section id="step3Radio">
@@ -94,7 +116,7 @@ and open the template in the editor.
                                         </section>
                                         <section class="form-group">
                                             <label for="first_name">*CCV Number:</label>
-                                            <input class="form-control" id="ccv" name="ccv" placeholder="Enter your CCV card number" type="tel" maxlength="3" required="true" pattern="[0-9]{3}">
+                                            <input class="form-control" id="ccv" name="ccv" placeholder="Enter your 3 digit CCV number" type="tel" maxlength="3" required="true" pattern="[0-9]{3}">
                                         </section>
                                         <section class="form-group">
                                             <label for="expiry_month">*Card Expiry Month (in MM):</label>

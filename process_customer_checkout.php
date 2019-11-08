@@ -55,8 +55,8 @@
                 echo "<h1>Error processing checkout!</h1>";
                 echo "<h4>The following input errors were detected:</h4>";     
                 echo "<p>" . $errorMsg . "</p>";
-            } else { //Move on to Step 3 page
-                header('Location: details_checkout.php'); 
+            } else { //Move on to Delivery Details page
+                header('Location: delivery_checkout.php'); 
             }
             //Helper function that checks input for malicious or unwanted content. 
             function sanitize_input($data) {   

@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 var txtAddress;
 var txtPc;
 var txtMobileNo;
@@ -30,10 +29,10 @@ function attachListeners() { //this is to add event listeners for the radio butt
     address.addEventListener("input", updateAddress);
     pc.addEventListener("input", updateAddress);
     btnOrder.addEventListener("click", checkForms);
-    //radioHome.addEventListener("click", updateAddress);
-    //radioHome.addEventListener("click", updateDelivery);
-    //radioStore.addEventListener("click", updateAddress);
-    //radioStore.addEventListener("click", updateDelivery);
+    radioHome.addEventListener("click", updateAddress);
+    radioHome.addEventListener("click", updateDelivery);
+    radioStore.addEventListener("click", updateAddress);
+    radioStore.addEventListener("click", updateDelivery);
     radioVisa.addEventListener("click", updateCard);
     radioMc.addEventListener("click", updateCard);
 }
@@ -213,20 +212,20 @@ function chkCCVSyntax(num) { //this is to check whether syntax of 3-digit ccv is
 function updateAddress() { //this is to update the address depending on radio button
     var getAddress = document.getElementById("address").value;
     var getPc = document.getElementById("postal_code").value;
-    //var radioHome = document.getElementById("radioHome");
-    //var radioStore = document.getElementById("radioStore");
+    var radioHome = document.getElementById("radioHome");
+    var radioStore = document.getElementById("radioStore");
     var collectionAddress = document.getElementById("txtCollectionAddress");
     var homeAddress = getAddress + " Singapore " + getPc;
     var storeAddress = "172 Ang Mo Kio Avenue 8 #01-01"+ " Singapore 567739";
     txtCollectionAddress = homeAddress;
     collectionAddress.innerHTML = txtCollectionAddress;
-    /*if (radioHome.checked) {
+    if (radioHome.checked) {
         txtCollectionAddress = homeAddress;
         collectionAddress.innerHTML = txtCollectionAddress;
     } else if (radioStore.checked) {
         txtCollectionAddress = storeAddress;
         collectionAddress.innerHTML = txtCollectionAddress; 
-    }*/
+    }
 }
 function updateDelivery() { //this is to update the delivery depending on radio button
     var radioHome = document.getElementById("radioHome");

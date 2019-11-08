@@ -50,36 +50,14 @@ and open the template in the editor.
             <section class="container-fluid" style= 'margin-top:20px'>
                 <div class =" row sectionheader standardfont text-center">
                     <div class="col-md-12">
-                        <h2 class="fontheader">KUEH CHECKOUT</h2>
+                        <h2 class="fontheader">KUEH CHECKOUT (CUSTOMER DETAILS)</h2>
                     </div>
                 </div>
                 <form id="customerForm" action="process_customer_checkout.php" method="post">
-                    <section class ="row justify-content-center ml-4 standardfont">
-                        <div class="col-md-12">
-                            <section id="step1">
-                            <h3 class ="subheader">Step 1: Select Delivery Type</h3>
-                            <section id="paragraph">
-                                <section id="step2Radio">
-                                    <section class="radio_grp">
-                                        <input class="radio_set" type="radio" name="radioDel" id="radioHome" value="delFast" checked="true"><label class="radio_lbl" for="delHome">Home Delivery</label>
-                                        <p id="txtHomeAddress"></p>
-                                        <p id="txtHomeDuration">Approximately 45-60 minutes</p>
-                                        <p id="deliveryHomeCost">Delivery Cost: $5.00</p>
-                                    </section>
-                                    <section class="radio_grp">
-                                        <input class="radio_set" type="radio" name="radioDel" id="radioStore" value="delNormal"><label class="radio_lbl" for="delNormal">Collect at our store</label>
-                                        <p id="txtStoreAddress"></p>
-                                        <p id="deliveryHomeCost">Delivery Cost: Free</p>
-                                    </section>
-                                </section>
-                            </section>
-                        </section>
-                        </div>
-                    </section>
                     <section class ="row justify-content-left ml-4 standardfont">
                         <div class="col-md-12">
-                            <section id="step2">
-                                <h3 class ="subheader">Step 2: Enter Customer's Details</h3>
+                            <section id="step1">
+                                <h3 class ="subheader">Step 1: Enter Customer's Details</h3>
                                 <section id="paragraph">
                                     <section class="form-group">
                                         <label for="email">*Email address:</label>
@@ -96,7 +74,7 @@ and open the template in the editor.
                                             <label for="mobile_no">*Mobile Number:</label>
                                             <input class="form-control" id="mobile_no" name="mobile_no" placeholder="Enter your mobile number" type="tel" maxLength="8" required="true" pattern="[0-9]{8}">
                                         </section>
-                                    <button id="btnDetails" type="submit" class="btn btn-block btn-success">Proceed to Step 3  <span class="fa fa-arrow-circle-right"></span></button>
+                                    <button id="btnDetails" type="submit" class="btn btn-block btn-success">Proceed to Delivery Details  <span class="fa fa-arrow-circle-right"></span></button>
                                 </section>
                             </section>
                         </div>
