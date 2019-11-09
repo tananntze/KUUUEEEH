@@ -27,48 +27,49 @@ and open the template in the editor.
         <?php 
         include "header.php";
         if(isset($_POST["btnKueh1"])) { 
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh1"]);
         } if(isset($_POST["btnKueh2"])) { 
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh2"]);
         } if(isset($_POST["btnKueh3"])) { 
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh3"]);
         } if(isset($_POST["btnKueh4"])) { 
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh4"]);
         } if(isset($_POST["btnKueh5"])) { 
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh5"]);
         } if(isset($_POST["btnKueh6"])) { 
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh6"]);
         } if(isset($_POST["btnKueh7"])) { 
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh7"]);
         } if(isset($_POST["btnKueh8"])) { 
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh8"]);
         } if(isset($_POST["btnKueh9"])) { 
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh9"]);
         } if(isset($_POST["btnKueh10"])) { 
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh10"]);
         } if (isset($_POST["btnKueh11"])) {
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh11"]);
         } if (isset($_POST["btnKueh12"])) {
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh12"]);
         } if (isset($_POST["btnKueh13"])) {
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh13"]);
         } if (isset($_POST["btnKueh14"])) {
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh14"]);
         } if (isset($_POST["btnKueh15"])) {
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh15"]);
         } if (isset($_POST["btnKueh16"])) {
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh16"]);
         } if (isset($_POST["btnKueh17"])) {
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh17"]);
         } if (isset($_POST["btnKueh18"])) {
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh18"]);
         } if (isset($_POST["btnKueh19"])) {
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh19"]);
         } if (isset($_POST["btnKueh20"])) {
-            addKuehDetails();
+            addKuehDetails($_POST["btnKueh20"]);
         }
-        function addKuehDetails() {
+        function addKuehDetails($kuehPrice) {
             $_SESSION["kuehqty"]++;
+            $_SESSION["subtotal"] += $kuehPrice;
             header('Location: kuehmenuall.php');
         }
         ?>
@@ -86,17 +87,17 @@ and open the template in the editor.
                             <?php //display message cart is empty
                             if ($_SESSION["kuehqty"] == 0) {
                                 echo "<section class='alert alert-danger' role='alert'>
-                                <span class='fa fa-times-circle fa-2x'></span><p> Sorry, your shopping cart is empty!</p>
+                                <span class='fa fa-times-circle fa-2x'></span><p> Sorry, your shopping cart is currently empty!</p>
                                 </section>";
                             } else {
                                 echo "<table id='tblOrders'></table>"; 
                             }
                             ?>
                         </section>
-                        <p id="subTotal">Subtotal:</p>
+                        <p id="subTotal">Subtotal: <?php echo "$". number_format($_SESSION["subtotal"], 2)?></p>
                         <?php 
                         if ($_SESSION["kuehqty"] == 0) {
-                            echo "<a style='pointer-events: none; cursor: default;' id='btnCheckout' class='btn btn-block text-muted'>Proceed to Checkout  <span class='fa fa-arrow-circle-right'></span></a></a>";
+                            echo "<a id='btnCheckout' class='btn btn-block text-muted'>Proceed to Checkout  <span class='fa fa-arrow-circle-right'></span></a></a>";
                         } else {
                             echo "<a href='customer_checkout.php' id='btnCheckout' class='btn btn-block btn-success'>Proceed to Checkout  <span class='fa fa-arrow-circle-right'></span></a></a>";
                         }
@@ -140,16 +141,16 @@ and open the template in the editor.
                             <figcaption>Ang Ku Kueh ($0.50/pc): Small round or oval shaped pastry with soft sticky glutinous rice flour skin wrapped around a sweet filling in the centre.</figcaption>
 
                             <!--https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->              
-                            <button type="submit" name="btnKueh1"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh1" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
-                            <img  class="zoom" src = "img/The Basic Kuehs/Chai Kueh.jpg" alt = "Chai Kueh">
+                            <img class="zoom" src = "img/The Basic Kuehs/Chai Kueh.jpg" alt = "Chai Kueh">
 
                             <!--https://www.pinterest.com/pin/459930180676369189/-->
                             <figcaption>Chai Kueh ($0.50/pc): A typical and popular chinese snack. Stir fried crunchy jicama (yam bean) wrapped in soft, chewy and crystal skin.</figcaption>
 
-                            <button type="submit" name="btnKueh2"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh2" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -157,7 +158,7 @@ and open the template in the editor.
 
                             <!--https://www.stovve.com/peranakan-patisserie-->
                             <figcaption>Kueh Ambon ($0.50/pc): This is a soft, springy, and chewy yeast cake originated from Medan (Indonesia).</figcaption>
-                            <button type="submit" name="btnKueh3"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh3" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -165,7 +166,7 @@ and open the template in the editor.
 
                             <!--https://www.youtube.com/watch?v=m_DFoFlXG_M-->
                             <figcaption>Kueh Bangkit ($0.50/pc): Light and crumbly coconut cream cookies that melt in your mouth. These cookies are made with tapioca flour and have a creamy rich coconut taste.</figcaption>
-                            <button type="submit" name="btnKueh4"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh4" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>    
 
                         <figure class="imgholder">
@@ -175,7 +176,7 @@ and open the template in the editor.
                             <figcaption>Kueh Bingkah ($0.50/pc): Made from grated tapioca (cassava), baked until the top and sides are crispy brown. Soft and chewy inside. A Nyonya delicacies of the Peranakans and goes well with coffee or tea.</figcaption>
 
                             <!--https://www.shiokmanrecipes.com/2017/06/15/kueh-bingka-ubi-baked-tapioca-cassava-cake/-->
-                            <button type="submit" name="btnKueh5"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh5" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                     </div>
@@ -186,7 +187,7 @@ and open the template in the editor.
 
                             <!--https://sethlui.com/disappearing-nostalgic-foods-singapore/-->
                             <figcaption>Kueh Bongkong ($0.50/pc): Made with various starches and coconut milk, filled with Gula Melaka filling that melts and oozes to flood the kueh as it steams. Nice soft and slightly bouncy texture.</figcaption>
-                            <button type="submit" name="btnKueh6"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh6" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -194,7 +195,7 @@ and open the template in the editor.
 
                             <!--https://www.asianfoodchannel.com/en/recipes/nyonya-kuih-dadar-->
                             <figcaption>Kueh Dadar ($0.50/pc): Bite-sized sweet and savoury dessert which stuffed with luscious Gula Melaka grated coconut and wrapped in a fragrant pandan pancake.</figcaption>
-                            <button type="submit" name="btnKueh7"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh7" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -204,7 +205,7 @@ and open the template in the editor.
                             <figcaption>Kueh Koci ($0.50/pc): A sweet dumpling using glutinous rice flour and stuffed with grated coconut sweetened using palm sugar.</figcaption>
 
                             <!--https://www.nyonyacooking.com/recipes/kuih-koci-black-glutinous-rice~Hk34uvoPf5bX-->
-                            <button type="submit" name="btnKueh8"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh8" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -214,7 +215,7 @@ and open the template in the editor.
                             <figcaption>Kueh Kodok ($0.50/pc): Known as Cekodok Pisang, simple but delicious snack. Using the freshest bananas to deep fry it. Giving a sweet and savoury taste.</figcaption>
 
                             <!--https://coasterkitchen.wordpress.com/2016/09/09/kuih-kodok-cocodok-recipe/-->                       
-                            <button type="submit" name="btnKueh9"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh9" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -224,7 +225,7 @@ and open the template in the editor.
                             <figcaption>Kueh Kosui ($0.50/pc): Known as Kueh Ko Swee, made from tapioca starch and rice flour and sweetened with Gula Melaka sugar. Served with freshly grated coconuts for more texture and taste.</figcaption>
 
                             <!--https://mykitchen101en.com/pandan-kuih-kosui/-->                        
-                            <button type="submit" name="btnKueh10"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh10" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
                     </div>
 
@@ -236,7 +237,7 @@ and open the template in the editor.
                             <figcaption>Kueh Lapis ($0.50/pc): Most popular and well-loved Nonya dessert for all people known as ‘thousand-layer cake’. Made with tapioca, rice flour, coconut milk and natural colouring to make it pretty for eating.</figcaption>
 
                             <!--http://www.indochili.com/kueh-lapis-singapore.html-->
-                            <button type="submit" name="btnKueh11"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh11" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -246,7 +247,7 @@ and open the template in the editor.
                             <figcaption>Kueh Sago ($0.50/pc): Made from small sago pearls, giving a texture that is soft but chewy. Natural colouring used and it is topped with Gula Melaka and Shredded Coconut.</figcaption>
 
                             <!--https://mykitchen101en.com/kuih-sago-with-gula-melaka-and-shredded-coconut/-->
-                            <button type="submit" name="btnKueh12"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh12" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -254,7 +255,7 @@ and open the template in the editor.
 
                             <!--https://www.pinterest.com/pin/507640189242347900/-->  
                             <figcaption>Kueh Salat ($0.50/pc): Two-tiered Nonya dessert with a base of steamed glutinous rice. Topped with a thick layer of custard flavour and squeezed coconut milk and pandan juice.</figcaption>
-                            <button type="submit" name="btnKueh13"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh13" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder"> 
@@ -262,7 +263,7 @@ and open the template in the editor.
 
                             <!--https://rasamalaysia.com/seri-muka/-->  
                             <figcaption>Kueh Seri Muka ($0.50/pc):  Classic and authentic dessert, breakfast or snack. Steamed layer of sweet coconut glutinous rice with a layer of caramel pandan custard on top.</figcaption>  
-                            <button type="submit" name="btnKueh14"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh14" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -272,7 +273,7 @@ and open the template in the editor.
                             <figcaption>Kueh Talam ($0.50/pc): Two-layer Nyonya Kueh, the top layer is made from coconut milk and rice flour. The bottom layer is made from rice and mung bean flour with green colouring from pandan leaves.</figcaption>
 
                             <!--https://www.penang-traveltips.com/kuih-talam.htm-->  
-                            <button type="submit" name="btnKueh15"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh15" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
                     </div>
 
@@ -283,7 +284,7 @@ and open the template in the editor.
                             <!--https://www.youtube.com/watch?v=51DQdlJQDpk-->
                             <figcaption>Lepat Pisang ($0.50/pc): Indonesian steamed snack made from glutinous rice flour filled with brown sugar and banana. Wrapped using banana leaves.</figcaption>
 
-                            <button type="submit" name="btnKueh16"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh16" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -293,7 +294,7 @@ and open the template in the editor.
                             <figcaption>Ondeh Ondeh ($0.50/pc): One of the all-time favourite Nonya desserts, soft glutinous rice balls, infused in pandan juice, filled with aromatic palm sugar, then coated in a sweet, fresh and pleasant taste of grated white coconut.</figcaption>
 
                             <!--https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
-                            <button type="submit" name="btnKueh17"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh17" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -303,7 +304,7 @@ and open the template in the editor.
                             <figcaption>Pulut Inti ($0.50/pc): Pulut Inti is a traditional Malaysian dessert of steamed glutinous rice with a sweet coconut topping. They are usually wrapped in banana leaves.</figcaption>
 
                             <!--https://www.rotinrice.com/pulut-inti-glutinous-rice-with-sweet-coconut-topping/-->
-                            <button type="submit" name="btnKueh18"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh18" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -312,7 +313,7 @@ and open the template in the editor.
                             <!--http://www.seasaltwithfood.com/2017/01/pulut-tekan-pulot-tai-tai.html-->                        
                             <figcaption>Pulut Tekan ($0.50/pc): Presented in a pyramid shaped dessert that wrapped with the banana leaf. Made from a mound of steamed glutinous rice topped with inti, a sweet coconut filling.</figcaption>
 
-                            <button type="submit" name="btnKueh19"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh19" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -321,7 +322,7 @@ and open the template in the editor.
                             <!--http://theinformalchef.blogspot.com/2017/03/simple-pulut-panggangrempah-udang.html-->
                             <figcaption>Rempah Udang ($0.50/pc): A traditional Peranakan dumpling dessert snack, typically comes as an oblong-shaped glutinous rice roll, filled in the middle with shrimp paste.</figcaption>
 
-                            <button type="submit" name="btnKueh20"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh20" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
                     </div>
                     <div class="col-md-2"></div>

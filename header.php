@@ -6,6 +6,9 @@
     if (!isset($_SESSION["kuehqty"])) { //if not initialized from session, set it to 0 first
         $_SESSION["kuehqty"] = 0;
     }
+    if (!isset($_SESSION["subtotal"])) {
+        $_SESSION["subtotal"] = 0.0;
+    }
     $qty = $_SESSION["kuehqty"];
 ?>
 <header>

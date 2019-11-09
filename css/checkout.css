@@ -32,10 +32,11 @@ and open the template in the editor.
     height: 40px;
 }
 
+/*Order popup */
 #myOrder {
     overflow-y: scroll;
     overflow-x: scroll;
-    height: 450px;
+    height: auto;
     width: auto;
 }
 
@@ -45,6 +46,11 @@ and open the template in the editor.
 
 #subTotal {
     margin-top: 30px;
+}
+
+.btnDisabled {
+    pointer-events: none; 
+    cursor: default;
 }
 
 /* Display of table and setting dimensions */

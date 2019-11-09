@@ -35,17 +35,17 @@ and open the template in the editor.
                             <?php //display message cart is empty
                             if ($_SESSION["kuehqty"] == 0) {
                                 echo "<section class='alert alert-danger' role='alert'>
-                                <span class='fa fa-times-circle fa-2x'></span><p> Sorry, your shopping cart is empty!</p>
+                                <span class='fa fa-times-circle fa-2x'></span><p> Sorry, your shopping cart is currently empty!</p>
                                 </section>";
                             } else {
                                 echo "<table id='tblOrders'></table>"; 
                             }
                             ?>
                         </section>
-                        <p id="subTotal">Subtotal:</p>
+                        <p id="subTotal">Subtotal: <?php echo "$". number_format($_SESSION["subtotal"], 2)?></p>
                         <?php 
                         if ($_SESSION["kuehqty"] == 0) {
-                            echo "<a style='pointer-events: none; cursor: default;' id='btnCheckout' class='btn btn-block text-muted'>Proceed to Checkout  <span class='fa fa-arrow-circle-right'></span></a></a>";
+                            echo "<a id='btnCheckout' class='btn btn-block text-muted btnDisabled'>Proceed to Checkout  <span class='fa fa-arrow-circle-right'></span></a></a>";
                         } else {
                             echo "<a href='customer_checkout.php' id='btnCheckout' class='btn btn-block btn-success'>Proceed to Checkout  <span class='fa fa-arrow-circle-right'></span></a></a>";
                         }
@@ -70,6 +70,20 @@ and open the template in the editor.
                         <p class="abtUsCaption">Still we are 100% committed in continuously combining new flavors with tradition and improving based on customer's feedback.</p>
                     </div>
                 </div>
+                <section>
+                    <div class ="row ml-12">
+                        <div class ="col-md-6">
+                            <iframe width="100%" height="350"
+                                src="https://www.youtube.com/embed/NfuroHPHi9E">                               
+                            </iframe>
+                        </div>
+                        <div class ="col-md-6">
+                            <iframe width="100%" height="350"
+                                src="https://www.youtube.com/embed/QGMRQj5Zk08">                               
+                            </iframe>
+                        </div>
+                    </div>
+                </section>
                 <section>
                     <div class ="row ml-12 standardfont">
                         <div class ="col-md-3 text-center">
