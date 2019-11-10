@@ -104,7 +104,7 @@ and open the template in the editor.
                                 <source src="video/kueh_video_1.mp4" type="video/mp4">
                             </video> 
                         </div>
-                        <!--Video 2 Credit: https://www.youtube.com/watch?v=QGMRQj5Zk08-->
+                        <!--Video 2 Credit: https://www.youtube.com/watch?v=0_p_qL1WXI0-->
                         <div class ="col-md-6">
                             <video width="100%" height="350" controls>
                                 <source src="video/kueh_video_2.mp4" type="video/mp4">
