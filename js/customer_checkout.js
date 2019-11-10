@@ -14,66 +14,11 @@ var txtMobileNo;
 //var cardType = "Visa";
 window.onload = function() {
     attachListeners();
-    //displayOrder();
     //updateDelivery();
 };
 function attachListeners() { //this is to add event listeners for the radio buttons of selecting type of delivery and type of payment
     var btnDetails = document.getElementById("btnDetails");
-    //var radioHome = document.getElementById("radioHome");
-    //var radioStore = document.getElementById("radioStore");
-    //radioHome.addEventListener("click", updateDelivery);
-    //radioStore.addEventListener("click", updateDelivery);
     btnDetails.addEventListener("click", checkForms);
-}
-function displayOrder() { //this is the code to dynamically create rows and oclumns to populate the table content for my orders
-    /*var quantity = document.getElementById("quantity");
-    var tblOrders = document.getElementById("tblOrders");
-    var noOfDiffKuehs = 4;
-    quantity.innerHTML = "Total Quantity: " + getQuantity;
-    var kuehImg = ["img/The Basic Kuehs/Ang Ku Kueh.jpg", "img/Kueh with Character/Png Kueh.jpg", "img/Kueh with Character/Chwee Kueh.jpg", "img/The Heavyweight Kuehs/Kueh Talam Ubi.jpg"];
-    var kuehCategory = ["The Basic Kuehs", "Kueh with Character", "Kueh with Character", "The Heavweight Kuehs"];
-    var kuehNames = ["Ang Ku Kueh", "Png Kueh", "Chwee Kueh", "Kueh Talam Ubi"];
-    var cost = [0.50, 0.60, 0.70, 0.50];
-    var quantities = [1, 2, 1, 3];
-    var header = tblOrders.createTHead();
-    var headerRow = header.insertRow(0);
-    var headerCellImg = headerRow.insertCell(0);
-    var headerCellCategory = headerRow.insertCell(1);
-    var headerCellName = headerRow.insertCell(2);
-    var headerCellPriceFor1 = headerRow.insertCell(3);
-    var headerCellQuantity = headerRow.insertCell(4);
-    var headerCellPriceForAll = headerRow.insertCell(5);
-    var headerAction = headerRow.insertCell(6);
-    headerCellImg.innerHTML = "Image";
-    headerCellCategory.innerHTML = "Category";
-    headerCellName.innerHTML = "Name";
-    headerCellPriceFor1.innerHTML = "Price";
-    headerCellQuantity.innerHTML = "Quantity";
-    headerCellPriceForAll.innerHTML = "Total Price";
-    headerAction.innerHTML = "Action";
-    for (var i = 0; i < noOfDiffKuehs; i++) {
-        var row = tblOrders.insertRow(i + 1);
-        var cellImg = row.insertCell(0);
-        var cellCategory = row.insertCell(1);
-        var cellKueh = row.insertCell(2);
-        var cellPriceFor1 = row.insertCell(3);
-        var cellQuantity = row.insertCell(4);
-        var cellPriceForAll = row.insertCell(5);
-        var cellPriceAction = row.insertCell(6);
-        cellImg.innerHTML = "<img id='imgKueh' src='" + kuehImg[i] + "' alt='kueh'/>";
-        cellCategory.innerHTML = kuehCategory[i];
-        cellKueh.innerHTML = kuehNames[i];
-        cellPriceFor1.innerHTML = "$" + (cost[i]).toFixed(2) + "/pc";
-        cellQuantity.innerHTML = quantities[i];
-        cellPriceForAll.innerHTML = "$" + (quantities[i] * cost[i]).toFixed(2);
-        cellPriceAction.innerHTML = "<a href='#' class='edit'><span class='fa fa-edit'> Edit</span></a>";
-        txtOrderList += kuehNames[i] + "   " + quantities[i] + "   " + (quantities[i] * cost[i]).toFixed(2) + "\n";
-        subtotal += (quantities[i] * cost[i]);
-    }
-    document.getElementById("subTotal").innerHTML = "Subtotal: $" + subtotal.toFixed(2);
-    document.getElementById("delivery").innerHTML = "Delivery: $" + delivery.toFixed(2);
-    totalAmt = subtotal + delivery;
-    document.getElementById("totalAmt").innerHTML = "Total Amount: $" + totalAmt.toFixed(2);*/
 }
 function checkForms() { //this is the function for the form validation
     var customerForm = document.getElementById("customerForm");
@@ -174,26 +119,4 @@ function updateAddress() { //this is to update the address depending on radio bu
         txtCollectionAddress = storeAddress;
         collectionAddress.innerHTML = txtCollectionAddress; 
     }
-}
-function updateDelivery() { //this is to update the delivery depending on radio button
-    /*var radioHome = document.getElementById("radioHome");
-    var radioStore = document.getElementById("radioStore");
-    if (radioHome.checked) {
-        delivery = 5.00;
-    } else if (radioStore.checked) {
-        delivery = 0.00;
-    }
-    document.getElementById("subTotal").innerHTML = "Subtotal: $" + subtotal.toFixed(2);
-    document.getElementById("delivery").innerHTML = "Delivery: $" + delivery.toFixed(2);
-    totalAmt = subtotal + delivery;
-    document.getElementById("totalAmt").innerHTML = "Total Amount: $" + totalAmt.toFixed(2);*/
-}
-function updateCard() { //this is to update the type of card depednding on radio button
-    /*var radioVisa = document.getElementById("payVisa");
-    var radioMc = document.getElementById("payMaster");
-    if (radioVisa.checked) {
-        cardType = radioVisa.value;
-    } else if (radioMc.checked) {
-        cardType = radioMc.value;
-    }*/
 }

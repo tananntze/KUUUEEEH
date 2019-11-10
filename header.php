@@ -3,13 +3,24 @@
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
     }
-    if (!isset($_SESSION["kuehqty"])) { //if not initialized from session, set it to 0 first
-        $_SESSION["kuehqty"] = 0;
+    if (!isset($_SESSION["totalQty"])) { //if not initialized from session, set it to 0 first
+        $_SESSION["totalQty"] = 0;
     }
     if (!isset($_SESSION["subtotal"])) {
         $_SESSION["subtotal"] = 0.0;
     }
-    $qty = $_SESSION["kuehqty"];
+    for ($i = 1; $i <= 10; $i++) {
+        if (!isset($_SESSION["kueh" . $i. "_qty"])) {
+            $_SESSION["kueh" . $i. "_qty"] = 0;
+        }
+        if (!isset($_SESSION["kueh" . $i. "_orders"])) {
+            $_SESSION["kueh" . $i. "_orders"] = array();
+        }   
+    }
+    if (!isset($_SESSION["my_orders"])) {
+        $_SESSION["my_orders"] = array();
+    }
+    $qty = $_SESSION["totalQty"];
 ?>
 <header>
     <nav class="nav navbar navbar-expand-md bg-pink navbar-dark" role="navigation">

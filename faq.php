@@ -28,20 +28,46 @@
                     </section>
                     <section id="paragraph" class="modal-body">
                         <section id="myOrder">
-                            <p id="quantity">Total Quantity: <?php echo $_SESSION["kuehqty"]?></p>
+                            <p id="quantity">Total Quantity: <?php echo $_SESSION["totalQty"]?></p>
                             <?php //display message cart is empty
-                            if ($_SESSION["kuehqty"] == 0) {
+                            if ($_SESSION["totalQty"] == 0) {
                                 echo "<section class='alert alert-danger' role='alert'>
                                 <span class='fa fa-times-circle fa-2x'></span><p> Sorry, your shopping cart is currently empty!</p>
                                 </section>";
                             } else {
-                                echo "<table id='tblOrders'></table>"; 
+                                echo "<table id='tblOrders'>"
+                                . "<tr>"
+                                . "<th>Image</th>"
+                                . "<th>Category</th>"
+                                . "<th>Name</th>"
+                                . "<th>Price</th>"
+                                . "<th>Quantity</th>"
+                                . "<th>Total</th>"
+                                . "<th>Action</th>"
+                                . "</tr>";
+                                foreach ($_SESSION["my_orders"] as $kueh_array) {
+                                    echo "<tr>";
+                                    for ($c = 0; $c < 6; $c++) {
+                                        if ($c == 0) {
+                                            echo "<td><img id='imgKueh' src='". $kueh_array[$c] ."' alt='Kueh Order'/></td>";
+                                        } else if ($c == 3) {
+                                            echo "<td>$" . number_format($kueh_array[$c], 2) . "/pc";
+                                        } else if ($c == 5) {
+                                            echo "<td>$" . number_format($kueh_array[$c], 2);
+                                        } 
+                                        else {
+                                            echo "<td>" . $kueh_array[$c]. "</td>";  
+                                        }
+                                    }
+                                    echo "<tr>";
+                                }
+                                echo "</table>";
                             }
                             ?>
                         </section>
-                        <p id="subTotal">Subtotal: <?php echo "$". number_format($_SESSION["subtotal"], 2)?></p>                      
+                        <p id="subTotal">Subtotal: <?php echo "$" . number_format($_SESSION["subtotal"], 2)?></p>
                         <?php 
-                        if ($_SESSION["kuehqty"] == 0) {
+                        if ($_SESSION["totalQty"] == 0) {
                             echo "<a id='btnCheckout' class='btn btn-block text-muted'>Proceed to Checkout  <span class='fa fa-arrow-circle-right'></span></a></a>";
                         } else {
                             echo "<a href='customer_checkout.php' id='btnCheckout' class='btn btn-block btn-success'>Proceed to Checkout  <span class='fa fa-arrow-circle-right'></span></a></a>";
