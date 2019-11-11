@@ -33,7 +33,7 @@ and open the template in the editor.
                     <div class="col-md-12">
                         <h2 class="fontheader">Add New Promotions Dashboard</h2>
                     </div>
-                    <div class="col-md-10">
+                    <div class="col-md-12">
                         <section id="paragraph">
                             <form id="promoForm" action="processpromotions.php" method="post" enctype="multipart/form-data">
                                 <section class="form-group">
