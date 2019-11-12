@@ -20,13 +20,13 @@ and open the template in the editor.
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     </head>
     <body class="overlay">
-        <?php include "header.php"?>
-              
+        <?php include "header.php" ?>
+
         <div class="container">
             <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
             <img src="img/Banner - White.png" alt="" class="responsive"id="bannerresize">
         </div>
-        
+
         <section>
             <div class="container-fluid" style= 'margin-top:20px'>
                 <section class =" row sectionheader text-center">
@@ -57,19 +57,19 @@ and open the template in the editor.
                     <section class ="row ml-12 standardfont">
                         <section class ="col-md-3 text-center">
                             <a href="kuehmenuall.php"><img class="zoom rounded-circle" id="btnAngKk" src="img/The Basic Kuehs/Ang Ku Kueh.jpg" alt="Ang Ku Kueh">
-                            <figcaption>Check Us Out In Our Menus!</figcaption></a>
+                                <figcaption>Check Us Out In Our Menus!</figcaption></a>
                         </section>
                         <section class ="col-md-3 text-center">
                             <a href="kuehmenuall.php"><img class="zoom rounded-circle" id="btnLapis" src="img/The Basic Kuehs/Kueh Lapis.jpg" alt="Kueh Lapis">
-                            <figcaption>Check Us Out In Our Menus!</figcaption></a>
+                                <figcaption>Check Us Out In Our Menus!</figcaption></a>
                         </section>
                         <section class ="col-md-3 text-center">
                             <a href="kuehmenuall.php"><img class="zoom rounded-circle" id="btnChwee" src="img/Kueh with Character/Chwee Kueh.JPG" alt="Chwee Kueh">
-                            <figcaption>Check Us Out In Our Menus!</figcaption></a>
+                                <figcaption>Check Us Out In Our Menus!</figcaption></a>
                         </section>
                         <section class ="col-md-3 text-center">
                             <a href="kuehmenuall.php"><img class="zoom rounded-circle" id="btnPng" src="img/Kueh with Character/Png Kueh.jpg" alt="Png Kueh">
-                            <figcaption>Check Us Out In Our Menus!</figcaption></a>
+                                <figcaption>Check Us Out In Our Menus!</figcaption></a>
                         </section>
                     </section>
                     <section class ="row ml-6 standardfont">
@@ -86,38 +86,8 @@ and open the template in the editor.
                         </section>
                     </section>
                 </section>
-            </section>
         </section>
-    </body>
-    <footer class="footer-bs p-2 mb-0">
-
-        <div class="row mx-0">
-            <div class="col-md-3 footer-brand animated fadeInLeft">
-
-                <p>© 2019 KUUUEEH</p>
-            </div>
-            <div class="col-md-4 footer-nav animated fadeInUp">
-                <h4>Menu —</h4>
-
-                <div class="col-md-6">
-                    <ul class="list">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="aboutus.php">About Us</a></li>
-                        <li><a href="kuehmenuall.php">Kueh</a></li>
-                        <li><a href="contactus.php">Contact Us</a></li>
-                        <li><a href="faq.php">FAQ's</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2 footer-social animated fadeInDown">
-                <h4>Follow Us @</h4>
-                <ul class= "list-inline">
-                    <li><a class ="fa fa-facebook-square" href="#"> Facebook</a></li>
-                    <li><a class="fa fa-twitter-square" href="#"> Twitter</a></li>
-                    <li ><a class= "fa fa-instagram" href="#"> Instagram</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </footer>
+    </section>
+</body>
+<?php include "footer_include.php" ?>
 </html>

@@ -19,15 +19,12 @@ and open the template in the editor.
         <script src="js/customer_checkout.js"></script>
     </head>
     <body>
-        <?php 
-        include "header.php";
-        ?>
-        
+        <?php include "header.php" ?>
         <div class="container">
             <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
             <img src="img/Banner - White.png" alt="" class="responsive" id="bannerresize">
         </div>
-        
+
         <section>
             <section class="container-fluid" style= 'margin-top:20px'>
                 <div class =" row sectionheader standardfont text-center">
@@ -43,19 +40,19 @@ and open the template in the editor.
                                 <section class="form-group">
                                     <label for="email">*Email address:</label>
                                     <input class="form-control" id="email" name="email" placeholder="Enter your email address" type="email" required="true"></section>
-                                    <section class="form-group">
-                                        <label for="first_name">*First Name:</label>
-                                        <input class="form-control" id="first_name" name="first_name" placeholder="Enter your first name" required="true" pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
-                                    </section>
-                                    <section class="form-group">
-                                        <label for="last_name">*Last Name:</label>
-                                        <input class="form-control" id="last_name" name="last_name" placeholder="Enter your last name" required="true" pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
-                                    </section>
-                                    <section class="form-group">
-                                        <label for="mobile_no">*Mobile Number:</label>
-                                        <input class="form-control" id="mobile_no" name="mobile_no" placeholder="Enter your mobile number" type="tel" maxLength="8" required="true" pattern="[0-9]{8}">
-                                        <button id="btnDetails" type="submit" class="btn btn-block btn-success">Proceed to Delivery Details  <span class="fa fa-arrow-circle-right"></span></button>
-                                    </section>
+                                <section class="form-group">
+                                    <label for="first_name">*First Name:</label>
+                                    <input class="form-control" id="first_name" name="first_name" placeholder="Enter your first name" required="true" pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
+                                </section>
+                                <section class="form-group">
+                                    <label for="last_name">*Last Name:</label>
+                                    <input class="form-control" id="last_name" name="last_name" placeholder="Enter your last name" required="true" pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
+                                </section>
+                                <section class="form-group">
+                                    <label for="mobile_no">*Mobile Number:</label>
+                                    <input class="form-control" id="mobile_no" name="mobile_no" placeholder="Enter your mobile number" type="tel" maxLength="8" required="true" pattern="[0-9]{8}">
+                                    <button id="btnDetails" type="submit" class="btn btn-block btn-success">Proceed to Delivery Details  <span class="fa fa-arrow-circle-right"></span></button>
+                                </section>
                             </section>
                         </div>
                     </section>
@@ -63,34 +60,5 @@ and open the template in the editor.
             </section>
         </section>
     </body>
-    <footer class="footer-bs p-2 mb-0">
-
-        <div class="row mx-0">
-            <div class="col-md-3 footer-brand animated fadeInLeft">
-
-                <p>© 2019 KUUUEEH</p>
-            </div>
-            <div class="col-md-4 footer-nav animated fadeInUp">
-                <h4>Menu —</h4>
-
-                <div class="col-md-6">
-                    <ul class="list">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="aboutus.php">About Us</a></li>
-                        <li><a href="kuehmenuall.php">Kueh</a></li>
-                        <li><a href="contactus.php">Contact Us</a></li>
-                        <li><a href="faq.php">FAQ's</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2 footer-social animated fadeInDown">
-                <h4>Follow Us @</h4>
-                <ul class= "list-inline">
-                    <li><a class ="fa fa-facebook-square" href="#"> Facebook</a></li>
-                    <li><a class="fa fa-twitter-square" href="#"> Twitter</a></li>
-                    <li ><a class= "fa fa-instagram" href="#"> Instagram</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <?php include "footer_include.php" ?>
 </html>

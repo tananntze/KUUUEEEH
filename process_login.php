@@ -3,7 +3,6 @@
     include "header.php";
 
     function login($email, $password){
-        session_start();
         $conn = connectToDB();
         $sql = $errorMsg = $fname = $lname = $retrievedEmail = "";
         $userId = 0;
@@ -15,6 +14,7 @@
             $userId = $row["userId"];
             $fname = $row["fname"];
             $lname = $row["lname"];
+            session_start();
             $_SESSION["userId"] = $userId;
             $_SESSION["fname"] = $fname;
             $_SESSION["lname"] = $lname;
