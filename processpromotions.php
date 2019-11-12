@@ -41,6 +41,7 @@
                     $errorMsg .= "End date must be later than start date!<br>";  
                 }
             }
+            //INCLUDE THE DB UPLOAD INPUT HERE//
             if (empty($_FILES['file_input']['name'])) { //check if the image file has uploaded or not
                 $success = false;
                 $errorMsg .= "Please upload an image file!<br>";  
