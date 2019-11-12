@@ -189,7 +189,7 @@ and open the template in the editor.
                 $_SESSION["kueh10_orders"][6] = $kuehTotalPrice;
             }
             addKuehDetails($kuehName, $_SESSION["kueh10_orders"], $kuehPrice);
-        } if (isset($_POST["btnKueh11"])) {
+        } /*if (isset($_POST["btnKueh11"])) {
             $unique_id = 11;
             $category = "The Heavyweight Kuehs";
             $kuehName = "Apam Balik";
@@ -509,7 +509,7 @@ and open the template in the editor.
                 $_SESSION["kueh30_orders"][6] = $kuehTotalPrice;
             }
             addKuehDetails($kuehName, $_SESSION["kueh30_orders"], $kuehPrice);
-        }
+        }*/
         function addKuehDetails($kuehName, $kuehArr, $kuehPrice) {
             $index = 0;
             $_SESSION["totalQty"]++;

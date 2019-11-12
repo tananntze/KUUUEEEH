@@ -44,7 +44,7 @@ and open the template in the editor.
                                             <input class="radio_set" type="radio" name="radioDel" id="radioHome" value="radioHome" checked="true"><label class="radio_lbl" for="delHome">Home Delivery</label>
                                             <p id="txtHomeAddress"></p>
                                             <p id="txtHomeDuration">Approximately 45-60 minutes</p>
-                                            <p id="deliveryHomeCost">Delivery Cost: $5.00</p>
+                                            <p id="deliveryHomeCost">Delivery Cost: + $5.00</p>
                                         </section>
                                         <section class="radio_grp">
                                             <input class="radio_set" type="radio" name="radioDel" id="radioStore" value="radioStore"><label class="radio_lbl" for="delNormal">Collect at our store</label>

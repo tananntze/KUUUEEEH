@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>PHP Testing on KUUUEEEH Checkout</title>
+        <title>KUUUEEEH Checkout</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -82,9 +82,10 @@
                 echo "<h4>The following input errors were detected:</h4>";     
                 echo "<p>" . $errorMsg . "</p>";
             } else {
+                $_SESSION["checkoutDone"] = true;
                 ?>
                 <section>
-                    <div class="container-fluid" style= 'margin-top:20px'>
+                    <div class="container-fluid  standardfont" style= 'margin-top:20px'>
                         <h1>Successful checkout!</h1>
                         <h1>Thank you for ordering with KUUUEEEH!</h1>
                         <p>Bon Appetit!</p>
@@ -128,16 +129,13 @@
                                     <p id="subTotal">Subtotal: <?php echo "$" . number_format($_SESSION["subtotal"], 2)?></p>
                                     <p id="delivery">Delivery: <?php echo "$" . number_format($_SESSION["delivery"], 2)?></p>
                                     <p id="totalDel">Total: <?php echo "$" . number_format($_SESSION["total"], 2)?></p>
-                                    <a href='index.php' id='btnHome' class='btn btn-default'>Return to Home</a>
+                                    <a href='index.php' id='btnHome' class='btn btn-primary btn-block'><span class='fa fa-home'></span> Return to Home</a>
                                 </section>
                             </div>
                         </section>
                     </div>
                 </section>
-                <?php    //kill current session, reset all variables            
-                if (session_status() == PHP_SESSION_ACTIVE) {
-                        session_destroy();                      
-                    }
+                <?php
                 }
                 //Helper function that checks input for malicious or unwanted content. 
                 function sanitize_input($data) {   
