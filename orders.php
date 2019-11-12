@@ -5,6 +5,13 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 
+<?php
+    session_start();
+    if (!isset($_SESSION['userId'])) {
+        header("Location: login.php");
+    }
+?>
+
 <html class="header">
 
 <head>
