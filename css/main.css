@@ -60,7 +60,7 @@ body{
 .fontheader{
     font-family: "Garamond";
     text-align: center; font-weight: bold;
-    color: #ec5772;
+    color: #987654;
     text-shadow: black;
 }
 
@@ -68,7 +68,7 @@ body{
     font-family: "Garamond";
     text-align: center; font-weight: bold;
     /*text-shadow: 2px 2px 2px black; can include this if want to style the fonts with shadow*/
-    color: #F81894;
+    color: #B39283;
 }
 
 nav{

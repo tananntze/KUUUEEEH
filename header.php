@@ -9,7 +9,13 @@
     if (!isset($_SESSION["subtotal"])) {
         $_SESSION["subtotal"] = 0.0;
     }
-    for ($i = 1; $i <= 10; $i++) {
+    if (!isset($_SESSION["delivery"])) {
+        $_SESSION["delivery"] = 0.0;
+    }
+    if (!isset($_SESSION["total"])) {
+        $_SESSION["total"] = 0.0;
+    }
+    for ($i = 1; $i <= 30; $i++) {
         if (!isset($_SESSION["kueh" . $i. "_qty"])) {
             $_SESSION["kueh" . $i. "_qty"] = 0;
         }
@@ -39,7 +45,7 @@
             </ul>
             <ul class="nav navbar-nav ml-auto">
                 <li class="nav navbar-nav">
-                    <a class ="nav-link" href="" data-toggle="modal" data-target="#orderPopup"><span class="fas fa-directions"> <span id="badgeQuantity" class="badge badge-danger"> <?php echo $qty ?> </span> My Order </span></a>
+                    <a class ="nav-link" href="my_order.php"><span class="fas fa-directions"> <span id="badgeQuantity" class="badge badge-danger"> <?php echo $qty ?> </span> My Order </span></a>
                     <a class="nav-link" href="login.php"><span class="fas fa-directions">Login</span></a>
                 </li>
             </ul>

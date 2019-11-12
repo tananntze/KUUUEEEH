@@ -12,74 +12,15 @@ and open the template in the editor.
         <meta name ="KUUUEEEH website where you find the best kuehs">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css"/> 
-        <link rel="stylesheet" href="css/checkout.css"/>
+        <link rel="stylesheet" href="css/shoppingcart.css"/>
         <link rel="stylesheet" href="css/aboutus.css"/> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-        <script src="js/myorderspopup.js"></script>
     </head>
     <body class="overlay">
         <?php include "header.php"?>
-        <section class="modal fade" id="orderPopup" role="dialog">
-            <section class="modal-dialog">
-                <section class="modal-content">
-                    <section class="modal-header text-center d-block">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h3 id ="orderHeader">My Order</h3>
-                    </section>
-                    <section id="paragraph" class="modal-body">
-                        <section id="myOrder">
-                            <p id="quantity">Total Quantity: <?php echo $_SESSION["totalQty"]?></p>
-                            <?php //display message cart is empty
-                            if ($_SESSION["totalQty"] == 0) {
-                                echo "<section class='alert alert-danger' role='alert'>
-                                <span class='fa fa-times-circle fa-2x'></span><p> Sorry, your shopping cart is currently empty!</p>
-                                </section>";
-                            } else {
-                                echo "<table id='tblOrders'>"
-                                . "<tr>"
-                                . "<th>Image</th>"
-                                . "<th>Category</th>"
-                                . "<th>Name</th>"
-                                . "<th>Price</th>"
-                                . "<th>Quantity</th>"
-                                . "<th>Total</th>"
-                                . "<th>Action</th>"
-                                . "</tr>";
-                                foreach ($_SESSION["my_orders"] as $kueh_array) {
-                                    echo "<tr>";
-                                    for ($c = 0; $c < 6; $c++) {
-                                        if ($c == 0) {
-                                            echo "<td><img id='imgKueh' src='". $kueh_array[$c] ."' alt='Kueh Order'/></td>";
-                                        } else if ($c == 3) {
-                                            echo "<td>$" . number_format($kueh_array[$c], 2) . "/pc";
-                                        } else if ($c == 5) {
-                                            echo "<td>$" . number_format($kueh_array[$c], 2);
-                                        } 
-                                        else {
-                                            echo "<td>" . $kueh_array[$c]. "</td>";  
-                                        }
-                                    }
-                                    echo "<tr>";
-                                }
-                                echo "</table>";
-                            }
-                            ?>
-                        </section>
-                        <p id="subTotal">Subtotal: <?php echo "$" . number_format($_SESSION["subtotal"], 2)?></p>
-                        <?php 
-                        if ($_SESSION["totalQty"] == 0) {
-                            echo "<a id='btnCheckout' class='btn btn-block text-muted'>Proceed to Checkout  <span class='fa fa-arrow-circle-right'></span></a></a>";
-                        } else {
-                            echo "<a href='customer_checkout.php' id='btnCheckout' class='btn btn-block btn-success'>Proceed to Checkout  <span class='fa fa-arrow-circle-right'></span></a></a>";
-                        }
-                        ?>
-                    </section>
-                </section>
-            </section>
-        </section>
               
         <div class="container">
             <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
@@ -88,64 +29,64 @@ and open the template in the editor.
         
         <section>
             <div class="container-fluid" style= 'margin-top:20px'>
-                <div class =" row sectionheader text-center">
-                    <div class="col-md-12">
+                <section class =" row sectionheader text-center">
+                    <section class="col-md-12">
                         <h2 class="abtUsHeader">ABOUT KUUUEEEH</h2>
                         <p class="abtUsCaption">Founded in 2019 by an avid kueh lover, KUUUEEEH has been offering a tempting array of sumptuous kuehs till today!</p>
                         <p class="abtUsCaption">Customers have been savoring our kuehs through our unique blend of flavors and we are proud that our kuehs are generally well-received.</p>
                         <p class="abtUsCaption">Still we are 100% committed in continuously combining new flavors with tradition and improving based on customer's feedback.</p>
-                    </div>
-                </div>
+                    </section>
+                </section>
                 <section>
-                    <div class ="row ml-12">
+                    <section class ="row md-12">
                         <!--Video 1 Credit: https://www.youtube.com/watch?v=NfuroHPHi9E-->
-                        <div class ="col-md-6">
+                        <section class ="col-md-6">
                             <video width="100%" height="350" controls>
                                 <source src="video/kueh_video_1.mp4" type="video/mp4">
                             </video> 
-                        </div>
+                        </section>
                         <!--Video 2 Credit: https://www.youtube.com/watch?v=0_p_qL1WXI0-->
-                        <div class ="col-md-6">
+                        <section class ="col-md-6">
                             <video width="100%" height="350" controls>
                                 <source src="video/kueh_video_2.mp4" type="video/mp4">
                             </video> 
-                        </div>
-                    </div>
+                        </section>
+                    </section>
                 </section>
                 <section>
-                    <div class ="row ml-12 standardfont">
-                        <div class ="col-md-3 text-center">
+                    <section class ="row ml-12 standardfont">
+                        <section class ="col-md-3 text-center">
                             <a href="kuehmenuall.php"><img class="zoom rounded-circle" id="btnAngKk" src="img/The Basic Kuehs/Ang Ku Kueh.jpg" alt="Ang Ku Kueh">
                             <figcaption>Check Us Out In Our Menus!</figcaption></a>
-                        </div>
-                        <div class ="col-md-3 text-center">
+                        </section>
+                        <section class ="col-md-3 text-center">
                             <a href="kuehmenuall.php"><img class="zoom rounded-circle" id="btnLapis" src="img/The Basic Kuehs/Kueh Lapis.jpg" alt="Kueh Lapis">
                             <figcaption>Check Us Out In Our Menus!</figcaption></a>
-                        </div>
-                        <div class ="col-md-3 text-center">
+                        </section>
+                        <section class ="col-md-3 text-center">
                             <a href="kuehmenuall.php"><img class="zoom rounded-circle" id="btnChwee" src="img/Kueh with Character/Chwee Kueh.JPG" alt="Chwee Kueh">
                             <figcaption>Check Us Out In Our Menus!</figcaption></a>
-                        </div>
-                        <div class ="col-md-3 text-center">
+                        </section>
+                        <section class ="col-md-3 text-center">
                             <a href="kuehmenuall.php"><img class="zoom rounded-circle" id="btnPng" src="img/Kueh with Character/Png Kueh.jpg" alt="Png Kueh">
                             <figcaption>Check Us Out In Our Menus!</figcaption></a>
-                        </div>
-                    </div>
-                    <div class ="row ml-6 standardfont">
-                        <div class ="col-md-6">
+                        </section>
+                    </section>
+                    <section class ="row ml-6 standardfont">
+                        <section class ="col-md-6">
                             <h2 class="abtUsSubHeader">Why Choose KUUUEEEH?</h2>
                             <p class="abtUsCaption">At KUUUEEEH, we use ingredients that are natural and our kuehs are always freshly made from the oven.</p> 
                             <p class="abtUsCaption">Uniquely to our kueh shop, our kuehs do not contain preservatives, artificial flavors and contains less sugar and oil. This is in part of our way of ensuring our kuehs are delicious yet promoting healthy lifestyle in Singapore to our valued customers!</p>
-                        </div>
-                        <div class ="col-md-6">
+                        </section>
+                        <section class ="col-md-6">
                             <h2 class="abtUsSubHeader">What kuehs are we selling?</h2>
                             <p class="abtUsCaption">Our menu offers a wide range of kuehs that you, your family and friends are surely craving for!</p>
                             <p class="abtUsCaption">Some of our signature kuehs from our menu includes: Ang Ku Kueh, Chwee Kueh, Kueh Lapis, Kueh Tako and many more that are highly recommended for y'all to try out!</p>
                             <p id="bon_appetit">"Bon Appétit!"</p>
-                        </div>
-                    </div>
+                        </section>
+                    </section>
                 </section>
-            </div>
+            </section>
         </section>
     </body>
     <footer class="footer-bs p-2 mb-0">

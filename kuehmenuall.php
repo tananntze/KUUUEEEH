@@ -14,7 +14,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/kuehmenuall.css">
-        <link rel="stylesheet" href="css/checkout.css"/>
+        <link rel="stylesheet" href="css/shoppingcart.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -26,169 +26,502 @@ and open the template in the editor.
         <?php 
         include "header.php";
         if (isset($_POST["btnKueh1"])) {
-            $imgSrc = "img/The Basic Kuehs/Ang Ku Kueh.jpg";
+            //TODO, retrieve all the values from Products Database once database value is up!
+            //assign a unique id to reference each kueh
+            $unique_id = 1;
             $category = "The Basic Kuehs";
             $kuehName = "Ang Ku Kueh";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
             $kuehPrice = $_POST["btnKueh1"];
             $_SESSION["kueh1_qty"]++;
             $kuehTotalPrice = $kuehPrice * $_SESSION["kueh1_qty"];
             //if the kueh array is empty, add the entry
             if (sizeof($_SESSION["kueh1_orders"]) == 0) {
-                array_push($_SESSION["kueh1_orders"], $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh1_qty"], $kuehTotalPrice);
+                array_push($_SESSION["kueh1_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh1_qty"], $kuehTotalPrice);
             } else {
                 //update the quantity and total price of the kueh
-                $_SESSION["kueh1_orders"][4] = $_SESSION["kueh1_qty"];
-                $_SESSION["kueh1_orders"][5] = $kuehTotalPrice;
+                $_SESSION["kueh1_orders"][5] = $_SESSION["kueh1_qty"];
+                $_SESSION["kueh1_orders"][6] = $kuehTotalPrice;
             } 
             addKuehDetails($kuehName, $_SESSION["kueh1_orders"], $kuehPrice);
         } if (isset($_POST["btnKueh2"])) {
-            $imgSrc = "img/The Basic Kuehs/Chai Kueh.jpg";
+            $unique_id = 2;
             $category = "The Basic Kuehs";
             $kuehName = "Chai Kueh";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
             $kuehPrice = $_POST["btnKueh2"];
             $_SESSION["kueh2_qty"]++;
             $kuehTotalPrice = $kuehPrice * $_SESSION["kueh2_qty"];
             //if the kueh array is empty, add the entry
             if (sizeof($_SESSION["kueh2_orders"]) == 0) {
-                array_push($_SESSION["kueh2_orders"], $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh2_qty"], $kuehTotalPrice);     
+                array_push($_SESSION["kueh2_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh2_qty"], $kuehTotalPrice);     
             } else {
                 //update the quantity and total price of the kueh
-                $_SESSION["kueh2_orders"][4] = $_SESSION["kueh2_qty"];
-                $_SESSION["kueh2_orders"][5] = $kuehTotalPrice;
+                $_SESSION["kueh2_orders"][5] = $_SESSION["kueh2_qty"];
+                $_SESSION["kueh2_orders"][6] = $kuehTotalPrice;
             } 
             addKuehDetails($kuehName, $_SESSION["kueh2_orders"], $kuehPrice);
         } if (isset($_POST["btnKueh3"])) { 
-            $imgSrc = "img/The Basic Kuehs/Kueh Ambon.jpg";
+            $unique_id = 3;
             $category = "The Basic Kuehs";
             $kuehName = "Kueh Ambon";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
             $kuehPrice = $_POST["btnKueh3"];
             $_SESSION["kueh3_qty"]++;
             $kuehTotalPrice = $kuehPrice * $_SESSION["kueh3_qty"];
             if (sizeof($_SESSION["kueh3_orders"]) == 0) {
-                array_push($_SESSION["kueh3_orders"], $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh3_qty"], $kuehTotalPrice);     
+                array_push($_SESSION["kueh3_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh3_qty"], $kuehTotalPrice);     
             } else {
                 //update the quantity and total price of the kueh
-                $_SESSION["kueh3_orders"][4] = $_SESSION["kueh3_qty"];
-                $_SESSION["kueh3_orders"][5] = $kuehTotalPrice;
+                $_SESSION["kueh3_orders"][5] = $_SESSION["kueh3_qty"];
+                $_SESSION["kueh3_orders"][6] = $kuehTotalPrice;
             } 
             addKuehDetails($kuehName, $_SESSION["kueh3_orders"], $kuehPrice);
-        } if (isset($_POST["btnKueh4"])) { 
-            $imgSrc = "img/The Basic Kuehs/Kueh Bangkit.jpg";
+        } if (isset($_POST["btnKueh4"])) {
+            $unique_id = 4;
             $category = "The Basic Kuehs";
             $kuehName = "Kueh Bangkit";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
             $kuehPrice = $_POST["btnKueh4"];
             $_SESSION["kueh4_qty"]++;
             $kuehTotalPrice = $kuehPrice * $_SESSION["kueh4_qty"];
             if (sizeof($_SESSION["kueh4_orders"]) == 0) {
-                array_push($_SESSION["kueh4_orders"], $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh4_qty"], $kuehTotalPrice);     
+                array_push($_SESSION["kueh4_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh4_qty"], $kuehTotalPrice);     
             } else {
                 //update the quantity and total price of the kueh
-                $_SESSION["kueh4_orders"][4] = $_SESSION["kueh4_qty"];
-                $_SESSION["kueh4_orders"][5] = $kuehTotalPrice;
+                $_SESSION["kueh4_orders"][5] = $_SESSION["kueh4_qty"];
+                $_SESSION["kueh4_orders"][6] = $kuehTotalPrice;
             } 
             addKuehDetails($kuehName, $_SESSION["kueh4_orders"], $kuehPrice);
-        } if (isset($_POST["btnKueh5"])) { 
-            $imgSrc = "img/The Basic Kuehs/Kueh Bingkah.jpg";
+        } if (isset($_POST["btnKueh5"])) {
+            $unique_id = 5;
             $category = "The Basic Kuehs";
             $kuehName = "Kueh Bingkah";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
             $kuehPrice = $_POST["btnKueh5"];
             $_SESSION["kueh5_qty"]++;
             $kuehTotalPrice = $kuehPrice * $_SESSION["kueh5_qty"];
             if (sizeof($_SESSION["kueh5_orders"]) == 0) {
-                array_push($_SESSION["kueh5_orders"], $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh5_qty"], $kuehTotalPrice);     
+                array_push($_SESSION["kueh5_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh5_qty"], $kuehTotalPrice);     
             } else {
                 //update the quantity and total price of the kueh
-                $_SESSION["kueh5_orders"][4] = $_SESSION["kueh5_qty"];
-                $_SESSION["kueh5_orders"][5] = $kuehTotalPrice;
+                $_SESSION["kueh5_orders"][5] = $_SESSION["kueh5_qty"];
+                $_SESSION["kueh5_orders"][6] = $kuehTotalPrice;
             }
             addKuehDetails($kuehName, $_SESSION["kueh5_orders"], $kuehPrice);
-        } if (isset($_POST["btnKueh6"])) {            
-            $imgSrc = "img/The Basic Kuehs/Kueh Bongkong.jpg";
-            $category = "The Basic Kuehs";
-            $kuehName = "Kueh Bongkong";
+        } if (isset($_POST["btnKueh6"])) {
+            $unique_id = 6;            
+            $category = "Kueh with Character";
+            $kuehName = "Apom Berkuah";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
             $kuehPrice = $_POST["btnKueh6"];
             $_SESSION["kueh6_qty"]++;
             $kuehTotalPrice = $kuehPrice * $_SESSION["kueh6_qty"];
             if (sizeof($_SESSION["kueh6_orders"]) == 0) {
-                array_push($_SESSION["kueh6_orders"], $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh6_qty"], $kuehTotalPrice);     
+                array_push($_SESSION["kueh6_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh6_qty"], $kuehTotalPrice);     
             } else {
                 //update the quantity and total price of the kueh
-                $_SESSION["kueh6_orders"][4] = $_SESSION["kueh6_qty"];
-                $_SESSION["kueh6_orders"][5] = $kuehTotalPrice;
+                $_SESSION["kueh6_orders"][5] = $_SESSION["kueh6_qty"];
+                $_SESSION["kueh6_orders"][6] = $kuehTotalPrice;
             }
             addKuehDetails($kuehName, $_SESSION["kueh6_orders"], $kuehPrice);
-        } if (isset($_POST["btnKueh7"])) { 
-            $imgSrc = "img/The Basic Kuehs/Kueh Dadar.jpg";
-            $category = "The Basic Kuehs";
-            $kuehName = "Kueh Dadar";
+        } if (isset($_POST["btnKueh7"])) {
+            $unique_id = 7;
+            $category = "Kueh with Character";
+            $kuehName = "Chwee Kueh";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
             $kuehPrice = $_POST["btnKueh7"];
             $_SESSION["kueh7_qty"]++;
             $kuehTotalPrice = $kuehPrice * $_SESSION["kueh7_qty"];
             if (sizeof($_SESSION["kueh7_orders"]) == 0) {
-                array_push($_SESSION["kueh7_orders"], $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh7_qty"], $kuehTotalPrice);     
+                array_push($_SESSION["kueh7_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh7_qty"], $kuehTotalPrice);     
             } else {
                 //update the quantity and total price of the kueh
-                $_SESSION["kueh7_orders"][4] = $_SESSION["kueh7_qty"];
-                $_SESSION["kueh7_orders"][5] = $kuehTotalPrice;
+                $_SESSION["kueh7_orders"][5] = $_SESSION["kueh7_qty"];
+                $_SESSION["kueh7_orders"][6] = $kuehTotalPrice;
             }
             addKuehDetails($kuehName, $_SESSION["kueh7_orders"], $kuehPrice);
-        } if (isset($_POST["btnKueh8"])) { 
-            $imgSrc = "img/The Basic Kuehs/Kueh Koci.jpg";
-            $category = "The Basic Kuehs";
-            $kuehName = "Kueh Koci";
+        } if (isset($_POST["btnKueh8"])) {
+            $unique_id = 8;
+            $category = "Kueh with Character";
+            $kuehName = "Chye Tow Kueh";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
             $kuehPrice = $_POST["btnKueh8"];
             $_SESSION["kueh8_qty"]++;
             $kuehTotalPrice = $kuehPrice * $_SESSION["kueh8_qty"];
             if (sizeof($_SESSION["kueh8_orders"]) == 0) {
-                array_push($_SESSION["kueh8_orders"], $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh8_qty"], $kuehTotalPrice);     
+                array_push($_SESSION["kueh8_orders"], 8, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh8_qty"], $kuehTotalPrice);     
             } else {
                 //update the quantity and total price of the kueh
-                $_SESSION["kueh8_orders"][4] = $_SESSION["kueh8_qty"];
-                $_SESSION["kueh8_orders"][5] = $kuehTotalPrice;
+                $_SESSION["kueh8_orders"][5] = $_SESSION["kueh8_qty"];
+                $_SESSION["kueh8_orders"][6] = $kuehTotalPrice;
             }
             addKuehDetails($kuehName, $_SESSION["kueh8_orders"], $kuehPrice);
-        } if (isset($_POST["btnKueh9"])) { 
-            $imgSrc = "img/The Basic Kuehs/Kueh Kodok.jpg";
-            $category = "The Basic Kuehs";
-            $kuehName = "Kueh Kodok";
+        } if (isset($_POST["btnKueh9"])) {
+            $unique_id = 9;
+            $category = "Kueh with Character";
+            $kuehName = "Dodol";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
             $kuehPrice = $_POST["btnKueh9"];
             $_SESSION["kueh9_qty"]++;
             $kuehTotalPrice = $kuehPrice * $_SESSION["kueh9_qty"];
             if (sizeof($_SESSION["kueh9_orders"]) == 0) {
-                array_push($_SESSION["kueh9_orders"], $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh9_qty"], $kuehTotalPrice);     
+                array_push($_SESSION["kueh9_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh9_qty"], $kuehTotalPrice);     
             } else {
                 //update the quantity and total price of the kueh
-                $_SESSION["kueh9_orders"][4] = $_SESSION["kueh9_qty"];
-                $_SESSION["kueh9_orders"][5] = $kuehTotalPrice;
+                $_SESSION["kueh9_orders"][5] = $_SESSION["kueh9_qty"];
+                $_SESSION["kueh9_orders"][6] = $kuehTotalPrice;
             }
             addKuehDetails($kuehName, $_SESSION["kueh9_orders"], $kuehPrice);
-        } if (isset($_POST["btnKueh10"])) { 
-            $imgSrc = "img/The Basic Kuehs/Kueh Kosui.jpg";
-            $category = "The Basic Kuehs";
-            $kuehName = "Kueh Kosui";
+        } if (isset($_POST["btnKueh10"])) {
+            $unique_id = 10;
+            $category = "Kueh With Character";
+            $kuehName = "Hoon Kueh";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
             $kuehPrice = $_POST["btnKueh10"];
             $_SESSION["kueh10_qty"]++;
             $kuehTotalPrice = $kuehPrice * $_SESSION["kueh10_qty"];
             if (sizeof($_SESSION["kueh10_orders"]) == 0) {
-                array_push($_SESSION["kueh10_orders"], $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh10_qty"], $kuehTotalPrice);     
+                array_push($_SESSION["kueh10_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh10_qty"], $kuehTotalPrice);     
             } else {
                 //update the quantity and total price of the kueh
-                $_SESSION["kueh10_orders"][4] = $_SESSION["kueh10_qty"];
-                $_SESSION["kueh10_orders"][5] = $kuehTotalPrice;
+                $_SESSION["kueh10_orders"][5] = $_SESSION["kueh10_qty"];
+                $_SESSION["kueh10_orders"][6] = $kuehTotalPrice;
             }
             addKuehDetails($kuehName, $_SESSION["kueh10_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh11"])) {
+            $unique_id = 11;
+            $category = "The Heavyweight Kuehs";
+            $kuehName = "Apam Balik";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh11"];
+            $_SESSION["kueh11_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh11_qty"];
+            if (sizeof($_SESSION["kueh11_orders"]) == 0) {
+                array_push($_SESSION["kueh11_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh11_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh11_orders"][5] = $_SESSION["kueh11_qty"];
+                $_SESSION["kueh11_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh11_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh12"])) {
+            $unique_id = 12;
+            $category = "The Heavyweight Kuehs";
+            $kuehName = "Getuk Getuk";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh12"];
+            $_SESSION["kueh12_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh12_qty"];
+            if (sizeof($_SESSION["kueh12_orders"]) == 0) {
+                array_push($_SESSION["kueh12_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh12_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh12_orders"][5] = $_SESSION["kueh12_qty"];
+                $_SESSION["kueh12_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh12_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh13"])) {
+            $unique_id = 13;
+            $category = "The Heavyweight Kuehs";
+            $kuehName = "Kueh Abok Abok";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh13"];
+            $_SESSION["kueh13_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh13_qty"];
+            if (sizeof($_SESSION["kueh13_orders"]) == 0) {
+                array_push($_SESSION["kueh13_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh13_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh13_orders"][5] = $_SESSION["kueh13_qty"];
+                $_SESSION["kueh13_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh13_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh14"])) {
+            $unique_id = 14;
+            $category = "The Heavyweight Kuehs";
+            $kuehName = "Kueh Akok";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh14"];
+            $_SESSION["kueh14_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh14_qty"];
+            if (sizeof($_SESSION["kueh14_orders"]) == 0) {
+                array_push($_SESSION["kueh14_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh14_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh14_orders"][5] = $_SESSION["kueh14_qty"];
+                $_SESSION["kueh14_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh14_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh15"])) {
+            $unique_id = 15;
+            $category = "The Heavyweight Kuehs";
+            $kuehName = "Kueh Bakul";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh15"];
+            $_SESSION["kueh15_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh15_qty"];
+            if (sizeof($_SESSION["kueh15_orders"]) == 0) {
+                array_push($_SESSION["kueh15_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh15_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh15_orders"][5] = $_SESSION["kueh15_qty"];
+                $_SESSION["kueh15_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh15_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh16"])) {
+            $unique_id = 16;
+            $category = "The Basic Kuehs";
+            $kuehName = "Kueh Bongkong";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh16"];
+            $_SESSION["kueh16_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh16_qty"];
+            if (sizeof($_SESSION["kueh16_orders"]) == 0) {
+                array_push($_SESSION["kueh16_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh16_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh16_orders"][5] = $_SESSION["kueh16_qty"];
+                $_SESSION["kueh16_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh16_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh17"])) {
+            $unique_id = 17;
+            $category = "The Basic Kuehs";
+            $kuehName = "Kueh Dadar";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh17"];
+            $_SESSION["kueh17_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh17_qty"];
+            if (sizeof($_SESSION["kueh17_orders"]) == 0) {
+                array_push($_SESSION["kueh17_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh17_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh17_orders"][5] = $_SESSION["kueh17_qty"];
+                $_SESSION["kueh17_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh17_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh18"])) {
+            $unique_id = 18;
+            $category = "The Basic Kuehs";
+            $kuehName = "Kueh Koci";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh18"];
+            $_SESSION["kueh18_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh18_qty"];
+            if (sizeof($_SESSION["kueh18_orders"]) == 0) {
+                array_push($_SESSION["kueh18_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh18_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh18_orders"][5] = $_SESSION["kueh18_qty"];
+                $_SESSION["kueh18_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh18_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh19"])) {
+            $unique_id = 19;
+            $category = "The Basic Kuehs";
+            $kuehName = "Kueh Kodok";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh19"];
+            $_SESSION["kueh19_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh19_qty"];
+            if (sizeof($_SESSION["kueh19_orders"]) == 0) {
+                array_push($_SESSION["kueh19_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh19_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh19_orders"][5] = $_SESSION["kueh19_qty"];
+                $_SESSION["kueh19_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh19_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh20"])) {
+            $unique_id = 20;
+            $category = "The Basic Kuehs";
+            $kuehName = "Kueh Kosui";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh20"];
+            $_SESSION["kueh20_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh20_qty"];
+            if (sizeof($_SESSION["kueh20_orders"]) == 0) {
+                array_push($_SESSION["kueh20_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh20_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh20_orders"][5] = $_SESSION["kueh20_qty"];
+                $_SESSION["kueh20_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh20_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh21"])) {
+            $unique_id = 21;
+            $category = "Kueh with Character";
+            $kuehName = "Huat Kueh";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh21"];
+            $_SESSION["kueh21_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh21_qty"];
+            if (sizeof($_SESSION["kueh21_orders"]) == 0) {
+                array_push($_SESSION["kueh21_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh21_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh21_orders"][5] = $_SESSION["kueh21_qty"];
+                $_SESSION["kueh21_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh21_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh22"])) {
+            $unique_id = 22;
+            $category = "Kueh with Character";
+            $kuehName = "Kueh Bahulu";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh22"];
+            $_SESSION["kueh22_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh22_qty"];
+            if (sizeof($_SESSION["kueh22_orders"]) == 0) {
+                array_push($_SESSION["kueh22_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh22_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh22_orders"][5] = $_SESSION["kueh22_qty"];
+                $_SESSION["kueh22_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh22_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh23"])) {
+            $unique_id = 23;
+            $category = "Kueh with Character";
+            $kuehName = "Kueh Bakar";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh23"];
+            $_SESSION["kueh23_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh23_qty"];
+            if (sizeof($_SESSION["kueh23_orders"]) == 0) {
+                array_push($_SESSION["kueh23_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh23_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh23_orders"][5] = $_SESSION["kueh23_qty"];
+                $_SESSION["kueh23_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh23_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh24"])) {
+            $unique_id = 24;
+            $category = "Kueh with Character";
+            $kuehName = "Kueh Belanda";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh24"];
+            $_SESSION["kueh24_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh24_qty"];
+            if (sizeof($_SESSION["kueh24_orders"]) == 0) {
+                array_push($_SESSION["kueh24_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh24_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh24_orders"][5] = $_SESSION["kueh24_qty"];
+                $_SESSION["kueh24_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh24_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh25"])) {
+            $unique_id = 25;
+            $category = "Kueh with Character";
+            $kuehName = "Kueh Kara Kara";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh25"];
+            $_SESSION["kueh25_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh25_qty"];
+            if (sizeof($_SESSION["kueh25_orders"]) == 0) {
+                array_push($_SESSION["kueh25_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh25_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh25_orders"][5] = $_SESSION["kueh25_qty"];
+                $_SESSION["kueh25_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh25_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh26"])) {
+            $unique_id = 26;
+            $category = "The Heavyweight Kuehs";
+            $kuehName = "Kueh Bulan";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh26"];
+            $_SESSION["kueh26_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh26_qty"];
+            if (sizeof($_SESSION["kueh26_orders"]) == 0) {
+                array_push($_SESSION["kueh26_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh26_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh26_orders"][5] = $_SESSION["kueh26_qty"];
+                $_SESSION["kueh26_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh26_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh27"])) {
+            $unique_id = 27;
+            $category = "The Heavyweight Kuehs";
+            $kuehName = "Kueh Cara";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh27"];
+            $_SESSION["kueh27_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh27_qty"];
+            if (sizeof($_SESSION["kueh27_orders"]) == 0) {
+                array_push($_SESSION["kueh27_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh27_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh27_orders"][5] = $_SESSION["kueh27_qty"];
+                $_SESSION["kueh27_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh27_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh28"])) {
+            $unique_id = 28;
+            $category = "The Heavyweight Kuehs";
+            $kuehName = "Kueh Cincin";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh28"];
+            $_SESSION["kueh28_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh28_qty"];
+            if (sizeof($_SESSION["kueh28_orders"]) == 0) {
+                array_push($_SESSION["kueh28_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh27_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh28_orders"][5] = $_SESSION["kueh28_qty"];
+                $_SESSION["kueh28_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh28_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh29"])) {
+            $unique_id = 29;
+            $category = "The Heavyweight Kuehs";
+            $kuehName = "Kueh Jagung";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh29"];
+            $_SESSION["kueh29_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh29_qty"];
+            if (sizeof($_SESSION["kueh29_orders"]) == 0) {
+                array_push($_SESSION["kueh29_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh27_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh29_orders"][5] = $_SESSION["kueh29_qty"];
+                $_SESSION["kueh29_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh29_orders"], $kuehPrice);
+        } if (isset($_POST["btnKueh30"])) {
+            $unique_id = 30;
+            $category = "The Heavyweight Kuehs";
+            $kuehName = "Kueh Kamir";
+            $imgSrc = "img/".$category."/".$kuehName.".jpg";
+            $kuehPrice = $_POST["btnKueh30"];
+            $_SESSION["kueh30_qty"]++;
+            $kuehTotalPrice = $kuehPrice * $_SESSION["kueh30_qty"];
+            if (sizeof($_SESSION["kueh30_orders"]) == 0) {
+                array_push($_SESSION["kueh30_orders"], $unique_id, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh27_qty"], $kuehTotalPrice);     
+            } else {
+                //update the quantity and total price of the kueh
+                $_SESSION["kueh30_orders"][5] = $_SESSION["kueh30_qty"];
+                $_SESSION["kueh30_orders"][6] = $kuehTotalPrice;
+            }
+            addKuehDetails($kuehName, $_SESSION["kueh30_orders"], $kuehPrice);
         }
         function addKuehDetails($kuehName, $kuehArr, $kuehPrice) {
             $index = 0;
             $_SESSION["totalQty"]++;
             $_SESSION["subtotal"] += $kuehPrice;
+            $_SESSION["total"] = $_SESSION["subtotal"];
             //if list is empty, the first entry will be added to list
             if (empty($_SESSION["my_orders"])) {
                 array_push($_SESSION["my_orders"], $kuehArr); 
             } else {
                 //if list is not empty, but if the name is already in the list, simply update the list
                 for ($index = 0; $index < sizeof($_SESSION["my_orders"]); $index++) {
-                    if ($_SESSION["my_orders"][$index][2] == $kuehName) {
+                    if ($_SESSION["my_orders"][$index][3] == $kuehName) {
                         $_SESSION["my_orders"][$index] = $kuehArr;
                         break;
                     }
@@ -201,65 +534,6 @@ and open the template in the editor.
             header('Location: kuehmenuall.php');            
         }
         ?>
-        
-        <section class="modal fade" id="orderPopup" role="dialog">
-            <section class="modal-dialog">
-                <section class="modal-content">
-                    <section class="modal-header text-center d-block">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h3 id ="orderHeader">My Order</h3>
-                    </section>
-                    <section id="paragraph" class="modal-body">
-                        <section id="myOrder">
-                            <p id="quantity">Total Quantity: <?php echo $_SESSION["totalQty"]?></p>
-                            <?php //display message cart is empty
-                            if ($_SESSION["totalQty"] == 0) {
-                                echo "<section class='alert alert-danger' role='alert'>
-                                <span class='fa fa-times-circle fa-2x'></span><p> Sorry, your shopping cart is currently empty!</p>
-                                </section>";
-                            } else {
-                                echo "<table id='tblOrders'>"
-                                . "<tr>"
-                                . "<th>Image</th>"
-                                . "<th>Category</th>"
-                                . "<th>Name</th>"
-                                . "<th>Price</th>"
-                                . "<th>Quantity</th>"
-                                . "<th>Total</th>"
-                                . "<th>Action</th>"
-                                . "</tr>";
-                                foreach ($_SESSION["my_orders"] as $kueh_array) {
-                                    echo "<tr>";
-                                    for ($c = 0; $c < 6; $c++) {
-                                        if ($c == 0) {
-                                            echo "<td><img id='imgKueh' src='". $kueh_array[$c] ."' alt='Kueh Order'/></td>";
-                                        } else if ($c == 3) {
-                                            echo "<td>$" . number_format($kueh_array[$c], 2) . "/pc";
-                                        } else if ($c == 5) {
-                                            echo "<td>$" . number_format($kueh_array[$c], 2);
-                                        } 
-                                        else {
-                                            echo "<td>" . $kueh_array[$c]. "</td>";  
-                                        }
-                                    }
-                                    echo "<tr>";
-                                }
-                                echo "</table>";
-                            }
-                            ?>
-                        </section>
-                        <p id="subTotal">Subtotal: <?php echo "$" . number_format($_SESSION["subtotal"], 2)?></p>
-                        <?php 
-                        if ($_SESSION["totalQty"] == 0) {
-                            echo "<a id='btnCheckout' class='btn btn-block text-muted'>Proceed to Checkout  <span class='fa fa-arrow-circle-right'></span></a></a>";
-                        } else {
-                            echo "<a href='customer_checkout.php' id='btnCheckout' class='btn btn-block btn-success'>Proceed to Checkout  <span class='fa fa-arrow-circle-right'></span></a></a>";
-                        }
-                        ?>
-                    </section>
-                </section>
-            </section>
-        </section>
 
         <div class="container">
             <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
@@ -341,7 +615,7 @@ and open the template in the editor.
 
                             <!--https://sethlui.com/disappearing-nostalgic-foods-singapore/-->
                             <figcaption>Kueh Bongkong ($0.50/pc): Made with various starches and coconut milk, filled with Gula Melaka filling that melts and oozes to flood the kueh as it steams. Nice soft and slightly bouncy texture.</figcaption>
-                            <button class="btn" type="submit" name="btnKueh6" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh16" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -349,7 +623,7 @@ and open the template in the editor.
 
                             <!--https://www.asianfoodchannel.com/en/recipes/nyonya-kuih-dadar-->
                             <figcaption>Kueh Dadar ($0.50/pc): Bite-sized sweet and savoury dessert which stuffed with luscious Gula Melaka grated coconut and wrapped in a fragrant pandan pancake.</figcaption>
-                            <button class="btn" type="submit" name="btnKueh7" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh17" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -359,7 +633,7 @@ and open the template in the editor.
                             <figcaption>Kueh Koci ($0.50/pc): A sweet dumpling using glutinous rice flour and stuffed with grated coconut sweetened using palm sugar.</figcaption>
 
                             <!--https://www.nyonyacooking.com/recipes/kuih-koci-black-glutinous-rice~Hk34uvoPf5bX-->
-                            <button class="btn" type="submit" name="btnKueh8" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh18" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -369,7 +643,7 @@ and open the template in the editor.
                             <figcaption>Kueh Kodok ($0.50/pc): Known as Cekodok Pisang, simple but delicious snack. Using the freshest bananas to deep fry it. Giving a sweet and savoury taste.</figcaption>
 
                             <!--https://coasterkitchen.wordpress.com/2016/09/09/kuih-kodok-cocodok-recipe/-->                       
-                            <button class="btn" type="submit" name="btnKueh9" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh19" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -379,7 +653,7 @@ and open the template in the editor.
                             <figcaption>Kueh Kosui ($0.50/pc): Known as Kueh Ko Swee, made from tapioca starch and rice flour and sweetened with Gula Melaka sugar. Served with freshly grated coconuts for more texture and taste.</figcaption>
 
                             <!--https://mykitchen101en.com/pandan-kuih-kosui/-->                        
-                            <button class="btn" type="submit" name="btnKueh10" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh20" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
                     </div>
 
@@ -502,7 +776,7 @@ and open the template in the editor.
                             <figcaption>Apom Berkuah ($0.50/pc): Fluffy and soft yeasted rice pancakes dipped in a kuah pengat pisang, a sweet sauce made with fresh coconut milk, gula melaka and pisang rajah or pisang mas.</figcaption>
 
                             <!--https://thechubbychefsg.wordpress.com/2017/09/19/apom-berkuahbokwa/-->                        
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                           <button class="btn" type="submit" name="btnKueh6" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -512,7 +786,7 @@ and open the template in the editor.
                             <figcaption>Chwee Kueh ($0.70/pc): A popular breakfast item which rice cakes are topped with diced preserved radish and served with chilli sauce.</figcaption>
 
                             <!--https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh7" value=0.70><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -520,7 +794,7 @@ and open the template in the editor.
 
                             <!--https://www.flickr.com/photos/vkeong/27245673335/in/dateposted-public/-->
                             <figcaption>Chye Tow Kueh ($0.50/pc): Known as fried carrot cake, made with radish cake (steamed rice flour and shredded white daikon), which is then stir-fried with eggs, preserved radish.</figcaption>
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh8" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -530,7 +804,7 @@ and open the template in the editor.
                             <figcaption>Dodol ($0.50/pc): A popular sweet treat in Southeast Asia. Chewy, sweet and thick cake made from glutinous rice flour, coconut milk and palm sugar (jaggery).</figcaption>
 
                             <!--https://mykitchen101en.com/kuih-dodol-durian-chewy-and-sweet-glutinous-rice-durian-cake/#targetText=Dodol%20is%20a%20chewy%2C%20sweet,grease%20and%20patience%20is%20needed.-->
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh9" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -540,7 +814,7 @@ and open the template in the editor.
                             <figcaption>Hoon Kueh ($0.50): Soft and tender texture, made from coconut cream, mung bean flour and corn, wrapped in banana leaf.</figcaption>
 
                             <!--http://whattobaketoday.blogspot.com/2015/09/kueh-jagung-corn-hoon-kueh_11.html-->
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh10" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
                     </div>
 
@@ -552,7 +826,7 @@ and open the template in the editor.
                             <figcaption>Huat Kueh ($0.50/pc): Huat means “to rise” or “to prosper”. Some people call huat kueh as smiling cake too. Soft and fluffy, not too sweet and comes in different colours.</figcaption>
 
                             <!--https://whattocooktoday.com/pandan-coconut-huat-kueh.html-->
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh21" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -562,7 +836,7 @@ and open the template in the editor.
                             <figcaption>Kueh Bahulu ($0.50/pc): Soft, light and fluffy with a mildly sweet taste and has the fragrance of baked cake.</figcaption>
 
                             <!--http://www.friedchillies.com/recipes/detail/kuih-bahulu-->
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh22" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -572,7 +846,7 @@ and open the template in the editor.
                             <figcaption>Kueh Bakar ($0.50/pc): A traditional Malay cake, sweet and soft. A baked custard that is full of pandan and egg aroma.</figcaption>
 
                             <!--https://kwgls.wordpress.com/2014/06/26/local-baked-custard-kuih-bakar-pandan-or-kuih-kemboja-%EF%BC%88%E9%A6%99%E5%85%B0%E7%83%98%E7%B3%95%EF%BC%89/-->
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh23" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -582,7 +856,7 @@ and open the template in the editor.
                             <figcaption>Kueh Belanda ($0.50/pc): Known as love letters, made of rice and tapioca flour, fresh coconut milk and eggs. Giving a crunchy & reminisce taste.</figcaption>
 
                             <!--https://lovewholesome.com/recipe/kueh-belanda-or-peranakan-love-letters/-->
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh24" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -592,7 +866,7 @@ and open the template in the editor.
                             <figcaption>Kueh Kara Kara ($0.50/pc): It’s a Peranakan sweet and crispy snacks, known as fragile rice krispies. Made from rice flour and sugar syrup.</figcaption>
 
                             <!--http://thebakerwoman.blogspot.com/2010/02/kueh-kara-kara.html-->
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh25" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
                     </div>
 
@@ -716,7 +990,7 @@ and open the template in the editor.
                             <figcaption>Apam Balik ($0.50/pc): A Southeast Asian fluffy pancake with cream corn or peanuts. This soft pancake has a thick surface with thin and crispy side.</figcaption>
 
                             <!--https://www.nyonyacooking.com/recipes/apam-balik~SJ5WuvsDf9WQ-->
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh11" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -726,7 +1000,7 @@ and open the template in the editor.
                             <figcaption>Getuk Getuk ($0.50/pc): Made from cassava. It is mixed with grated coconut, sugar and small amounts of salt. Chewy and soft.</figcaption>
 
                             <!--https://www.guaishushu1.com/getuk-ubi-%E6%9C%A8%E8%96%AF%E6%A4%B0%E4%B8%9D%E7%B3%95%EF%BC%89/-->
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh12" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -734,17 +1008,17 @@ and open the template in the editor.
 
                             <!--https://whattocooktoday.com/abok-abok-sago.html-->
                             <figcaption>Kueh Abok Abok ($0.50/pc): This is a snack made from sago, sugar, coconut and Gula Melaka steamed in banana leaves. Giving a dumpling kind of shape.</figcaption>
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh13" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
                             <img class="zoom" src = "img/The Heavyweight Kuehs/Kueh Akok.jpg" alt = "Kueh Akok" style="max-width: 100%">
 
                             <!--https://www.nst.com.my/news/2016/09/174078/eats-jerry-serves-only-best-akok-->
-                            <figcaption>Kueh Akok ($0.50): A traditional snack made from eggs, flour, coconut milk and palm sugar.</figcaption>
+                            <figcaption>Kueh Akok ($0.50/pc): A traditional snack made from eggs, flour, coconut milk and palm sugar.</figcaption>
 
                             <!--http://foodnframe.com/2012/02/kuih-akok-kelantan/-->
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh14" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -754,7 +1028,7 @@ and open the template in the editor.
                             <figcaption>Kueh Bakul ($0.50/pc): Known as Nian Gao, prepared from glutinous rice flour and sugar. Giving a sticky, chewy and sweet texture and taste. This snack can be eaten in many ways.</figcaption>
 
                             <!--https://en.wikipedia.org/wiki/Glutinous_rice_flour-->
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh15" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
                     </div>
 
@@ -766,7 +1040,7 @@ and open the template in the editor.
                             <figcaption>Kueh Bulan ($0.50/pc): Also known as Mooncakes, a rich thick lotus seed paste filling is surrounded thin crust and contain yolks from salted duck eggs.</figcaption>
 
                             <!--https://en.wikipedia.org/wiki/Yolk-->
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh26" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -774,7 +1048,7 @@ and open the template in the editor.
 
                             <!--https://www.kuali.com/recipe/kuih-cara-manis-pandan-sponge-cake/-->
                             <figcaption>Kueh Cara ($0.50/pc): Made from pure coconut milk and vanilla juice, and stuffed with chopped coconut sugar for the explosion filling.</figcaption>
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh27" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -782,17 +1056,17 @@ and open the template in the editor.
 
                             <!--https://my.carousell.com/p/kuih-cincin-186810032/-->
                             <figcaption>Kueh Cincin ($0.50/pc): The tasty and crunchy or baked ring biscuit. Made of flour, rice flour, palm oil and brown sugar.</figcaption>
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh28" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
                             <img class="zoom" src = "img/The Heavyweight Kuehs/Kueh Jagung.jpg" alt = "Kueh Jagung" style="max-width: 100%">
 
                             <!--http://1resepikuih.blogspot.com/2009/09/kuih-jagung.html-->
-                            <figcaption>Kueh Jagung ($0.50): It is made up of canned sweet corn with kernel bits atop a layer of coconut milk and pandan.</figcaption>
+                            <figcaption>Kueh Jagung ($0.50/pc): It is made up of canned sweet corn with kernel bits atop a layer of coconut milk and pandan.</figcaption>
 
                             <!--http://whattobaketoday.blogspot.com/2015/09/kueh-jagung-corn-hoon-kueh_11.html-->
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh29" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -802,7 +1076,7 @@ and open the template in the editor.
                             <figcaption>Kueh Kamir ($0.50/pc): Typical food Pemalang origin Arab countries. This cake is made of flour dough, butter, and eggs, mixed with ingredients such as bananas or tape.</figcaption>
 
                             <!--http://whattobaketoday.blogspot.com/2015/09/kueh-jagung-corn-hoon-kueh_11.html-->
-                            <button class="btn"><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh30" value=0.50><i class="fa fa-shopping-cart"></i></button>
                         </figure>
                     </div>
 
@@ -943,4 +1217,3 @@ and open the template in the editor.
     </footer>
 
 </html>
-
