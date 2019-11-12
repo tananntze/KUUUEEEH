@@ -16,7 +16,7 @@
     </head>
 
     <body class="overlay">
-        <?php include "header.php"?>
+        <?php include "header.php" ?>
 
         <div class="container">
             <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
@@ -98,36 +98,6 @@
 
     </body>
 
-<footer class="footer-bs p-2 mb-0"> <!--cited from https://codepen.io/nonelittlesong/pen/dLQVeJ-->
-
-        <div class="row mx-0">
-            <div class="col-md-3 footer-brand animated fadeInLeft">
-
-                <p>© 2019 KUUUEEH</p>
-            </div>
-            <div class="col-md-4 footer-nav animated fadeInUp">
-                <h4>Menu —</h4>
-
-                <div class="col-md-6">
-                    <ul class="list">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="aboutus.php">About Us</a></li>
-                        <li><a href="kuehmenuall.php">Kueh</a></li>
-                        <li><a href="contactus.php">Contact Us</a></li>
-                        <li><a href="faq.php">FAQ's</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2 footer-social animated fadeInDown">
-                <h4>Follow Us @</h4>
-                <ul class= "list-inline">
-                    <li><a class ="fa fa-facebook-square" href="#"> Facebook</a></li>
-                    <li><a class="fa fa-twitter-square" href="#"> Twitter</a></li>
-                    <li ><a class= "fa fa-instagram" href="#"> Instagram</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </footer>
+    <?php include "footer_include.php" ?>
 </div>
 </html>
