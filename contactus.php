@@ -20,7 +20,7 @@ and open the template in the editor.
     </head>
 
     <body class="overlay">
-        <?php include "header.php"?>
+        <?php include "header.php" ?>
 
         <div class="container">
             <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
@@ -59,18 +59,19 @@ and open the template in the editor.
                     <section class =' col-md-4'>
                         <h3 class ="subheader">Get in Touch with us here!</h3>
                         <form name="myForm" action=""
-                              onsubmit="return validateForm()" method="post">
-                            <section class="form-group">
-                                <input type="text" class="form-control" placeholder="Name" name="" maxlength="30">
-                            </section>
-                            <section class="form-group">
-                                <input type="email" class="form-control" placeholder="Email Address" name="email"maxlength="50">
-                            </section>
-                            <section class="form-group">
-                                <textarea class="form-control"maxlength="450" rows="3"></textarea>
-                            </section>
-                            <input type="submit" class="btn btn-secondary btn-block"  value="Submit" >
-                        </form>
+                              <form name="myForm" method = "POST" action="process_contactus.php" onsubmit="return validateForm()">
+
+                                <section class="form-group">
+                                    <input type="text" class="form-control" id = "name" placeholder="Enter Your Name Here" name="" maxlength="30" required pattern='/^[a-zA-Z ][a-zA-Z]+{3,}$'>
+                                </section>
+                                <section class="form-group">
+                                    <input type="email" class="form-control" id ="email" placeholder="Enter Your Email Address" name="email"maxlength="50" required pattern='[a-z0-9.%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'>
+                                </section>
+                                <section class="form-group">
+                                    <textarea class="form-control" id = "text" maxlength="200" placeholder ="Enter your message here!" required pattern="'/^[a-zA-Z][a-zA-Z\\s]+$/{3,}" rows="3"></textarea>
+                                </section>
+                                <input type="submit" class="btn btn-secondary btn-block"  value="Submit" >
+                            </form>
                     </section>
                     <section class =' col-md-4'></section>
                 </section>
