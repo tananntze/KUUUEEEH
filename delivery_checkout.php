@@ -19,13 +19,13 @@ and open the template in the editor.
         <script src="js/delivery_checkout.js"></script>
     </head>
     <body>
-        <?php include "header.php"?>
-        
+        <?php include "header.php" ?>
+
         <div class="container">
             <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
             <img src="img/Banner - White.png" alt="" class="responsive">
         </div>
-        
+
         <section>
             <section class="container-fluid" style= 'margin-top:20px'>
                 <div class =" row sectionheader standardfont text-center">
@@ -76,69 +76,69 @@ and open the template in the editor.
                                     <label for="postal_code">*Postal Code:</label>
                                     <input class="form-control" id="postal_code" name="postal_code" placeholder="Enter the 6 digit Singapore postal code" type="tel" maxLength="6" required="true" pattern="[0-9]{6}">
                                 </section>
-                                    <section id="step3Radio">
-                                        <label for="radioPayment">*Select a card:</label>
-                                        <section class="radio_grp">
-                                            <!--The Image source is taken and credited by: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
-                                            <input class="radio_set" type="radio" name="radioPayment" id="payVisa" value="Visa" checked="true"><label class="radio_lbl" for="delVisa">Visa</label><img class="card_logo" src="img/visa.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
-                                        </section>
-                                        <section class="radio_grp">
-                                            <!--The Image source is taken and credited by: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
-                                            <input class="radio_set" type="radio" name="radioPayment" id="payMaster" value="MasterCard"><label class="radio_lbl" for="delMaster">MasterCard</label><img class="card_logo" src="img/mastercard.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
-                                        </section>
-                                        <section class="form-group">
-                                            <label for="card_name">*Name Of Card:</label>
-                                            <input class="form-control" id="card_name" name="card_name" placeholder="Enter your name of the card" type="name" required="true" pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
-                                        </section>
-                                        <section class="form-group">
-                                            <label for="card_number">*16-Digit Card Number:</label>
-                                            <input class="form-control" id="card_number" name="card_number" placeholder="Enter your 16 digit card number" type="tel" maxlength="16" required="true" pattern="[0-9]{16}">
-                                        </section>
-                                        <section class="form-group">
-                                            <label for="first_name">*CCV Number:</label>
-                                            <input class="form-control" id="ccv" name="ccv" placeholder="Enter your 3 digit CCV number" type="tel" maxlength="3" required="true" pattern="[0-9]{3}">
-                                        </section>
-                                        <section class="form-group">
-                                            <label for="expiry_month">*Card Expiry Month (in MM):</label>
-                                            <select class="custom-select" id="expiry_month" name="expiry_month">
-                                                <option selected>01</option>
-                                                <option>02</option>
-                                                <option>03</option>
-                                                <option>04</option>
-                                                <option>05</option>
-                                                <option>06</option>
-                                                <option>07</option>
-                                                <option>08</option>
-                                                <option>09</option>
-                                                <option>10</option>
-                                                <option>11</option>
-                                                <option selected>12</option>
-                                            </select>
-                                        </section>
-                                        <section class="form-group">
-                                            <label for="expiry_year">*Card Expiry Year (in YYYY):</label>
-                                            <select class="custom-select" id="expiry_year" name="expiry_year">
-                                                <option selected>2019</option>
-                                                <option>2020</option>
-                                                <option>2021</option>
-                                                <option>2022</option>
-                                                <option>2023</option>
-                                                <option>2024</option>
-                                                <option>2025</option>
-                                                <option>2026</option>
-                                                <option>2027</option>
-                                                <option>2028</option>
-                                                <option>2029</option>
-                                                <option>2030</option>
-                                                <option>2031</option>
-                                                <option>2032</option>
-                                                <option>2033</option>
-                                                <option>2034</option>
-                                            </select>
-                                            <p id="txtConfirm">Please confirm your order. Once done, click Place Order.</p>
-                                            <button id="btnOrder" type="submit" class="btn btn-block btn-success">Place Order  <span class="fa fa-clipboard"></span></button>
-                                        </section>  
+                                <section id="step3Radio">
+                                    <label for="radioPayment">*Select a card:</label>
+                                    <section class="radio_grp">
+                                        <!--The Image source is taken and credited by: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
+                                        <input class="radio_set" type="radio" name="radioPayment" id="payVisa" value="Visa" checked="true"><label class="radio_lbl" for="delVisa">Visa</label><img class="card_logo" src="img/visa.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
                                     </section>
+                                    <section class="radio_grp">
+                                        <!--The Image source is taken and credited by: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
+                                        <input class="radio_set" type="radio" name="radioPayment" id="payMaster" value="MasterCard"><label class="radio_lbl" for="delMaster">MasterCard</label><img class="card_logo" src="img/mastercard.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
+                                    </section>
+                                    <section class="form-group">
+                                        <label for="card_name">*Name Of Card:</label>
+                                        <input class="form-control" id="card_name" name="card_name" placeholder="Enter your name of the card" type="name" required="true" pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
+                                    </section>
+                                    <section class="form-group">
+                                        <label for="card_number">*16-Digit Card Number:</label>
+                                        <input class="form-control" id="card_number" name="card_number" placeholder="Enter your 16 digit card number" type="tel" maxlength="16" required="true" pattern="[0-9]{16}">
+                                    </section>
+                                    <section class="form-group">
+                                        <label for="first_name">*CCV Number:</label>
+                                        <input class="form-control" id="ccv" name="ccv" placeholder="Enter your 3 digit CCV number" type="tel" maxlength="3" required="true" pattern="[0-9]{3}">
+                                    </section>
+                                    <section class="form-group">
+                                        <label for="expiry_month">*Card Expiry Month (in MM):</label>
+                                        <select class="custom-select" id="expiry_month" name="expiry_month">
+                                            <option selected>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option selected>12</option>
+                                        </select>
+                                    </section>
+                                    <section class="form-group">
+                                        <label for="expiry_year">*Card Expiry Year (in YYYY):</label>
+                                        <select class="custom-select" id="expiry_year" name="expiry_year">
+                                            <option selected>2019</option>
+                                            <option>2020</option>
+                                            <option>2021</option>
+                                            <option>2022</option>
+                                            <option>2023</option>
+                                            <option>2024</option>
+                                            <option>2025</option>
+                                            <option>2026</option>
+                                            <option>2027</option>
+                                            <option>2028</option>
+                                            <option>2029</option>
+                                            <option>2030</option>
+                                            <option>2031</option>
+                                            <option>2032</option>
+                                            <option>2033</option>
+                                            <option>2034</option>
+                                        </select>
+                                        <p id="txtConfirm">Please confirm your order. Once done, click Place Order.</p>
+                                        <button id="btnOrder" type="submit" class="btn btn-block btn-success">Place Order  <span class="fa fa-clipboard"></span></button>
+                                    </section>  
+                                </section>
                             </section>
                         </div>
                     </section>
@@ -146,34 +146,5 @@ and open the template in the editor.
             </section>
         </section>
     </body>
-    <footer class="footer-bs p-2 mb-0">
-
-        <div class="row mx-0">
-            <div class="col-md-3 footer-brand animated fadeInLeft">
-
-                <p>© 2019 KUUUEEH</p>
-            </div>
-            <div class="col-md-4 footer-nav animated fadeInUp">
-                <h4>Menu —</h4>
-
-                <div class="col-md-6">
-                    <ul class="list">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="aboutus.php">About Us</a></li>
-                        <li><a href="kuehmenuall.php">Kueh</a></li>
-                        <li><a href="contactus.php">Contact Us</a></li>
-                        <li><a href="faq.php">FAQ's</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2 footer-social animated fadeInDown">
-                <h4>Follow Us @</h4>
-                <ul class= "list-inline">
-                    <li><a class ="fa fa-facebook-square" href="#"> Facebook</a></li>
-                    <li><a class="fa fa-twitter-square" href="#"> Twitter</a></li>
-                    <li ><a class= "fa fa-instagram" href="#"> Instagram</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <?php include "footer_include.php" ?>
 </html>
