@@ -13,6 +13,7 @@
     <body>
         <main>
             <?php 
+            include "dbConfig.php";
             $email = $first_name = $last_name  = $mobile_no = $errorMsg = ""; 
             $success = true; 
             if (empty($_POST["email"])) {     
@@ -55,16 +56,33 @@
                 echo "<h1>Error processing checkout!</h1>";
                 echo "<h4>The following input errors were detected:</h4>";     
                 echo "<p>" . $errorMsg . "</p>";
-            } else { //Move on to Delivery Details page
+            } else { //Successful form submission, add to database first then move on to Delivery Details page
+                $conn = connectToDB();
+                $sql = "SELECT * FROM p1_1.customer WHERE email='$email'";
+                $result = $conn->query($sql); 
+                if ($result->num_rows == 0) {                      
+                    insertNewCustomer($email, $mobile_no, $last_name, $first_name);
+                }
                 header('Location: delivery_checkout.php'); 
             }
+            $result->free_result(); 
             //Helper function that checks input for malicious or unwanted content. 
             function sanitize_input($data) {   
                 $data = trim($data);   
                 $data = stripslashes($data);   
                 $data = htmlspecialchars($data);   
                 return $data; 
-            }   
+            }
+            //function to insert new customer details if the credentials are not stored in database yet
+            function insertNewCustomer($email, $mobile_no, $last_name, $first_name) {
+                $conn = connectToDB();
+                $sql = "INSERT INTO p1_1.customer (email, hp, lname, fname)";         
+                $sql .= " VALUES ('$email', '$mobile_no', '$last_name', '$first_name')"; 
+                if (!$conn->query($sql)) {             
+                    $errorMsg = "Database error: " . $conn->error;             
+                    $success = false;                             
+                } 
+            }
             ?>
         </main>
     </body>
