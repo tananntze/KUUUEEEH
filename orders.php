@@ -66,35 +66,44 @@ if (!isset($_SESSION['userId'])) {
             </section>
         </section>
 
-        <section class="container standardfont">
-            <section class="card">
-                <table class="table table-hover table-responsive">
-                    <thead>
-                        <tr class="d-flex">
-                            <th class="col-2">OrderId</th>
-                            <th class="col-6">Customer Email</th>
-                            <th class="col-5">Delivery Mode</th>
-                            <th class="col-4">Status</th>
-                            <th class="col-3">Total</th>
-                            <th class="col-3">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="table-light d-flex">
-                            <td class="col-2 data">1</td>
-                            <td class="col-6 data">jflsajf@gmail.com</td>
-                            <td class="col-5 data">Home Delivery</td>
-                            <td class="col-4 data">Paid</td>
-                            <td class="col-3 data">$8.90</td>
-                            <td class="col-3">
-                                <a href=# class="view" data-toggle="modal" data-target="#viewModal"><span class="fa fa-eye">View</span></a> <br>
-                                <a href=# class="edit" data-toggle="modal" data-target="#editModal"><span class="fa fa-edit"> Edit</span></a> <br>
-                                <a href=# class="delete" data-toggle="modal" data-target="#deleteModal"><span class="fas fa-trash-alt"> Delete</span></a></td>
+    <section class="container standardfont">
+        <section class="card">
+            <table class="table table-hover table-responsive">
+                <thead>
+                    <tr class="d-flex">
+                        <th class="col-2">OrderId</th>
+                        <th class="col-6">Customer Email</th>
+                        <th class="col-5">Delivery Mode</th>
+                        <th class="col-4">Status</th>
+                        <th class="col-3">Total</th>
+                        <th class="col-3">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php 
+                        include "dbConfig.php";
+                        $conn = connectToDB();
+                        $sql = "SELECT * FROM checkout_details";
+                        $result = $conn->query($sql);
+                        while ($row = $result->fetch_assoc()){
+                    ?>
+                    <tr class="table-light d-flex">
+                        <td class="col-2 data"><?php echo $row['orderId']; ?></td>
+                        <td class="col-6 data"><?php echo $row ['customer_email']; ?></td>
+                        <td class="col-5 data"><?php echo $row ['deliveryType']; ?></td>
+                        <td class="col-4 data"><?php echo $row ['status']; ?></td>
+                        <td class="col-3 data"><?php echo $row ['totalPrice']; ?></td>
+                        <td class="col-3">
+                            <a href=# class="view" data-toggle="modal" data-target="#viewModal"><span class="fa fa-eye">View</span></a> <br>
+                            <a href=# class="edit" data-toggle="modal" data-target="#editModal"><span class="fa fa-edit"> Edit</span></a> <br>
+                            <a href=# class="delete" data-toggle="modal" data-target="#deleteModal"><span class="fas fa-trash-alt"> Delete</span></a></td>
 
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+                    </tr>
+                    <?php
+                        }
+                    ?>
+                </tbody>
+            </table>
         </section>
 
     </body>

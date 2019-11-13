@@ -2,6 +2,8 @@
 <?php
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
+    } if (!isset($_SESSION["checkoutDone"])) {
+        $_SESSION["checkoutDone"] = false;
     }
     if (!isset($_SESSION["totalQty"])) { //if not initialized from session, set it to 0 first
         $_SESSION["totalQty"] = 0;

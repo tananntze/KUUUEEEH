@@ -1,3 +1,6 @@
+<?php
+
+?>
 <header>
     <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
         <a class="navbar-brand logocolor" href="index.php">KUUUEEEH</a>

@@ -28,8 +28,8 @@
 
                 <!-- Login Form -->
                 <form action="process_login.php" method="POST">
-                    <input type="email" id="email" class="fadeIn second" name="email" placeholder="Email Address">
-                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">
+                    <input type="email" id="email" class="fadeIn second" name="email" placeholder="Email Address" required>
+                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password" required>
                     <input type="submit" class="fadeIn fourth" value="Log In">
 
                 </form>
@@ -38,7 +38,6 @@
                 <div id="formFooter">
                     <a class="underlineHover" href="#">Forgot Password?</a>
                 </div>
-
             </div>
         </div>
     </body>

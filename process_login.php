@@ -1,9 +1,19 @@
 <?php
+
+    /*
+        User Account 1
+        username: testing@gmail.com
+        password: 123456
+
+        User Account 2
+        username: test@gmail.com
+        password: admin
+    */
+
     require "dbConfig.php";
     include "header.php";
 
     function login($email, $password){
-        session_start();
         $conn = connectToDB();
         $sql = $errorMsg = $fname = $lname = $retrievedEmail = "";
         $userId = 0;
@@ -15,6 +25,7 @@
             $userId = $row["userId"];
             $fname = $row["fname"];
             $lname = $row["lname"];
+            session_start();
             $_SESSION["userId"] = $userId;
             $_SESSION["fname"] = $fname;
             $_SESSION["lname"] = $lname;
@@ -33,7 +44,7 @@
     }
 
     function validate_user(){
-        $email = $password = $errorMsg = "";
+        $email = $password = $errorMsg = $hashedpassword = "";
         $success = true;
 
         if (empty($_POST["email"])){
@@ -57,10 +68,11 @@
         else
         {
             $password = sanitize_input($_POST["password"]);
+            $hashedpassword = md5($password);
         }
 
         if ($success){
-            login($email,$password);
+            login($email,$hashedpassword);
         }else{
             echo "<h4>The following input errors were detected:</h4>";
             echo "<p>" . $errorMsg . "</p>";
