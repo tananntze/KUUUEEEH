@@ -82,8 +82,7 @@ and open the template in the editor.
         <aside class="modal fade standardfont" id="addModal">
             <section class="modal-dialog modal-dialog-centered">
                 <section class="modal-content">
-                    <form action="editadmin.php">
-                    
+                    <form action="process_admin_addnew.php" method="post">
                     <section class="modal-header">
                         <h4 class="modal-title">Add New Item</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -112,7 +111,7 @@ and open the template in the editor.
 
                         <p>Insert Image</p>
                         <section class="custom-file">
-                            <input type="file" class="custom-file-input" id="insertImg" name="filename">
+                            <input type="file" class="custom-file-input" id="insertImg" name="insertImg">
                             <label class="custom-file-label" for="insertImg">Choose file</label>
                         </section>
                     </section>
@@ -290,5 +289,4 @@ and open the template in the editor.
         </aside>
     </body>
     
-    <?php include "footer_include.php" ?>
 </html>

@@ -12,3 +12,10 @@ $(".custom-file-input").on("change", function() {
 });
 
 };
+
+//var addModal = document.getElementById('addModal');
+//window.onclick = function(event) {
+//    if (event.target === addModal) {
+//        addModal.style.display = "none";
+//    }
+//}
