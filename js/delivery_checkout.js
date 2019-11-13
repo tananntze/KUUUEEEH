@@ -108,8 +108,8 @@ function checkForms() { //this is the function for the form validation
     } if (expiryDate < new Date().setHours(0,0,0,0)) {
         expiryMonth.style.borderColor = "red";
         expiryYear.style.borderColor = "red";
-        expiryMonth.setCustomValidity("Your card has expire already, please try again!");
-        expiryYear.setCustomValidity("Your card has expire already, please try again!");
+        expiryMonth.setCustomValidity("Your card has expired already, please try again!");
+        expiryYear.setCustomValidity("Your card has expired already, please try again!");
         isNotExpired = false;
     } else {
         expiryMonth.style.borderColor = "green";

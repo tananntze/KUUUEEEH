@@ -121,49 +121,58 @@
                                     <section id="myOrder text-center">
                                     <p id="quantity">Total Quantity: <?php echo $_SESSION["totalQty"]?></p>
                                     <?php
-                                        echo "<table id='tblOrders'>"
-                                        . "<tr>"
-                                        . "<th>Image</th>"
-                                        . "<th>Category</th>"
-                                        . "<th>Name</th>"
-                                        . "<th>Price</th>"
-                                        . "<th>Quantity</th>"
-                                        . "<th>Total</th>"
-                                        . "</tr>";
-                                        foreach ($_SESSION["my_orders"] as $row=>$kueh_array) {
-                                            echo "<tr>";
-                                            for ($c = 1; $c < 7; $c++) {
-                                                if ($c == 1) {
-                                                    echo "<td><img id='imgKueh' src='". $kueh_array[$c] ."' alt='Kueh Order'/></td>";
-                                                } else if ($c == 4) {
-                                                    echo "<td>$" . number_format($kueh_array[$c], 2) . "/pc";
-                                                } else if ($c == 6) {
-                                                    echo "<td>$" . number_format($kueh_array[$c], 2);
-                                                } 
-                                                else {
-                                                    echo "<td>" . $kueh_array[$c]. "</td>";  
-                                                }
+                                //display message cart is empty
+                                if ($_SESSION["totalQty"] == 0) {
+                                    echo "<section class='alert alert-danger' role='alert'>
+                                    <span class='fa fa-times-circle fa-2x'></span><p> Sorry, your shopping cart is currently empty!</p>
+                                    </section>";
+                                } else {
+                                    echo "<table id='tblOrders'>"
+                                    . "<tr>"
+                                    . "<th>Image</th>"
+                                    . "<th>Category</th>"
+                                    . "<th>Name</th>"
+                                    . "<th>Description</th>"
+                                    . "<th>Price</th>"
+                                    . "<th>Quantity</th>"
+                                    . "<th>Total</th>"
+                                    . "<th>Action</th>"
+                                    . "</tr>";
+                                    foreach ($_SESSION["my_orders"] as $row => $kueh_array) {
+                                        echo "<tr>";
+                                        for ($c = 1; $c < 8; $c++) {
+                                            if ($c == 1) {
+                                                echo "<td><img id='imgKueh' src='" . $kueh_array[$c] . "' alt='Kueh Order'/></td>";
+                                            } else if ($c == 5) {
+                                                echo "<td>$" . number_format($kueh_array[$c], 2) . "/pc";
+                                            } else if ($c == 7) {
+                                                echo "<td>$" . number_format($kueh_array[$c], 2);
+                                            } else {
+                                                echo "<td>" . $kueh_array[$c] . "</td>";
                                             }
-                                            echo "</tr>";
                                         }
-                                        echo "</table>";
-                                        //session_destroy();
-                                        }  
-                                        ?>
-                                        <p id="subTotal">Subtotal: <?php echo "$" . number_format($_SESSION["subtotal"], 2)?></p>
-                                        <p id="delivery">Delivery: <?php echo "$" . number_format($_SESSION["delivery"], 2)?></p>
-                                        <p id="totalDel">Total: <?php echo "$" . number_format($_SESSION["total"], 2)?></p>
-                                        <a href='index.php' id='btnHome' class='btn btn-primary btn-block'><span class='fa fa-home'></span> Return to Home</a>        
-                                    </div>
-                                </section>
+                                        echo "<td><a href='kuehmenuall.php' class='btn' id='btnEdit'><span class='fa fa-pencil-square-o'></span>  Edit</a> <form method='post' action=''><button type='submit' class='btn' name='btnRemove" . strval($row) . "'><span class='fa fa-times'></span> Remove</button></form></td>";
+                                        echo "</tr>";
+                                    }
+                                    echo "</table>";
+                                }
+                            }
+                            ?>
+                            <p id="subTotal">Subtotal: <?php echo "$" . number_format($_SESSION["subtotal"], 2)?></p>
+                            <p id="delivery">Delivery: <?php echo "$" . number_format($_SESSION["delivery"], 2)?></p>
+                            <p id="totalDel">Total: <?php echo "$" . number_format($_SESSION["total"], 2)?></p>
+                            <a href='index.php' id='btnHome' class='btn btn-primary btn-block'><span class='fa fa-home'></span> Return to Home</a>        
                             </div>
                         </section>
-                    <?php }
-                    function sanitize_input($data) {   
-                        $data = trim($data);   
-                        $data = stripslashes($data);   
-                        $data = htmlspecialchars($data);   
-                        return $data; 
+                        </div>
+                    </section>
+                        <?php }
+                        
+                        function sanitize_input($data) {   
+                            $data = trim($data);   
+                            $data = stripslashes($data);   
+                            $data = htmlspecialchars($data);   
+                            return $data; 
                     }?>                     
         </main>
     </body>
