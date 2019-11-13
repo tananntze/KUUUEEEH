@@ -19,11 +19,12 @@ and open the template in the editor.
         <script src="js/delivery_checkout.js"></script>
     </head>
     <body>
-        <?php include "header.php" ?>
+        <?php include "header.php";
+        ?>
 
         <div class="container">
             <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
-            <img src="img/Banner - White.png" alt="" class="responsive">
+            <img src="img/Banner - White.png" alt="" class="responsive" id="bannerresize">
         </div>
 
         <section>
@@ -44,12 +45,13 @@ and open the template in the editor.
                                             <input class="radio_set" type="radio" name="radioDel" id="radioHome" value="radioHome" checked="true"><label class="radio_lbl" for="delHome">Home Delivery</label>
                                             <p id="txtHomeAddress"></p>
                                             <p id="txtHomeDuration">Approximately 45-60 minutes</p>
-                                            <p id="deliveryHomeCost">Delivery Cost: + $5.00</p>
+                                            <p id="deliveryHomeCost">Delivery Cost: Subtotal (<?php echo "$" . number_format($_SESSION["subtotal"], 2)?>) + Delivery Charge ($5.00)</p>
                                         </section>
                                         <section class="radio_grp">
                                             <input class="radio_set" type="radio" name="radioDel" id="radioStore" value="radioStore"><label class="radio_lbl" for="delNormal">Collect at our store</label>
-                                            <p id="txtStoreAddress">Approximately 45-60 minutes</p>
-                                            <p id="deliveryHomeCost">Delivery Cost: Free</p>
+                                            <p id="txtStoreAddress"></p>
+                                            <p id="txtStoreDuration">Approximately 45-60 minutes</p>
+                                            <p id="deliveryHomeCost">Delivery Cost: Subtotal (<?php echo "$" . number_format($_SESSION["subtotal"], 2)?>) + Delivery Charge (Free)</p>
                                         </section>
                                     </section>
                                 </section>

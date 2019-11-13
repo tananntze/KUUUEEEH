@@ -13,14 +13,19 @@
     <body>
         <main>
             <?php
-            session_start();
-            $address = $postal_code = $mobile_no = $card_type = $card_name = $card_no = $ccv = $exp_month = $exp_year = $exp_date = $errorMsg = ""; 
+            include "dbConfig.php";
+            include "initializing_checkout_details.php";           
+            $address = $postal_code = $deliver_type = $card_type = $card_name = $card_no = $ccv = $exp_month = $exp_year = $exp_date = $errorMsg = ""; 
             $success = true; 
             $date_now = new DateTime("now", new DateTimeZone('Asia/Singapore')); //retrieves current date
             if ($_POST["radioDel"] == "radioHome") {
+                $delivery_type = sanitize_input($_POST["postal_code"]);
+                $delivery_type = "Home";
                 $_SESSION["delivery"] = 5.00;
                 $_SESSION["total"] = $_SESSION["subtotal"] + $_SESSION["delivery"];
             } else {
+                $delivery_type = sanitize_input($_POST["postal_code"]);
+                $delivery_type = "Collection";
                 $_SESSION["delivery"] = 0.00;
                 $_SESSION["total"] = $_SESSION["subtotal"] + $_SESSION["delivery"];
             }
@@ -82,9 +87,23 @@
                 echo "<h4>The following input errors were detected:</h4>";     
                 echo "<p>" . $errorMsg . "</p>";
             } else {
-                $_SESSION["checkoutDone"] = true;
-                ?>
-                <section>
+                insertCheckoutDetails($address, $postal_code, $delivery_type, $_SESSION["total"], $_SESSION["customer_email"]);
+            }
+            function insertCheckoutDetails($address, $postal_code, $delivery_type, $total, $email) {
+                global $success, $date_now;
+                //convert to datetime in MySQL format
+                $date_now = date("Y-m-d H:i:s", strtotime($date_now));
+                $address = $address . " Singapore: " . " " . $postal_code;
+                $status = "Not Delivered";
+                $conn = connectToDB();
+                $sql = "INSERT INTO checkout_details (address, dateTime, deliveryType, status, totalPrice, customer_email)";         
+                $sql .= " VALUES ('$address' , '$date_now', '$delivery_type', '$status', '$total', '$email')"; 
+                if (!$conn->query($sql)) {             
+                    $errorMsg = "Database error: " . $conn->error;             
+                    $success = false;                             
+                } else {
+                    ?>
+                    <section>
                     <div class="container-fluid  standardfont" style= 'margin-top:20px'>
                         <h1>Successful checkout!</h1>
                         <h1>Thank you for ordering with KUUUEEEH!</h1>
@@ -92,59 +111,67 @@
                         <section class="row justify-content-center standardfont">
                             <section class="col-md-12">
                                 <h2 class = "fontheader">MY ORDER</h2>
+                                <h5 class = "subheader">Customer's Name: <?php echo $_SESSION["customer_fn"] . " " . $_SESSION["customer_ln"]?></h5>
+                                <h5 class = "subheader">Customer's Email: <?php echo $_SESSION["customer_email"]?></h5>
+                                <h5 class = "subheader">For enquiries about your order details, please contact us @+6565995599 or drop an email to Kueh_for_you@kuey4you.com to find out your orders!</h5>
+                                <h5 class = "subheader">We will keep you informed via your contact number @+65<?php echo $_SESSION["customer_hp"]?> for the delivery updates!</h5>
                             </section>
                             <div class="col-md-10">
-                                <section id="paragraph" class="scrollTable">
+                                <section id="paragraph" class="scrollTable standardfont">
                                     <section id="myOrder text-center">
                                     <p id="quantity">Total Quantity: <?php echo $_SESSION["totalQty"]?></p>
-                                    <?php //display message cart is empty
-                                        echo "<table id='tblOrders'>"
-                                        . "<tr>"
-                                        . "<th>Image</th>"
-                                        . "<th>Category</th>"
-                                        . "<th>Name</th>"
-                                        . "<th>Price</th>"
-                                        . "<th>Quantity</th>"
-                                        . "<th>Total</th>"
-                                        . "</tr>";
-                                        foreach ($_SESSION["my_orders"] as $row=>$kueh_array) {
-                                            echo "<tr>";
-                                            for ($c = 1; $c < 7; $c++) {
-                                                if ($c == 1) {
-                                                    echo "<td><img id='imgKueh' src='". $kueh_array[$c] ."' alt='Kueh Order'/></td>";
-                                                } else if ($c == 4) {
-                                                    echo "<td>$" . number_format($kueh_array[$c], 2) . "/pc";
-                                                } else if ($c == 6) {
-                                                    echo "<td>$" . number_format($kueh_array[$c], 2);
-                                                } 
-                                                else {
-                                                    echo "<td>" . $kueh_array[$c]. "</td>";  
-                                                }
+                                    <?php
+                                //display message cart is empty
+                                if ($_SESSION["totalQty"] == 0) {
+                                    echo "<section class='alert alert-danger' role='alert'>
+                                    <span class='fa fa-times-circle fa-2x'></span><p> Sorry, your shopping cart is currently empty!</p>
+                                    </section>";
+                                } else {
+                                    echo "<table id='tblOrders'>"
+                                    . "<tr>"
+                                    . "<th>Image</th>"
+                                    . "<th>Category</th>"
+                                    . "<th>Name</th>"
+                                    . "<th>Description</th>"
+                                    . "<th>Price</th>"
+                                    . "<th>Quantity</th>"
+                                    . "<th>Total</th>"
+                                    . "</tr>";
+                                    foreach ($_SESSION["my_orders"] as $row => $kueh_array) {
+                                        echo "<tr>";
+                                        for ($c = 1; $c <= 7; $c++) {
+                                            if ($c == 1) {
+                                                echo "<td><img id='imgKueh' src='" . $kueh_array[$c] . "' alt='Kueh Order'/></td>";
+                                            } else if ($c == 5) {
+                                                echo "<td>$" . number_format($kueh_array[$c], 2) . "/pc";
+                                            } else if ($c == 7) {
+                                                echo "<td>$" . number_format($kueh_array[$c], 2);
+                                            } else {
+                                                echo "<td>" . $kueh_array[$c] . "</td>";
                                             }
-                                            echo "</tr>";
                                         }
-                                        echo "</table>";
-                                    ?>
-                                </section>
-                                    <p id="subTotal">Subtotal: <?php echo "$" . number_format($_SESSION["subtotal"], 2)?></p>
-                                    <p id="delivery">Delivery: <?php echo "$" . number_format($_SESSION["delivery"], 2)?></p>
-                                    <p id="totalDel">Total: <?php echo "$" . number_format($_SESSION["total"], 2)?></p>
-                                    <a href='index.php' id='btnHome' class='btn btn-primary btn-block'><span class='fa fa-home'></span> Return to Home</a>
-                                </section>
+                                        echo "</tr>";
+                                    }
+                                    echo "</table>";
+                                }
+                            }
+                            ?>
+                            <p id="subTotal">Subtotal: <?php echo "$" . number_format($_SESSION["subtotal"], 2)?></p>
+                            <p id="delivery">Delivery: <?php echo "$" . number_format($_SESSION["delivery"], 2)?></p>
+                            <p id="totalDel">Total: <?php echo "$" . number_format($_SESSION["total"], 2)?></p>
+                            <a href='index.php' id='btnHome' class='btn btn-primary btn-block'><span class='fa fa-home'></span> Return to Home</a>        
                             </div>
                         </section>
-                    </div>
-                </section>
-                <?php
-                }
-                //Helper function that checks input for malicious or unwanted content. 
-                function sanitize_input($data) {   
-                    $data = trim($data);   
-                    $data = stripslashes($data);   
-                    $data = htmlspecialchars($data);   
-                    return $data; 
-                }   
-                ?>
+                        </div>
+                    </section>
+                        <?php }
+                        
+                        function sanitize_input($data) {   
+                            $data = trim($data);   
+                            $data = stripslashes($data);   
+                            $data = htmlspecialchars($data);   
+                            return $data; 
+                    }?>                     
         </main>
     </body>
 </html>
