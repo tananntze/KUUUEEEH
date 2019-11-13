@@ -101,6 +101,8 @@ if (!isset($_SESSION['userId'])) {
                     </tr>
                     <?php
                         }
+                        $result -> free_result();
+                        $conn->close();
                     ?>
                 </tbody>
             </table>

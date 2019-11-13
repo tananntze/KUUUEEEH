@@ -1,4 +1,6 @@
 <?php
+
+include "adminheader.php";
 // Constants for accessing our DB:
 define("DBHOST", "161.117.122.252");
 define("DBNAME", "p1_1");
@@ -78,7 +80,7 @@ function sanitize_input($data) {
 // Helper function to write the data to the DB
 
 function saveFoodItemToDB() {
-    global $addCategory, $addName, $addDescription, $addPrice, $errorMsg, $success;
+    global $addCategory, $addName, $addDescription, $addPrice, $errorMsg, $success, $userId;
 
     // Create connection
     $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
@@ -88,8 +90,10 @@ function saveFoodItemToDB() {
         $errorMsg = "Connection failed:" . $conn->connect_error;
         $success = false;
     } else {
-        $sql = "INSERT INTO product (user_userId, description, category, name, price)";
-        $sql .= " VALUES ((SELECT userId FROM p1_1.user WHERE email = 'tananntze@gmail.com'), '$addDescription', '$addCategory', '$addName', $addPrice)";
+        session_start();
+        $userId = $_SESSION['userId'];
+        $sql = "INSERT INTO product (description, category, name, price, user_userId)";
+        $sql .= " VALUES ('$addDescription', '$addCategory', '$addName', $addPrice, '$userId')";
 
         //Execute the query
         if (!$conn->query($sql)) {
@@ -104,36 +108,5 @@ function saveFoodItemToDB() {
 
 <body>
 
-    <footer class="footer-bs p-2 mb-0">
-
-        <div class="row mx-0">
-            <div class="col-md-3 footer-brand animated fadeInLeft">
-
-                <p>© 2019 KUUUEEH</p>
-            </div>
-            <div class="col-md-4 footer-nav animated fadeInUp">
-                <h4>Menu —</h4>
-
-                <div class="col-md-6">
-                    <ul class="list">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="aboutus.php">About Us</a></li>
-                        <li><a href="kuehmenuall.php">Kueh</a></li>
-                        <li><a href="contactus.php">Contact Us</a></li>
-                        <li><a href="faq.php">FAQ's</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2 footer-social animated fadeInDown">
-                <h4>Follow Us @</h4>
-                <ul class= "list-inline">
-                    <li><a class ="fa fa-facebook-square" href="#"> Facebook</a></li>
-                    <li><a class="fa fa-twitter-square" href="#"> Twitter</a></li>
-                    <li ><a class= "fa fa-instagram" href="#"> Instagram</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </footer>
 
 </body>
