@@ -69,7 +69,7 @@
         //Text Field//
         if (empty($_POST["text"])) {
             $errorMsg = "Do enter your question in the text field";
-        } else if (!preg_match("/^[A-Za-z _.,!]*$/", $text)) {
+        } else if (!preg_match("/^[A-Za-z _.,''!]*$/", $text)) {
             $errorMsg = "Only letters and white space allowed";
             $success = false;
         } else {

@@ -59,7 +59,7 @@ and open the template in the editor.
                                     <label for="end_date">*Promotion End Date: </label>
                                     <input id="end_date" min="2019-10-01" max="2029-01-01" type="date" name="end_date"/>
                                 </section>
-                                <button id="btnAdd" type="button" class="btn btn-block btn-success"><span class="fa fa-plus-circle"></span> Add Promotion</button>
+                                <button type="submit" id="btnAdd" name="submit" class="btn btn-block btn-success"><span class="fa fa-plus-circle"></span> Add Promotion</button>
                             </form>
                         </section>
                     </div>
