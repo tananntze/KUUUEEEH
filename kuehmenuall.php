@@ -25,6 +25,7 @@ and open the template in the editor.
     <body background="img/Pink Dots Tumblr BG.jpg">
         <?php 
         include "header.php";
+        
         if (isset($_POST["btnKueh1"])) {
             //TODO, retrieve all the values from Products Database once database value is up!
             //assign a unique id to reference each kueh

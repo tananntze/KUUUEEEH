@@ -3,6 +3,7 @@
     define("DBNAME", "p1_1");
     define("DBUSER", "p1_1");
     define("DBPASS", "F3ms97bpZA");
+    
     function connectToDB(){
         global $conn, $errorMsg, $success;
         $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
@@ -18,7 +19,4 @@
     return $conn;
     $conn->close();
     }
-    
-
-    
 ?>
