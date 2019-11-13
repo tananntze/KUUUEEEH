@@ -22,15 +22,34 @@ and open the template in the editor.
     <body background="img/Pink Dots Tumblr BG.jpg">
         <?php
         include "header.php";
-        foreach ($_SESSION["my_orders"] as $row => $kueh_array) {
-            if (isset($_POST["btnRemove" . $row])) {
-                //reset the kueh quantity to 0
-                $_SESSION["subtotal"] -= $_SESSION["my_orders"][$row][6];
-                $_SESSION["total"] -= $_SESSION["my_orders"][$row][6];
-                $_SESSION["totalQty"] -= $_SESSION["kueh" . $_SESSION["my_orders"][$row][0] . "_qty"];
-                $_SESSION["kueh" . $_SESSION["my_orders"][$row][0] . "_qty"] = 0;
-                unset($_SESSION["my_orders"][$row]);
-                $_SESSION["my_orders"] = array_values($_SESSION["my_orders"]); //reindex my array
+        foreach ($_SESSION["my_orders"] as $row => $kueh_array) {;
+            if (isset($_POST["btnDecrement".$row])) {
+                //Decrement the kueh quantity that is based on kueh ID
+                $kueh_id = $_SESSION["my_orders"][$row][0];
+                $kueh_name = $_SESSION["my_orders"][$row][3];
+                $_SESSION["totalQty"]--;
+                $_SESSION["subtotal"] -= $_SESSION["my_orders"][$row][5];
+                $_SESSION["total"] -= $_SESSION["my_orders"][$row][5];
+                $_SESSION["kueh".$kueh_id."_qty"]--;
+                if ($_SESSION["kueh".$kueh_id."_qty"] == 0) {
+                    unset($_SESSION["my_orders"][$row]);
+                    $_SESSION["my_orders"] = array_values($_SESSION["my_orders"]); 
+                } else {
+                    $_SESSION["my_orders"][$row][6] = $_SESSION["kueh".$kueh_id."_qty"];
+                    $_SESSION["my_orders"][$row][7] -= $_SESSION["my_orders"][$row][5];
+                }
+                header('Location: my_order.php');
+            }
+            if (isset($_POST["btnIncrement".$row])) {
+                //Increment the kueh quantity that is based on kueh ID
+                $kueh_id = $_SESSION["my_orders"][$row][0];
+                $kueh_name = $_SESSION["my_orders"][$row][3];
+                $_SESSION["totalQty"]++;
+                $_SESSION["subtotal"] += $_SESSION["my_orders"][$row][5];
+                $_SESSION["total"] += $_SESSION["my_orders"][$row][5];
+                $_SESSION["kueh".$kueh_id."_qty"]++;
+                $_SESSION["my_orders"][$row][6] = $_SESSION["kueh".$kueh_id."_qty"];
+                $_SESSION["my_orders"][$row][7] += $_SESSION["my_orders"][$row][5];
                 header('Location: my_order.php');
             }
         }
@@ -45,7 +64,7 @@ and open the template in the editor.
                     <section class="col-md-12">
                         <h2 class = "fontheader">MY ORDER</h2>
                     </section>
-                    <div class="col-md-10">
+                    <div class="col-md-12">
                         <section id="paragraph" class="scrollTable">
                             <section id="myOrder text-center">
                                 <p id="quantity">Total Quantity: <?php echo $_SESSION["totalQty"] ?></p>
@@ -53,14 +72,15 @@ and open the template in the editor.
                                 //display message cart is empty
                                 if ($_SESSION["totalQty"] == 0) {
                                     echo "<section class='alert alert-danger' role='alert'>
-                                <span class='fa fa-times-circle fa-2x'></span><p> Sorry, your shopping cart is currently empty!</p>
-                                </section>";
+                                    <span class='fa fa-times-circle fa-2x'></span><p> Sorry, your shopping cart is currently empty!</p>
+                                    </section>";
                                 } else {
                                     echo "<table id='tblOrders'>"
                                     . "<tr>"
                                     . "<th>Image</th>"
                                     . "<th>Category</th>"
                                     . "<th>Name</th>"
+                                    . "<th>Description</th>"
                                     . "<th>Price</th>"
                                     . "<th>Quantity</th>"
                                     . "<th>Total</th>"
@@ -68,18 +88,19 @@ and open the template in the editor.
                                     . "</tr>";
                                     foreach ($_SESSION["my_orders"] as $row => $kueh_array) {
                                         echo "<tr>";
-                                        for ($c = 1; $c < 7; $c++) {
+                                        for ($c = 1; $c < 8; $c++) {
                                             if ($c == 1) {
                                                 echo "<td><img id='imgKueh' src='" . $kueh_array[$c] . "' alt='Kueh Order'/></td>";
-                                            } else if ($c == 4) {
+                                            } else if ($c == 5) {
                                                 echo "<td>$" . number_format($kueh_array[$c], 2) . "/pc";
-                                            } else if ($c == 6) {
+                                            } else if ($c == 7) {
                                                 echo "<td>$" . number_format($kueh_array[$c], 2);
                                             } else {
                                                 echo "<td>" . $kueh_array[$c] . "</td>";
                                             }
                                         }
-                                        echo "<td><a href='kuehmenuall.php' class='btn' id='btnEdit'><span class='fa fa-pencil-square-o'></span>  Edit</a> <form method='post' action=''><button type='submit' class='btn' name='btnRemove" . strval($row) . "'><span class='fa fa-times'></span> Remove</button></form></td>";
+                                        echo "<td>"
+                                        . "<a href='kuehmenuall.php' class='btn' id='btnEdit'><span class='fa fa-pencil-square-o'></span>  Edit</a> <form method='post' action=''><button type='submit' class='btn' name='btnIncrement" . strval($row) . "'><span class='fa fa-plus-circle fa-2x'></span></button><button type='submit' class='btn' name='btnDecrement" . strval($row) . "'><span class='fa fa-minus-circle fa-2x'></span></button></form></td>";
                                         echo "</tr>";
                                     }
                                     echo "</table>";

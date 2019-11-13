@@ -14,6 +14,7 @@
         <main>
             <?php 
             include "dbConfig.php";
+            include "initializing_checkout_details.php";
             $email = $first_name = $last_name  = $mobile_no = $errorMsg = ""; 
             $success = true; 
             if (empty($_POST["email"])) {     
@@ -62,8 +63,9 @@
                 $result = $conn->query($sql); 
                 if ($result->num_rows == 0) {                      
                     insertNewCustomer($email, $mobile_no, $last_name, $first_name);
+                } else {
+                    validateCustomerEmail($result, $email, $mobile_no, $last_name, $first_name);
                 }
-                header('Location: delivery_checkout.php'); 
             }
             $result->free_result(); 
             //Helper function that checks input for malicious or unwanted content. 
@@ -81,7 +83,44 @@
                 if (!$conn->query($sql)) {             
                     $errorMsg = "Database error: " . $conn->error;             
                     $success = false;                             
-                } 
+                } else {
+                    $_SESSION["customer_email"] = $email;
+                    $_SESSION["customer_hp"] = $mobile_no;
+                    $_SESSION["customer_fn"] = $first_name;
+                    $_SESSION["customer_ln"] = $last_name;
+                    header("Location: delivery_checkout.php");
+                }
+            }
+            function validateCustomerEmail($result, $email, $mobile_no, $last_name, $first_name) {
+                global $success, $errorMsg;
+                $row = $result->fetch_assoc();
+                if (($email !=  $row["email"]) || ($mobile_no != $row["hp"]) || ($last_name != $row["lname"]) || ($first_name != $row["fname"])) {
+                    $success = false;    
+                }
+                if ($email != $row["email"]) {
+                    $errorMsg .= "Sorry, your email does not match!<br>";            
+                }
+                if ($mobile_no != $row["hp"]) {
+                    $errorMsg .= "Sorry, your handphone number does not match!<br>";            
+                }
+                if ($last_name != $row["lname"]) {
+                    $errorMsg .= "Sorry, your last name does not match!<br>";            
+                }
+                if ($first_name != $row["fname"]) {
+                    $errorMsg .= "Sorry, your first name does not match!<br>";            
+                }
+                if (!$success) {
+                    echo "<h1>Error processing checkout for customer details!</h1>";
+                    echo "<h4>The following input errors were detected:</h4>";
+                    echo "<p>" . $errorMsg . "</p>";
+                    echo "<a id='btnCustomer' href='customer_checkout.php' class='btn btn-primary btn-block'><span class='fa fa-arrow-circle-left'></span> Return to Customer's Checkout</a>";
+                } else if ($success) {
+                    $_SESSION["customer_email"] = $email;
+                    $_SESSION["customer_hp"] = $mobile_no;
+                    $_SESSION["customer_fn"] = $first_name;
+                    $_SESSION["customer_ln"] = $last_name;
+                    header("Location: delivery_checkout.php");
+                }
             }
             ?>
         </main>
