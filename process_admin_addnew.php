@@ -29,7 +29,7 @@ if (empty($_POST["addName"])) {
     $success = false;
 } else {
     $addName = sanitize_input($_POST["addName"]);
-    if (!preg_match("/^[a-zA-Z'-]+$/", $addName)) {
+    if (!preg_match("/^[a-zA-Z ]*$/", $addName)) {
         $errorMsg .= "Name is not valid. It must not contain numbers or special characters.<br>";
         $success = false;
 }
@@ -55,6 +55,36 @@ if (empty($_POST["addPrice"])) {
 }
 }
 
+//reference: https://stackoverflow.com/questions/41517897/move-upload-file-is-failed-to-open-stream-and-unable-to-move-file
+//insert img into database using file path method
+if(isset($_POST['submit'])){
+    if (($_FILES['insertImg']['name']!="")){
+        // Where the file is going to be stored
+        if(($_POST['addCategory']) == "Kueh with Character") {
+            
+            $target_dir = "img/Kueh with Character/"; //target folder
+            
+        } elseif (($_POST['addCategory']) == "The Basic Kuehs") {
+            
+            $target_dir = "img/The Basic Kuehs/"; //target folder
+            
+        } else {
+            
+            $target_dir = "img/The Heavyweight Kuehs/"; //target folder
+            
+        }
+        
+        $file = $_FILES['insertImg']['name'];//creating file path
+        $path = pathinfo($file);
+        $filename = $path['filename'];
+        $ext = $path['extension'];
+        $temp_name = $_FILES['insertImg']['tmp_name'];
+        $path_filename_ext = $target_dir.$filename.".".$ext; 
+        $insertImg = $path_filename_ext; //declaring insertImg = file path 
+        move_uploaded_file($temp_name,$path_filename_ext); //move the image into the folder
+    }
+}
+
 
 if ($success) {
     saveFoodItemToDB();
@@ -78,9 +108,8 @@ function sanitize_input($data) {
 }
 
 // Helper function to write the data to the DB
-
 function saveFoodItemToDB() {
-    global $addCategory, $addName, $addDescription, $addPrice, $errorMsg, $success, $userId;
+    global $addCategory, $addName, $addDescription, $addPrice, $errorMsg, $success, $userId, $insertImg;
 
     // Create connection
     $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
@@ -92,9 +121,8 @@ function saveFoodItemToDB() {
     } else {
         session_start();
         $userId = $_SESSION['userId'];
-        $sql = "INSERT INTO product (description, category, name, price, user_userId)";
-        $sql .= " VALUES ('$addDescription', '$addCategory', '$addName', $addPrice, '$userId')";
-
+        $sql = "INSERT INTO product (image, description, category, name, price, user_userId)";
+        $sql .= " VALUES ('$insertImg','$addDescription', '$addCategory', '$addName', $addPrice, '$userId')";
         //Execute the query
         if (!$conn->query($sql)) {
             $errorMsg = "Database error: " . $conn->error;
@@ -104,9 +132,6 @@ function saveFoodItemToDB() {
 
     $conn->close();
 }
-?>
-
-<body>
 
 
-</body>
+
