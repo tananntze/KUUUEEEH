@@ -29,7 +29,7 @@ if (empty($_POST["addName"])) {
     $success = false;
 } else {
     $addName = sanitize_input($_POST["addName"]);
-    if (!preg_match("/^[a-zA-Z'-]+$/", $addName)) {
+    if (!preg_match("/^[a-zA-Z ]*$/", $addName)) {
         $errorMsg .= "Name is not valid. It must not contain numbers or special characters.<br>";
         $success = false;
 }
@@ -49,10 +49,11 @@ if (empty($_POST["addPrice"])) {
     $success = false;
 } else {
     $addPrice = sanitize_input($_POST["addPrice"]);
-    if (!preg_match("/^[1-9]+(\.[0-9]{2})?$/", $addPrice)) {
+    //0.01 to 99.99 validation Credited By: https://stackoverflow.com/questions/3727052/0-01-to-99-99-in-a-regular-expression
+    if (!preg_match("/^(?=.*[1-9])\d{0,2}(?:\.\d{0,2})?$/", $addPrice)) {
         $errorMsg .= "Price is not valid. Only 2 decimal places are allowed and the price cannot be zero.<br>";
         $success = false;
-}
+    }
 }
 
 

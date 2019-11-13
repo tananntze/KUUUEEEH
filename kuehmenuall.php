@@ -24,21 +24,34 @@ and open the template in the editor.
 
     <body background="img/Pink Dots Tumblr BG.jpg">
         <?php 
-        /*include "header.php";
+        include "header.php";
         include "dbConfig.php";
         $conn = connectToDB();
-        $sql = "SELECT * FROM product WHERE ";
-        for ($i = 1; $i <= 15; $i++) {
+        for ($i = 1; $i <= 11; $i++) {
             if (isset($_POST["btnKueh".$i])) {
-                print_r($i);
+                $sql = "SELECT * FROM product WHERE ";
                 $sql .= "prodId='".($i)."'";
+                $result = $conn->query($sql);
+                if($result -> num_rows > 0){ 
+                    $row = $result->fetch_assoc();  
+                    $imgSrc = $row["image"];
+                    $kuehName = $row["name"];
+                    $description = $row["description"];
+                    $category = $row["category"];
+                    $kuehPrice = $row["price"];  
+                    $_SESSION["kueh".$i."_qty"]++;
+                    $kuehTotalPrice = $kuehPrice * $_SESSION["kueh".$i."_qty"];
+                    if (sizeof($_SESSION["kueh".$i."_orders"]) == 0) {
+                        array_push($_SESSION["kueh".$i."_orders"], $i, $imgSrc, $category, $kuehName, $description, $kuehPrice, $_SESSION["kueh".$i."_qty"], $kuehTotalPrice);
+                    } else {
+                    //update the quantity and total price of the kueh
+                    $_SESSION["kueh".$i."_orders"][6] = $_SESSION["kueh".$i."_qty"];
+                    $_SESSION["kueh".$i."_orders"][7] = $kuehTotalPrice;
+                } 
+                addKuehDetails($kuehName, $_SESSION["kueh".$i."_orders"], $kuehPrice);
+                }
             } 
         }
-        $result = $conn->query($sql);
-        $row = $result->fetch_assoc();    
-        $kuehName = $row["name"];
-        $description = $row["description"];
-        $category = $row["category"];*/
         /*if (isset($_POST["btnKueh1"])) {
             //TODO, retrieve all the values from Products Database once database value is up!
             //assign a unique id to reference each kueh
