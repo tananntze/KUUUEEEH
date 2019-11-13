@@ -23,16 +23,18 @@ and open the template in the editor.
         <?php
         include "header.php";
         foreach ($_SESSION["my_orders"] as $row => $kueh_array) {
-            if (isset($_POST["btnRemove" . $row])) {
-                //reset the kueh quantity to 0
+            /*if (isset($_POST["btnRemove" . $row])) {
+                $kueh_id = $_SESSION["my_orders"][$row][0];
                 $_SESSION["subtotal"] -= $_SESSION["my_orders"][$row][6];
                 $_SESSION["total"] -= $_SESSION["my_orders"][$row][6];
-                $_SESSION["totalQty"] -= $_SESSION["kueh" . $_SESSION["my_orders"][$row][0] . "_qty"];
-                $_SESSION["kueh" . $_SESSION["my_orders"][$row][0] . "_qty"] = 0;
-                unset($_SESSION["my_orders"][$row]);
-                $_SESSION["my_orders"] = array_values($_SESSION["my_orders"]); //reindex my array
+                $_SESSION["kueh" . $row. "_orders"][5] = $_SESSION["kueh" . $kueh_id . "_qty"]--;
+                $_SESSION["totalQty"]--;
+                if ($_SESSION["kueh" . $row. "_orders"][5] == 0) {
+                    unset($_SESSION["my_orders"][$row]);
+                    $_SESSION["my_orders"] = array_values($_SESSION["my_orders"]); 
+                }
                 header('Location: my_order.php');
-            }
+            }*/
         }
         ?>
         <div class="container">
@@ -53,8 +55,8 @@ and open the template in the editor.
                                 //display message cart is empty
                                 if ($_SESSION["totalQty"] == 0) {
                                     echo "<section class='alert alert-danger' role='alert'>
-                                <span class='fa fa-times-circle fa-2x'></span><p> Sorry, your shopping cart is currently empty!</p>
-                                </section>";
+                                    <span class='fa fa-times-circle fa-2x'></span><p> Sorry, your shopping cart is currently empty!</p>
+                                    </section>";
                                 } else {
                                     echo "<table id='tblOrders'>"
                                     . "<tr>"

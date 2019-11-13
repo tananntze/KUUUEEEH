@@ -7,10 +7,8 @@ var txtAddress;
 var txtPc;
 var txtMobileNo;
 var txtCollectionAddress;
-//var cardType = "Visa";
 window.onload = function() {
     attachListeners();
-    updateDelivery();
 };
 function attachListeners() { //this is to add event listeners for the radio buttons of selecting type of delivery and type of payment
     var btnOrder = document.getElementById("btnOrder");
@@ -25,9 +23,7 @@ function attachListeners() { //this is to add event listeners for the radio butt
     pc.addEventListener("input", updateAddress);
     btnOrder.addEventListener("click", checkForms);
     radioHome.addEventListener("click", updateAddress);
-    radioHome.addEventListener("click", updateDelivery);
     radioStore.addEventListener("click", updateAddress);
-    radioStore.addEventListener("click", updateDelivery);
     radioVisa.addEventListener("click", updateCard);
     radioMc.addEventListener("click", updateCard);
 }
@@ -124,16 +120,6 @@ function checkForms() { //this is the function for the form validation
     }
     if (isAddressValid && isPcValid && isCardNameValid && isCardNumValid && isCCVValid && isNotExpired) { //if all the textfields are valid, then form submission will take place and there will be a alert to display in a form of e-receipt to show that an order has been made successfully
         detailsForm.submit();
-        /*alert("Thank you for ordering with KUUUEEEH!" + "\n\n\
-        Order Successful!\n\n\
-        Full Name: " + txtFirstName + " " + txtLastName + "\n\n\
-        Address: " + txtAddress + " Singapore " + txtPc + "\n\n\
-        Mobile No: " + txtMobileNo + "\n\n\
-        Collection Address: " + txtCollectionAddress + "\n\n\
-        My Order:\n" + txtOrderList + "\n\n\
-        Total Amount: " + totalAmt.toFixed(2) + "\n\n\
-        Payment By: " + cardType + "\n\n\
-        Delivered in: About 45-60 minutes");*/
     }
 }
 function chkEmailSyntax(email) { //this is to check whether syntax of email is correct format or not
@@ -171,17 +157,6 @@ function updateAddress() { //this is to update the address depending on radio bu
         txtCollectionAddress = storeAddress;
         collectionAddress.innerHTML = txtCollectionAddress; 
     }
-}
-function updateDelivery() { //this is to update the delivery depending on radio button
-    /*var radioHome = document.getElementById("radioHome");
-    var radioStore = document.getElementById("radioStore");
-    if (radioHome.checked) {
-        delivery = 5.00;
-    } else if (radioStore.checked) {
-        delivery = 0.00;
-    }
-    document.getElementById("delivery").innerHTML = "Delivery: $" + delivery.toFixed(2);
-    document.getElementById("totalAmt").innerHTML = "Total Amount: $" + totalAmt.toFixed(2);*/
 }
 function updateCard() { //this is to update the type of card depednding on radio button
     var radioVisa = document.getElementById("payVisa");

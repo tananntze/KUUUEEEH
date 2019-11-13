@@ -7,14 +7,8 @@ var txtEmail;
 var txtFirstName;
 var txtLastName;
 var txtMobileNo;
-//var txtOrderList = "";
-//var subtotal = 0.0;
-//var delivery = 0.00;
-//var totalAmt = 0.0;
-//var cardType = "Visa";
 window.onload = function() {
     attachListeners();
-    //updateDelivery();
 };
 function attachListeners() { //this is to add event listeners for the radio buttons of selecting type of delivery and type of payment
     var btnDetails = document.getElementById("btnDetails");

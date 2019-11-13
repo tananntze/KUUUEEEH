@@ -1,13 +1,12 @@
  <!-- Nav Bar-->
 <?php
     if (session_status() == PHP_SESSION_NONE) {
-        session_start();
-    } if (!isset($_SESSION["checkoutDone"])) {
-        $_SESSION["checkoutDone"] = false;
+        session_start();   
     }
     if (!isset($_SESSION["totalQty"])) { //if not initialized from session, set it to 0 first
         $_SESSION["totalQty"] = 0;
     }
+    $qty = $_SESSION["totalQty"];
     if (!isset($_SESSION["subtotal"])) {
         $_SESSION["subtotal"] = 0.0;
     }
@@ -17,7 +16,7 @@
     if (!isset($_SESSION["total"])) {
         $_SESSION["total"] = 0.0;
     }
-    for ($i = 1; $i <= 30; $i++) {
+    for ($i = 1; $i <= 15; $i++) {
         if (!isset($_SESSION["kueh" . $i. "_qty"])) {
             $_SESSION["kueh" . $i. "_qty"] = 0;
         }
@@ -28,7 +27,6 @@
     if (!isset($_SESSION["my_orders"])) {
         $_SESSION["my_orders"] = array();
     }
-    $qty = $_SESSION["totalQty"];
 ?>
 
 <header>
