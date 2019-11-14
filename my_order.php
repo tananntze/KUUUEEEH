@@ -100,7 +100,7 @@ and open the template in the editor.
                                             }
                                         }
                                         echo "<td>"
-                                        . "<a href='kuehmenuall.php' class='btn' id='btnEdit'><span class='fa fa-pencil-square-o'></span>  Edit</a> <form method='post' action=''><button type='submit' class='btn' name='btnIncrement" . strval($row) . "'><span class='fa fa-plus-circle fa-2x'></span></button><button type='submit' class='btn' name='btnDecrement" . strval($row) . "'><span class='fa fa-minus-circle fa-2x'></span></button></form></td>";
+                                        . "<a href='kuehmenuall.php' class='btn' id='btnEdit'><span class='fa fa-pencil-square-o'></span>  Edit</a> <form method='post' action=''><button type='submit' class='btn' name='btnIncrement" . strval($row) . "'><span class='fa fa-plus-circle fa-2x text-success'></span></button><button type='submit' class='btn' name='btnDecrement" . strval($row) . "'><span class='fa fa-minus-circle fa-2x text-danger'></span></button></form></td>";
                                         echo "</tr>";
                                     }
                                     echo "</table>";
