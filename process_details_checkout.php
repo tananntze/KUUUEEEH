@@ -93,7 +93,7 @@
                 global $success, $date_now;
                 //convert to datetime in MySQL format
                 $date_now = date("Y-m-d H:i:s", strtotime($date_now));
-                $address = $address . " Singapore: " . " " . $postal_code;
+                $address = $address . " Singapore: " . $postal_code;
                 $status = "Not Delivered";
                 $conn = connectToDB();
                 $sql = "INSERT INTO checkout_details (address, dateTime, deliveryType, status, totalPrice, customer_email)";         
@@ -102,6 +102,7 @@
                     $errorMsg = "Database error: " . $conn->error;             
                     $success = false;                             
                 } else {
+                    $_SESSION["order_id"] = $conn->insert_id;
                     ?>
                     <section>
                     <div class="container-fluid  standardfont" style= 'margin-top:20px'>
@@ -159,7 +160,7 @@
                             <p id="subTotal">Subtotal: <?php echo "$" . number_format($_SESSION["subtotal"], 2)?></p>
                             <p id="delivery">Delivery: <?php echo "$" . number_format($_SESSION["delivery"], 2)?></p>
                             <p id="totalDel">Total: <?php echo "$" . number_format($_SESSION["total"], 2)?></p>
-                            <a href='index.php' id='btnHome' class='btn btn-primary btn-block'><span class='fa fa-home'></span> Return to Home</a>        
+                            <a href='process_successful_checkout.php' id='btnHome' class='btn btn-primary btn-block'><span class='fa fa-home'></span> Return to Home</a>        
                             </div>
                         </section>
                         </div>

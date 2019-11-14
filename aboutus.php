@@ -82,6 +82,7 @@ and open the template in the editor.
                         <section class ="col-md-6">
                             <h2 class="abtUsSubHeader">What kuehs are we selling?</h2>
                             <p class="abtUsCaption">Our menu offers a wide range of kuehs that you, your family and friends are surely craving for!</p>
+                            <p class="abtUsCaption">We offer 3 different types of Kuehs: Kueh with Character, The Basic Kuehs &amp; The Heavyweight Kuehs respectively so that our customers can choose a variety of kuehs to enjoy!</p>
                             <p class="abtUsCaption">Some of our signature kuehs from our menu includes: Ang Ku Kueh, Chwee Kueh, Kueh Lapis, Kueh Tako and many more that are highly recommended for y'all to try out!</p>
                             <p id="bon_appetit">"Bon Appétit!"</p>
                         </section>
