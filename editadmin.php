@@ -52,7 +52,7 @@ and open the template in the editor.
                 </section>
 
                 <section class="card-body">
-                    <form action="process_search.php" method="post">>
+                    <form action="process_secarch.php" method="post">>
                         <div class="row">
                             <div class="col-2">
                                 <section class="form-group">
