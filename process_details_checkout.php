@@ -93,7 +93,7 @@
                 global $success, $date_now;
                 //convert to datetime in MySQL format
                 $date_now = date("Y-m-d H:i:s", strtotime($date_now));
-                $address = $address . " Singapore: " . " " . $postal_code;
+                $address = $address . " Singapore: " . $postal_code;
                 $status = "Not Delivered";
                 $conn = connectToDB();
                 $sql = "INSERT INTO checkout_details (address, dateTime, deliveryType, status, totalPrice, customer_email)";         
