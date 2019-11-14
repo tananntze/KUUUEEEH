@@ -111,7 +111,7 @@ and open the template in the editor.
                             <figcaption>Ang Ku Kueh ($0.50/pc): Small round or oval shaped pastry with soft sticky glutinous rice flour skin wrapped around a sweet filling in the centre.</figcaption>
 
                             <!--https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->              
-                            <button class="btn" type="submit" name="btnKueh1" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh1"><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -120,7 +120,7 @@ and open the template in the editor.
                             <!--https://www.pinterest.com/pin/459930180676369189/-->
                             <figcaption>Chai Kueh ($0.50/pc): A typical and popular chinese snack. Stir fried crunchy jicama (yam bean) wrapped in soft, chewy and crystal skin.</figcaption>
 
-                            <button class="btn" type="submit" name="btnKueh2" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh2"><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -128,7 +128,7 @@ and open the template in the editor.
 
                             <!--https://www.stovve.com/peranakan-patisserie-->
                             <figcaption>Kueh Ambon ($0.50/pc): This is a soft, springy, and chewy yeast cake originated from Medan (Indonesia).</figcaption>
-                            <button class="btn" type="submit" name="btnKueh3" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh3"><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -136,7 +136,7 @@ and open the template in the editor.
 
                             <!--https://www.youtube.com/watch?v=m_DFoFlXG_M-->
                             <figcaption>Kueh Bangkit ($0.50/pc): Light and crumbly coconut cream cookies that melt in your mouth. These cookies are made with tapioca flour and have a creamy rich coconut taste.</figcaption>
-                            <button class="btn" type="submit" name="btnKueh4" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh4"><i class="fa fa-shopping-cart"></i></button>
                         </figure>    
 
                         <figure class="imgholder">
@@ -146,7 +146,7 @@ and open the template in the editor.
                             <figcaption>Kueh Bingkah ($0.50/pc): Made from grated tapioca (cassava), baked until the top and sides are crispy brown. Soft and chewy inside. A Nyonya delicacies of the Peranakans and goes well with coffee or tea.</figcaption>
 
                             <!--https://www.shiokmanrecipes.com/2017/06/15/kueh-bingka-ubi-baked-tapioca-cassava-cake/-->
-                            <button class="btn" type="submit" name="btnKueh5" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh5"><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                     </div>
@@ -318,7 +318,7 @@ and open the template in the editor.
                             <figcaption>Apom Berkuah ($0.50/pc): Fluffy and soft yeasted rice pancakes dipped in a kuah pengat pisang, a sweet sauce made with fresh coconut milk, gula melaka and pisang rajah or pisang mas.</figcaption>
 
                             <!--https://thechubbychefsg.wordpress.com/2017/09/19/apom-berkuahbokwa/-->                        
-                           <button class="btn" type="submit" name="btnKueh6" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                           <button class="btn" type="submit" name="btnKueh6"><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -328,7 +328,7 @@ and open the template in the editor.
                             <figcaption>Chwee Kueh ($0.70/pc): A popular breakfast item which rice cakes are topped with diced preserved radish and served with chilli sauce.</figcaption>
 
                             <!--https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
-                            <button class="btn" type="submit" name="btnKueh7" value=0.70><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh7"><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -336,7 +336,7 @@ and open the template in the editor.
 
                             <!--https://www.flickr.com/photos/vkeong/27245673335/in/dateposted-public/-->
                             <figcaption>Chye Tow Kueh ($0.50/pc): Known as fried carrot cake, made with radish cake (steamed rice flour and shredded white daikon), which is then stir-fried with eggs, preserved radish.</figcaption>
-                            <button class="btn" type="submit" name="btnKueh8" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh8"><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -346,7 +346,7 @@ and open the template in the editor.
                             <figcaption>Dodol ($0.50/pc): A popular sweet treat in Southeast Asia. Chewy, sweet and thick cake made from glutinous rice flour, coconut milk and palm sugar (jaggery).</figcaption>
 
                             <!--https://mykitchen101en.com/kuih-dodol-durian-chewy-and-sweet-glutinous-rice-durian-cake/#targetText=Dodol%20is%20a%20chewy%2C%20sweet,grease%20and%20patience%20is%20needed.-->
-                            <button class="btn" type="submit" name="btnKueh9" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh9"><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -356,7 +356,7 @@ and open the template in the editor.
                             <figcaption>Hoon Kueh ($0.50): Soft and tender texture, made from coconut cream, mung bean flour and corn, wrapped in banana leaf.</figcaption>
 
                             <!--http://whattobaketoday.blogspot.com/2015/09/kueh-jagung-corn-hoon-kueh_11.html-->
-                            <button class="btn" type="submit" name="btnKueh10" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh10"><i class="fa fa-shopping-cart"></i></button>
                         </figure>
                     </div>
 
@@ -532,7 +532,7 @@ and open the template in the editor.
                             <figcaption>Apam Balik ($0.50/pc): A Southeast Asian fluffy pancake with cream corn or peanuts. This soft pancake has a thick surface with thin and crispy side.</figcaption>
 
                             <!--https://www.nyonyacooking.com/recipes/apam-balik~SJ5WuvsDf9WQ-->
-                            <button class="btn" type="submit" name="btnKueh11" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh11"><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -542,7 +542,7 @@ and open the template in the editor.
                             <figcaption>Getuk Getuk ($0.50/pc): Made from cassava. It is mixed with grated coconut, sugar and small amounts of salt. Chewy and soft.</figcaption>
 
                             <!--https://www.guaishushu1.com/getuk-ubi-%E6%9C%A8%E8%96%AF%E6%A4%B0%E4%B8%9D%E7%B3%95%EF%BC%89/-->
-                            <button class="btn" type="submit" name="btnKueh12" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh12"><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -550,7 +550,7 @@ and open the template in the editor.
 
                             <!--https://whattocooktoday.com/abok-abok-sago.html-->
                             <figcaption>Kueh Abok Abok ($0.50/pc): This is a snack made from sago, sugar, coconut and Gula Melaka steamed in banana leaves. Giving a dumpling kind of shape.</figcaption>
-                            <button class="btn" type="submit" name="btnKueh13" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh13"><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -560,7 +560,7 @@ and open the template in the editor.
                             <figcaption>Kueh Akok ($0.50/pc): A traditional snack made from eggs, flour, coconut milk and palm sugar.</figcaption>
 
                             <!--http://foodnframe.com/2012/02/kuih-akok-kelantan/-->
-                            <button class="btn" type="submit" name="btnKueh14" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh14"><i class="fa fa-shopping-cart"></i></button>
                         </figure>
 
                         <figure class="imgholder">
@@ -570,7 +570,7 @@ and open the template in the editor.
                             <figcaption>Kueh Bakul ($0.50/pc): Known as Nian Gao, prepared from glutinous rice flour and sugar. Giving a sticky, chewy and sweet texture and taste. This snack can be eaten in many ways.</figcaption>
 
                             <!--https://en.wikipedia.org/wiki/Glutinous_rice_flour-->
-                            <button class="btn" type="submit" name="btnKueh15" value=0.50><i class="fa fa-shopping-cart"></i></button>
+                            <button class="btn" type="submit" name="btnKueh15"><i class="fa fa-shopping-cart"></i></button>
                         </figure>
                     </div>
 

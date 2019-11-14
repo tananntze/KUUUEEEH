@@ -22,5 +22,8 @@
     } 
     if (!isset($_SESSION["delivery_type"])) {
         $_SESSION["delivery_type"] = "";
-    } 
+    }
+    if (!isset($_SESSION["order_id"])) {
+        $_SESSION["order_id"] = "";
+    }
 ?>
