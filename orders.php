@@ -86,15 +86,16 @@ if (!isset($_SESSION['userId'])) {
                         $sql = "SELECT * FROM checkout_details";
                         $result = $conn->query($sql);
                         while ($row = $result->fetch_assoc()){
+                            $orderId = $row['orderId'];
                     ?>
                     <tr class="table-light d-flex">
-                        <td class="col-2 data"><?php echo $row['orderId']; ?></td>
+                        <td class="col-2 data"><?php echo $orderId ?></td>
                         <td class="col-6 data"><?php echo $row ['customer_email']; ?></td>
                         <td class="col-5 data"><?php echo $row ['deliveryType']; ?></td>
                         <td class="col-4 data"><?php echo $row ['status']; ?></td>
                         <td class="col-3 data"><?php echo $row ['totalPrice']; ?></td>
                         <td class="col-3">
-                            <a href=# class="view" data-toggle="modal" data-target="#viewModal"><span class="fa fa-eye">View</span></a> <br>
+                            <a href="view_order.php?orderId=<?php echo $orderId ?>" class="view"><span class="fa fa-eye">View</span></a> <br>
                             <a href=# class="edit" data-toggle="modal" data-target="#editModal"><span class="fa fa-edit"> Edit</span></a> <br>
                             <a href=# class="delete" data-toggle="modal" data-target="#deleteModal"><span class="fas fa-trash-alt"> Delete</span></a></td>
 
