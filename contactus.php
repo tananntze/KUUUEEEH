@@ -4,6 +4,8 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+
+
 <html class="header">
     <head>
         <title>Contact Us</title>
@@ -20,7 +22,8 @@ and open the template in the editor.
     </head>
 
     <body class="overlay">
-        <?php include "header.php" ?>
+        <?php include "header.php";
+        ?>
 
         <div class="container">
             <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
@@ -59,7 +62,7 @@ and open the template in the editor.
                     <section class =' col-md-4'>
                         <h3 class ="subheader">Get in Touch with us here!</h3>
 
-                        <form name="myForm" method = "post" action="process_contactus.php" onsubmit="return validateForm()">
+                        <form name="myForm" method = "post" action="process_contactus.php" action =" MAILTO:blazeking990@gmail.com" onsubmit="return validateForm()">
 
                             <section class="form-group">
                                 <input type="text" class="form-control"  placeholder="Enter Your Name Here" name="name" maxlength="30" required pattern='/^[a-zA-Z ][a-zA-Z]+{3,}$'>
@@ -79,3 +82,5 @@ and open the template in the editor.
     </body>
     <?php include "footer_include.php" ?>
 </html>
+
+    

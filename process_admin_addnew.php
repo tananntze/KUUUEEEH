@@ -1,4 +1,6 @@
 <?php
+
+include "adminheader.php";
 // Constants for accessing our DB:
 define("DBHOST", "161.117.122.252");
 define("DBNAME", "p1_1");
@@ -27,7 +29,7 @@ if (empty($_POST["addName"])) {
     $success = false;
 } else {
     $addName = sanitize_input($_POST["addName"]);
-    if (!preg_match("/^[a-zA-Z'-]+$/", $addName)) {
+    if (!preg_match("/^[a-zA-Z ]*$/", $addName)) {
         $errorMsg .= "Name is not valid. It must not contain numbers or special characters.<br>";
         $success = false;
 }
@@ -47,10 +49,41 @@ if (empty($_POST["addPrice"])) {
     $success = false;
 } else {
     $addPrice = sanitize_input($_POST["addPrice"]);
-    if (!preg_match("/^[1-9]+(\.[0-9]{2})?$/", $addPrice)) {
+    //0.01 to 99.99 validation Credited By: https://stackoverflow.com/questions/3727052/0-01-to-99-99-in-a-regular-expression
+    if (!preg_match("/^(?=.*[1-9])\d{0,2}(?:\.\d{0,2})?$/", $addPrice)) {
         $errorMsg .= "Price is not valid. Only 2 decimal places are allowed and the price cannot be zero.<br>";
         $success = false;
+    }
 }
+
+//reference: https://stackoverflow.com/questions/41517897/move-upload-file-is-failed-to-open-stream-and-unable-to-move-file
+//insert img into database using file path method
+if(isset($_POST['submit'])){
+    if (($_FILES['insertImg']['name']!="")){
+        // Where the file is going to be stored
+        if(($_POST['addCategory']) == "Kueh with Character") {
+            
+            $target_dir = "img/Kueh with Character/"; //target folder
+            
+        } elseif (($_POST['addCategory']) == "The Basic Kuehs") {
+            
+            $target_dir = "img/The Basic Kuehs/"; //target folder
+            
+        } else {
+            
+            $target_dir = "img/The Heavyweight Kuehs/"; //target folder
+            
+        }
+        
+        $file = $_FILES['insertImg']['name'];//creating file path
+        $path = pathinfo($file);
+        $filename = $path['filename'];
+        $ext = $path['extension'];
+        $temp_name = $_FILES['insertImg']['tmp_name'];
+        $path_filename_ext = $target_dir.$filename.".".$ext; 
+        $insertImg = $path_filename_ext; //declaring insertImg = file path 
+        move_uploaded_file($temp_name,$path_filename_ext); //move the image into the folder
+    }
 }
 
 
@@ -76,9 +109,8 @@ function sanitize_input($data) {
 }
 
 // Helper function to write the data to the DB
-
 function saveFoodItemToDB() {
-    global $addCategory, $addName, $addDescription, $addPrice, $errorMsg, $success;
+    global $addCategory, $addName, $addDescription, $addPrice, $errorMsg, $success, $userId, $insertImg;
 
     // Create connection
     $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
@@ -88,9 +120,10 @@ function saveFoodItemToDB() {
         $errorMsg = "Connection failed:" . $conn->connect_error;
         $success = false;
     } else {
-        $sql = "INSERT INTO product (user_userId, description, category, name, price)";
-        $sql .= " VALUES ((SELECT userId FROM p1_1.user WHERE email = 'tananntze@gmail.com'), '$addDescription', '$addCategory', '$addName', $addPrice)";
-
+        session_start();
+        $userId = $_SESSION['userId'];
+        $sql = "INSERT INTO product (image, description, category, name, price, user_userId)";
+        $sql .= " VALUES ('$insertImg','$addDescription', '$addCategory', '$addName', $addPrice, '$userId')";
         //Execute the query
         if (!$conn->query($sql)) {
             $errorMsg = "Database error: " . $conn->error;
@@ -100,40 +133,6 @@ function saveFoodItemToDB() {
 
     $conn->close();
 }
-?>
 
-<body>
 
-    <footer class="footer-bs p-2 mb-0">
 
-        <div class="row mx-0">
-            <div class="col-md-3 footer-brand animated fadeInLeft">
-
-                <p>© 2019 KUUUEEH</p>
-            </div>
-            <div class="col-md-4 footer-nav animated fadeInUp">
-                <h4>Menu —</h4>
-
-                <div class="col-md-6">
-                    <ul class="list">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="aboutus.php">About Us</a></li>
-                        <li><a href="kuehmenuall.php">Kueh</a></li>
-                        <li><a href="contactus.php">Contact Us</a></li>
-                        <li><a href="faq.php">FAQ's</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2 footer-social animated fadeInDown">
-                <h4>Follow Us @</h4>
-                <ul class= "list-inline">
-                    <li><a class ="fa fa-facebook-square" href="#"> Facebook</a></li>
-                    <li><a class="fa fa-twitter-square" href="#"> Twitter</a></li>
-                    <li ><a class= "fa fa-instagram" href="#"> Instagram</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </footer>
-
-</body>
