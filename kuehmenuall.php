@@ -45,10 +45,10 @@ and open the template in the editor.
                         array_push($_SESSION["kueh".$i."_orders"], $i, $imgSrc, $category, $kuehName, $description, $kuehPrice, $_SESSION["kueh".$i."_qty"], $kuehTotalPrice);
                     } else {
                     //update the quantity and total price of the kueh
-                    $_SESSION["kueh".$i."_orders"][6] = $_SESSION["kueh".$i."_qty"];
-                    $_SESSION["kueh".$i."_orders"][7] = $kuehTotalPrice;
-                } 
-                addKuehDetails($kuehName, $_SESSION["kueh".$i."_orders"], $kuehPrice);
+                        $_SESSION["kueh".$i."_orders"][6] = $_SESSION["kueh".$i."_qty"];
+                        $_SESSION["kueh".$i."_orders"][7] = $kuehTotalPrice;
+                    } 
+                    addKuehDetails($kuehName, $_SESSION["kueh".$i."_orders"], $kuehPrice);
                 }
             } 
         }
