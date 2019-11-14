@@ -92,8 +92,8 @@
             function insertCheckoutDetails($address, $postal_code, $delivery_type, $total, $email) {
                 global $success, $date_now;
                 //convert to datetime in MySQL format
-                $date_now = date("Y-m-d H:i:s", time());
-                $address = $address . " Singapore: " . " " . $postal_code;
+                $date_now = date("Y-m-d H:i:s", strtotime($date_now));
+                $address = $address . " Singapore: " . $postal_code;
                 $status = "Not Delivered";
                 $conn = connectToDB();
                 $sql = "INSERT INTO checkout_details (address, dateTime, deliveryType, status, totalPrice, customer_email)";         
@@ -102,6 +102,7 @@
                     $errorMsg = "Database error: " . $conn->error;             
                     $success = false;                             
                 } else {
+                    $_SESSION["order_id"] = $conn->insert_id;
                     ?>
                     <section>
                     <div class="container-fluid  standardfont" style= 'margin-top:20px'>
@@ -136,11 +137,10 @@
                                     . "<th>Price</th>"
                                     . "<th>Quantity</th>"
                                     . "<th>Total</th>"
-                                    . "<th>Action</th>"
                                     . "</tr>";
                                     foreach ($_SESSION["my_orders"] as $row => $kueh_array) {
                                         echo "<tr>";
-                                        for ($c = 1; $c < 8; $c++) {
+                                        for ($c = 1; $c <= 7; $c++) {
                                             if ($c == 1) {
                                                 echo "<td><img id='imgKueh' src='" . $kueh_array[$c] . "' alt='Kueh Order'/></td>";
                                             } else if ($c == 5) {
@@ -151,7 +151,6 @@
                                                 echo "<td>" . $kueh_array[$c] . "</td>";
                                             }
                                         }
-                                        echo "<td><a href='kuehmenuall.php' class='btn' id='btnEdit'><span class='fa fa-pencil-square-o'></span>  Edit</a> <form method='post' action=''><button type='submit' class='btn' name='btnRemove" . strval($row) . "'><span class='fa fa-times'></span> Remove</button></form></td>";
                                         echo "</tr>";
                                     }
                                     echo "</table>";
@@ -161,7 +160,7 @@
                             <p id="subTotal">Subtotal: <?php echo "$" . number_format($_SESSION["subtotal"], 2)?></p>
                             <p id="delivery">Delivery: <?php echo "$" . number_format($_SESSION["delivery"], 2)?></p>
                             <p id="totalDel">Total: <?php echo "$" . number_format($_SESSION["total"], 2)?></p>
-                            <a href='index.php' id='btnHome' class='btn btn-primary btn-block'><span class='fa fa-home'></span> Return to Home</a>        
+                            <a href='process_successful_checkout.php' id='btnHome' class='btn btn-primary btn-block'><span class='fa fa-home'></span> Return to Home</a>        
                             </div>
                         </section>
                         </div>

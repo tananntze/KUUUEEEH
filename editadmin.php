@@ -29,7 +29,7 @@ and open the template in the editor.
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-        <script type="text/javascript" src="js/editadmin.js"></script> 
+        <script src="js/editadmin.js"></script> 
 
 
     </head>
@@ -52,7 +52,7 @@ and open the template in the editor.
                 </section>
 
                 <section class="card-body">
-                    <form action="process_search.php" method="post">>
+                    <form action="process_search.php" method="post">
                         <div class="row">
                             <div class="col-2">
                                 <section class="form-group">
@@ -82,7 +82,7 @@ and open the template in the editor.
         <aside class="modal fade standardfont" id="addModal">
             <section class="modal-dialog modal-dialog-centered">
                 <section class="modal-content">
-                    <form action="process_admin_addnew.php" method="post">
+                    <form action="process_admin_addnew.php" method="post" enctype="multipart/form-data">
                     <section class="modal-header">
                         <h4 class="modal-title">Add New Item</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -90,8 +90,12 @@ and open the template in the editor.
                     
                     <section class="modal-body">
                         <section class="form-group">
-                            <label for="acategory">Category</label>
-                            <input type="text" name="addCategory" id="addCategory" class="form-control" value="" placeholder="Enter Category" required>
+                            <label for="acategory">Select Category:</label>
+                            <select class="form-control" name="addCategory" id="addCategory" required>
+                                <option>Kueh with Character</option>
+                                <option>The Basic Kuehs</option>
+                                <option>The Heavyweight Kuehs</option>
+                            </select>
                         </section>
 
                         <section class="form-group">
@@ -111,13 +115,13 @@ and open the template in the editor.
 
                         <p>Insert Image</p>
                         <section class="custom-file">
-                            <input type="file" class="custom-file-input" id="insertImg" name="insertImg">
+                            <input type="file" class="custom-file-input" name="insertImg" id="insertImg">
                             <label class="custom-file-label" for="insertImg">Choose file</label>
                         </section>
                     </section>
                     
                     <section class="modal-footer">
-                        <button type="submit" class="btn btn-success" name="submit">Submit</button>    
+                        <button type="submit" class="btn btn-success" name="submit" id="submit">Submit</button>    
                     </section>
                     </form>
                 </section>         
@@ -130,87 +134,42 @@ and open the template in the editor.
                 <table class="table table-hover table-responsive">
                     <thead>
                         <tr class="d-flex">
-                            <th class="col-1">SNo</th>
+                            <th class="col-1">Prod No.</th>
                             <th class="col-2">Category</th>
                             <th class="col-2">Name</th>
                             <th class="col-2">Description</th>
-                            <th class="col-2">Price</th>
+                            <th class="col-1">Price</th>
                             <th class="col-2">Image</th>
+                            <th class="col-1">Status</th>
                             <th class="col-1">Action</th>
                         </tr>
                     </thead>
                     
                     <tbody>
+                        <?php 
+                        include "dbConfig.php";
+                        $conn = connectToDB();
+                        $sql = "SELECT * FROM product";
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()){
+                        ?>
                         <tr class="table-light d-flex">
-                            <td class="col-1 data">1</td>
-                            <td class="col-2 data">Kueh with Character</td>
-                            <td class="col-2 data">Chwee Kueh</td>
-                            <td class="col-2 data">A popular breakfast item which rice cakes are topped with diced preserved radish and served with chili sauce.</td> <!--https://en.wikipedia.org/wiki/Chwee_kueh-->
-                            <td class="col-2 data">$0.50/pc</td>
-                            <td class="col-2"><img src="img/Kueh with Character/Chwee Kueh.jpg" class="img-fluid img-thumbnail" alt="Chwee Kueh"></td> <!--http://www.mykitchensnippets.com/2011/04/chwee-kuehquar-ko-kuehsteamed-rice-cake.html-->
+                            <td class="col-1 data"><?php echo $row['prodId']; ?></td>
+                            <td class="col-2 data"><?php echo $row['category']; ?></td>
+                            <td class="col-2 data"><?php echo $row['name']; ?></td>
+                            <td class="col-2 data"><?php echo $row['description']; ?></td> 
+                            <td class="col-1 data"><?php echo $row['price']; ?></td>
+                            <td class="col-2"><img src="<?php echo $row['image']; ?>" class="img-fluid img-thumbnail" alt="<?php echo $row['name']; ?>"></td> 
+                            <td class="col-1 data"><?php echo $row['status']; ?></td>
                             <td class="col-1"><a href = # class="edit" data-toggle="modal" data-target="#editModal"><span class="fa fa-edit"> Edit</span></a> 
-                                <a href = # class="delete" data-toggle="modal" data-target="#deleteModal"><span class="fas fa-trash-alt"> Delete</span></a></td>
                         </tr>
-                        <tr class="table-light d-flex">
-                            <td class="col-1 data">2</td>
-                            <td class="col-2 data">Kueh with Character</td>
-                            <td class="col-2 data">Png Kueh</td>
-                            <td class="col-2 data">Soft and tender and the glutinous rice filling with full of mushroom and dried shrimp flavour. Added some fried shallots, chopped spring onions and a trickle of sweet soy sauce.</td> <!-- http://ieatishootipost.sg/teochew-kueh-why-is-there-red-and-white-png-kueh/-->
-                            <td class="col-2 data">$0.60/pc</td>
-                            <td class="col-2"><img src="img/Kueh with Character/Png Kueh.jpg" class="img-fluid img-thumbnail" alt="Png Kueh"></td> <!-- http://www.pbs.org/food/fresh-tastes/hungry-ghost-festival-singapore/-->
-                            <td class="col-1"><a href = # class="edit"><span class="fa fa-edit"> Edit</span></a>
-                                <a href = # class="delete"><span class="fas fa-trash-alt"> Delete</span></a></td>
-                        </tr>
-                        <tr class="table-light d-flex">
-                            <td class="col-1 data">3</td>
-                            <td class="col-2 data">The Basic Kuehs</td>
-                            <td class="col-2 data">Ang Ku Kueh</td>
-                            <td class="col-2 data">Small round or oval shaped pastry with soft sticky glutinous rice flour skin wrapped around a sweet filling in the centre.</td> <!-- https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
-                            <td class="col-2 data">$0.50/pc</td>
-                            <td class="col-2"><img src="img/The Basic Kuehs/Ang Ku Kueh.jpg" class="img-fluid img-thumbnail" alt="Ang Ku Kueh"></td> <!-- https://www.stovve.com/peranakan-patisserie -->
-                            <td class="col-1"><a href = # class="edit"><span class="fa fa-edit"> Edit</span></a>
-                                <a href = # class="delete"><span class="fas fa-trash-alt"> Delete</span></a></td>
-                        </tr>
-                         <tr class="table-light d-flex">
-                            <td class="col-1 data">4</td>
-                            <td class="col-2 data">The Basic Kuehs</td>
-                            <td class="col-2 data">Ondeh Ondeh</td>
-                            <td class="col-2 data">One of the all-time favourite Nonya desserts, soft glutinous rice balls, infused in pandan juice, filled with aromatic palm sugar, then coated in a sweet, fresh and pleasant taste of grated white coconut.</td> <!-- https://www.ladyironchef.com/2015/08/guide-traditional-kueh/ -->
-                            <td class="col-2 data">$0.30/pc</td>
-                            <td class="col-2"><img src="img/The Basic Kuehs/Ondeh Ondeh.jpg" class="img-fluid img-thumbnail" alt="Ondeh Ondeh"></td> <!-- https://www.elmundoeats.com/pandan-balls-with-coconut-sugar-ondeh-ondeh/-->
-                            <td class="col-1"><a href = # class="edit"><span class="fa fa-edit"> Edit</span></a>
-                                <a href = # class="delete"><span class="fas fa-trash-alt"> Delete</span></a></td>
-                        </tr>
-                        <tr class="table-light d-flex">
-                            <td class="col-1 data">5</td>
-                            <td class="col-2 data">The Heavyweight Kuehs</td>
-                            <td class="col-2 data">Apam Balik</td>
-                            <td class="col-2 data">A Southeast Asian fluffy pancake with cream corn or peanuts. This soft pancake has a thick surface with thin and crispy side.</td> <!-- https://www.nyonyacooking.com/recipes/apam-balik~SJ5WuvsDf9WQ -->
-                            <td class="col-2 data">$0.70/pc</td>
-                            <td class="col-2"><img src="img/The Heavyweight Kuehs/Apam Balik.jpg" class="img-fluid img-thumbnail" alt="Apam Balik"></td> <!-- https://www.elmundoeats.com/asian-peanut-pancake-turnover-apam-balik/ -->
-                            <td class="col-1"><a href = # class="edit"><span class="fa fa-edit"> Edit</span></a>
-                                <a href = # class="delete"><span class="fas fa-trash-alt"> Delete</span></a></td>
-                        </tr>
-                        <tr class="table-light d-flex">
-                            <td class="col-1 data">6</td>
-                            <td class="col-2 data">The Heavyweight Kuehs</td>
-                            <td class="col-2 data">Kueh Cara</td>
-                            <td class="col-2 data">Made from pure coconut milk and vanilla juice and stuffed with chopped coconut sugar for the explosion filling.</td> <!-- https://www.tasteatlas.com/kuih-cara-manis -->
-                            <td class="col-2 data">$0.40/pc</td>
-                            <td class="col-2"><img src="img/The Heavyweight Kuehs/Kueh Cara.jpg" class="img-fluid img-thumbnail" alt="Kueh Cara"></td> <!-- https://www.kuali.com/recipe/kuih-cara-manis-pandan-sponge-cake/ -->
-                            <td class="col-1"><a href = # class="edit"><span class="fa fa-edit"> Edit</span></a>
-                                <a href = # class="delete"><span class="fas fa-trash-alt"> Delete</span></a></td>
-                        </tr>
-                        <tr class="table-light d-flex">
-                            <td class="col-1 data">7</td>
-                            <td class="col-2 data">The Heavyweight Kuehs</td>
-                            <td class="col-2 data">Kueh Talam Ubi</td>
-                            <td class="col-2 data">It’s a 2 layered steamed kueh, fresh coconut milk at the top and tapioca at the bottom. Sweet and savoury at the same time.</td> <!-- http://fuzzymazing.blogspot.com/2011/10/talam-ubi.html-->
-                            <td class="col-2 data">$0.50/pc</td>
-                            <td class="col-2"><img src="img/The Heavyweight Kuehs/Kueh Talam Ubi.jpg" class="img-fluid img-thumbnail" alt="Kueh Talam Ubi"></td> <!-- https://www.aynorablogs.com/2018/11/resepi-kuih-talam-ubi-yang-sedap.html-->
-                            <td class="col-1"><a href = # class="edit"><span class="fa fa-edit"> Edit</span></a>
-                                <a href = # class="delete"><span class="fas fa-trash-alt"> Delete</span></a></td>
-                        </tr>
+                        <?php
+                        }
+                        } else { echo "0 results"; }
+                        $result -> free_result();
+                        $conn->close();
+                        ?>
                     </tbody>
                 </table>
             </section>
@@ -221,7 +180,7 @@ and open the template in the editor.
             <section class="modal fade standardfont" id="editModal">
                 <section class="modal-dialog modal-dialog-centered">
                     <section class="modal-content">
-                        <form action="editadmin.php">
+                        <form action="process_admin_edit.php" method="post">
                             <section class="modal-header">
                                 <h4 class="modal-title">Edit Item</h4>
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -264,7 +223,7 @@ and open the template in the editor.
             </section>
         </aside>
  
-<!--Delete modal-->
+<!--Delete modal
         <aside>
             <section class="modal fade standardfont" id="deleteModal">
                 <section class="modal-dialog modal-dialog-centered">
@@ -286,7 +245,7 @@ and open the template in the editor.
                     </section>         
                 </section>
             </section>
-        </aside>
+        </aside>-->
     </body>
     
 </html>
