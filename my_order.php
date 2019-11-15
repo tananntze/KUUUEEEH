@@ -28,15 +28,15 @@ and open the template in the editor.
                 $kueh_id = $_SESSION["my_orders"][$row][0];
                 $kueh_name = $_SESSION["my_orders"][$row][3];
                 $_SESSION["totalQty"]--;
-                $_SESSION["subtotal"] -= $_SESSION["my_orders"][$row][5];
-                $_SESSION["total"] -= $_SESSION["my_orders"][$row][5];
+                $_SESSION["subtotal"] -= $_SESSION["my_orders"][$row][4];
+                $_SESSION["total"] -= $_SESSION["my_orders"][$row][4];
                 $_SESSION["kueh".$kueh_id."_qty"]--;
                 if ($_SESSION["kueh".$kueh_id."_qty"] == 0) {
                     unset($_SESSION["my_orders"][$row]);
                     $_SESSION["my_orders"] = array_values($_SESSION["my_orders"]); 
                 } else {
-                    $_SESSION["my_orders"][$row][6] = $_SESSION["kueh".$kueh_id."_qty"];
-                    $_SESSION["my_orders"][$row][7] -= $_SESSION["my_orders"][$row][5];
+                    $_SESSION["my_orders"][$row][5] = $_SESSION["kueh".$kueh_id."_qty"];
+                    $_SESSION["my_orders"][$row][6] -= $_SESSION["my_orders"][$row][4];
                 }
                 header('Location: my_order.php');
             }
@@ -46,8 +46,8 @@ and open the template in the editor.
                 $kueh_name = $_SESSION["my_orders"][$row][3];
                 $_SESSION["totalQty"]++;
                 //Increment price of subtotal by the price of 1 kueh
-                $_SESSION["subtotal"] += $_SESSION["my_orders"][$row][5];
-                $_SESSION["total"] += $_SESSION["my_orders"][$row][5];
+                $_SESSION["subtotal"] += $_SESSION["my_orders"][$row][4];
+                $_SESSION["total"] += $_SESSION["my_orders"][$row][4];
                 //Increment kueh quantity
                 $_SESSION["kueh".$kueh_id."_qty"]++;
                 $_SESSION["my_orders"][$row][5] = $_SESSION["kueh".$kueh_id."_qty"];
