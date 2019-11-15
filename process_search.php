@@ -68,9 +68,18 @@
             
             else
             {
-                
+                echo "<h2>Oops!</h2>";  
             }
-        } 
+        }
+        
+        else
+        {
+            echo "<h2>Oops!</h2>";
+            echo "<h4>The following input errors were detected:</h4>";
+            echo "<p>" . $errorMsg . "</p>";
+            
+            echo  "<a href = 'editadmin.php' type='button' class='btn btn-default'>Return to Search</a>";
+        }
+        
         ?>
-    </body>        
-</html>
+        
