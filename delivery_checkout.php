@@ -20,6 +20,9 @@ and open the template in the editor.
     </head>
     <body>
         <?php include "header.php";
+        if ($_SESSION["totalQty"] == 0) {
+            header("Location: index.php");
+        }
         ?>
 
         <div class="container">

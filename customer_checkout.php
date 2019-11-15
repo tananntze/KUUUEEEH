@@ -20,6 +20,10 @@ and open the template in the editor.
     </head>
     <body>
         <?php include "header.php";
+        //redirect users back to home page if total kueh quantity is resetted back to 0 (after session is killed due to successful checkout)
+        if ($_SESSION["totalQty"] == 0) {
+            header("Location: index.php");
+        }
         ?>
         <div class="container">
             <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->

@@ -1,5 +1,6 @@
  <!-- Nav Bar-->
 <?php
+    include "dbConfig.php";
     if (session_status() == PHP_SESSION_NONE) {
         session_start();   
     }
@@ -16,13 +17,19 @@
     if (!isset($_SESSION["total"])) {
         $_SESSION["total"] = 0.0;
     }
-    for ($i = 1; $i <= 15; $i++) {
-        if (!isset($_SESSION["kueh" . $i. "_qty"])) {
-            $_SESSION["kueh" . $i. "_qty"] = 0;
+    $conn = connectToDB();
+    $sql = "SELECT * FROM product WHERE ";
+    $sql .= "status='Active'";
+    $result = $conn->query($sql);
+    if($result-> num_rows > 0){ 
+        while ($row = $result->fetch_assoc()) {
+            if (!isset($_SESSION["kueh" . $row["prodId"]. "_qty"])) {
+                $_SESSION["kueh" . $row["prodId"]. "_qty"] = 0;
+            }
+            if (!isset($_SESSION["kueh" . $row["prodId"]. "_orders"])) {
+                $_SESSION["kueh" . $row["prodId"]. "_orders"] = array();
+            }     
         }
-        if (!isset($_SESSION["kueh" . $i. "_orders"])) {
-            $_SESSION["kueh" . $i. "_orders"] = array();
-        }   
     }
     if (!isset($_SESSION["my_orders"])) {
         $_SESSION["my_orders"] = array();
