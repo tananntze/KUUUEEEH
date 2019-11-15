@@ -27,7 +27,7 @@ and open the template in the editor.
         include "header.php";
         $conn = connectToDB();
         
-        /*for ($i = 1; $i <= 15; $i++) {
+        for ($i = 1; $i <= 15; $i++) {
             if (isset($_POST["btnKueh".$i])) {
                 $sql = "SELECT * FROM product WHERE ";
                 $sql .= "prodId='".($i)."'";
@@ -51,7 +51,7 @@ and open the template in the editor.
                     addKuehDetails($kuehName, $_SESSION["kueh".$i."_orders"], $kuehPrice);
                 }
             } 
-        }*/
+        }
         function addKuehDetails($kuehName, $kuehArr, $kuehPrice) {
             $index = 0;
             $_SESSION["totalQty"]++;
