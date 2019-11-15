@@ -22,6 +22,11 @@ and open the template in the editor.
 
 <body>
     <?php include "header.php";
+    if (isset($_SESSION["checkout_successful"])){
+        unset($_SESSION["checkout_successful"]);
+        session_destroy();
+        header("Location: index.php");
+    }
     ?>
 
     <!--This is the banner for inserting of promotion-->

@@ -45,11 +45,13 @@ and open the template in the editor.
                 $kueh_id = $_SESSION["my_orders"][$row][0];
                 $kueh_name = $_SESSION["my_orders"][$row][3];
                 $_SESSION["totalQty"]++;
+                //Increment price of subtotal by the price of 1 kueh
                 $_SESSION["subtotal"] += $_SESSION["my_orders"][$row][5];
                 $_SESSION["total"] += $_SESSION["my_orders"][$row][5];
+                //Increment kueh quantity
                 $_SESSION["kueh".$kueh_id."_qty"]++;
-                $_SESSION["my_orders"][$row][6] = $_SESSION["kueh".$kueh_id."_qty"];
-                $_SESSION["my_orders"][$row][7] += $_SESSION["my_orders"][$row][5];
+                $_SESSION["my_orders"][$row][5] = $_SESSION["kueh".$kueh_id."_qty"];
+                $_SESSION["my_orders"][$row][6] += $_SESSION["my_orders"][$row][4];
                 header('Location: my_order.php');
             }
         }
@@ -80,7 +82,6 @@ and open the template in the editor.
                                     . "<th>Image</th>"
                                     . "<th>Category</th>"
                                     . "<th>Name</th>"
-                                    . "<th>Description</th>"
                                     . "<th>Price</th>"
                                     . "<th>Quantity</th>"
                                     . "<th>Total</th>"
@@ -88,12 +89,12 @@ and open the template in the editor.
                                     . "</tr>";
                                     foreach ($_SESSION["my_orders"] as $row => $kueh_array) {
                                         echo "<tr>";
-                                        for ($c = 1; $c < 8; $c++) {
+                                        for ($c = 1; $c < 7; $c++) {
                                             if ($c == 1) {
                                                 echo "<td><img id='imgKueh' src='" . $kueh_array[$c] . "' alt='Kueh Order'/></td>";
-                                            } else if ($c == 5) {
+                                            } else if ($c == 4) {
                                                 echo "<td>$" . number_format($kueh_array[$c], 2) . "/pc";
-                                            } else if ($c == 7) {
+                                            } else if ($c == 6) {
                                                 echo "<td>$" . number_format($kueh_array[$c], 2);
                                             } else {
                                                 echo "<td>" . $kueh_array[$c] . "</td>";

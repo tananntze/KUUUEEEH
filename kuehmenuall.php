@@ -27,7 +27,7 @@ and open the template in the editor.
         include "header.php";
         include "dbConfig.php";
         $conn = connectToDB();
-        for ($i = 1; $i <= 11; $i++) {
+        for ($i = 1; $i <= 15; $i++) {
             if (isset($_POST["btnKueh".$i])) {
                 $sql = "SELECT * FROM product WHERE ";
                 $sql .= "prodId='".($i)."'";
@@ -42,11 +42,11 @@ and open the template in the editor.
                     $_SESSION["kueh".$i."_qty"]++;
                     $kuehTotalPrice = $kuehPrice * $_SESSION["kueh".$i."_qty"];
                     if (sizeof($_SESSION["kueh".$i."_orders"]) == 0) {
-                        array_push($_SESSION["kueh".$i."_orders"], $i, $imgSrc, $category, $kuehName, $description, $kuehPrice, $_SESSION["kueh".$i."_qty"], $kuehTotalPrice);
+                        array_push($_SESSION["kueh".$i."_orders"], $i, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh".$i."_qty"], $kuehTotalPrice);
                     } else {
                     //update the quantity and total price of the kueh
-                        $_SESSION["kueh".$i."_orders"][6] = $_SESSION["kueh".$i."_qty"];
-                        $_SESSION["kueh".$i."_orders"][7] = $kuehTotalPrice;
+                        $_SESSION["kueh".$i."_orders"][5] = $_SESSION["kueh".$i."_qty"];
+                        $_SESSION["kueh".$i."_orders"][6] = $kuehTotalPrice;
                     } 
                     addKuehDetails($kuehName, $_SESSION["kueh".$i."_orders"], $kuehPrice);
                 }
