@@ -23,8 +23,63 @@ and open the template in the editor.
         <script defer src="js/main.js"></script>
     </head>
 
+
     <body>
         <?php include "header.php" ?>
+        
+        <?php
+        include "dbConfig.php"; //Get connection
+        $conn = connectToDB();
+        
+        for ($i = 1; $i <= 15; $i++) {
+            if (isset($_POST["btnKueh".$i])) {
+                $sql = "SELECT * FROM product WHERE ";
+                $sql .= "prodId='".($i)."'";
+                $result = $conn->query($sql);
+                if($result -> num_rows > 0){ 
+                    $row = $result->fetch_assoc();  
+                    $imgSrc = $row["image"];
+                    $kuehName = $row["name"];
+                    $description = $row["description"];
+                    $category = $row["category"];
+                    $kuehPrice = $row["price"];  
+                    $_SESSION["kueh".$i."_qty"]++;
+                    $kuehTotalPrice = $kuehPrice * $_SESSION["kueh".$i."_qty"];
+                    if (sizeof($_SESSION["kueh".$i."_orders"]) == 0) {
+                        array_push($_SESSION["kueh".$i."_orders"], $i, $imgSrc, $category, $kuehName, $kuehPrice, $_SESSION["kueh".$i."_qty"], $kuehTotalPrice);
+                    } else {
+                    //update the quantity and total price of the kueh
+                        $_SESSION["kueh".$i."_orders"][5] = $_SESSION["kueh".$i."_qty"];
+                        $_SESSION["kueh".$i."_orders"][6] = $kuehTotalPrice;
+                    } 
+                    addKuehDetails($kuehName, $_SESSION["kueh".$i."_orders"], $kuehPrice);
+                }
+            } 
+        }
+        
+        function addKuehDetails($kuehName, $kuehArr, $kuehPrice) {
+            $index = 0;
+            $_SESSION["totalQty"]++;
+            $_SESSION["subtotal"] += $kuehPrice;
+            $_SESSION["total"] = $_SESSION["subtotal"];
+            //if list is empty, the first entry will be added to list
+            if (empty($_SESSION["my_orders"])) 
+            {
+                array_push($_SESSION["my_orders"], $kuehArr); 
+            }
+            
+            else 
+            {
+                //if list is not empty, but if the name is already in the list, simply update the list
+                for ($index = 0; $index < sizeof($_SESSION["my_orders"]); $index++) {
+                    if ($_SESSION["my_orders"][$index][3] == $kuehName) {
+                        $_SESSION["my_orders"][$index] = $kuehArr;
+                        break;
+            }
+
+            $result->free_result();
+            $conn->close();
+        ?>
         
         <div class="container">
             <!-- The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/ -->
@@ -44,9 +99,7 @@ and open the template in the editor.
             <h1 class="fontheader" id="character">The Basic Kuehs</h1>
 
             <div class="d-flex justify-content-center flex-fill flex-wrap">
-                <?php
-                    include "dbConfig.php"; //Get connection
-                    
+                <?php                    
                     $conn = connectToDB();
 
                     $sql = "SELECT * FROM p1_1.product WHERE category='The Basic Kuehs'";
@@ -96,12 +149,6 @@ and open the template in the editor.
                                 <button class='btn' type='submit' id='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart'></i></button>
                             </div>
                         </figure>
-                <?php
-                    }
-
-                    $result->free_result();
-                    $conn->close();
-                ?>
             </div>
         </section>
         

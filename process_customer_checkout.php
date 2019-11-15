@@ -16,7 +16,7 @@
             include "dbConfig.php";
             include "initializing_checkout_details.php";
             $email = $first_name = $last_name  = $mobile_no = $errorMsg = ""; 
-            $success = true; 
+            $success = true;
             if (empty($_POST["email"])) {     
                $errorMsg .= "Email is required.<br>";     
                $success = false; 
@@ -94,7 +94,7 @@
             function validateCustomerEmail($result, $email, $mobile_no, $last_name, $first_name) {
                 global $success, $errorMsg;
                 $row = $result->fetch_assoc();
-                if (($email !=  $row["email"]) || ($mobile_no != $row["hp"]) || ($last_name != $row["lname"]) || ($first_name != $row["fname"])) {
+                if (($email !=  $row["email"]) || ($mobile_no != $row["hp"])) {
                     $success = false;    
                 }
                 if ($email != $row["email"]) {
@@ -102,12 +102,6 @@
                 }
                 if ($mobile_no != $row["hp"]) {
                     $errorMsg .= "Sorry, your handphone number does not match!<br>";            
-                }
-                if ($last_name != $row["lname"]) {
-                    $errorMsg .= "Sorry, your last name does not match!<br>";            
-                }
-                if ($first_name != $row["fname"]) {
-                    $errorMsg .= "Sorry, your first name does not match!<br>";            
                 }
                 if (!$success) {
                     echo "<h1>Error processing checkout for customer details!</h1>";
