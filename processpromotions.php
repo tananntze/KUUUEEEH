@@ -34,8 +34,8 @@
             } else {
                 session_start();
                 $userId = $_SESSION['userId'];
-                $sql = "INSERT INTO p1_1.promotion (image, startDate, endDate, user_userId) ";
-                $sql .= "VALUES ('$file_input','$start_date','$end_date', '$userId')";
+                $sql = "UPDATE p1_1.promotion SET image='$file_input',startDate ='$start_date',endDate ='$end_date', user_userId='$userId' WHERE promoID = 1";
+//  Updating of promotion banner in the index page. Upon uploading of file, it will directly update the banner in index.php
             }
             //execute the query
             if (!$conn->query($sql)) {
@@ -95,8 +95,9 @@
                 $ext = $path['extension'];
                 $temp_name = $_FILES['file_input']['tmp_name'];
                 $path_filename_ext = $target_dir . $filename . "." . $ext;
-                $file_input = $path_filename_ext; //declaring insertImg = file path 
+                $file_input = $path_filename_ext; //declaring file_input = file path 
                 move_uploaded_file($temp_name, $path_filename_ext); //move the image into the folder
+               
             }
         }
         if (!$success) {
@@ -107,6 +108,7 @@
             connectToDB();
             echo "<h1>Successfully added KUEH Promotion!</h1>";
             echo "<a href='promotions.php' class='btn btn-large' role='button'>Return to Promotions</a>";
+           
         }
 
         function sanitize_input($data) {
