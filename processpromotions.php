@@ -106,6 +106,7 @@
         } else {
             connectToDB();
             echo "<h1>Successfully added KUEH Promotion!</h1>";
+            echo "<a href='promotions.php' class='btn btn-large' role='button'>Return to Promotions</a>";
         }
 
         function sanitize_input($data) {

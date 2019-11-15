@@ -54,8 +54,11 @@ and open the template in the editor.
 
     <!--This is a brief section on about us-->
     <section class="aboutSection">
+        <?php
         
-        <div class="view overlay col-md-6 d-inline-block">            
+        ?>
+        <div class="view overlay col-md-6 d-inline-block">
+<!--        need to be able to update the image apon uploading of banner from admin page-->
             <img src="img/cake.jpeg" class="about-img  img-cake rounded-circle responsive" alt="">
             <div class="mask flex-center rgba-white-strong">
                 <div class="button responsive"><a class="white-text"href="aboutus.php">About us</a></div>
