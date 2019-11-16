@@ -9,10 +9,8 @@ foreach ($_SESSION["my_orders"] as $row => $kueh_array) {
     if (!$conn->query($sql)) {             
         $errorMsg = "Database error: " . $conn->error;             
         $success = false;                                          
-    } else {
-        session_destroy();
-        header("Location: index.php");         
     }
-    $conn->close();
 }
+session_destroy();
+header("Location: index.php");   
 ?>
