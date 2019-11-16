@@ -66,8 +66,9 @@
                 } else {
                     validateCustomerEmail($result, $email, $mobile_no, $last_name, $first_name);
                 }
+                $result->free_result(); 
+                $conn->close();
             }
-            $result->free_result(); 
             //Helper function that checks input for malicious or unwanted content. 
             function sanitize_input($data) {   
                 $data = trim($data);   

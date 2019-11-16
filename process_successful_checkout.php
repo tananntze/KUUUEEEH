@@ -11,6 +11,7 @@ foreach ($_SESSION["my_orders"] as $row => $kueh_array) {
         $success = false;                                          
     }
 }
+$conn->close();
 session_destroy();
 header("Location: index.php");   
 ?>

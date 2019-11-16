@@ -45,10 +45,12 @@ and open the template in the editor.
                         //update the quantity and total price of the kueh
                             $_SESSION["kueh".$row["prodId"]."_orders"][5] = $_SESSION["kueh".$row["prodId"]."_qty"];
                             $_SESSION["kueh".$row["prodId"]."_orders"][6] = $kuehTotalPrice;
-                        } 
+                        }
                         addKuehDetails($kuehName, $_SESSION["kueh".$row["prodId"]."_orders"], $kuehPrice);                  
                     }           
                 }
+                $result->free_result();
+                $conn->close();
             }
             function addKuehDetails($kuehName, $kuehArr, $kuehPrice) {
                 $index = 0;
