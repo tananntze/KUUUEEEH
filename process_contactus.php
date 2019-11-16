@@ -31,6 +31,7 @@
                 $errorMsg = "Connection failed: " . $conn->connect_error;
                 $success = false;
             } else {
+                
                 $sql = "INSERT INTO p1_1.contact_us (name,email,message) ";
                 $sql .= "VALUES ('$name','$email','$text')";
             }
