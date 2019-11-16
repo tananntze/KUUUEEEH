@@ -5,10 +5,10 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <?php
-    session_start();
-    if (!isset($_SESSION['userId'])) {
-        header("Location: login.php");
-    }
+session_start();
+if (!isset($_SESSION['userId'])) {
+    header("Location: login.php");
+}
 ?>
 <html>
     <head>
@@ -22,9 +22,9 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="js/promotions.js"></script>   
+        <script defer src="js/promotions.js"></script>
     </head>
-    
+
     <body id="overlay">
         <?php include "adminheader.php" ?>
 
