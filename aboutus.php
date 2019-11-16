@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html lang="en">
     <head>
         <title>About Us</title>
         <meta charset="UTF-8">
@@ -25,7 +25,7 @@ and open the template in the editor.
 
         <div class="container">
             <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
-            <img src="img/Banner - White.png" alt="" class="responsive"id="bannerresize">
+            <img src="img/Banner - White.png" alt="" class="responsive" id="bannerresize">
         </div>
 
         <section>
@@ -42,13 +42,13 @@ and open the template in the editor.
                     <section class ="row md-12">
                         <!--Video 1 Credit: https://www.youtube.com/watch?v=NfuroHPHi9E-->
                         <section class ="col-md-6">
-                            <video width="100%" height="350" controls>
+                            <video id="video1" height="350" controls>
                                 <source src="video/kueh_video_1.mp4" type="video/mp4">
                             </video> 
                         </section>
                         <!--Video 2 Credit: https://www.youtube.com/watch?v=0_p_qL1WXI0-->
                         <section class ="col-md-6">
-                            <video width="100%" height="350" controls>
+                            <video id="video2" height="350" controls>
                                 <source src="video/kueh_video_2.mp4" type="video/mp4">
                             </video> 
                         </section>
@@ -88,8 +88,8 @@ and open the template in the editor.
                         </section>
                     </section>
                 </section>
+            </div>
         </section>
-    </section>
 </body>
 <?php include "footer_include.php" ?>
 </html>
