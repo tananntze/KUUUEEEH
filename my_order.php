@@ -61,7 +61,7 @@ and open the template in the editor.
             <img src="img/Banner - White.png" alt="" class="responsive"id="bannerresize">
         </div>
         <section>
-            <div class="container-fluid" style= 'margin-top:20px'>
+            <div class="container-fluid standardfont" style= 'margin-top:20px'>
                 <section class="row justify-content-center standardfont">
                     <section class="col-md-12">
                         <h2 class = "fontheader">MY ORDER</h2>
