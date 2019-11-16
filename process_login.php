@@ -10,7 +10,6 @@
         password: admin
     */
 
-    require "dbConfig.php";
     include "header.php";
 
     function login($email, $password){
