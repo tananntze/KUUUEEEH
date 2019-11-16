@@ -30,6 +30,7 @@ if (!isset($_SESSION['userId'])) {
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <script src="js/editadmin.js"></script> 
+        <script src="js/process_search.js"></script>
         
         <script>
             $(document).ready(function(){
@@ -83,25 +84,25 @@ if (!isset($_SESSION['userId'])) {
                 </section>
 
                 <section class="card-body">
-                    <form action="process_search.php" method="post">
+                    <form name = "searchform" action="process_search.php" onsubmit="return validateForm()" method="post">
                         <div class="row">
                             <div class="col-2">
                                 <section class="form-group">
-                                    <label for="scategory">Category</label>
-                                    <input type="text" name="scategory" id="searchCategory" class="form-control" value="" placeholder="Enter Category">
+                                    <label for="scategory" class="formtitle">Category</label>
+                                    <input type="text"  name="scategory" id="scategory" class="form-control" class="form-control" value="" placeholder="Enter Category" pattern="^[a-zA-Z](?!.* {2})[ \w.-]{2,}$">
                                 </section>
                             </div>
 
                             <div class="col-2">
                                 <section class="form-group">
                                     <label for="sname">Name</label>
-                                    <input type="text" name="sname" id="searchName" class="form-control" value="" placeholder="Enter Name">
+                                    <input type="text" name="sname" id="sname" class="form-control" value="" placeholder="Enter Name" pattern="^[a-zA-Z](?!.* {2})[ \w.-]{2,}$">
                                 </section>
                             </div>
 
                             <div class="col-4">
                                 <button type="submit" name="submit" value="search" id="submit" class="btn btn-primary"><span class="fas fa-search"></span> Search</button>
-                                <a href="editadmin.php" class="btn btn-danger"><span class="fas fa-sync-alt"></span> Clear</a>
+<!--                                <a href="editadmin.php" class="btn btn-danger"><span class="fas fa-sync-alt"></span> Clear</a>-->
                             </div>
                         </div>
                     </form>
@@ -182,11 +183,10 @@ if (!isset($_SESSION['userId'])) {
                         $conn = connectToDB();
                         $sql = "SELECT * FROM product";
                         $result = $conn->query($sql);
-//                        $package = array();
                        
                         if ($result->num_rows > 0) {
-                            while ($row = $result->fetch_assoc()) {
-//                                array_push($package,$row);
+                            while ($row = $result->fetch_assoc()) 
+                            {
                                 ?>
                        
                                 <tr class="table-light d-flex">
