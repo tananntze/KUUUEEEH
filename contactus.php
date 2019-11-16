@@ -27,7 +27,7 @@ and open the template in the editor.
 
         <div class="container">
             <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
-            <img src="img/Banner - White.png" alt="banner" class="responsive "id="bannerresize">
+            <img src="img/Banner - White.png" alt="banner" class="responsive" id="bannerresize">
         </div>
 
         <section>
@@ -62,16 +62,16 @@ and open the template in the editor.
                     <section class =' col-md-4'>
                         <h3 class ="subheader">Get in Touch with us here!</h3>
 
-                        <form name="myForm" method = "post" action="process_contactus.php" action =" MAILTO:blazeking990@gmail.com" onsubmit="return validateForm()">
+                        <form name="myForm" method= "post" action="process_contactus.php" action =" MAILTO:blazeking990@gmail.com" onsubmit="return validateForm()">
 
                             <section class="form-group">
                                 <input type="text" class="form-control"  placeholder="Enter Your Name Here" name="name" maxlength="30" required pattern='/^[a-zA-Z ][a-zA-Z]+{3,}$'>
                             </section>
                             <section class="form-group">
-                                <input type="email" class="form-control"  placeholder="Enter Your Email Address" name="email"maxlength="50" required pattern='[a-z0-9.%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'>
+                                <input type="email" class="form-control"  placeholder="Enter Your Email Address" name="email" maxlength="50" required pattern='[a-z0-9.%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'>
                             </section>
                             <section class="form-group">
-                                <textarea class="form-control" name ="text" maxlength="200" placeholder ="Enter your message here!" required pattern="'/^[a-zA-Z][a-zA-Z\\s]+$/{3,}" rows="3"></textarea>
+                                <textarea class="form-control" name="text" maxlength="200" placeholder ="Enter your message here!" required pattern="'/^[a-zA-Z][a-zA-Z\\s]+$/{3,}" rows="3"></textarea>
                             </section>
                             <input type="submit" class="btn btn-secondary btn-block"  value="Submit" >
                         </form>

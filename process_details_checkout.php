@@ -110,7 +110,7 @@
                         $conn->close();
                         ?>
                         <section>
-                        <div class="container-fluid  standardfont" style= 'margin-top:20px'>
+                        <div class="container-fluid standardfont" style= 'margin-top:20px'>
                             <h1>Successful checkout!</h1>
                             <h1>Thank you for ordering with KUUUEEEH!</h1>
                             <p>Bon Appetit!</p>

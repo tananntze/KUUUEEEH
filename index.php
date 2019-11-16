@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html class="header">
+<html lang ="en"  class="header">
 
 <head>
     <title>Home</title>
@@ -21,7 +21,6 @@ and open the template in the editor.
 </head>
 
 <body>
-<html lang ="en" class="header">
     <head>
         <title>Home</title>
         <meta charset="UTF-8">
