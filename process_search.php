@@ -23,7 +23,7 @@
     <body>
         <?php        
         //Accessing our DB:
-        require "dbConfig.php";
+        include "dbConfig.php";
         
         //Helper function that checks input for malicious or unwanted content.
         function sanitize_input($data)
@@ -55,13 +55,11 @@
             }
         }
         
-        //Attempt to connect to DB
-        if ($Success)
+        //Connect to database
+        if ($success)
         {
-            //Create connection
-            $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
+            $conn = connecToDB();
             
-            //Check connection
             if ($conn->connect_error)
             {
                 $errorMsg = "Connection failed: " . $conn->connect_error;
@@ -70,41 +68,18 @@
             
             else
             {
-                $sql = "SELECT * FROM p1_1.product WHERE ";
-                $sql .= "category='$search'";
-
-                // Execute the query
-                // https://stackoverflow.com/questions/9361894/php-mysql-how-to-get-multiple-values-from-a-php-database-method
-                $columns = array();
-                $result = $conn->query($sql);
-                while($row = $conn->query($result))
-                {
-                    $column[] =  $row[$prodId];
-                }
-                
-                //
-                if ($result->num_rows > 0)
-                {
-                    //Multiple data is returned
-                    foreach($column as $value)
-                    {
-                        echo "<li>" . $value . "</li>";
-                    }
-                }
-
-                else
-                {
-                    $errorMsg = "Category not found.";
-                    $success = false;
-                }
-
-                $result->free_result();
+                echo "<h2>Oops!</h2>";  
             }
-
-            $conn->close();
         }
+        
+        else
+        {
+            echo "<h2>Oops!</h2>";
+            echo "<h4>The following input errors were detected:</h4>";
+            echo "<p>" . $errorMsg . "</p>";
+            
+            echo  "<a href = 'editadmin.php' type='button' class='btn btn-default'>Return to Search</a>";
+        }
+        
         ?>
-    </body>
         
-        
-</html>
