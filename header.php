@@ -21,7 +21,7 @@
     $sql = "SELECT * FROM product WHERE ";
     $sql .= "status='Active'";
     $result = $conn->query($sql);
-    if($result-> num_rows > 0){ 
+    if($result-> num_rows > 0){
         while ($row = $result->fetch_assoc()) {
             if (!isset($_SESSION["kueh" . $row["prodId"]. "_qty"])) {
                 $_SESSION["kueh" . $row["prodId"]. "_qty"] = 0;
@@ -31,6 +31,8 @@
             }     
         }
     }
+    $result->free_result();
+    $conn->close();
     if (!isset($_SESSION["my_orders"])) {
         $_SESSION["my_orders"] = array();
     }

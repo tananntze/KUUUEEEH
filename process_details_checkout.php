@@ -107,6 +107,7 @@
                     } else {
                         $_SESSION["order_id"] = $conn->insert_id;
                         $_SESSION["checkout_successful"] = true;
+                        $conn->close();
                         ?>
                         <section>
                         <div class="container-fluid  standardfont" style= 'margin-top:20px'>

@@ -37,15 +37,15 @@ and open the template in the editor.
     </head>
 
         <?php
-        include "header.php";
-        global $file_path;
-        $conn = connectToDB();
-        $stmt = $conn->prepare("SELECT image FROM p1_1.promotion");
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $row_data = $result->fetch_assoc();
-        $file_path = $row_data['image'];
-        $conn->close();
+            include "header.php";
+            global $file_path;
+            $conn = connectToDB();
+            $stmt = $conn->prepare("SELECT image FROM p1_1.promotion");
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $row_data = $result->fetch_assoc();
+            $file_path = $row_data['image'];
+            $conn->close();
         ?>
 
         <!--This is the banner for inserting of promotion-->
@@ -91,12 +91,6 @@ and open the template in the editor.
 
                     Still we are 100% committed in continuously combining new flavors with tradition and improving based on customer's feedback.</p>
             </div>   
-
         </section>
-
-
-
-
     </body>
-
 </html>

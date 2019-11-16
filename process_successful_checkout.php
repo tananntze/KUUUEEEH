@@ -12,6 +12,7 @@ foreach ($_SESSION["my_orders"] as $row => $kueh_array) {
     } else {
         session_destroy();
         header("Location: index.php");         
-    }   
+    }
+    $conn->close();
 }
 ?>

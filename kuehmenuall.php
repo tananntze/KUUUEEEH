@@ -25,12 +25,15 @@ and open the template in the editor.
 
 
     <body>
-        <?php include "header.php" ?>
-        
-        <?php
-        include "dbConfig.php"; //Get connection
-        $conn = connectToDB();
-        
+        <?php include "header.php";//Get connection
+            $conn = connectToDB();
+            $sql = "SELECT * FROM product WHERE ";
+            $sql .= "status='Active'";
+            $result = $conn->query($sql);
+            if($result-> num_rows > 0){ 
+                
+                
+            }
         /*for ($i = 1; $i <= 15; $i++) {
             if (isset($_POST["btnKueh".$i])) {
                 $sql = "SELECT * FROM product WHERE ";
@@ -104,7 +107,7 @@ and open the template in the editor.
                 <?php                    
                     $conn = connectToDB();
 
-                    $sql = "SELECT * FROM p1_1.product WHERE category='The Basic Kuehs'";
+                    $sql = "SELECT * FROM p1_1.product WHERE category='The Basic Kuehs' AND status='Active'";
                     $result = $conn->query($sql);
                     while ($row = $result->fetch_assoc())
                     {
@@ -136,7 +139,7 @@ and open the template in the editor.
                 <?php
                     $conn = connectToDB();
 
-                    $sql = "SELECT * FROM p1_1.product WHERE category='Kueh with Character'";
+                    $sql = "SELECT * FROM p1_1.product WHERE category='Kueh with Character' AND status='Active'";
                     $result = $conn->query($sql);
                     while ($row = $result->fetch_assoc())
                     {
@@ -168,7 +171,7 @@ and open the template in the editor.
                 <?php
                     $conn = connectToDB();
 
-                    $sql = "SELECT * FROM p1_1.product WHERE category='The Heavyweight Kuehs'";
+                    $sql = "SELECT * FROM p1_1.product WHERE category='The Heavyweight Kuehs' AND status='Active'";
                     $result = $conn->query($sql);
                     while ($row = $result->fetch_assoc())
                     {
