@@ -80,3 +80,8 @@ strong, label {
 #warning {
     color: red;
 }
+
+/*.file {
+  visibility: hidden;
+  position: absolute;
+}*/
