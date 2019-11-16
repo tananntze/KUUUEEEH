@@ -17,7 +17,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-        <script type="text/javascript" src="js/editadmin.js"></script> 
+        <script src="js/editadmin.js"></script> 
     </head>
     
     <body>
@@ -68,9 +68,18 @@
             
             else
             {
-                
+                echo "<h2>Oops!</h2>";  
             }
-        } 
+        }
+        
+        else
+        {
+            echo "<h2>Oops!</h2>";
+            echo "<h4>The following input errors were detected:</h4>";
+            echo "<p>" . $errorMsg . "</p>";
+            
+            echo  "<a href = 'editadmin.php' type='button' class='btn btn-default'>Return to Search</a>";
+        }
+        
         ?>
-    </body>        
-</html>
+        

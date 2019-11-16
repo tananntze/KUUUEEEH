@@ -20,14 +20,9 @@ and open the template in the editor.
 }*/
 
 /* Specific to kuehmenuall */
-/* Header border design */
-#border {
-    border-bottom-style: dotted;
-    border-bottom-color: grey;
-    border-bottom-width: thick;
-    margin-bottom: 30px;
+button {
+    text-align: center;
 }
-
 /*For <h1> tag*/
 .fontheader {
     font-family: "Garamond";
@@ -35,6 +30,11 @@ and open the template in the editor.
     font-weight: bold;
     color: #B39283;
     text-shadow: black;
+    
+    border-bottom-style: dotted;
+    border-bottom-color: grey;
+    border-bottom-width: thick;
+    margin-bottom: 50px;
 }
 
 /*Hover image zoom and blur*/
@@ -100,4 +100,16 @@ nav a {
 nav a:hover{
     color: #ec5772;
     font-weight: bold;
+}
+
+/*Increase spacing at the sides of the menu*/
+section {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+figure img {
+    border-width: 10px;
+    border-style: solid; 
+    border-color: transparent;
 }

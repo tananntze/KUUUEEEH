@@ -9,7 +9,6 @@
         username: test@gmail.com
         password: admin
     */
-
     include "header.php";
 
     function login($email, $password){
