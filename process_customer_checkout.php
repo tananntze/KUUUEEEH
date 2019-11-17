@@ -66,8 +66,9 @@
                 } else {
                     validateCustomerEmail($result, $email, $mobile_no, $last_name, $first_name);
                 }
+                $result->free_result(); 
+                $conn->close();
             }
-            $result->free_result(); 
             //Helper function that checks input for malicious or unwanted content. 
             function sanitize_input($data) {   
                 $data = trim($data);   
@@ -90,6 +91,7 @@
                     $_SESSION["customer_ln"] = $last_name;
                     header("Location: delivery_checkout.php");
                 }
+                $conn->close();
             }
             function validateCustomerEmail($result, $email, $mobile_no, $last_name, $first_name) {
                 global $success, $errorMsg;

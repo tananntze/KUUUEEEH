@@ -31,6 +31,7 @@
                 $errorMsg = "Connection failed: " . $conn->connect_error;
                 $success = false;
             } else {
+                
                 $sql = "INSERT INTO p1_1.contact_us (name,email,message) ";
                 $sql .= "VALUES ('$name','$email','$text')";
             }
@@ -88,7 +89,7 @@
             echo "<hr>";
             echo "<section class='container'>";
             echo "<h3>Thank you for your feedback/question!</h3>";
-            echo "<a href='contactus.php' class='btn btn-large' role='button'>Return to Contact Us</a>";
+            echo "<a href='contactus.php' class='btn btn-primary' role='button'>Return to Contact Us</a>";
             echo "</section>";
             echo "<hr>";
         } else {
@@ -97,7 +98,7 @@
             echo "<h2>Opps!</h2>";
             echo "<h3>The following errors were detected:</h3>";
             echo "<p>" . $errorMsg . "</p>";
-            echo "<a href='contactus.php' class='btn btn-large' role='button'>Return to Contact Us</a>";
+            echo "<a href='contactus.php' class='btn btn-primary' role='button'>Return to Contact Us</a>";
             echo "</section>";
             echo "<hr>";
         }
