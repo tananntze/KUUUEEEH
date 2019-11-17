@@ -31,36 +31,6 @@ if (!isset($_SESSION['userId'])) {
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <script src="js/editadmin.js"></script> 
         
-        <script>
-            $(document).ready(function(){
-                $('.editbtn').on('click',function(){
-                    
-                    $('#editModal').modal('show'); //to make the edit modal pop up when on click
-                        
-                        
-                        $tr = $(this).closest('tr');
-                        var data = $tr.children("td").map(function() { //create a var to map the TD to the function returning text value.
-                            
-                            return $(this).text();
-                            
-                        }).get();
-                        
-                        console.log(data);
-                        
-                        //retrieving the data from table and store into form IDs
-                        $('#updateProdId').val(data[0]);
-                        $('#editCategory').val(data[1]);
-                        $('#editName').val(data[2]);
-                        $('#editDescription').val(data[3]);
-                        $('#editPrice').val(data[4]);
-                        $('#updateImg').val(data[5]);
-                        $('#editStatus').val(data[6]);
-                    
-                });
-                
-            });
-        
-        </script>
 
 
     </head>
@@ -182,12 +152,11 @@ if (!isset($_SESSION['userId'])) {
                         $conn = connectToDB();
                         $sql = "SELECT * FROM product";
                         $result = $conn->query($sql);
-//                        $package = array();
+
                        
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
-//                                array_push($package,$row);
-                                ?>
+                        ?>
                        
                                 <tr class="table-light d-flex">
                                     <td class="col-1 data"><?php echo $row['prodId']; ?></td>
