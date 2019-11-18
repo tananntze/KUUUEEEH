@@ -80,7 +80,7 @@ and open the template in the editor.
             }
             ?>
         <div class="container">
-            <!-- The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/ -->
+            <!-- The animated kueh images for the banner are taken and credited by ladyironchef: Beginnerâ€™s Guide to Kuehs â€“ 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/ -->
             <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
         </div>
         

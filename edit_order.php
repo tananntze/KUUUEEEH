@@ -49,17 +49,19 @@ function getCustomerDetails()
 
 function getCheckoutDetails()
 {
-    global $address, $deliver_type, $status, $totalPrice; 
+    global $address, $deliver_type, $status, $totalPrice,$postal_code;
     $orderId = $_GET['orderId'];
     $conn = connectToDB();
     $sql = "SELECT * FROM checkout_details WHERE orderId='$orderId'";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
+        $_SESSION["orderId"] = $orderId;
         $address = $row['address'];
         $deliver_type = $row['deliveryType'];
         $status = $row['status'];
         $totalPrice = $row['totalPrice'];
+        $postal_code = $row['postal_code'];
         $result->free_result();
     }
     $conn->close();
@@ -92,39 +94,71 @@ getCheckoutDetails();
         <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
         <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
     </div>
-    <form>
-        <div class="form-group">
-            <label for="email">Customer Email</label>
-            <input type="email" name="email" class="form-control" id="email" value=<?php echo $email;?> placeholder="name@example.com" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input type="text" name="fname" class="form-control" id="firstName" value=<?php echo $fname;?> required>
-        </div>
 
-        <div class="form-group">
-            <label for="lastName">First Name</label>
-            <input type="text" name="lname" class="form-control" id="lastName" value=<?php echo $lname;?> required>
-        </div>
+    <div class="row justify-content-center standardfont">
+        <div class="col-md-12">
+            <form method="POST" action="update_order_details.php">
+                <div class="form-group">
+                    <label for="email">Customer Email</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" value=<?php echo $email; ?> readOnly="readOnly">
+                </div>
 
-        <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="phone" name="phone" class="form-control" id="phone" value=<?php echo $phone;?> required>
-        </div>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="fname" class="form-control" id="firstName" required value=<?php echo $fname; ?> >
+                </div>
 
-        <div class="form-group">
-            <label for="deliveryOption">Delivery Option</label>
-            <select class="form-control" name="deliveryOption" id="deliveryOption">
-                    <option value="Home" <?php if($deliver_type == "Home"){ echo " selected='selected'"; } ?>>Home</option>
-                    <option value="Collection" <?php if($deliver_type == "Home"){ echo " selected='selected'"; } ?>>Collection</option>
-            </select>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lname" class="form-control" id="lastName" required value=<?php echo $lname; ?> >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="phone" name="phone" class="form-control" id="phone" required value=<?php echo $phone; ?> >
+                </div>
+
+                <div class="form-group">
+                    <label for="deliveryOption">Delivery Option</label>
+                    <select class="form-control" name="deliveryOption" id="deliveryOption">
+                        <option value="Home" <?php if ($deliver_type == "Home") {
+                                                    echo " selected='selected'";
+                                                } ?>>Home</option>
+                        <option value="Collection" <?php if ($deliver_type == "Collection") {
+                                                        echo " selected='selected'";
+                                                    } ?>>Collection</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select class="form-control" name="status" id="status">
+                        <option value="Not Delivered" <?php if ($deliver_type == "Not Delivered") {
+                                                            echo " selected='selected'";
+                                                        } ?>>Not Delivered</option>
+                        <option value="Delivering" <?php if ($deliver_type == "Delivering") {
+                                                        echo " selected='selected'";
+                                                    } ?>>Delivering</option>
+                        <option value="Delivered" <?php if ($deliver_type == "Delivered") {
+                                                        echo " selected='selected'";
+                                                    } ?>>Delivered</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Address">Address</label>
+                    <textarea class="form-control" name="address" id="Address" rows="3"><?php echo $address; ?></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="postal_code">Postal</label>
+                    <input type="phone" name="postal_code" class="form-control" id="postal_code" value=<?php echo $postal_code; ?> required>
+                </div>
+
+                <button type="submit" id="btnSubmit" name="submit" class="btn btn-block btn-success">Update</button>
+
+            </form>
+
         </div>
-        <div class="form-group">
-            <label for="Address">Address</label>
-            <textarea class="form-control" id="Address" rows="3"><?php echo $address;?></textarea>
-        </div>
-    </form>
+    </div>
 
 
 
