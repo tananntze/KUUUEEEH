@@ -49,7 +49,7 @@ function getCustomerDetails()
 
 function getCheckoutDetails()
 {
-    global $address, $deliver_type, $status, $totalPrice,$postal_code;
+    global $address, $deliver_type, $status, $totalPrice, $postal_code;
     $orderId = $_GET['orderId'];
     $conn = connectToDB();
     $sql = "SELECT * FROM checkout_details WHERE orderId='$orderId'";
@@ -67,8 +67,11 @@ function getCheckoutDetails()
     $conn->close();
 }
 
+
+
 getCustomerDetails();
 getCheckoutDetails();
+
 
 ?>
 
@@ -105,17 +108,17 @@ getCheckoutDetails();
 
                 <div class="form-group">
                     <label for="firstName">First Name</label>
-                    <input type="text" name="fname" class="form-control" id="firstName" required value=<?php echo $fname; ?> >
+                    <input type="text" name="fname" class="form-control" id="firstName" required value=<?php echo $fname; ?>>
                 </div>
 
                 <div class="form-group">
                     <label for="lastName">Last Name</label>
-                    <input type="text" name="lname" class="form-control" id="lastName" required value=<?php echo $lname; ?> >
+                    <input type="text" name="lname" class="form-control" id="lastName" required value=<?php echo $lname; ?>>
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input type="phone" name="phone" class="form-control" id="phone" required value=<?php echo $phone; ?> >
+                    <input type="phone" name="phone" class="form-control" id="phone" required value=<?php echo $phone; ?>>
                 </div>
 
                 <div class="form-group">
@@ -153,9 +156,50 @@ getCheckoutDetails();
                     <input type="phone" name="postal_code" class="form-control" id="postal_code" value=<?php echo $postal_code; ?> required>
                 </div>
 
+                <table>
+                    <thead>
+                        <tr class="d-flex">
+                            <th class="col-4">Prod Id</th>
+                            <th class="col-8">Name of Kueh</th>
+                            <th class="col-7">Category</th>
+                            <th class="col-4">Quantity</th>
+                           
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <?php
+                        $conn = connectToDB();
+                        $orderId = $_GET['orderId'];
+                        //echo $orderId;
+                        $sql = "SELECT product.*,product_checkout.* FROM product, product_checkout WHERE checkout_details_orderId='$orderId' AND prodId=product_prodId";
+                        $result = $conn->query($sql);
+                        while($row = $result->fetch_assoc()){
+                        ?>
+                        <tr class="table-light d-flex">
+                            <td class="col-4 data"><?php echo $row['product_prodId']; ?></td>
+                            <td class="col-8 data"><?php echo $row['name']; ?></td>
+                            <td class="col-7 data"><?php echo $row['category']; ?></td>
+                            <td class="col-4 data"><?php echo $row['kueh_quantity']; ?></td>
+                           
+
+                        </tr>
+                        <?php
+                        }
+                        $result->free_result();
+                        $conn->close();
+                        ?>                            
+                    </tbody>
+
+
+                </table>
+
+
                 <button type="submit" id="btnSubmit" name="submit" class="btn btn-block btn-success">Update</button>
 
             </form>
+
 
         </div>
     </div>
