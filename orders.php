@@ -72,9 +72,9 @@ if (!isset($_SESSION['userId'])) {
                     <tr class="d-flex">
                         <th class="col-2">OrderId</th>
                         <th class="col-6">Customer Email</th>
-                        <th class="col-5">Delivery Mode</th>
+                        <th class="col-3">Delivery Mode</th>
                         <th class="col-4">Status</th>
-                        <th class="col-3">Total</th>
+                        <th class="col-4">Total</th>
                         <th class="col-3">Action</th>
                     </tr>
                 </thead>
@@ -90,11 +90,11 @@ if (!isset($_SESSION['userId'])) {
                         <tr class="table-light d-flex">
                             <td class="col-2 data"><?php echo $orderId ?></td>
                             <td class="col-6 data"><?php echo $row['customer_email']; ?></td>
-                            <td class="col-5 data"><?php echo $row['deliveryType']; ?></td>
+                            <td class="col-3 data"><?php echo $row['deliveryType']; ?></td>
                             <td class="col-4 data"><?php echo $row['status']; ?></td>
-                            <td class="col-3 data"><?php echo $row['totalPrice']; ?></td>
+                            <td class="col-4 data"><?php echo $row['totalPrice']; ?></td>
                             <td class="col-3">
-                                <a href="edit_order.php?orderId=<?php echo $orderId ?>" class="edit"><span class="fa fa-edit"> Edit</span></a> <br>
+                                <a href="edit_order.php?orderId=<?php echo $orderId ?>" class="edit"><span class="fa fa-edit">Edit</span></a> <br>
                                 <a href=# class="delete" data-toggle="modal" data-target="#deleteModal"><span class="fas fa-trash-alt"> Delete</span></a></td>
 
                         </tr>
