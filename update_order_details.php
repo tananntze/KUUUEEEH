@@ -83,22 +83,25 @@ function updateDetails(){
         //header("refresh:3; login.php");
     }
 
-
-
 }
 
 
 function updateCustomerDetails($email, $fname, $lname, $phone){
    $update_success = false; 
    $conn = connectToDB();
-   $sql = "UPDATE customer SET hp='$phone', fname='$fname', lname='$lname' WHERE email='$email'";
+   $sql = $conn->prepare("UPDATE customer SET hp=?, fname=?, lname=? WHERE email=?");
+   $sql->bind_param('ssss', $phone, $fname, $lname, $email);
+   $sql->execute();
+   $sql->close();
+   $conn->close();
    
-   if($conn->query($sql) == true){
-       $update_success == true;
-       return $update_success;
-   }else{
-       return $update_success;
-   }
+    if ($conn->connect_error) {             
+        $errorMsg = "Database error: " . $conn->error;             
+        $update_success = false;                             
+    } else {
+        $update_success == true;
+    }
+    return $update_success;
    
 }
 
@@ -111,12 +114,13 @@ function updateCheckoutDetails($orderId,$deliveryOption, $status, $address, $pos
     $sql->execute();
     $sql->close();
     $conn->close();
-    if($conn->query($sql) == true){
-       $update_success == true;
-       return $update_success;
-    }else{
-       return $update_success;
+    if ($conn->connect_error) {             
+        $errorMsg = "Database error: " . $conn->error;             
+        $update_success = false;                             
+    } else {
+        $update_success == true;
     }
+    return $update_success;
 }
 
 function sanitize_input($data)

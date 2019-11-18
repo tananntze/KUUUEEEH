@@ -77,22 +77,13 @@
         if (empty($_FILES['file_input']['name'])) { //check if the image file has uploaded or not
             $success = false;
             $errorMsg .= "Please upload an image file!<br>";
-        } else if (!empty($_FILES['file_input']['name'])) { //PHP's validation of checking if file uploaded is a file with image extensions, Credited By: https://stackoverflow.com/questions/6755192/how-to-check-uploaded-file-type-in-php
-            $file_name = ($_FILES['file_input']['tmp_name']);
-            $allowedTypes = array(IMAGETYPE_PNG, IMAGETYPE_JPEG, IMAGETYPE_GIF); // TAKE note the MAX cap for PHP IMAGE files 10MB
-            $detectedType = exif_imagetype($file_name);
-            if (!in_array($detectedType, $allowedTypes)) {
-                $success = false;
-                $errorMsg .= "Please upload a proper image file with .jpeg, .png or .gif extensions!<br>";
-            }
-        }
+        } 
         else if (!empty($_FILES['file_input']['name'])){
             $file_size = $_FILES['file_input']['size'];
             $max_size = 10240000; // VALIADATION FOR FILE SIZE BEING MORE THAN 10MB
             if (($file_size > $max_size)){
                 $errorMsg .= "File size must not exceed 10MB please resize and reupload thank you!";
-            }
-            
+            }            
         }
         //UPLOAD image database file CODE is below here!//
         if (isset($_POST['submit'])) {

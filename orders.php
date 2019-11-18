@@ -95,7 +95,7 @@ if (!isset($_SESSION['userId'])) {
                             <td class="col-4 data"><?php echo $row['totalPrice']; ?></td>
                             <td class="col-3">
                                 <a href="edit_order.php?orderId=<?php echo $orderId ?>" class="edit"><span class="fa fa-edit">Edit</span></a> <br>
-                                <a href=# class="delete" data-toggle="modal" data-target="#deleteModal"><span class="fas fa-trash-alt"> Delete</span></a></td>
+                                <a href="delete_order.php?orderId=<?php echo $orderId ?>" class="delete"><span class="fas fa-trash-alt"> Delete</span></a></td>
 
                         </tr>
                     <?php

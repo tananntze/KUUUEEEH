@@ -89,6 +89,7 @@
                     echo "<h1>Error processing checkout!</h1>";
                     echo "<h4>The following input errors were detected:</h4>";     
                     echo "<p>" . $errorMsg . "</p>";
+                    echo "<a id='btnHome' href='delivery_checkout.php' class='btn btn-primary btn-block'>Return to Delivery Details</a>";
                 } else {
                     insertCheckoutDetails($address, $postal_code, $delivery_type, $_SESSION["total"], $_SESSION["customer_email"]);
                 }
@@ -121,8 +122,8 @@
                                 <section class="col-md-12">
                                     <h2 class = "fontheader">MY ORDER</h2>
                                     <h5 class = "subheader">Customer's Name: <?php echo $_SESSION["customer_fn"] . " " . $_SESSION["customer_ln"]?></h5>
-                                    <h5 clheader">For enquiries about your order details, please contact us @+6565995599 or drop an email to Kueh_ass = "subheader">Customer's Email: <?php echo $_SESSION["customer_email"]?></h5>
-                                    <h5 class = "subfor_you@kuey4you.com to find out your orders!</h5>
+                                    <h5 class = "subheader">For enquiries about your order details, please contact us @+6565995599 or drop an email to Kueh_for_you@kuey4you.com</h5>
+                                    <h5 class = "subheader">Customer's Email: <?php echo $_SESSION["customer_email"]?></h5>
                                     <h5 class = "subheader">We will keep you informed via your contact number @+65<?php echo $_SESSION["customer_hp"]?> for the delivery updates!</h5>
                                 </section>
                                 <div class="col-md-10">
