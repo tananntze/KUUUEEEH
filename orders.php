@@ -112,6 +112,4 @@ if (!isset($_SESSION['userId'])) {
 
 </body>
 
-<?php include "footer_include.php" ?>
-
 </html>
