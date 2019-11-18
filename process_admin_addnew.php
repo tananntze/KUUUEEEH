@@ -119,16 +119,12 @@ function saveFoodItemToDB() {
     } else {
         session_start();
         $userId = $_SESSION['userId']; //retrieve userId from session
-        $sql = "INSERT INTO product (image, description, category, name, price, user_userId)";
-        $sql .= " VALUES ('$insertImg','$addDescription', '$addCategory', '$addName', $addPrice, '$userId')";
-        //Execute the query
-        if (!$conn->query($sql)) {
-            $errorMsg = "Database error: " . $conn->error;
-            $success = false;
-        }
+        $sql = $conn->prepare("INSERT INTO product (image, description, category, name, price, user_userId) VALUES (?, ?, ?, ?, ?, ?)");
+        $sql->bind_param("ssssdi", $insertImg, $addDescription, $addCategory, $addName, $addPrice, $userId);
+        $sql->execute();
+        $sql->close();
+        $conn->close();
     }
-
-    $conn->close();
 }
 
 

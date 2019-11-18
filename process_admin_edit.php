@@ -79,17 +79,18 @@ function editData() {
         $success = false;
     } else {
         if (($_FILES['updateImg']['name']!="")){ 
-        $sql = "UPDATE product SET image= '$updateImg', description = '$editDescription', category = '$editCategory', name ='$editName', price = '$editPrice', status = '$editStatus' WHERE prodId = '$updateProdId'";
+        $sql = $conn->prepare("UPdATE product SET image= ?, description = ?, category = ?, name = ?, price = ?, status = ? WHERE prodId = ?");
+        $sql->bind_param('ssssdsi', $updateImg, $editDescription, $editCategory, $editName, $editPrice, $editStatus, $updateProdId);
+        $sql->execute();
+        $sql->close();
+        $conn->close();
         } else {
-            $sql = "UPDATE product SET description = '$editDescription', category = '$editCategory', name ='$editName', price = '$editPrice', status = '$editStatus' WHERE prodId = '$updateProdId'";
-        }
-        //Execute the query
-        if (!$conn->query($sql)) {
-            $errorMsg = "Database error: " . $conn->error;
-            $success = false;
+            $sql = $conn->prepare("UPdATE product SET description = ?, category = ?, name = ?, price = ?, status = ? WHERE prodId = ?");
+            $sql->bind_param('sssdsi', $editDescription, $editCategory, $editName, $editPrice, $editStatus, $updateProdId);
+            $sql->execute();
+            $sql->close();
+            $conn->close();
         }
     }
-
-    $conn->close();
 }
 

@@ -34,15 +34,15 @@
             } else {
                 session_start();
                 $userId = $_SESSION['userId'];
-                $sql = "UPDATE p1_1.promotion SET image='$file_input',startDate ='$start_date',endDate ='$end_date', user_userId='$userId' WHERE promoID = 1";
+                $promoId = 1;
+                $sql = $conn->prepare("UPDATE p1_1.promotion SET image=?,startDate =?,endDate =?, user_userId=? WHERE promoID = ?");
+                $sql->bind_param('sssii', $file_input, $start_date, $end_date, $userId, $promoId);
+                $sql->execute();
+                $sql->close();
+                $conn->close();
 //  Updating of promotion banner in the index page. Upon uploading of file, it will directly update the banner in index.php
             }
             //execute the query
-            if (!$conn->query($sql)) {
-                $errorMsg = "Database error: " . $conn->error;
-                $success = false;
-            }
-            $conn->close();
         }
 
         $success = true;
