@@ -331,12 +331,12 @@
         //If both fields are empty
         else
         {
-            echo "<p class='searchdesign'>Please enter at least a field to search.</p>";
+            echo "<p class='searchdesign'>Please fill in at least one of the search fields.</p>";
         }
         ?>
         
         <!-- Edit modal
-            https://www.youtube.com/watch?v=mh4MVFiMZTM to retrieve and display in the fields -->
+        https://www.youtube.com/watch?v=mh4MVFiMZTM to retrieve and display in the fields -->
         <aside>
             <section class="modal fade standardfont" id="editModal">
                 <section class="modal-dialog modal-dialog-centered">

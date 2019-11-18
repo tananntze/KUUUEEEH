@@ -29,12 +29,11 @@ if (!isset($_SESSION['userId'])) {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-        <script src="js/editadmin.js"></script> 
-        <script src="js/process_search.js"></script>
         
-
-
+        <script src="js/editadmin.js"></script> 
+        <script src="js/process_editadmin.js"></script>
     </head>
+    
     <body class="overlay">
         <?php include "adminheader.php" ?>
 
@@ -54,7 +53,7 @@ if (!isset($_SESSION['userId'])) {
                 </section>
 
                 <section class="card-body">
-                    <form name = "searchform" action="process_search.php" onsubmit="return validateForm()" method="post">
+                    <form name = "searchform" action="process_search.php" onsubmit="return validateSearch()" method="post">
                         <div class="row">
                             <div class="col-2">
                                 <section class="form-group">
@@ -84,7 +83,7 @@ if (!isset($_SESSION['userId'])) {
         <aside class="modal fade standardfont" id="addModal">
             <section class="modal-dialog modal-dialog-centered">
                 <section class="modal-content">
-                    <form action="process_admin_addnew.php" method="post" enctype="multipart/form-data">
+                    <form name = "addform" action="process_admin_addnew.php" onsubmit="return validateAdd()" method="post" enctype="multipart/form-data" novalidate>
                         <section class="modal-header">
                             <h4 class="modal-title">Add New Item</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
