@@ -28,13 +28,16 @@ and open the template in the editor.
                 $kueh_id = $_SESSION["my_orders"][$row][0];
                 $kueh_name = $_SESSION["my_orders"][$row][3];
                 $_SESSION["totalQty"]--;
+                //Decrement the total price of checkout
                 $_SESSION["subtotal"] -= $_SESSION["my_orders"][$row][4];
                 $_SESSION["total"] -= $_SESSION["my_orders"][$row][4];
                 $_SESSION["kueh".$kueh_id."_qty"]--;
                 if ($_SESSION["kueh".$kueh_id."_qty"] == 0) {
+                    //delete the row from the tbale if the specified kueh quantity is 0
                     unset($_SESSION["my_orders"][$row]);
                     $_SESSION["my_orders"] = array_values($_SESSION["my_orders"]); 
                 } else {
+                    //update the kueh quantity and the kueh total price for each specified kueh
                     $_SESSION["my_orders"][$row][5] = $_SESSION["kueh".$kueh_id."_qty"];
                     $_SESSION["my_orders"][$row][6] -= $_SESSION["my_orders"][$row][4];
                 }

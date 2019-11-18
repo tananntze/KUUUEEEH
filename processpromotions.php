@@ -78,11 +78,11 @@
         } else { //PHP's validation of checking if file uploaded is a file with image extensions, Credited By: https://stackoverflow.com/questions/6755192/how-to-check-uploaded-file-type-in-php
             $file_name = $_FILES['file_input']['tmp_name'];
             $allowedTypes = array(IMAGETYPE_PNG, IMAGETYPE_JPEG, IMAGETYPE_GIF);
-            $detectedType = exif_imagetype($file_name);
-            if (!in_array($detectedType, $allowedTypes)) {
+            //$detectedType = exif_imagetype($file_name);
+            /*if (!in_array($detectedType, $allowedTypes)) {
                 $success = false;
                 $errorMsg .= "Please upload a proper image file with .jpeg, .png or .gif extensions!<br>";
-            }
+            }*/
         }
         //include the upload image database file here
         if (isset($_POST['submit'])) {
