@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-
-
 <html lang ="en" class="header">
     <head>
         <title>Contact Us</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name ="KUUUEEEH website where you find the best kuehs">
+        <meta name ="KUUUEEEH website where you find the best kuehs" content="">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/shoppingcart.css"/> 
@@ -52,7 +44,7 @@ and open the template in the editor.
                         <section class ="col-md-6">
                             <h3 class ="subheader"> Location </h3>
                             <section class="embed-responsive embed-responsive-16by9">
-                                <iframe class ='embed-responsive-item'alt ="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1274.6247559636176!2d103.84831020185078!3d1.3777725466679476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da16e96db0a1ab%3A0x3d0be54fbbd6e1cd!2sSingapore%20Institute%20of%20Technology%20(SIT%40NYP)!5e0!3m2!1sen!2ssg!4v1570000602036!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" ></iframe>
+                                <iframe class ='embed-responsive-item' title="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1274.6247559636176!2d103.84831020185078!3d1.3777725466679476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da16e96db0a1ab%3A0x3d0be54fbbd6e1cd!2sSingapore%20Institute%20of%20Technology%20(SIT%40NYP)!5e0!3m2!1sen!2ssg!4v1570000602036!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" ></iframe>
                             </section>
                         </section>
                     </section>
@@ -62,23 +54,28 @@ and open the template in the editor.
                         <section class =' col-md-4'>
                             <h3 class ="subheader">Get in Touch with us here!</h3>
 
-                            <form name="myForm" method = "post" action="process_contactus.php" action =" MAILTO:blazeking990@gmail.com" onsubmit="return validateForm()">
+                            <form name="myForm" method = "post" action="process_contactus.php" onsubmit="return validateForm()">
 
                                 <section class="form-group">
+                                    
                                     <input type="text" class="form-control"  placeholder="Enter Your Name Here" name="name" maxlength="30" required pattern='/^[a-zA-Z ][a-zA-Z]+{3,}$'>
+                                    
                                 </section>
                                 <section class="form-group">
-                                    <input type="email" class="form-control"  placeholder="Enter Your Email Address" name="email"maxlength="50" required pattern='[a-z0-9.%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'>
+                                    <input type="email" class="form-control"  placeholder="Enter Your Email Address" name="email" maxlength="50" required pattern='[a-z0-9.%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'>
                                 </section>
                                 <section class="form-group">
                                     <textarea class="form-control" name ="text" maxlength="200" placeholder ="Enter your message here!" required pattern="'/^[a-zA-Z][a-zA-Z\\s]+$/{3,}" rows="3"></textarea>
                                 </section>
-                                <input type="submit" class="btn btn-secondary btn-block"  value="Submit" >
+                                <section class =" row justify-content-center">
+                                <label><input type="submit" class="btn btn-secondary btn-block"  value="Submit"  ></label>
+                                </section>
                             </form>
                         </section>
                         <section class =' col-md-4'></section>
                     </section>
                 </section>
+            </section>
         </main>
     </body>
     <?php include "footer_include.php" ?>
