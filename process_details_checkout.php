@@ -99,14 +99,17 @@
                     $date_now = date("Y-m-d H:i:s", strtotime($date_now));
                     $status = "Not Delivered";
                     $conn = connectToDB();
-                    $sql = "INSERT INTO checkout_details (address, postal_code, dateTime, deliveryType, status, totalPrice, customer_email)";         
-                    $sql .= " VALUES ('$address', '$postal_code', '$date_now', '$delivery_type', '$status', '$total', '$email')"; 
-                    if (!$conn->query($sql)) {             
+
+                    if ($conn->connect_error) {             
                         $errorMsg = "Database error: " . $conn->error;             
                         $success = false;                             
                     } else {
+                        $sql = $conn->prepare("INSERT INTO checkout_details (address, postal_code, dateTime, deliveryType, status, totalPrice, customer_email) VALUES (?, ?, ?, ?, ?, ?, ?)");
+                        $sql->bind_param("sisssds", $address, $postal_code, $date_now, $delivery_type, $status, $total, $email);
+                        $sql->execute();
                         $_SESSION["order_id"] = $conn->insert_id;
                         $_SESSION["checkout_successful"] = true;
+                        $sql->close();
                         $conn->close();
                         ?>
                         <section>
@@ -118,8 +121,8 @@
                                 <section class="col-md-12">
                                     <h2 class = "fontheader">MY ORDER</h2>
                                     <h5 class = "subheader">Customer's Name: <?php echo $_SESSION["customer_fn"] . " " . $_SESSION["customer_ln"]?></h5>
-                                    <h5 class = "subheader">Customer's Email: <?php echo $_SESSION["customer_email"]?></h5>
-                                    <h5 class = "subheader">For enquiries about your order details, please contact us @+6565995599 or drop an email to Kueh_for_you@kuey4you.com to find out your orders!</h5>
+                                    <h5 clheader">For enquiries about your order details, please contact us @+6565995599 or drop an email to Kueh_ass = "subheader">Customer's Email: <?php echo $_SESSION["customer_email"]?></h5>
+                                    <h5 class = "subfor_you@kuey4you.com to find out your orders!</h5>
                                     <h5 class = "subheader">We will keep you informed via your contact number @+65<?php echo $_SESSION["customer_hp"]?> for the delivery updates!</h5>
                                 </section>
                                 <div class="col-md-10">

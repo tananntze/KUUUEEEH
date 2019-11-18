@@ -31,16 +31,13 @@
                 $errorMsg = "Connection failed: " . $conn->connect_error;
                 $success = false;
             } else {
-                
-                $sql = "INSERT INTO p1_1.contact_us (name,email,message) ";
-                $sql .= "VALUES ('$name','$email','$text')";
+                $sql = $conn->prepare("INSERT INTO p1_1.contact_us (name, email, message) VALUES (?, ?, ?)");
+                $sql->bind_param("sss", $name, $email, $text);
+                $sql->execute();
+                $sql->close();
+                $conn->close();
             }
             //execute the query
-            if (!$conn->query($sql)) {
-                $errorMsg = "Database error: " . $conn->error;
-                $success = false;
-            }
-            $conn->close();
         }
 
         $success = true;

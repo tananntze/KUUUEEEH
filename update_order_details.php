@@ -106,14 +106,17 @@ function updateCustomerDetails($email, $fname, $lname, $phone){
 function updateCheckoutDetails($orderId,$deliveryOption, $status, $address, $postal){
     $update_success = false; 
     $conn = connectToDB();
-   $sql = "UPDATE checkout_details SET address='$address', deliveryType='$deliveryOption', status='$status', postal_code='$postal' WHERE orderId='$orderId'";
-   
-   if($conn->query($sql) == true){
+    $sql = $conn->prepare("UPDATE checkout_details SET address=?, deliveryType=?, status=?, postal_code=? WHERE orderId=?");
+    $sql->bind_param('ssssi', $address, $deliveryOption, $status, $postal, $orderId);
+    $sql->execute();
+    $sql->close();
+    $conn->close();
+    if($conn->query($sql) == true){
        $update_success == true;
        return $update_success;
-   }else{
+    }else{
        return $update_success;
-   }
+    }
 }
 
 function sanitize_input($data)

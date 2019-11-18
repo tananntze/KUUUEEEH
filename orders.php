@@ -11,10 +11,6 @@ if (!isset($_SESSION['userId'])) {
     header("Location: login.php");
     exit();
 }
-
-
-
-
 ?>
 
 <html class="header">
@@ -37,7 +33,9 @@ if (!isset($_SESSION['userId'])) {
 </head>
 
 <body class="overlay">
-    <?php include "adminheader.php" ?>
+    <?php include "adminheader.php"; 
+
+?>
     
     <div class="container">
         <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
@@ -111,7 +109,5 @@ if (!isset($_SESSION['userId'])) {
 
 
 </body>
-
-<?php include "footer_include.php" ?>
 
 </html>

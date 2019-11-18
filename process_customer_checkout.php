@@ -20,8 +20,8 @@
             if (empty($_POST["email"])) {     
                $errorMsg .= "Email is required.<br>";     
                $success = false; 
-            } else {     
-                $email = sanitize_input($_POST["email"]); // Additional check to make sure e-mail address is well-formed.     
+            } else {    
+                $email = sanitize_input($_POST["email"]);
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {         
                     $errorMsg .= "Invalid email format.";         
                     $success = false;       
@@ -79,19 +79,21 @@
             //function to insert new customer details if the credentials are not stored in database yet
             function insertNewCustomer($email, $mobile_no, $last_name, $first_name) {
                 $conn = connectToDB();
-                $sql = "INSERT INTO p1_1.customer (email, hp, lname, fname)";         
-                $sql .= " VALUES ('$email', '$mobile_no', '$last_name', '$first_name')"; 
-                if (!$conn->query($sql)) {             
+                if ($conn->connect_error) {             
                     $errorMsg = "Database error: " . $conn->error;             
                     $success = false;                             
                 } else {
+                    $sql = $conn->prepare("INSERT INTO p1_1.customer (email, hp, lname, fname) VALUES (?, ?, ?, ?)");
+                    $sql->bind_param("ssss", $email, $mobile_no, $last_name, $first_name);
+                    $sql->execute();
                     $_SESSION["customer_email"] = $email;
                     $_SESSION["customer_hp"] = $mobile_no;
                     $_SESSION["customer_fn"] = $first_name;
                     $_SESSION["customer_ln"] = $last_name;
+                    $sql->close();
+                    $conn->close();
                     header("Location: delivery_checkout.php");
                 }
-                $conn->close();
             }
             function validateCustomerEmail($result, $email, $mobile_no, $last_name, $first_name) {
                 global $success, $errorMsg;
