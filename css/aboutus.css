@@ -87,6 +87,10 @@ fa-directions {
     text-align: center;
 }
 
+#video1, #video2 {
+    width: 100%;
+}
+
 .zoom:hover + figcaption {
     
     visibility: visible; 

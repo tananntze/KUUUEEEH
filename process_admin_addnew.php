@@ -17,11 +17,8 @@ if (empty($_POST["addCategory"])) {
     $success = false;
 }  else { 
     $addCategory = sanitize_input($_POST["addCategory"]);
-    if (!preg_match("/^[a-zA-Z ]*$/", $addCategory)) {
-        $errorMsg .= "Category is not valid. It must not contain numbers or special characters.<br>";
-        $success = false;
     }
-}
+
 
 //addName
 if (empty($_POST["addName"])) {
@@ -86,7 +83,7 @@ if(isset($_POST['submit'])){
     }
 }
 
-
+//success
 if ($success) {
     saveFoodItemToDB();
     echo "<h2>Your item, </h2>" . $addName . "<h2>have successfully added!!</h2>";
@@ -121,7 +118,7 @@ function saveFoodItemToDB() {
         $success = false;
     } else {
         session_start();
-        $userId = $_SESSION['userId'];
+        $userId = $_SESSION['userId']; //retrieve userId from session
         $sql = "INSERT INTO product (image, description, category, name, price, user_userId)";
         $sql .= " VALUES ('$insertImg','$addDescription', '$addCategory', '$addName', $addPrice, '$userId')";
         //Execute the query

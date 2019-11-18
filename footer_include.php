@@ -3,7 +3,7 @@
     <div class="row mx-0">
         <div class="col-md-3 footer-brand animated fadeInLeft">
 
-            <p>© 2019 KUUUEEH</p>
+            <p>© 2019 KUUUEEEH</p>
         </div>
         <div class="col-md-4 footer-nav animated fadeInUp">
             <h4>Menu —</h4>

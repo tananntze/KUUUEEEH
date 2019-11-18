@@ -4,17 +4,17 @@
  * and open the template in the editor.
  */
 var isPicValid = false;
-window.onload = function() {
+window.onload = function () {
     attachListeners();
 };
 function attachListeners() { //this is to initialize the buttons by attaching an event and call function
     var btnAdd = document.getElementById("btnAdd");
     var fileInput = document.getElementById("file_input");
     var uploadBanner = document.getElementById("banner_file_upload");
-    uploadBanner.addEventListener("click", function() { //this is to prompt user to show the dialog to select a file once user clicks a button
+    uploadBanner.addEventListener("click", function () { //this is to prompt user to show the dialog to select a file once user clicks a button
         fileInput.click();
     });
-    fileInput.addEventListener("change", function() {
+    fileInput.addEventListener("change", function () {
         displayBanner(this);
     });
     btnAdd.addEventListener("click", checkForms);
@@ -36,7 +36,8 @@ function checkForms() { //this is the function for the form validation
         bannerDropZone.style.borderColor = "red";
     } else {
         bannerDropZone.style.borderColor = "green";
-    } if (txtStart == "") {
+    }
+    if (txtStart == "") {
         start.setCustomValidity("This is a required field!");
         isStartDateValid = false;
     } else {
@@ -49,7 +50,8 @@ function checkForms() { //this is the function for the form validation
             start.setCustomValidity("");
             isStartDateValid = true;
         }
-    } if (txtEnd == "") {
+    }
+    if (txtEnd == "") {
         end.setCustomValidity("This is a required field!");
         isEndDateValid = false;
     } else {
@@ -66,7 +68,8 @@ function checkForms() { //this is the function for the form validation
             end.setCustomValidity("");
             isEndDateValid = true;
         }
-    } if (isPicValid && isStartDateValid && isEndDateValid) {
+    }
+    if (isPicValid && isStartDateValid && isEndDateValid) {
         alert("You have successfully added a new KUUUEEEH promotion!");
         promoForm.submit();
     }
@@ -84,13 +87,13 @@ function displayBanner(input) { //this is to check whether the file extension is
         if (isSuccess) {
             isPicValid = true;
             reader = new FileReader();
-            reader.onload = function(e) {
+            reader.onload = function (e) {
                 bannerImg.setAttribute("src", e.target.result);
                 bannerImg.style.width = "100%";
                 bannerDropZone.style.borderColor = "green";
                 bannerDropZone.style.height = "auto";
             };
-            reader.readAsDataURL(input.files[0]); 
+            reader.readAsDataURL(input.files[0]);
             filePath.innerHTML = input.files[0].name;
         } else {
             isPicValid = false;
