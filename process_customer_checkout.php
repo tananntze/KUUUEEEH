@@ -20,8 +20,8 @@
             if (empty($_POST["email"])) {     
                $errorMsg .= "Email is required.<br>";     
                $success = false; 
-            } else {     
-                $email = sanitize_input($_POST["email"]); // Additional check to make sure e-mail address is well-formed.     
+            } else {    
+                $email = sanitize_input($_POST["email"]);
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {         
                     $errorMsg .= "Invalid email format.";         
                     $success = false;       
@@ -75,13 +75,6 @@
                 $data = stripslashes($data);   
                 $data = htmlspecialchars($data);   
                 return $data; 
-            }
-            //function for encryption
-            function encryptthis($data, $key) {
-                $encryption_key = base64_decode($key);
-                $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length('aes-256-cbc'));
-                $encrypted = openssl_encrypt($data, 'aes-256-cbc', $encryption_key, 0, $iv);
-                return base64_encode($encrypted . '::' . $iv);
             }
             //function to insert new customer details if the credentials are not stored in database yet
             function insertNewCustomer($email, $mobile_no, $last_name, $first_name) {
