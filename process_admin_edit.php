@@ -79,13 +79,13 @@ function editData() {
         $success = false;
     } else {
         if (($_FILES['updateImg']['name']!="")){ 
-        $sql = $conn->prepare("UPdATE product SET image= ?, description = ?, category = ?, name = ?, price = ?, status = ? WHERE prodId = ?");
+        $sql = $conn->prepare("UPDATE product SET image= ?, description = ?, category = ?, name = ?, price = ?, status = ? WHERE prodId = ?");
         $sql->bind_param('ssssdsi', $updateImg, $editDescription, $editCategory, $editName, $editPrice, $editStatus, $updateProdId);
         $sql->execute();
         $sql->close();
         $conn->close();
         } else {
-            $sql = $conn->prepare("UPdATE product SET description = ?, category = ?, name = ?, price = ?, status = ? WHERE prodId = ?");
+            $sql = $conn->prepare("UPDATE product SET description = ?, category = ?, name = ?, price = ?, status = ? WHERE prodId = ?");
             $sql->bind_param('sssdsi', $editDescription, $editCategory, $editName, $editPrice, $editStatus, $updateProdId);
             $sql->execute();
             $sql->close();
