@@ -71,9 +71,9 @@ else
     }
 }
 
-//reference: https://stackoverflow.com/questions/41517897/move-upload-file-is-failed-to-open-stream-and-unable-to-move-file
-//insert img into database using file path method
-//
+
+//References: https://stackoverflow.com/questions/10456113/php-check-file-extension-in-upload-form
+//https://www.php.net/manual/en/function.filesize.php
 //Setting variables
 $maxfilesize = 2048000; //MAX File Size 2MB allowed file size
 $allowed =  array('jpg','jpeg'); //allowed extensions
@@ -127,6 +127,8 @@ if(isset($_POST['submit']))
 
             }
 
+//Reference: https://stackoverflow.com/questions/41517897/move-upload-file-is-failed-to-open-stream-and-unable-to-move-file
+//insert img into database using file path method
             $file = $_FILES['insertImg']['name'];//creating file path
             $path = pathinfo($file);
             $filename = $path['filename'];

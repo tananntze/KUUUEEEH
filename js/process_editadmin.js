@@ -61,25 +61,48 @@ function validateAdd()
     var addname = document.forms["addform"]["addName"].value;
     var adddesc = document.forms["addform"]["addDescription"].value;
     var addprice = document.forms["addform"]["addPrice"].value;
-    var addimg = document.forms["addform"]["addImage"].value;
     
     if (addname === "" || !(/^[a-zA-Z](?!.* {2,6})[ \w.-]{2,15}$/.test(addname))) 
     {
-        alert("First name is invalid.");
+        alert("Name is invalid.");
         return false;  
     }
     
-    if (adddesc === "" || !(/[\w\s\-,.]{10,160}$/.test(fn))) 
+    if (adddesc === "" || !(/[\w\s\-,.]{10,160}$/.test(adddesc))) 
     {
         alert("Description is invalid.");
         return false;  
     }
     
-    if (addprice === "" || !(/^(?=.*[1-9])\d{0,2}(?:\.\d{0,2})?$/.test(addname))) 
+    if (addprice === "" || !(/^(?=.*[1-9])\d{0,2}(?:\.\d{0,2})?$/.test(addprice))) 
     {
         alert("Price is invalid.");
         return false;  
+    }    
+}
+
+// For editadmin.php editing function
+function validateEdit() 
+{
+    var editname = document.forms["editform"]["editName"].value;
+    var editdesc = document.forms["editform"]["editDescription"].value;
+    var editprice = document.forms["editform"]["editPrice"].value;
+    
+    if (editname === "" || !(/^[a-zA-Z](?!.* {2,6})[ \w.-]{2,15}$/.test(editname))) 
+    {
+        alert("Name is invalid.");
+        return false;  
     }
     
+    if (editdesc === "" || !(/[\w\s\-,.]{10,160}$/.test(editdesc))) 
+    {
+        alert("Description is invalid.");
+        return false;  
+    }
     
+    if (editprice === "" || !(/^(?=.*[1-9])\d{0,2}(?:\.\d{0,2})?$/.test(editprice))) 
+    {
+        alert("Price is invalid.");
+        return false;  
+    }    
 }
