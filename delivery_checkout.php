@@ -4,12 +4,11 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html lang="en">
     <head>
         <title>Kueh Checkout</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name ="KUUUEEEH website where you find the best kuehs">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css"/> 
         <link rel="stylesheet" href="css/shoppingcart.css"/> 
@@ -45,16 +44,16 @@ and open the template in the editor.
                                 <section id="paragraph">
                                     <section id="step2Radio">
                                         <section class="radio_grp">
-                                            <input class="radio_set" type="radio" name="radioDel" id="radioHome" value="radioHome" checked="true"><label class="radio_lbl" for="delHome">Home Delivery</label>
+                                            <input class="radio_set" type="radio" name="radioDel" id="radioHome" value="radioHome" checked><label class="radio_lbl" for="radioHome">Home Delivery</label>
                                             <p id="txtHomeAddress"></p>
                                             <p id="txtHomeDuration">Approximately 45-60 minutes</p>
                                             <p id="deliveryHomeCost">Delivery Cost: Subtotal (<?php echo "$" . number_format($_SESSION["subtotal"], 2)?>) + Delivery Charge ($5.00)</p>
                                         </section>
                                         <section class="radio_grp">
-                                            <input class="radio_set" type="radio" name="radioDel" id="radioStore" value="radioStore"><label class="radio_lbl" for="delNormal">Collect at our store</label>
+                                            <input class="radio_set" type="radio" name="radioDel" id="radioStore" value="radioStore"><label class="radio_lbl" for="radioStore">Collect at our store</label>
                                             <p id="txtStoreAddress"></p>
                                             <p id="txtStoreDuration">Approximately 45-60 minutes</p>
-                                            <p id="deliveryHomeCost">Delivery Cost: Subtotal (<?php echo "$" . number_format($_SESSION["subtotal"], 2)?>) + Delivery Charge (Free)</p>
+                                            <p id="deliveryStoreCost">Delivery Cost: Subtotal (<?php echo "$" . number_format($_SESSION["subtotal"], 2)?>) + Delivery Charge (Free)</p>
                                         </section>
                                     </section>
                                 </section>
@@ -65,7 +64,7 @@ and open the template in the editor.
                         <div class="col-md-12">
                             <section id="step3">
                                 <h3 class ="subheader">Step 3: Enter Delivery & Billing Details</h3>
-                                <section id="paragraph">
+                                <section id="paragraph2">
                                     <section id="collectionInstruction">
                                         <h4>Collection Address</h4>
                                         <p id="txtCollectionAddress">
@@ -75,38 +74,38 @@ and open the template in the editor.
                                 </section>
                                 <section class="form-group">
                                     <label for="address">*Address:</label>
-                                    <input class="form-control" id="address" name="address" placeholder="Enter your full address" type="text" required="true">
+                                    <input class="form-control" id="address" name="address" placeholder="Enter your full address" type="text" required>
                                 </section>
                                 <section class="form-group">
                                     <label for="postal_code">*Postal Code:</label>
-                                    <input class="form-control" id="postal_code" name="postal_code" placeholder="Enter the 6 digit Singapore postal code" type="tel" maxLength="6" required="true" pattern="[0-9]{6}">
+                                    <input class="form-control" id="postal_code" name="postal_code" placeholder="Enter the 6 digit Singapore postal code" type="tel" maxLength="6" required pattern="[0-9]{6}">
                                 </section>
                                 <section id="step3Radio">
-                                    <label for="radioPayment">*Select a card:</label>
+                                    <label for="payVisa">*Select a card:</label>
                                     <section class="radio_grp">
                                         <!--The Image source is taken and credited by: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
-                                        <input class="radio_set" type="radio" name="radioPayment" id="payVisa" value="Visa" checked="true"><label class="radio_lbl" for="delVisa">Visa</label><img class="card_logo" src="img/visa.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
+                                        <input class="radio_set" type="radio" name="radioPayment" id="payVisa" value="Visa" checked><label class="radio_lbl" for="payVisa">Visa</label><img class="card_logo" src="img/visa.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
                                     </section>
                                     <section class="radio_grp">
                                         <!--The Image source is taken and credited by: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
-                                        <input class="radio_set" type="radio" name="radioPayment" id="payMaster" value="MasterCard"><label class="radio_lbl" for="delMaster">MasterCard</label><img class="card_logo" src="img/mastercard.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
+                                        <input class="radio_set" type="radio" name="radioPayment" id="payMaster" value="MasterCard"><label class="radio_lbl" for="payMaster">MasterCard</label><img class="card_logo" src="img/mastercard.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
                                     </section>
                                     <section class="form-group">
                                         <label for="card_name">*Name Of Card:</label>
-                                        <input class="form-control" id="card_name" name="card_name" placeholder="Enter your name of the card" type="name" required="true" pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
+                                        <input class="form-control" id="card_name" name="card_name" placeholder="Enter your name of the card" type="text" required pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
                                     </section>
                                     <section class="form-group">
                                         <label for="card_number">*16-Digit Card Number:</label>
-                                        <input class="form-control" id="card_number" name="card_number" placeholder="Enter your 16 digit card number" type="tel" maxlength="16" required="true" pattern="[0-9]{16}">
+                                        <input class="form-control" id="card_number" name="card_number" placeholder="Enter your 16 digit card number" type="tel" maxlength="16" required pattern="[0-9]{16}">
                                     </section>
                                     <section class="form-group">
-                                        <label for="first_name">*CCV Number:</label>
-                                        <input class="form-control" id="ccv" name="ccv" placeholder="Enter your 3 digit CCV number" type="tel" maxlength="3" required="true" pattern="[0-9]{3}">
+                                        <label for="ccv">*CCV Number:</label>
+                                        <input class="form-control" id="ccv" name="ccv" placeholder="Enter your 3 digit CCV number" type="tel" maxlength="3" required pattern="[0-9]{3}">
                                     </section>
                                     <section class="form-group">
                                         <label for="expiry_month">*Card Expiry Month (in MM):</label>
                                         <select class="custom-select" id="expiry_month" name="expiry_month">
-                                            <option selected>01</option>
+                                            <option>01</option>
                                             <option>02</option>
                                             <option>03</option>
                                             <option>04</option>

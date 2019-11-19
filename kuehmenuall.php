@@ -10,7 +10,6 @@ and open the template in the editor.
         <title>All Kuehs</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name ="KUUUEEEH website where you find the best kuehs">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/kuehmenuall.css">
@@ -84,7 +83,7 @@ and open the template in the editor.
             <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
         </div>
         
-        <nav role="navigation" class="nav2">
+        <nav class="nav2">
             <ul>
                 <li><a href ="#basic">Basic Kuehs</a></li>
                 <li><a href ="#character">Kuehs with Character</a></li>
@@ -93,9 +92,9 @@ and open the template in the editor.
         </nav>
         
         <!-- The Basic Kuehs -->
-       <form method="post" action="">
+       <form method="post" action="#">
         <section>
-            <h1 class="fontheader" id="character">The Basic Kuehs</h1>
+            <h1 class="fontheader" id="basic">The Basic Kuehs</h1>
 
             <div class="d-flex justify-content-center flex-fill flex-wrap">
                 <?php                    
@@ -106,15 +105,15 @@ and open the template in the editor.
                     while ($row = $result->fetch_assoc())
                     {
                             ?>
-                             <figure class="imgholder">
-                                <img class="zoom" src = "<?php echo $row ['image']; ?>" alt = "">
-                                <figcaption>
-                                    <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
-                                </figcaption>
-                                <div>
-                                    <button class='btn' type='submit' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart'></i></button>
-                                </div>
-                            </figure>
+                            <div class="kuehMenu">
+                                <figure class="imgholder">
+                                    <img class="zoom" src = "<?php echo $row ['image']; ?>" alt = "">
+                                    <figcaption>
+                                        <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
+                                    </figcaption>
+                                </figure>
+                                <button class='btn' type='submit' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart fa-2x'></i></button>
+                            </div>
                             <?php 
                     }
 
@@ -137,15 +136,15 @@ and open the template in the editor.
                     while ($row = $result->fetch_assoc())
                     {             
                         ?>
-                         <figure class="imgholder">
-                            <img class="zoom" src = "<?php echo $row ['image']; ?>" alt = "">
-                            <figcaption>
-                                <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
-                            </figcaption>
-                            <div>
-                                <button class='btn' type='submit' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart'></i></button>
-                            </div>
-                        </figure>
+                        <div class="kuehMenu"> 
+                            <figure class="imgholder">
+                                <img class="zoom" src = "<?php echo $row ['image']; ?>" alt = "">
+                                <figcaption>
+                                    <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
+                                </figcaption>
+                            </figure>
+                            <button class='btn' type='submit' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart fa-2x'></i></button>
+                        </div>
                 <?php
                     }
 
@@ -168,15 +167,15 @@ and open the template in the editor.
                     while ($row = $result->fetch_assoc())
                     {
                         ?>
-                         <figure class="imgholder">
-                            <img class="zoom" src = "<?php echo $row ['image']; ?>" alt = "">
-                            <figcaption>
-                                <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
-                            </figcaption>
-                            <div>
-                                <button class='btn' type='submit' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart'></i></button>
-                            </div>
-                        </figure>
+                        <div class="kuehMenu">
+                            <figure class="imgholder">
+                                <img class="zoom" src = "<?php echo $row ['image']; ?>" alt = "">
+                                <figcaption>
+                                    <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
+                                </figcaption>
+                            </figure>
+                            <button class='btn' type='submit' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart fa-2x'></i></button>
+                        </div>
                 <?php
                     }
 

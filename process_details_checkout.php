@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>KUUUEEEH Checkout</title>
         <meta charset="UTF-8">
@@ -128,7 +129,7 @@
                                 </section>
                                 <div class="col-md-10">
                                     <section id="paragraph" class="scrollTable standardfont">
-                                        <section id="myOrder text-center">
+                                        <section id="myOrder" class="text-center">
                                         <p id="quantity">Total Quantity: <?php echo $_SESSION["totalQty"]?></p>
                                         <?php
                                     //display message cart is empty
@@ -168,12 +169,14 @@
                                 <p id="subTotal">Subtotal: <?php echo "$" . number_format($_SESSION["subtotal"], 2)?></p>
                                 <p id="delivery">Delivery: <?php echo "$" . number_format($_SESSION["delivery"], 2)?></p>
                                 <p id="totalDel">Total: <?php echo "$" . number_format($_SESSION["total"], 2)?></p>
-                                <a href='process_successful_checkout.php' id='btnHome' class='btn btn-primary btn-block'><span class='fa fa-home'></span> Return to Home</a>        
+                                <a href='process_successful_checkout.php' id='btnHome' class='btn btn-primary btn-block'><span class='fa fa-home'></span> Return to Home</a>
+                                        </section>
+                                    </section>
                                 </div>
                             </section>
                             </div>
                         </section>
-                            <?php 
+                        <?php 
             }
             function sanitize_input($data) {   
                     $data = trim($data);   

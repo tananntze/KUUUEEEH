@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html class="header">
+<html lang="en">
 
     <head>
         <title>My Orders</title>
@@ -18,8 +18,6 @@ and open the template in the editor.
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     </head>
-
-    <body background="img/Pink Dots Tumblr BG.jpg">
         <?php
         include "header.php";
         foreach ($_SESSION["my_orders"] as $row => $kueh_array) {;
@@ -59,9 +57,11 @@ and open the template in the editor.
             }
         }
         ?>
+    
+    
         <div class="container">
-            <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
-            <img src="img/Banner - White.png" alt="" class="responsive"id="bannerresize">
+                <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
+                <img src="img/Banner - White.png" alt="" class="responsive" id="bannerresize">
         </div>
         <section>
             <div class="container-fluid standardfont" style= 'margin-top:20px'>
@@ -71,7 +71,7 @@ and open the template in the editor.
                     </section>
                     <div class="col-md-12">
                         <section id="paragraph" class="scrollTable">
-                            <section id="myOrder text-center">
+                            <section id="myOrder" class="text-center">
                                 <p id="quantity">Total Quantity: <?php echo $_SESSION["totalQty"] ?></p>
                                 <?php
                                 //display message cart is empty
@@ -104,7 +104,7 @@ and open the template in the editor.
                                             }
                                         }
                                         echo "<td>"
-                                        . "<a href='kuehmenuall.php' class='btn standardfont' id='btnEdit'><span class='fa fa-pencil-square-o'></span>  Edit</a> <form method='post' action=''><button type='submit' class='btn' name='btnIncrement" . strval($row) . "'><span class='fa fa-plus-circle fa-2x text-success'></span></button><button type='submit' class='btn' name='btnDecrement" . strval($row) . "'><span class='fa fa-minus-circle fa-2x text-danger'></span></button></form></td>";
+                                        . "<a href='kuehmenuall.php' class='btn standardfont' id='btnEdit'><span class='fa fa-pencil-square-o'></span>  Edit</a> <form method='post' action='#'><button type='submit' class='btn' name='btnIncrement" . strval($row) . "'><span class='fa fa-plus-circle fa-2x text-success'></span></button><button type='submit' class='btn' name='btnDecrement" . strval($row) . "'><span class='fa fa-minus-circle fa-2x text-danger'></span></button></form></td>";
                                         echo "</tr>";
                                     }
                                     echo "</table>";
@@ -116,7 +116,7 @@ and open the template in the editor.
                             if ($_SESSION["totalQty"] == 0) {
                                 echo "<a id='btnCheckout' class='btn btn-block text-muted'>Proceed to Checkout  <span class='fa fa-arrow-circle-right'></span></a></a>";
                             } else {
-                                echo "<a href='customer_checkout.php' id='btnCheckout' class='btn btn-block btn-success'>Proceed to Checkout  <span class='fa fa-arrow-circle-right'></span></a></a>";
+                                echo "<a href='customer_checkout.php' id='btnCheckout' class='btn btn-block btn-success'>Proceed to Checkout  <span class='fa fa-arrow-circle-right'></span></a>";
                             }
                             ?>
                         </section>

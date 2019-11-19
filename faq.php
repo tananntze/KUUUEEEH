@@ -1,10 +1,18 @@
 <html lang ="en"class="header">
 
+<!DOCTYPE html>
+<html lang="en" class="header">
+
+
     <head>
         <title>FAQ</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <meta name ="KUUUEEEH website where you find the best kuehs" content="">
+
+        <meta name ="KUUUEEEH website where you find the best kuehs" content="Founded in 2019 by an avid kueh lover, KUUUEEEH has been offering a tempting array of sumptuous kuehs till today! Customers have been savoring our kuehs through our unique blend of flavors and we are proud that our kuehs are generally well-received. Still we are 100% committed in continuously combining new flavors with tradition and improving based on customer's feedback.">
+
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/shoppingcart.css"/> 
@@ -36,7 +44,7 @@
                                 <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h2 class="clearfix mb-0">
-                                            <a class="btn btn-link mt-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Ordering Information <span class="fa fa-angle-down"></span></a>									
+                                            <a href="#" class="btn btn-link mt-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Ordering Information <span class="fa fa-angle-down"></span></a>									
                                         </h2>
                                     </div>
                                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
@@ -51,7 +59,7 @@
                                 <div class="card">
                                     <div class="card-header" id="headingTwo">
                                         <h2 class="clearfix mb-0">
-                                            <a class="btn btn-link mt-0" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Product Information <span class="fa fa-angle-down"></span></a>									
+                                            <a href="#" class="btn btn-link mt-0" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Product Information <span class="fa fa-angle-down"></span></a>									
                                         </h2>
                                     </div>
                                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
@@ -65,7 +73,7 @@
                                 <div class="card">
                                     <div class="card-header" id="headingThree">
                                         <h2 class="clearfix mb-0">
-                                            <a class="btn btn-link mt-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Business Opportunities<span class="fa fa-angle-down"></span></a>									
+                                            <a href="#" class="btn btn-link mt-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Business Opportunities<span class="fa fa-angle-down"></span></a>									
                                         </h2>
                                     </div>
                                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">

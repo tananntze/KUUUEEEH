@@ -9,7 +9,7 @@ and open the template in the editor.
         <title>About Us</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name ="KUUUEEEH website where you find the best kuehs">
+        <meta name ="KUUUEEEH website where you find the best kuehs" content="Founded in 2019 by an avid kueh lover, KUUUEEEH has been offering a tempting array of sumptuous kuehs till today! Customers have been savoring our kuehs through our unique blend of flavors and we are proud that our kuehs are generally well-received. Still we are 100% committed in continuously combining new flavors with tradition and improving based on customer's feedback.">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css"/> 
         <link rel="stylesheet" href="css/shoppingcart.css"/>
@@ -57,20 +57,36 @@ and open the template in the editor.
                 <section>
                     <section class ="row ml-12 standardfont">
                         <section class ="col-md-3 text-center">
-                            <a href="kuehmenuall.php"><img class="zoom rounded-circle" id="btnAngKk" src="img/The Basic Kuehs/Ang Ku Kueh.jpg" alt="Ang Ku Kueh">
-                                <figcaption>Check Us Out In Our Menus!</figcaption></a>
+                            <a href="kuehmenuall.php">
+                                <figure>
+                                   <img class="zoom rounded-circle" id="btnAngKk" src="img/The Basic Kuehs/Ang Ku Kueh.jpg" alt="Ang Ku Kueh"/>
+                                   <figcaption><span>Check Us Out In Our Menus!</span></figcaption>
+                                </figure>
+                            </a>
                         </section>
                         <section class ="col-md-3 text-center">
-                            <a href="kuehmenuall.php"><img class="zoom rounded-circle" id="btnLapis" src="img/The Basic Kuehs/Kueh Lapis.jpg" alt="Kueh Lapis">
-                                <figcaption>Check Us Out In Our Menus!</figcaption></a>
+                            <a href="kuehmenuall.php">
+                                <figure>
+                                   <img class="zoom rounded-circle" id="btnLapis" src="img/The Basic Kuehs/Kueh Lapis.jpg" alt="Kueh Lapis"/>
+                                   <figcaption><span>Check Us Out In Our Menus!</span></figcaption>
+                                </figure>
+                            </a>
                         </section>
                         <section class ="col-md-3 text-center">
-                            <a href="kuehmenuall.php"><img class="zoom rounded-circle" id="btnChwee" src="img/Kueh with Character/Chwee Kueh.JPG" alt="Chwee Kueh">
-                                <figcaption>Check Us Out In Our Menus!</figcaption></a>
+                            <a href="kuehmenuall.php">
+                                <figure>
+                                   <img class="zoom rounded-circle" id="btnChwee" src="img/Kueh with Character/Chwee Kueh.JPG" alt="Chwee Kueh"/>
+                                   <figcaption><span>Check Us Out In Our Menus!</span></figcaption>
+                                </figure>
+                            </a>
                         </section>
                         <section class ="col-md-3 text-center">
-                            <a href="kuehmenuall.php"><img class="zoom rounded-circle" id="btnPng" src="img/Kueh with Character/Png Kueh.jpg" alt="Png Kueh">
-                                <figcaption>Check Us Out In Our Menus!</figcaption></a>
+                            <a href="kuehmenuall.php">
+                                <figure>
+                                   <img class="zoom rounded-circle" id="btnPng" src="img/Kueh with Character/Png Kueh.jpg" alt="Png Kueh">
+                                   <figcaption><span>Check Us Out In Our Menus!</span></figcaption>
+                                </figure>
+                            </a>
                         </section>
                     </section>
                     <section class ="row ml-6 standardfont">
