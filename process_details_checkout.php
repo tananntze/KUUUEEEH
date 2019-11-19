@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="header">
     <head>
         <title>KUUUEEEH Checkout</title>
         <meta charset="UTF-8">

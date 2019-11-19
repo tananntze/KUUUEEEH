@@ -1,5 +1,5 @@
 <html>
-    <head>
+    <head lang="en" class="header">
         <meta charset="UTF-8">
         <title>Process Contact Us Form</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

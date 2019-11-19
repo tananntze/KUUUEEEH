@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en" class="header">
      <head>
         <title>Kueh Menu</title>
         <meta charset="UTF-8">

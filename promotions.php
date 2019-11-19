@@ -6,7 +6,7 @@ if (!isset($_SESSION['userId'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang ="en">
+<html lang="en" class="header">
     <head>
 
         <title>Promotions Page</title>

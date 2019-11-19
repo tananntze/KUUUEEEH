@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html lang="en">
+<html lang="en" class="header">
     <head>
         <title>Kueh Checkout</title>
         <meta charset="UTF-8">
@@ -33,7 +33,7 @@ and open the template in the editor.
             <section class="container-fluid" style= 'margin-top:20px'>
                 <div class =" row sectionheader standardfont text-center">
                     <div class="col-md-12">
-                        <h2 class="fontheader">KUEH CHECKOUT (CUSTOMER DETAILS)</h2>
+                        <h1 class="fontheader">KUEH CHECKOUT (CUSTOMER DETAILS)</h1>
                     </div>
                 </div>
                 <form id="customerForm" action="process_customer_checkout.php" method="post">

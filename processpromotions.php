@@ -1,5 +1,5 @@
 <html>
-    <head>
+    <head lang="en" class="header">
         <meta charset="UTF-8">
         <title>Add New Promotion</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
