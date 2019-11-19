@@ -78,6 +78,13 @@
             $errorMsg .= "Please upload an image file!<br>";
         } 
         else if (!empty($_FILES['file_input']['name'])){
+            //$file_name = $_FILES['file_input']['tmp_name'];
+            //$allowedTypes = array(IMAGETYPE_PNG, IMAGETYPE_JPEG, IMAGETYPE_GIF);
+            //$detectedType = exif_imagetype($file_name);
+            /*if (!in_array($detectedType, $allowedTypes)) {
+                $success = false;
+                $errorMsg .= "Please upload a proper image file with .jpeg, .png or .gif extensions!<br>";
+            }*/
             $file_size = $_FILES['file_input']['size'];
             $max_size = 10240000; // VALIADATION FOR FILE SIZE BEING MORE THAN 10MB
             if (($file_size > $max_size)){
