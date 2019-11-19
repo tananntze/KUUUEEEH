@@ -33,7 +33,7 @@ and open the template in the editor.
             <section class="container-fluid" style= 'margin-top:20px'>
                 <div class =" row sectionheader standardfont text-center">
                     <div class="col-md-12">
-                        <h2 class="fontheader">KUEH CHECKOUT (CUSTOMER DETAILS)</h2>
+                        <h1 class="fontheader">KUEH CHECKOUT (CUSTOMER DETAILS)</h1>
                     </div>
                 </div>
                 <form id="customerForm" action="process_customer_checkout.php" method="post">

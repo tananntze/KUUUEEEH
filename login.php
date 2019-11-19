@@ -25,7 +25,7 @@
         <div class="wrapper fadeInDown">
             <div id="formContent">
                 <!-- Tabs Titles -->
-                <h2>STAFF LOGIN</h2>
+                <h1>STAFF LOGIN</h1>
 
                 <!-- Login Form -->
                 <form action="process_login.php" method="POST">
