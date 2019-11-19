@@ -67,7 +67,7 @@ and open the template in the editor.
             <div class="container-fluid standardfont" style= 'margin-top:20px'>
                 <section class="row justify-content-center standardfont">
                     <section class="col-md-12">
-                        <h2 class = "fontheader">MY ORDER</h2>
+                        <h1 class = "fontheader">MY ORDER</h1>
                     </section>
                     <div class="col-md-12">
                         <section id="paragraph" class="scrollTable">

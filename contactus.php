@@ -26,7 +26,7 @@
                 <section class="container-fluid" style= 'margin-top:20px'>
                     <section class =" row sectionheader standardfont text-center">
                         <section class="col-md-12">
-                            <h2 class = "fontheader">CONTACT</h2>
+                            <h1 class = "fontheader">CONTACT</h1>
                         </section>
                     </section>
                     <section class ="row justify-content-left ml-4 standardfont">

@@ -43,7 +43,7 @@ if (!isset($_SESSION['userId'])) {
     </div>
 
     <section class="container standardfont">
-        <h2 class="fontheader" id="order_header">Orders & Deliveries</h2>
+        <h1 class="fontheader" id="order_header">Orders & Deliveries</h1>
         <section class="card">
             <section class="card-body">
                 <form>
