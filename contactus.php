@@ -58,14 +58,14 @@
 
                                 <section class="form-group">
                                     
-                                    <input type="text" class="form-control"  placeholder="Enter Your Name Here" name="name" maxlength="30" required pattern='/^[a-zA-Z ][a-zA-Z]+{3,}$'>
+                                    <input type="text" class="form-control"  aria-label="Name" placeholder="Enter Your Name Here" name="name" maxlength="30" required pattern='/^[a-zA-Z ][a-zA-Z]+{3,}$'>
                                     
                                 </section>
                                 <section class="form-group">
-                                    <input type="email" class="form-control"  placeholder="Enter Your Email Address" name="email" maxlength="50" required pattern='[a-z0-9.%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'>
+                                    <input type="email" class="form-control" aria-label="Email Address" placeholder="Enter Your Email Address" name="email" maxlength="50" required pattern='[a-z0-9.%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'>
                                 </section>
                                 <section class="form-group">
-                                    <textarea class="form-control" name ="text" maxlength="200" placeholder ="Enter your message here!" required pattern="'/^[a-zA-Z][a-zA-Z\\s]+$/{3,}" rows="3"></textarea>
+                                    <textarea class="form-control" aria-label="Question here" name ="text" maxlength="200" placeholder ="Enter your message here!" required pattern="'/^[a-zA-Z][a-zA-Z\\s]+$/{3,}" rows="3"></textarea>
                                 </section>
                                 <section class =" row justify-content-center">
                                 <label><input type="submit" class="btn btn-secondary btn-block"  value="Submit"  ></label>

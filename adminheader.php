@@ -2,7 +2,7 @@
 
 <!--<head>
 
-    <!--<head>
+    <head>
         <title>Kueh Menu</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@
     <header>
         <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
             <a class="navbar-brand logocolor" href="#">KUUUEEEH</a>
-            <button class ="navbar-toggler custom-toggler" type ='button' data-toggle="collapse" data-target ="#navbar">
+            <button class ="navbar-toggler custom-toggler" aria-label="collapsible" type ='button' data-toggle="collapse" data-target ="#navbar">
                 <span class ="navbar-toggler-icon"></span>
             </button>
             <nav class ="collapse navbar-collapse" id="navbar">
