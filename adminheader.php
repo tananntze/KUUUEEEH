@@ -1,5 +1,3 @@
-<?php ?>
-
 <!--<head>
 
     <head>
@@ -21,11 +19,15 @@
         <script src="js/editadmin.js"></script>
      </head>-->
     <!--<header> -->
+
+        <!-- This is the navigation bar for all admin users. With this, it allows the prgrammer to include this file to have a standardized layout  -->
         <nav class="nav navbar navbar-expand-md bg-pink navbar-dark" aria-label="navbar">
             <a class="navbar-brand logocolor" href="#">KUUUEEEH</a>
+            <!-- This is the toggle menu bar for mobile version when website is in mobile -->
             <button class ="navbar-toggler custom-toggler" aria-label="collapsible" type ='button' data-toggle="collapse" data-target ="#navbar">
                 <span class ="navbar-toggler-icon"></span>
             </button>
+            <!-- This is the actual navigation-->
             <nav class ="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav">
                     <li class ="nav-item"><a href ="orders.php">Orders of the Day</a></li>

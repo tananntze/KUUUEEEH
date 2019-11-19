@@ -51,12 +51,12 @@ if ($success) {
     editData();
     echo "<h2>You have successfully updated!!</h2>";
     echo "<br>";
-    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary'>Back to Admin Panel</button></a>";
+    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary' aria-label='Back to Admin Panel'>Back to Admin Panel</button></a>";
 } else {
     echo "<h1>Oh No!</h1>";
     echo "<h4>The following input errors were detected:</h4>";
     echo "<p>" . $errorMsg . "</p>";
-    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary'>Back to Admin Panel</button></a>";
+    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary' aria-label='Back to Admin Panel'>Back to Admin Panel</button></a>";
 }
 
 //To update data
@@ -97,7 +97,7 @@ function editData() {
 }
 ?>
 
-<html>
+<html lang="en">
     <head>
         <title>Kueh Menu</title>
         <meta charset="UTF-8">
