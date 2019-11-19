@@ -85,7 +85,7 @@ if (!isset($_SESSION['userId'])) {
                     <form name = "addform" action="process_admin_addnew.php" onsubmit="return validateAdd()" method="post" enctype="multipart/form-data" novalidate>
                         <section class="modal-header">
                             <h4 class="modal-title">Add New Item</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close Add New Item">&times;</button>
+                            <button type="button" class="close" data-dismiss="modal" role="button" aria-label="Close Add New Item">&times;</button>
                         </section>
 
                         <section class="modal-body">
@@ -100,17 +100,17 @@ if (!isset($_SESSION['userId'])) {
                             </section>
 
                             <section class="form-group">            
-                                <label for="addName">Name</label>
+                                <label for="aname">Name</label>
                                 <input type="text" name="addName" id="addName" class="form-control" placeholder="Enter Name" required pattern="/^[a-zA-Z](?!.* {2,6})[ \w.-]{2,15}$/">
                             </section>
 
                             <section class="form-group">
-                                <label for="addDescription">Description</label>
+                                <label for="adescription">Description</label>
                                 <textarea name="addDescription" id="addDescription" class="form-control" rows="5" placeholder="Enter Description" required pattern="/[\w\s\-,.]{10,160}$/"></textarea>
                             </section>
 
                             <section class="form-group">
-                                <label for="addPrice">Price</label>
+                                <label for="aprice">Price</label>
                                 <input type="text" name="addPrice" id="addPrice" class="form-control" placeholder="Enter Price" required pattern="/^(?=.*[1-9])\d{0,2}(?:\.\d{0,2})?$/">
                             </section>
 
