@@ -94,7 +94,7 @@ and open the template in the editor.
         <!-- The Basic Kuehs -->
        <form method="post" action="#">
         <section>
-            <h1 class="fontheader" id="character">The Basic Kuehs</h1>
+            <h1 class="fontheader" id="basic">The Basic Kuehs</h1>
 
             <div class="d-flex justify-content-center flex-fill flex-wrap">
                 <?php                    
@@ -105,15 +105,15 @@ and open the template in the editor.
                     while ($row = $result->fetch_assoc())
                     {
                             ?>
-                             <figure class="imgholder">
-                                <img class="zoom" src = "<?php echo $row ['image']; ?>" alt = "">
-                                <figcaption>
-                                    <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
-                                </figcaption>
-                                <div>
-                                    <button class='btn' type='submit' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart'></i></button>
-                                </div>
-                            </figure>
+                            <div class="kuehMenu">
+                                <figure class="imgholder">
+                                    <img class="zoom" src = "<?php echo $row ['image']; ?>" alt = "">
+                                    <figcaption>
+                                        <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
+                                    </figcaption>
+                                </figure>
+                                <button class='btn' type='submit' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart fa-2x'></i></button>
+                            </div>
                             <?php 
                     }
 
@@ -136,15 +136,15 @@ and open the template in the editor.
                     while ($row = $result->fetch_assoc())
                     {             
                         ?>
-                         <figure class="imgholder">
-                            <img class="zoom" src = "<?php echo $row ['image']; ?>" alt = "">
-                            <figcaption>
-                                <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
-                            </figcaption>
-                            <div>
-                                <button class='btn' type='submit' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart'></i></button>
-                            </div>
-                        </figure>
+                        <div class="kuehMenu"> 
+                            <figure class="imgholder">
+                                <img class="zoom" src = "<?php echo $row ['image']; ?>" alt = "">
+                                <figcaption>
+                                    <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
+                                </figcaption>
+                            </figure>
+                            <button class='btn' type='submit' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart fa-2x'></i></button>
+                        </div>
                 <?php
                     }
 
@@ -167,15 +167,15 @@ and open the template in the editor.
                     while ($row = $result->fetch_assoc())
                     {
                         ?>
-                         <figure class="imgholder">
-                            <img class="zoom" src = "<?php echo $row ['image']; ?>" alt = "">
-                            <figcaption>
-                                <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
-                            </figcaption>
-                            <div>
-                                <button class='btn' type='submit' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart'></i></button>
-                            </div>
-                        </figure>
+                        <div class="kuehMenu">
+                            <figure class="imgholder">
+                                <img class="zoom" src = "<?php echo $row ['image']; ?>" alt = "">
+                                <figcaption>
+                                    <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
+                                </figcaption>
+                            </figure>
+                            <button class='btn' type='submit' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart fa-2x'></i></button>
+                        </div>
                 <?php
                     }
 

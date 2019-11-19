@@ -32,16 +32,15 @@ if (!isset($_SESSION['userId'])) {
 </head>
 
 <body class="overlay">
-    <?php include "adminheader.php";
+    <?php 
+    include "adminheader.php";
 
-    ?>
-    <section class="container standardfont">
-        <div class="container">
-            <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
-            <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
-        </div>
-
-    </section>
+?>
+    
+    <div class="container">
+        <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
+        <img src="img/BannerWhite.png" alt="Kueh Banner" class="responsive" id="bannerresize">
+    </div>
 
     <section class="container standardfont">
         <h2 class="fontheader" id="order_header">Orders & Deliveries</h2>

@@ -1,6 +1,6 @@
-<?php
+<?php ?>
 
-?>
+<!--<head>
 
     <!--<head>
         <title>Kueh Menu</title>
