@@ -1,8 +1,7 @@
-<?php
+<?php ?>
 
-?>
+<!--<head>
 
-<html>
     <head>
         <title>Kueh Menu</title>
         <meta charset="UTF-8">
@@ -20,11 +19,11 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <script src="js/editadmin.js"></script>
-     </head>
+     </head>-->
     <header>
         <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
             <a class="navbar-brand logocolor" href="#">KUUUEEEH</a>
-            <button class ="navbar-toggler custom-toggler" type ='button' data-toggle="collapse" data-target ="#navbar">
+            <button class ="navbar-toggler custom-toggler" aria-label="collapsible" type ='button' data-toggle="collapse" data-target ="#navbar">
                 <span class ="navbar-toggler-icon"></span>
             </button>
             <nav class ="collapse navbar-collapse" id="navbar">
@@ -41,4 +40,3 @@
             </nav>  
         </nav>          
     </header>
-</html>

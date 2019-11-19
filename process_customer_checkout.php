@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" class="header">
     <head>
         <title>PHP Testing on KUUUEEEH Checkout</title>
         <meta charset="UTF-8">

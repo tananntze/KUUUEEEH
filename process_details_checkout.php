@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" class="header">
     <head>
         <title>KUUUEEEH Checkout</title>
         <meta charset="UTF-8">
@@ -89,6 +90,7 @@
                     echo "<h1>Error processing checkout!</h1>";
                     echo "<h4>The following input errors were detected:</h4>";     
                     echo "<p>" . $errorMsg . "</p>";
+                    echo "<a id='btnHome' href='delivery_checkout.php' class='btn btn-primary btn-block'>Return to Delivery Details</a>";
                 } else {
                     insertCheckoutDetails($address, $postal_code, $delivery_type, $_SESSION["total"], $_SESSION["customer_email"]);
                 }
@@ -121,13 +123,13 @@
                                 <section class="col-md-12">
                                     <h2 class = "fontheader">MY ORDER</h2>
                                     <h5 class = "subheader">Customer's Name: <?php echo $_SESSION["customer_fn"] . " " . $_SESSION["customer_ln"]?></h5>
-                                    <h5 clheader">For enquiries about your order details, please contact us @+6565995599 or drop an email to Kueh_ass = "subheader">Customer's Email: <?php echo $_SESSION["customer_email"]?></h5>
-                                    <h5 class = "subfor_you@kuey4you.com to find out your orders!</h5>
+                                    <h5 class = "subheader">For enquiries about your order details, please contact us @+6565995599 or drop an email to Kueh_for_you@kuey4you.com</h5>
+                                    <h5 class = "subheader">Customer's Email: <?php echo $_SESSION["customer_email"]?></h5>
                                     <h5 class = "subheader">We will keep you informed via your contact number @+65<?php echo $_SESSION["customer_hp"]?> for the delivery updates!</h5>
                                 </section>
                                 <div class="col-md-10">
                                     <section id="paragraph" class="scrollTable standardfont">
-                                        <section id="myOrder text-center">
+                                        <section id="myOrder" class="text-center">
                                         <p id="quantity">Total Quantity: <?php echo $_SESSION["totalQty"]?></p>
                                         <?php
                                     //display message cart is empty
@@ -167,12 +169,14 @@
                                 <p id="subTotal">Subtotal: <?php echo "$" . number_format($_SESSION["subtotal"], 2)?></p>
                                 <p id="delivery">Delivery: <?php echo "$" . number_format($_SESSION["delivery"], 2)?></p>
                                 <p id="totalDel">Total: <?php echo "$" . number_format($_SESSION["total"], 2)?></p>
-                                <a href='process_successful_checkout.php' id='btnHome' class='btn btn-primary btn-block'><span class='fa fa-home'></span> Return to Home</a>        
+                                <a href='process_successful_checkout.php' id='btnHome' class='btn btn-primary btn-block'><span class='fa fa-home'></span> Return to Home</a>
+                                        </section>
+                                    </section>
                                 </div>
                             </section>
                             </div>
                         </section>
-                            <?php 
+                        <?php 
             }
             function sanitize_input($data) {   
                     $data = trim($data);   

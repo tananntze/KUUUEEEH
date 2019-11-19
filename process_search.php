@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en" class="header">
      <head>
         <title>Kueh Menu</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name ="KUUUEEEH website where you find the best kuehs">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/editadmin.css">
@@ -331,12 +330,12 @@
         //If both fields are empty
         else
         {
-            echo "<p class='searchdesign'>Please enter at least a field to search.</p>";
+            echo "<p class='searchdesign'>Please fill in at least one of the search fields.</p>";
         }
         ?>
         
         <!-- Edit modal
-            https://www.youtube.com/watch?v=mh4MVFiMZTM to retrieve and display in the fields -->
+        https://www.youtube.com/watch?v=mh4MVFiMZTM to retrieve and display in the fields -->
         <aside>
             <section class="modal fade standardfont" id="editModal">
                 <section class="modal-dialog modal-dialog-centered">
