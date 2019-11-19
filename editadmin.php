@@ -85,7 +85,7 @@ if (!isset($_SESSION['userId'])) {
                     <form name = "addform" action="process_admin_addnew.php" onsubmit="return validateAdd()" method="post" enctype="multipart/form-data" novalidate>
                         <section class="modal-header">
                             <h4 class="modal-title">Add New Item</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <button type="button" class="close" data-dismiss="modal" role="button">&times;</button>
                         </section>
 
                         <section class="modal-body">
