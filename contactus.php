@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang ="en" class="header">
     <head>
         <title>Contact Us</title>
