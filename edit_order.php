@@ -157,7 +157,7 @@ getCheckoutDetails();
                     <input type="number" name="postal_code" class="form-control" id="postal_code" value=<?php echo $postal_code; ?> required>
                 </div>
 
-                <table>
+                <table class="table table-hover table-responsive">
                     <thead>
                         <tr class="d-flex">
                             <th class="col-4">Prod Id</th>
