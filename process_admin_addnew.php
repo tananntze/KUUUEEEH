@@ -65,21 +65,22 @@ if (empty($_POST["addPrice"])) {
 //Setting variables
 $maxfilesize = 2048000; //MAX File Size 2MB allowed file size
 $allowed =  array('jpg','jpeg'); //allowed extensions
-$filetype = pathinfo($_FILES['insertImg']['name'], PATHINFO_EXTENSION); //file extension
-           
+$filetype = pathinfo($_FILES['insertImg']['name'], PATHINFO_EXTENSION);
+
 if(isset($_POST['submit']))
 {
     //If there is no files
-    if (empty($_FILES['insertImg']['name']) || $_FILES['insertImg']['name'] = "")
+    if (empty($_FILES['insertImg']['name']) || $_FILES['insertImg']['name'] == "")
     {
         $ierrorMsg .= "Please insert a file.";
+        $isuccess = false;  
     }
     
     //If a file is included
     else
     {
         //Ensure the size is less than maxfilesize
-        if (filesize($_FILES['insertImg']['name']) > $maxfilesize)
+        if ($_FILES['insertImg']['size'] > $maxfilesize)
         {
             $ierrorMsg .= "Max file size exceeded. Please upload a smaller file.";
             $isuccess = false;        
@@ -88,7 +89,7 @@ if(isset($_POST['submit']))
         //Ensure only certain file extesions are accepted.
         else if (!in_array($filetype,$allowed))
         {
-            $ierrorMsg .= "File extension not accepted. Please upload a file with either jpg pr jpeg extension.";
+            $ierrorMsg .= "File extension not accepted. Please upload a file with either jpg or jpeg extension.";
             $isuccess = false;  
         }
         
@@ -96,22 +97,22 @@ if(isset($_POST['submit']))
         {
             // Where the file is going to be stored
             if (($_POST['addCategory']) == "Kueh with Character") {
-                $target_dir = "img/Kueh with Character/"; //target folder
+                $target_dir = "img/Kueh_with_Character/"; //target folder
             } elseif (($_POST['addCategory']) == "The Basic Kuehs") {
 
-                $target_dir = "img/The Basic Kuehs/"; //target folder
+                $target_dir = "img/The_Basic_Kuehs/"; //target folder
             } else {
-                $target_dir = "img/The Heavyweight Kuehs/"; //target folder
+                $target_dir = "img/The_Heavyweight_Kuehs/"; //target folder
             }
 
-            //$file = $_FILES['insertImg']['name']; //creating file path
-            //$path = pathinfo($file);
-            // $filename = $path['filename'];
-            //$ext = $path['extension'];
-            // $temp_name = $_FILES['insertImg']['tmp_name'];
-            // $path_filename_ext = $target_dir . $filename . "." . $ext;
-            // $insertImg = $path_filename_ext; //declaring insertImg = file path 
-            //move_uploaded_file($temp_name, $path_filename_ext); //move the image into the folder
+            $file = $_FILES['insertImg']['name']; //creating file path
+            $path = pathinfo($_FILES['insertImg']['name']);
+            $filename = $path['filename'];
+            $ext = $filetype;
+            $temp_name = $_FILES['insertImg']['tmp_name'];
+            $path_filename_ext = $target_dir . $filename . "." . $ext;
+            $insertImg = $path_filename_ext; //declaring insertImg = file path 
+            move_uploaded_file($temp_name, $path_filename_ext); //move the image into the folder
         }
     }
 }
@@ -120,7 +121,6 @@ if(isset($_POST['submit']))
 if ($nsuccess && $dsuccess && $psuccess && $isuccess) {
     saveFoodItemToDB();
     echo "<h2>Your item, </h2>" . $addName . "<h2>have successfully added!!</h2>";
-    echo "$target_dir";
     echo "<br>";
     echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary'>Back to Admin Panel</button></a>";
 } else {

@@ -116,7 +116,7 @@ if (!isset($_SESSION['userId'])) {
                             <p>Insert Image</p>
                             <section class="custom-file">
                                 <label class="custom-file-label" for="insertImg">Choose file</label>
-                                <input type="file" class="custom-file-input" name="insertImg" id="insertImg" accept="image/*">
+                                <input type="file" class="custom-file-input" name="insertImg" id="insertImg">
                             </section>
                         </section>
 
