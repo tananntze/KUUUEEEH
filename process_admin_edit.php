@@ -26,13 +26,13 @@ if (isset($_POST['update'])) {
         // Where the file is going to be stored
         if (($_POST['editCategory']) == "Kueh with Character") {
 
-            $target_dir = "img/Kueh with Character/"; //target folder
+            $target_dir = "img/Kueh_with_Character/"; //target folder
         } elseif (($_POST['editCategory']) == "The Basic Kuehs") {
 
-            $target_dir = "img/The Basic Kuehs/"; //target folder
+            $target_dir = "img/The_Basic_Kuehs/"; //target folder
         } else {
 
-            $target_dir = "img/The Heavyweight Kuehs/"; //target folder
+            $target_dir = "img/The_Heavyweight_Kuehs/"; //target folder
         }
 
         $file = $_FILES['updateImg']['name']; //creating file path
@@ -51,12 +51,12 @@ if ($success) {
     editData();
     echo "<h2>You have successfully updated!!</h2>";
     echo "<br>";
-    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary'>Back to Admin Panel</button></a>";
+    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary' aria-label='Back to Admin Panel'>Back to Admin Panel</button></a>";
 } else {
     echo "<h1>Oh No!</h1>";
     echo "<h4>The following input errors were detected:</h4>";
     echo "<p>" . $errorMsg . "</p>";
-    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary'>Back to Admin Panel</button></a>";
+    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary' aria-label='Back to Admin Panel'>Back to Admin Panel</button></a>";
 }
 
 //To update data
@@ -97,7 +97,7 @@ function editData() {
 }
 ?>
 
-<html>
+<html lang="en">
     <head>
         <title>Kueh Menu</title>
         <meta charset="UTF-8">
