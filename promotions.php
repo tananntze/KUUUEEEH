@@ -13,11 +13,6 @@ if (!isset($_SESSION['userId'])) {
         <meta charset="UTF-8" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" property="">
         <meta name ="KUUUEEEH website where you find the best kuehs" content="" property="">
-
-        <meta charset="UTF-8">
-        <title>Add New Promotion</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/editadmin.css">
