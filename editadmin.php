@@ -100,23 +100,23 @@ if (!isset($_SESSION['userId'])) {
 
                             <section class="form-group">
                                 <label for="aname">Name</label>
-                                <input type="text" name="addName" id="addName" class="form-control" placeholder="Enter Name" required>
+                                <input type="text" name="addName" id="addName" class="form-control" placeholder="Enter Name" required pattern="/^[a-zA-Z](?!.* {2,6})[ \w.-]{2,15}$/">
                             </section>
 
                             <section class="form-group">
                                 <label for="adescription">Description</label>
-                                <textarea name="addDescription" id="addDescription" class="form-control" rows="5" placeholder="Enter Description" required></textarea>
+                                <textarea name="addDescription" id="addDescription" class="form-control" rows="5" placeholder="Enter Description" required pattern="/[\w\s\-,.]{10,160}$/"></textarea>
                             </section>
 
                             <section class="form-group">
                                 <label for="aprice">Price</label>
-                                <input type="text" name="addPrice" id="addPrice" class="form-control" placeholder="Enter Price" required>
+                                <input type="text" name="addPrice" id="addPrice" class="form-control" placeholder="Enter Price" required pattern="/^(?=.*[1-9])\d{0,2}(?:\.\d{0,2})?$/">
                             </section>
 
                             <p>Insert Image</p>
                             <section class="custom-file">
                                 <label class="custom-file-label" for="insertImg">Choose file</label>
-                                <input type="file" class="custom-file-input" name="insertImg" id="insertImg">
+                                <input type="file" class="custom-file-input" name="insertImg" id="insertImg" accept="image/*">
                             </section>
                         </section>
 

@@ -20,7 +20,7 @@ $csuccess = $nsuccess = $dsuccess = $psuccess = $isuccess = true; //Category, na
 $addCategory = sanitize_input($_POST["addCategory"]);
 
 
-//addName
+//addName 
 if (empty($_POST["addName"])) 
 {
     $nerrorMsg .= "Name is required for the kueh.<br>";
@@ -46,7 +46,7 @@ if (empty($_POST["addDescription"]))
 else 
 {
     $addDescription = sanitize_input($_POST["addDescription"]);
-    if (!preg_match("/^[\w\-,.]{10,280}$/", $addDescription))
+    if (!preg_match("/[\w\s\-,.]{10,160}$/", $addDescription))
     {
         $derrorMsg .= "Description given is not a valid format.<br>";
         $dsuccess = false;
@@ -77,26 +77,31 @@ else
 //Setting variables
 $maxfilesize = 2048000; //MAX File Size 2MB allowed file size
 $allowed =  array('jpg','jpeg'); //allowed extensions
-$ext = pathinfo($_FILES['insertImg']['name'], PATHINFO_EXTENSION); //file extension
-
+$filetype = pathinfo($_FILES['insertImg']['name'], PATHINFO_EXTENSION); //file extension
+           
 if(isset($_POST['submit']))
 {
-    if (empty($_FILES['insertImg']['name']) || $_FILES['insertImg']['name']!="")
+    //If there is no files
+    if (empty($_FILES['insertImg']['name']) || $_FILES['insertImg']['name'] = "")
     {
         $ierrorMsg .= "Please insert a file.";
     }
     
+    //If a file is included
     else
     {
+        //Ensure the size is less than maxfilesize
         if (filesize($_FILES['insertImg']['name']) > $maxfilesize)
         {
             $ierrorMsg .= "Max file size exceeded. Please upload a smaller file.";
             $isuccess = false;        
         }
         
-        else if (!in_array($ext,$allowed))
+        //Ensure only certain file extesions are accepted.
+        else if (!in_array($filetype,$allowed))
         {
             $ierrorMsg .= "File extension not accepted. Please upload a file with either jpg pr jpeg extension.";
+            $isuccess = false;  
         }
         
         else
@@ -172,11 +177,14 @@ function saveFoodItemToDB()
     $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
 
     //Check connection
-    if ($conn->connect_error) {
+    if ($conn->connect_error) 
+    {
         $errorMsg = "Connection failed:" . $conn->connect_error;
         $success = false;
-    } else {
-        session_start();
+    } 
+    else 
+    {
+        //session_start();
         $userId = $_SESSION['userId']; //retrieve userId from session
         $sql = $conn->prepare("INSERT INTO product (image, description, category, name, price, user_userId) VALUES (?, ?, ?, ?, ?, ?)");
         $sql->bind_param("ssssdi", $insertImg, $addDescription, $addCategory, $addName, $addPrice, $userId);
