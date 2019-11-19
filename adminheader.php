@@ -1,9 +1,8 @@
-<?php
+<?php ?>
 
-?>
+<!--<head>
 
-<html>
-    <head>
+    <!--<head>
         <title>Kueh Menu</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +19,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <script src="js/editadmin.js"></script>
-     </head>
+     </head>-->
     <header>
         <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
             <a class="navbar-brand logocolor" href="#">KUUUEEEH</a>
@@ -41,4 +40,3 @@
             </nav>  
         </nav>          
     </header>
-</html>

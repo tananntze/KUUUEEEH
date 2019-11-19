@@ -13,10 +13,10 @@ if (!isset($_SESSION['userId'])) {
 }
 ?>
 
-<html class="header">
+<html lang="en" class="header">
 
 <head>
-    <title>Kueh Menu</title>
+    <title>Orders and Deliveries</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -32,13 +32,14 @@ if (!isset($_SESSION['userId'])) {
 </head>
 
 <body class="overlay">
-    <?php include "adminheader.php"; 
+    <?php 
+    include "adminheader.php";
 
 ?>
     
     <div class="container">
         <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
-        <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
+        <img src="img/BannerWhite.png" alt="Kueh Banner" class="responsive" id="bannerresize">
     </div>
 
     <section class="container standardfont">
@@ -49,13 +50,13 @@ if (!isset($_SESSION['userId'])) {
                     <div class="row">
                         <div class="col-4">
                             <section class="form-group">
-                                <label for="OrderId">Order Id</label>
+                                <label for="orderId">Order Id</label>
                                 <input type="text" name="orderId" id="orderId" class="form-control" value="" placeholder="Enter Order Id">
                             </section>
                         </div>
 
                         <div class="col-4">
-                            <button type="submit" name="submit" value="search" id="submit" class="btn btn-primary"><span class="fas fa-search"></span> Search</button>
+                            <button type="submit" name="submit" value="search" id="submit" class="btn btn-primary" aria-label="Submit Search"><span class="fas fa-search"></span> Search</button>
                             <a href="#" class="btn btn-danger"><span class="fas fa-sync-alt"></span> Clear</a>
                         </div>
                     </div>
@@ -93,8 +94,8 @@ if (!isset($_SESSION['userId'])) {
                             <td class="col-4 data"><?php echo $row['status']; ?></td>
                             <td class="col-4 data"><?php echo $row['totalPrice']; ?></td>
                             <td class="col-3">
-                                <a href="edit_order.php?orderId=<?php echo $orderId ?>" class="edit"><span class="fa fa-edit">Edit</span></a> <br>
-                                <a href="delete_order.php?orderId=<?php echo $orderId ?>" class="delete"><span class="fas fa-trash-alt"> Delete</span></a></td>
+                                <a href="edit_order.php?orderId=<?php echo $orderId ?>" class="edit" aria-label="Edit Order"><span class="fa fa-edit">Edit</span></a> <br>
+                                <a href="delete_order.php?orderId=<?php echo $orderId ?>" class="delete" aria-label="Delete Order"><span class="fas fa-trash-alt"> Delete</span></a></td>
 
                         </tr>
                     <?php
@@ -105,7 +106,7 @@ if (!isset($_SESSION['userId'])) {
                 </tbody>
             </table>
         </section>
-
+    </section>                
 
 </body>
 

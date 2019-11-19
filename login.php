@@ -29,8 +29,8 @@
 
                 <!-- Login Form -->
                 <form action="process_login.php" method="POST">
-                    <input type="email" id="email" class="fadeIn second" name="email" placeholder="Email Address" required>
-                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password" required>
+                    <input type="email" id="email" class="fadeIn second" name="email" placeholder="Email Address" aria-label="email" required>
+                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password" aria-label="password" required>
                     <input type="submit" class="fadeIn fourth" value="Log In">
                 </form>
 

@@ -75,13 +75,13 @@ getCheckoutDetails();
 
 ?>
 
-<html>
+<html lang="en">
 
 <head>
     <title>Kueh Menu</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="KUUUEEEH website where you find the best kuehs">
+    <meta name="KUUUEEEH website where you find the best kuehs" content="width=device-width">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/editOrder.css">
@@ -98,7 +98,7 @@ getCheckoutDetails();
         <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
     </div>
 
-    <div class="row justify-content-center standardfont">
+    <main class="row justify-content-center standardfont">
         <div class="col-md-12">
             <form method="POST" action="update_order_details.php">
                 <div class="form-group">
@@ -118,7 +118,7 @@ getCheckoutDetails();
 
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input type="phone" name="phone" class="form-control" id="phone" required value=<?php echo $phone; ?>>
+                    <input type="tel" name="phone" class="form-control" id="phone" required value=<?php echo $phone; ?>>
                 </div>
 
                 <div class="form-group">
@@ -153,7 +153,7 @@ getCheckoutDetails();
 
                 <div class="form-group">
                     <label for="postal_code">Postal</label>
-                    <input type="phone" name="postal_code" class="form-control" id="postal_code" value=<?php echo $postal_code; ?> required>
+                    <input type="number" name="postal_code" class="form-control" id="postal_code" value=<?php echo $postal_code; ?> required>
                 </div>
 
                 <table>
@@ -163,7 +163,7 @@ getCheckoutDetails();
                             <th class="col-8">Name of Kueh</th>
                             <th class="col-7">Category</th>
                             <th class="col-4">Quantity</th>
-                           
+
 
                         </tr>
                     </thead>
@@ -175,21 +175,21 @@ getCheckoutDetails();
                         //echo $orderId;
                         $sql = "SELECT product.*,product_checkout.* FROM product, product_checkout WHERE checkout_details_orderId='$orderId' AND prodId=product_prodId";
                         $result = $conn->query($sql);
-                        while($row = $result->fetch_assoc()){
-                        ?>
-                        <tr class="table-light d-flex">
-                            <td class="col-4 data"><?php echo $row['product_prodId']; ?></td>
-                            <td class="col-8 data"><?php echo $row['name']; ?></td>
-                            <td class="col-7 data"><?php echo $row['category']; ?></td>
-                            <td class="col-4 data"><?php echo $row['kueh_quantity']; ?></td>
-                           
+                        while ($row = $result->fetch_assoc()) {
+                            ?>
+                            <tr class="table-light d-flex">
+                                <td class="col-4 data"><?php echo $row['product_prodId']; ?></td>
+                                <td class="col-8 data"><?php echo $row['name']; ?></td>
+                                <td class="col-7 data"><?php echo $row['category']; ?></td>
+                                <td class="col-4 data"><?php echo $row['kueh_quantity']; ?></td>
 
-                        </tr>
+
+                            </tr>
                         <?php
                         }
                         $result->free_result();
                         $conn->close();
-                        ?>                            
+                        ?>
                     </tbody>
 
 
@@ -202,7 +202,7 @@ getCheckoutDetails();
 
 
         </div>
-    </div>
+    </main>
 
 
 
