@@ -20,8 +20,8 @@
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <script src="js/editadmin.js"></script>
      </head>-->
-    <header>
-        <nav class="nav navbar navbar-expand-md bg-pink navbar-dark"  role ="navigation">
+    <!--<header> -->
+        <nav class="nav navbar navbar-expand-md bg-pink navbar-dark" aria-label="navbar">
             <a class="navbar-brand logocolor" href="#">KUUUEEEH</a>
             <button class ="navbar-toggler custom-toggler" aria-label="collapsible" type ='button' data-toggle="collapse" data-target ="#navbar">
                 <span class ="navbar-toggler-icon"></span>
@@ -34,9 +34,9 @@
                 </ul>
                 <ul class ="nav navbar-nav ml-auto">
                     <li class="nav navbar-nav">
-                        <a class ="nav-link" href="process_logout.php"><span class="fas fa-directions">Logout</span></a>
+                        <a class ="nav-link" aria-label="logout" href="process_logout.php"><span class="fas fa-directions">Logout</span></a>
                     </li>
                 </ul>
             </nav>  
         </nav>          
-    </header>
+    <!--</header>-->

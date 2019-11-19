@@ -2,6 +2,27 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group/>
+=======
+        <group>
+<<<<<<< HEAD
+            <file>file:/D:/XAMPP/htdocs/KUUUEEEH/process_admin_addnew.php</file>
+            <file>file:/D:/XAMPP/htdocs/KUUUEEEH/promotions.php</file>
+            <file>file:/D:/XAMPP/htdocs/KUUUEEEH/process_contactus.php</file>
+            <file>file:/D:/XAMPP/htdocs/KUUUEEEH/kuehmenuall.php</file>
+            <file>file:/D:/XAMPP/htdocs/KUUUEEEH/processpromotions.php</file>
+            <file>file:/D:/XAMPP/htdocs/KUUUEEEH/editadmin.php</file>
+            <file>file:/D:/XAMPP/htdocs/KUUUEEEH/contactus.php</file>
+            <file>file:/D:/XAMPP/htdocs/KUUUEEEH/edit_order.php</file>
+            <file>file:/D:/XAMPP/htdocs/KUUUEEEH/process_admin_edit.php</file>
+=======
+
+            <file>file:/D:/xampp/htdocs/IT1004-Project/KUUUEEEH/editadmin.php</file>
+            <file>file:/C:/xampp/htdocs/1004-Project/KUUUEEEH/delivery_checkout.php</file>
+
+>>>>>>> 69d54d8ae9d8178dc5dcec1c2d681e7d4929aa06
+        </group>
+>>>>>>> 86f641f3b329e50b08eaeae030b38efbb6d810db
     </open-files>
 </project-private>

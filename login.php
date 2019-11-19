@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <title>Home</title>
+        <title>Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name ="KUUUEEEH website where you find the best kuehs" content="Founded in 2019 by an avid kueh lover, KUUUEEEH has been offering a tempting array of sumptuous kuehs till today! Customers have been savoring our kuehs through our unique blend of flavors and we are proud that our kuehs are generally well-received. Still we are 100% committed in continuously combining new flavors with tradition and improving based on customer's feedback.">
@@ -40,8 +40,9 @@
                 </div> -->
             </div>
         </div>
+        <?php include "footer_include.php" ?>
     </body>
 
-    <?php include "footer_include.php" ?>
+   
 
 </html>

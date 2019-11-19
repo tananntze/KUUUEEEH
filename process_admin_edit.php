@@ -1,19 +1,11 @@
-<head>
-    <meta charset="UTF-8">
-    <title>Process Contact Us Form</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/promotions.css"/> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>   
-    <script defer src="js/main.js"></script>
-</head>
-
-
 
 <?php
+
+session_start();
+if (!isset($_SESSION['userId'])) {
+    header("Location: login.php");
+}
+
 include "adminheader.php";
 // Constants for accessing our DB:
 define("DBHOST", "161.117.122.252");
@@ -59,12 +51,12 @@ if ($success) {
     editData();
     echo "<h2>You have successfully updated!!</h2>";
     echo "<br>";
-    echo "<a href ='editadmin.php'><button type='button' class='btn btn-default'>Back to Admin Panel</button></a>";
+    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary'>Back to Admin Panel</button></a>";
 } else {
     echo "<h1>Oh No!</h1>";
     echo "<h4>The following input errors were detected:</h4>";
     echo "<p>" . $errorMsg . "</p>";
-    echo "<a href ='editadmin.php'><button type='button' class='btn btn-default'>Back to Admin Panel</button></a>";
+    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary'>Back to Admin Panel</button></a>";
 }
 
 //To update data
@@ -103,3 +95,25 @@ function editData() {
         }
     }
 }
+?>
+
+<html>
+    <head>
+        <title>Kueh Menu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name ="KUUUEEEH website where you find the best kuehs">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/editadmin.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <script src="js/editadmin.js"></script>
+     </head>
+</html>

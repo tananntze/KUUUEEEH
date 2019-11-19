@@ -32,81 +32,73 @@ if (!isset($_SESSION['userId'])) {
 </head>
 
 <body class="overlay">
-    <?php 
+    <?php
     include "adminheader.php";
 
-?>
-    
-    <div class="container">
+    ?>
+
+    <header class="container">
         <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
         <img src="img/BannerWhite.png" alt="Kueh Banner" class="responsive" id="bannerresize">
-    </div>
+    </header>
 
-    <section class="container standardfont">
+    <section class="container standardfont card card-body">
         <h1 class="fontheader" id="order_header">Orders & Deliveries</h1>
-        <section class="card">
-            <section class="card-body">
-                <form>
-                    <div class="row">
-                        <div class="col-4">
-                            <section class="form-group">
-                                <label for="orderId">Order Id</label>
-                                <input type="text" name="orderId" id="orderId" class="form-control" value="" placeholder="Enter Order Id">
-                            </section>
-                        </div>
-
-                        <div class="col-4">
-                            <button type="submit" name="submit" value="search" id="submit" class="btn btn-primary" aria-label="Submit Search"><span class="fas fa-search"></span> Search</button>
-                            <a href="#" class="btn btn-danger"><span class="fas fa-sync-alt"></span> Clear</a>
-                        </div>
+        <form>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <!--<label for="orderId">Order Id</label> -->
+                        <input type="text" name="orderId" id="orderId" class="form-control" aria-label="search" placeholder="Enter Order Id">
                     </div>
-                </form>
-            </section>
-        </section>
-    </section>
+                </div>
 
-    <section class="container standardfont">
-        <section class="card">
-            <table class="table table-hover table-responsive">
-                <thead>
-                    <tr class="d-flex">
-                        <th class="col-2">OrderId</th>
-                        <th class="col-6">Customer Email</th>
-                        <th class="col-3">Delivery Mode</th>
-                        <th class="col-4">Status</th>
-                        <th class="col-4">Total</th>
-                        <th class="col-3">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    include "dbConfig.php";
-                    $conn = connectToDB();
-                    $sql = "SELECT * FROM checkout_details";
-                    $result = $conn->query($sql);
-                    while ($row = $result->fetch_assoc()) {
-                        $orderId = $row['orderId'];
-                        ?>
-                        <tr class="table-light d-flex">
-                            <td class="col-2 data"><?php echo $orderId ?></td>
-                            <td class="col-6 data"><?php echo $row['customer_email']; ?></td>
-                            <td class="col-3 data"><?php echo $row['deliveryType']; ?></td>
-                            <td class="col-4 data"><?php echo $row['status']; ?></td>
-                            <td class="col-4 data"><?php echo $row['totalPrice']; ?></td>
-                            <td class="col-3">
-                                <a href="edit_order.php?orderId=<?php echo $orderId ?>" class="edit" aria-label="Edit Order"><span class="fa fa-edit">Edit</span></a> <br>
-                                <a href="delete_order.php?orderId=<?php echo $orderId ?>" class="delete" aria-label="Delete Order"><span class="fas fa-trash-alt"> Delete</span></a></td>
+                <div class="col-4">
+                    <button type="submit" name="submit" id="submit" class="btn btn-primary" aria-label="Submit Search"><span class="fas fa-search"></span> Search</button>
+                    <button type="submit" name="clear" id="clear" class="btn btn-danger"><span class="fas fa-sync-alt"></span> Clear</button>
+                </div>
+            </div>
+        </form>
 
-                        </tr>
-                    <?php
-                    }
-                    $result->free_result();
-                    $conn->close();
+        <table class="table table-hover table-responsive">
+            <thead>
+                <tr class="d-flex">
+                    <th class="col-2">OrderId</th>
+                    <th class="col-6">Customer Email</th>
+                    <th class="col-3">Delivery Mode</th>
+                    <th class="col-4">Status</th>
+                    <th class="col-4">Total</th>
+                    <th class="col-3">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                include "dbConfig.php";
+                $conn = connectToDB();
+                $sql = "SELECT * FROM checkout_details";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
+                    $orderId = $row['orderId'];
                     ?>
-                </tbody>
-            </table>
-        </section>
-    </section>                
+                    <tr class="table-light d-flex">
+                        <td class="col-2 data"><?php echo $orderId ?></td>
+                        <td class="col-6 data"><?php echo $row['customer_email']; ?></td>
+                        <td class="col-3 data"><?php echo $row['deliveryType']; ?></td>
+                        <td class="col-4 data"><?php echo $row['status']; ?></td>
+                        <td class="col-4 data"><?php echo $row['totalPrice']; ?></td>
+                        <td class="col-3">
+                            <a href="edit_order.php?orderId=<?php echo $orderId ?>" class="edit" aria-label="Edit Order"><span class="fa fa-edit">Edit</span></a> <br>
+                            <a href="delete_order.php?orderId=<?php echo $orderId ?>" class="delete" aria-label="Delete Order"><span class="fas fa-trash-alt"> Delete</span></a></td>
+
+                    </tr>
+                <?php
+                }
+                $result->free_result();
+                $conn->close();
+                ?>
+            </tbody>
+        </table>
+    </section>
 
 </body>
 
