@@ -58,6 +58,7 @@
                 echo "<h1>Error processing checkout!</h1>";
                 echo "<h4>The following input errors were detected:</h4>";     
                 echo "<p>" . $errorMsg . "</p>";
+                echo "<a id='btnCustomer' href='customer_checkout.php' class='btn btn-primary btn-block'><span class='fa fa-arrow-circle-left'></span> Return to Customer's Checkout</a>";
             } else { //Successful form submission, add to database first then move on to Delivery Details page
                 $conn = connectToDB();
                 $sql = "SELECT * FROM p1_1.customer WHERE email='$email'";
