@@ -73,13 +73,16 @@
         //INCLUDE THE DB UPLOAD INPUT HERE//
 
 
-        if (empty($_FILES['file_input']['name'])) { //check if the image file has uploaded or not
+        if (empty($_FILES['file_input']['name'])) 
+        { //check if the image file has uploaded or not
             $success = false;
             $errorMsg .= "Please upload an image file!<br>";
         } 
         //UPLOAD image database file CODE is below here!//
-        if (isset($_POST['submit'])) {
-            if (($_FILES['file_input']['name'] != "")) {
+        if (isset($_POST['submit'])) 
+        {
+            if (($_FILES['file_input']['name'] != "")) 
+            {
                 // Where the file is going to be stored
                 $target_dir = "img/banner/"; //target folder 
                 $file = $_FILES['file_input']['name']; //creating file path
@@ -91,24 +94,35 @@
                 $file_input = $path_filename_ext; //declaring file_input = file path 
                 move_uploaded_file($temp_name, $path_filename_ext); //move the image into the folder
             }
-        } else if (!empty($_FILES['file_input']['name'])) { //PHP's validation of checking if file uploaded is a file with image extensions, Credited By: https://stackoverflow.com/questions/6755192/how-to-check-uploaded-file-type-in-php
+        } 
+        
+        else if (!empty($_FILES['file_input']['name'])) 
+        { //PHP's validation of checking if file uploaded is a file with image extensions, Credited By: https://stackoverflow.com/questions/6755192/how-to-check-uploaded-file-type-in-php
             $file_name = ($_FILES['file_input']['tmp_name']);
             $allowedTypes = array(IMAGETYPE_PNG, IMAGETYPE_JPEG, IMAGETYPE_GIF); // TAKE note the MAX cap for PHP IMAGE files 2MB
             $detectedType = exif_imagetype($file_name);
-            if (!in_array($detectedType, $allowedTypes)) {
+            if (!in_array($detectedType, $allowedTypes)) 
+            {
                 $success = false;
                 $errorMsg .= "Please upload a proper image file with .jpeg, .png or .gif extensions!<br>";
             } 
-        } else if (!empty($_FILES['file_input']['name'])) {
-                $file_size = $_FILES['file_input']['size'];
-                $max_size = 10240000; // VALIADATION FOR FILE SIZE BEING MORE THAN 10MB
-                if (($file_size > $max_size)) {
-                    $errorMsg .= "File size must not exceed 10MB please resize and reupload thank you!";     
-                }          
-            }
+        } 
+        
+        else if (!empty($_FILES['file_input']['name'])) 
+        {
+            $file_size = $_FILES['file_input']['size'];
+            $max_size = 10240000; // VALIADATION FOR FILE SIZE BEING MORE THAN 10MB
+            if (($file_size > $max_size)) 
+            {
+                $errorMsg .= "File size must not exceed 10MB please resize and reupload thank you!";     
+            }          
+        }
+
             //UPLOAD image database file CODE is below here!//
-            if (isset($_POST['submit'])) {
-                if (($_FILES['file_input']['name'] != "")) {
+            if (isset($_POST['submit'])) 
+            {
+                if (($_FILES['file_input']['name'] != "")) 
+                {
                     // Where the file is going to be stored
                     $target_dir = "img/banner/"; //target folder 
                     $file = $_FILES['file_input']['name']; //creating file path
@@ -121,17 +135,23 @@
                     move_uploaded_file($temp_name, $path_filename_ext); //move the image into the folder
                 }
             }
-            if (!$success) {
+            
+            if (!$success) 
+            {
                 echo "<h1>Error processing promotions!</h1>";
                 echo "<h4>The following input errors were detected:</h4>";
                 echo "<p>" . $errorMsg . "</p>";
-            } else {
+            } 
+            
+            else 
+            {
                 connectToDB();
                 echo "<h1>Successfully added KUEH Promotion!</h1>";
                 echo "<a href='promotions.php' class='btn btn-large' role='button'>Return to Promotions</a>";
             }
 
-            function sanitize_input($data) {
+            function sanitize_input($data) 
+            {
                 $data = trim($data);
                 $data = stripslashes($data);
                 $data = htmlspecialchars($data);

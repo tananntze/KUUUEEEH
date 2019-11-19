@@ -95,7 +95,7 @@ getCheckoutDetails();
     <?php include "adminheader.php" ?>
     <div class="container">
         <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
-        <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
+        <img src="img/BannerWhite.png" alt="" class="responsive" id="bannerresize">
     </div>
 
     <main class="row justify-content-center standardfont">
@@ -157,7 +157,7 @@ getCheckoutDetails();
                     <input type="number" name="postal_code" class="form-control" id="postal_code" value=<?php echo $postal_code; ?> required>
                 </div>
 
-                <table>
+                <table class="table table-hover table-responsive">
                     <thead>
                         <tr class="d-flex">
                             <th class="col-4">Prod Id</th>

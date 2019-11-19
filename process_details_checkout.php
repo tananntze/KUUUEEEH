@@ -90,7 +90,7 @@
                     echo "<h1>Error processing checkout!</h1>";
                     echo "<h4>The following input errors were detected:</h4>";     
                     echo "<p>" . $errorMsg . "</p>";
-                    echo "<a id='btnHome' href='delivery_checkout.php' class='btn btn-primary btn-block'>Return to Delivery Details</a>";
+                    echo "<a id='btnHome' href='delivery_checkout.php' class='btn btn-primary btn-block'><span class='fa fa-arrow-circle-left'></span> Return to Delivery Details</a>";
                 } else {
                     insertCheckoutDetails($address, $postal_code, $delivery_type, $_SESSION["total"], $_SESSION["customer_email"]);
                 }
@@ -151,7 +151,7 @@
                                             echo "<tr>";
                                             for ($c = 1; $c < 7; $c++) {
                                                 if ($c == 1) {
-                                                    echo "<td><img id='imgKueh' src='" . $kueh_array[$c] . "' alt='Kueh Order'/></td>";
+                                                    echo "<td><img id='imgKueh".$row."' class='imgKueh' src='".$kueh_array[$c]."' alt='Kueh Order'/></td>";
                                                 } else if ($c == 4) {
                                                     echo "<td>$" . number_format($kueh_array[$c], 2) . "/pc";
                                                 } else if ($c == 6) {

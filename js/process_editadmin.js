@@ -69,7 +69,7 @@ function validateAdd()
         return false;  
     }
     
-    if (adddesc === "" || !(/^[\w-,.]{10,280}$/.test(fn))) 
+    if (adddesc === "" || !(/[\w\s\-,.]{10,160}$/.test(fn))) 
     {
         alert("Description is invalid.");
         return false;  
@@ -80,4 +80,6 @@ function validateAdd()
         alert("Price is invalid.");
         return false;  
     }
+    
+    
 }
