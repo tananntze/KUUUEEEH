@@ -99,6 +99,7 @@ getCheckoutDetails();
     </div>
 
     <main class="row justify-content-center standardfont">
+        <h1 class="fontheader" id="edit_order">Edit Order</h1>
         <div class="col-md-12">
             <form method="POST" action="update_order_details.php">
                 <div class="form-group">
