@@ -1,5 +1,10 @@
 <?php
 
+session_start();
+if (!isset($_SESSION['userId'])) {
+    header("Location: login.php");
+}
+
 include "adminheader.php";
 // Constants for accessing our DB:
 define("DBHOST", "161.117.122.252");
