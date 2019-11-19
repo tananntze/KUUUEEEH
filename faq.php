@@ -1,10 +1,10 @@
-<html class="header">
+<html lang ="en"class="header">
 
     <head>
         <title>FAQ</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name ="KUUUEEEH website where you find the best kuehs">
+        <meta name ="KUUUEEEH website where you find the best kuehs" content="">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/shoppingcart.css"/> 
@@ -18,23 +18,16 @@
     <body class="overlay">
         <?php include "header.php";
         ?>
-
-        <div class="container">
+        <section class="container">
             <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
             <img src="img/Banner - White.png" alt="bannerimg" class="responsive" id="bannerresize">
-        </div>
-
-        <section>
+        </section>
+        <main>
             <div class="container-fluid">
-
                 <div class =" row sectionheader standardfont text-center pt-4">
-
                     <div class="col-md-12">
-
                         <h2 class = fontheader>FAQ</h2>
-
                     </div>
-
                 </div>
                 <section>
                     <div class ="row justify-content-center standardfont pb-5">
@@ -66,7 +59,6 @@
                                             <p>At KUUUEEEH, we use ingredients that are natural and our kuehs are always freshly made from the oven.</p>
                                             <p>Uniquely to our kueh shop, our kuehs do not contain preservatives, artificial flavors and contains less sugar and oil.</p>
                                             <p>This is in part of our way of ensuring our kuehs are delicious yet promoting healthy lifestyle in Singapore to our valued customers!</p>
-
                                         </article>
                                     </div>
                                 </div>
@@ -80,8 +72,6 @@
                                         <article class="card-body standardfont">
                                             <p>For any business opportunities kindly <a href="contactus.php">Contact Us.</a>
                                             </p>
-
-
                                         </article>
                                     </div>
                                 </div>
@@ -89,16 +79,8 @@
                         </div>
                     </div>
                 </section>
-
-
             </div>
-
-
-
-        </section>
-
+        </main>
     </body>
-
     <?php include "footer_include.php" ?>
-</div>
 </html>
