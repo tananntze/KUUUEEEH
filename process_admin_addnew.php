@@ -140,7 +140,7 @@ if ($nsuccess && $dsuccess && $psuccess && $isuccess)
     saveFoodItemToDB();
     echo "<h2>Your item, </h2>" . $addName . "<h2>have successfully added!!</h2>";
     echo "<br>";
-    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary'>Back to Admin Panel</button></a>";
+    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary' aria-label='Back to Admin Panel'>Back to Admin Panel</button></a>";
 
 } 
 else 
@@ -151,7 +151,7 @@ else
     echo "<p>" . $derrorMsg . "</p>";
     echo "<p>" . $perrorMsg . "</p>";
     echo "<p>" . $ierrorMsg . "</p>";
-    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary'>Back to Admin Panel</button></a>";
+    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary' aria-label='Back to Admin Panel'>Back to Admin Panel</button></a>";
 }
 
 //Helper function that checks input for malicious or unwanted content.
@@ -188,7 +188,7 @@ function saveFoodItemToDB()
 
 ?>
 
-<html>
+<html lang="en">
     <head>
         <title>Kueh Menu</title>
         <meta charset="UTF-8">

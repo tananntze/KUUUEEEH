@@ -43,12 +43,12 @@ if (!isset($_SESSION['userId'])) {
 
         <!--Admin header and search by category or food name and add food item function-->
         <section class="container standardfont">
-            <h2 class="fontheader" id="editadmin_header">Admin Panel</h2>
+            <h1 class="fontheader" id="editadmin_header">Admin Panel</h1>
 
             <section class="card">
                 <section class="card-header">
-                    <span class="fas fa-search"  class = "searchIcon" id="search" ></span><strong> Search by</strong> 
-                    <a href="#" class="btn btn-dark addItem btn-sm"  role="button" data-toggle="modal" data-target="#addModal"><span class="fa fa-plus-circle"></span> Add New Item</a>
+                    <span class="fas fa-search searchIcon"></span><strong> Search by</strong> 
+                    <a href="#" class="btn btn-dark addItem btn-sm" data-toggle="modal" data-target="#addModal" aria-label="Add New Item"><span class="fa fa-plus-circle"></span> Add New Item</a>
                 </section>
 
                 <section class="card-body">
@@ -57,19 +57,19 @@ if (!isset($_SESSION['userId'])) {
                             <div class="col-2">
                                 <section class="form-group">
                                     <label for="scategory" class="formtitle">Category</label>
-                                    <input type="text"  name="scategory"  id="scategory" class="form-control" class="form-control" value="" placeholder="Enter Category" pattern="^[a-zA-Z](?!.* {2})[ \w.-]{2,}$">
+                                    <input type="text"  name="scategory"  id="scategory" class="form-control" placeholder="Enter Category" pattern="^[a-zA-Z](?!.* {2})[ \w.-]{2,}$">
                                 </section>
                             </div>
 
                             <div class="col-2">
                                 <section class="form-group">
                                     <label for="sname">Name</label>
-                                    <input type="text" name="sname" id="sname" class="form-control" value="" placeholder="Enter Name" pattern="^[a-zA-Z](?!.* {2})[ \w.-]{2,}$">
+                                    <input type="text" name="sname" id="sname" class="form-control" placeholder="Enter Name" pattern="^[a-zA-Z](?!.* {2})[ \w.-]{2,}$">
                                 </section>
                             </div>
 
                             <div class="col-4">
-                                <button type="submit" name="submit" value="search" id="submit" class="btn btn-primary"><span class="fas fa-search"></span> Search</button>
+                                <button type="submit" name="submit" value="search" id="search" class="btn btn-primary" aria-label="Submit Search"><span class="fas fa-search"></span> Search</button>
 <!--                                <a href="editadmin.php" class="btn btn-danger"><span class="fas fa-sync-alt"></span> Clear</a>-->
                             </div>
                         </div>
@@ -85,31 +85,32 @@ if (!isset($_SESSION['userId'])) {
                     <form name = "addform" action="process_admin_addnew.php" onsubmit="return validateAdd()" method="post" enctype="multipart/form-data" novalidate>
                         <section class="modal-header">
                             <h4 class="modal-title">Add New Item</h4>
-                            <button type="button" class="close" data-dismiss="modal" role="button">&times;</button>
+                            <button type="button" class="close" data-dismiss="modal" role="button" aria-label="Close Add New Item">&times;</button>
                         </section>
 
                         <section class="modal-body">
                             <section class="form-group">
-                                <label for="acategory">Select Category:</label>
+                                <label for="addCategory">Select Category:</label>
                                 <select class="form-control" name="addCategory" id="addCategory" required>
-                                    <option>Kueh with Character</option>
-                                    <option>The Basic Kuehs</option>
-                                    <option>The Heavyweight Kuehs</option>
+                                    <option value="" disabled selected>Please select an category</option>
+                                    <option value="Kueh with Character">Kueh with Character</option>
+                                    <option value ="The Basic Kuehs">The Basic Kuehs</option>
+                                    <option value ="The Heavyweight Kuehs">The Heavyweight Kuehs</option>
                                 </select>
                             </section>
 
                             <section class="form-group">
-                                <label for="aname">Name</label>
+                                <label for="addName">Name</label>
                                 <input type="text" name="addName" id="addName" class="form-control" placeholder="Enter Name" required>
                             </section>
 
                             <section class="form-group">
-                                <label for="adescription">Description</label>
+                                <label for="addDescription">Description</label>
                                 <textarea name="addDescription" id="addDescription" class="form-control" rows="5" placeholder="Enter Description" required></textarea>
                             </section>
 
                             <section class="form-group">
-                                <label for="aprice">Price</label>
+                                <label for="addPrice">Price</label>
                                 <input type="text" name="addPrice" id="addPrice" class="form-control" placeholder="Enter Price" required>
                             </section>
 
@@ -163,7 +164,7 @@ if (!isset($_SESSION['userId'])) {
                                     <td class="col-1 data"><?php echo $row['price']; ?></td>
                                     <td class="col-2"><img src="<?php echo $row['image']; ?>" class="img-fluid img-thumbnail" alt="<?php echo $row['name']; ?>"></td> 
                                     <td class="col-1 data"><?php echo $row['status']; ?></td>
-                                    <td class="col-1"><button type="button" class="btn editbtn"><span class="fa fa-edit"> Edit</span></button> 
+                                    <td class="col-1"><button type="button" class="btn editbtn" aria-label="Edit Item"><span class="fa fa-edit"> Edit</span></button> 
                                 </tr>
                               
                                 <?php
@@ -193,36 +194,38 @@ if (!isset($_SESSION['userId'])) {
                             <section class="modal-body">
 
                                     <section class="form-group">
-                                        <label for="eprodId">Product Id</label>
+                                        <label for="updateProdId">Product Id</label>
                                         <input type="text" name="updateProdId" id="updateProdId" class="form-control" placeholder="Product ID" readonly>
                                     </section>
                                     <section class="form-group">
-                                    <label for="ecategory">Select Category:</label>
+                                    <label for="editCategory">Select Category:</label>
                                         <select class="form-control" name="editCategory" id="editCategory" required>
-                                        <option>Kueh with Character</option>
-                                        <option>The Basic Kuehs</option>
-                                        <option>The Heavyweight Kuehs</option>
+                                            <option value="" disabled>Please select a category</option>
+                                            <option value ="Kueh with Character">Kueh with Character</option>
+                                            <option value ="The Basic Kuehs">The Basic Kuehs</option>
+                                            <option value ="The Heavyweight Kuehs">The Heavyweight Kuehs</option>
                                     </select>
                                 </section>
 
                                 <section class="form-group">
-                                    <label for="ename">Name</label>
+                                    <label for="editName">Name</label>
                                     <input type="text" name="editName" id="editName" class="form-control" placeholder="Enter Name" required>
                                 </section>
 
                                 <section class="form-group">
-                                    <label for="edescription">Description</label>
+                                    <label for="editDescription">Description</label>
                                     <textarea name="editDescription" id="editDescription" class="form-control" rows="5" placeholder="" required></textarea>
                                 </section>
 
                                 <section class="form-group">
-                                    <label for="eprice">Price</label>
+                                    <label for="editPrice">Price</label>
                                     <input type="text" name="editPrice" id="editPrice" class="form-control" required>
                                 </section>
 
                                 <section class="form-group">
-                                    <label for="estatus">Select Status:</label>
+                                    <label for="editStatus">Select Status:</label>
                                     <select class="form-control" name="editStatus" id="editStatus" required>
+                                        <option value="" disabled>Please select a status</option>
                                         <option>Active</option>
                                         <option>Inactive</option>
                                     </select>
@@ -236,7 +239,7 @@ if (!isset($_SESSION['userId'])) {
                             </section>
 
                             <section class="modal-footer">
-                                <button type="submit" class="btn btn-success" id="update" name="update">Update</button>    
+                                <button type="submit" class="btn btn-success" id="update" name="update" aria-label="Update Item">Update</button>    
                             </section>
                         </form>
                     </section>         
