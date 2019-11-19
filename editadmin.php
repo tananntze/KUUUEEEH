@@ -43,6 +43,7 @@ if (!isset($_SESSION['userId'])) {
 
         <!--Admin header and search by category or food name and add food item function-->
         <section class="container standardfont"> 
+            <!--Test Edit Joy pls wake up YA-->
             <!--Test Edit Joy pls wake up lel-->
             <h1 class="fontheader" id="editadmin_header">Admin Panel</h1>
 
