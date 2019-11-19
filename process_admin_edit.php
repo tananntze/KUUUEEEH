@@ -102,9 +102,9 @@ if(isset($_POST['submit']))
         if (filesize($_FILES['updateImg']['name']) > $maxfilesize)
         {
             $ierrorMsg .= "Max file size exceeded. Please upload a smaller file.";
-            $isuccess = false;        
+            $isuccess = false;  
         }
-        
+
         //Ensure only certain file extesions are accepted.
         else if (!in_array($filetype,$allowed))
         {
@@ -215,7 +215,7 @@ function editData() {
 }
 ?>
 
-<html>
+<html lang="en">
     <head>
         <title>Kueh Menu</title>
         <meta charset="UTF-8">
