@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html lang="en">
+<html lang="en" class="header">
     <head>
         <title>About Us</title>
         <meta charset="UTF-8">
@@ -32,7 +32,7 @@ and open the template in the editor.
             <div class="container-fluid" style= 'margin-top:20px'>
                 <section class =" row sectionheader text-center">
                     <section class="col-md-12">
-                        <h2 class="abtUsHeader">ABOUT KUUUEEEH</h2>
+                        <h1 class="abtUsHeader">ABOUT KUUUEEEH</h1>
                         <p class="abtUsCaption">Founded in 2019 by an avid kueh lover, KUUUEEEH has been offering a tempting array of sumptuous kuehs till today!</p>
                         <p class="abtUsCaption">Customers have been savoring our kuehs through our unique blend of flavors and we are proud that our kuehs are generally well-received.</p>
                         <p class="abtUsCaption">Still we are 100% committed in continuously combining new flavors with tradition and improving based on customer's feedback.</p>

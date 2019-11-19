@@ -1,5 +1,3 @@
-<html lang ="en"class="header">
-
 <!DOCTYPE html>
 <html lang="en" class="header">
 
@@ -34,7 +32,7 @@
             <div class="container-fluid">
                 <div class =" row sectionheader standardfont text-center pt-4">
                     <div class="col-md-12">
-                        <h2 class = fontheader>FAQ</h2>
+                        <h1 class = fontheader>FAQ</h1>
                     </div>
                 </div>
                 <section>
