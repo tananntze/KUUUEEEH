@@ -77,7 +77,7 @@ else
 //insert img into database using file path method
 
 //Setting variables
-$maxfilesize = 10000000; //allowed file size
+$maxfilesize = 2048000; //MAX File Size 2MB allowed file size
 $allowed =  array('jpg','jpeg'); //allowed extensions
 $ext = pathinfo($_FILES['insertImg']['name'], PATHINFO_EXTENSION); //file extension
 

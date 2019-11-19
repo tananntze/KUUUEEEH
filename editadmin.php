@@ -38,7 +38,7 @@ if (!isset($_SESSION['userId'])) {
 
         <div class="container">
             <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
-            <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
+            <img src="img/BannerWhite.png" alt="Kueh Banner" class="responsive" id="bannerresize">
         </div>
 
         <!--Admin header and search by category or food name and add food item function-->
@@ -47,8 +47,8 @@ if (!isset($_SESSION['userId'])) {
 
             <section class="card">
                 <section class="card-header">
-                    <span class="fas fa-search" class = "searchIcon" id="search" ></span><strong> Search by</strong> 
-                    <a href="#" class="btn btn-dark addItem btn-sm" role="button" data-toggle="modal" data-target="#addModal"><span class="fa fa-plus-circle"></span> Add New Item</a>
+                    <span class="fas fa-search"  class = "searchIcon" id="search" ></span><strong> Search by</strong> 
+                    <a href="#" class="btn btn-dark addItem btn-sm"  role="button" data-toggle="modal" data-target="#addModal"><span class="fa fa-plus-circle"></span> Add New Item</a>
                 </section>
 
                 <section class="card-body">
@@ -57,7 +57,7 @@ if (!isset($_SESSION['userId'])) {
                             <div class="col-2">
                                 <section class="form-group">
                                     <label for="scategory" class="formtitle">Category</label>
-                                    <input type="text"  name="scategory" id="scategory" class="form-control" class="form-control" value="" placeholder="Enter Category" pattern="^[a-zA-Z](?!.* {2})[ \w.-]{2,}$">
+                                    <input type="text"  name="scategory"  id="scategory" class="form-control" class="form-control" value="" placeholder="Enter Category" pattern="^[a-zA-Z](?!.* {2})[ \w.-]{2,}$">
                                 </section>
                             </div>
 
