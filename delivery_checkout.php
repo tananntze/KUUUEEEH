@@ -81,14 +81,14 @@ and open the template in the editor.
                                     <input class="form-control" id="postal_code" name="postal_code" placeholder="Enter the 6 digit Singapore postal code" type="tel" maxLength="6" required pattern="[0-9]{6}">
                                 </section>
                                 <section id="step3Radio">
-                                    <label for="payVisa">*Select a card:</label>
+                                    *Select a card:
                                     <section class="radio_grp">
                                         <!--The Image source is taken and credited by: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
                                         <label class="radio_lbl" for="payVisa"><input class="radio_set" type="radio" name="radioPayment" id="payVisa" value="Visa" checked> Visa</label><img class="card_logo" src="img/visa.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
                                     </section>
                                     <section class="radio_grp">
                                         <!--The Image source is taken and credited by: https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1-->
-                                        <label class="radio_lbl" for="paypayMaster"><input class="radio_set" type="radio" name="radioPayment" id="payMaster" value="MasterCard"> MasterCard</label><img class="card_logo" src="img/mastercard.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
+                                        <label class="radio_lbl" for="payMaster"><input class="radio_set" type="radio" name="radioPayment" id="payMaster" value="MasterCard"> MasterCard</label><img class="card_logo" src="img/mastercard.jpg" alt="Credits:https://newinnpubwinchelsea.co.uk/rooms/visa-mastercard-logo-1/">
                                     </section>
                                     <section class="form-group">
                                         <label for="card_name">*Name Of Card:</label>

@@ -94,7 +94,7 @@ and open the template in the editor.
                                         echo "<tr>";
                                         for ($c = 1; $c < 7; $c++) {
                                             if ($c == 1) {
-                                                echo "<td><img id='imgKueh' src='" . $kueh_array[$c] . "' alt='Kueh Order'/></td>";
+                                                echo "<td><img id='imgKueh".$row."' class='imgKueh' src='" . $kueh_array[$c] . "' alt='Kueh Order'/></td>";
                                             } else if ($c == 4) {
                                                 echo "<td>$" . number_format($kueh_array[$c], 2) . "/pc";
                                             } else if ($c == 6) {
@@ -103,8 +103,7 @@ and open the template in the editor.
                                                 echo "<td>" . $kueh_array[$c] . "</td>";
                                             }
                                         }
-                                        echo "<td>"
-                                        . "<a href='kuehmenuall.php' class='btn standardfont' id='btnEdit'><span class='fa fa-pencil-square-o'></span>  Edit</a> <form method='post' action='#'><button type='submit' class='btn' name='btnIncrement" . strval($row) . "'><span class='fa fa-plus-circle fa-2x text-success'></span></button><button type='submit' class='btn' name='btnDecrement" . strval($row) . "'><span class='fa fa-minus-circle fa-2x text-danger'></span></button></form></td>";
+                                        echo "<td><a href='kuehmenuall.php' class='btn standardfont' id='btnEdit".$row."'><span class='fa fa-pencil-square-o'></span>  Edit</a> <form method='post' action='#'><button type='submit' class='btn' id='btnIncrement".strval($row)."' name='btnIncrement".strval($row)."' aria-label='Increment'><span class='fa fa-plus-circle fa-2x text-success'></span></button><button type='submit' class='btn' id='btnDecrement".strval($row)."' name='btnDecrement".strval($row)."' aria-label='Increment'><span class='fa fa-minus-circle fa-2x text-danger'></span></button></form></td>";
                                         echo "</tr>";
                                     }
                                     echo "</table>";

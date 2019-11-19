@@ -151,7 +151,7 @@
                                             echo "<tr>";
                                             for ($c = 1; $c < 7; $c++) {
                                                 if ($c == 1) {
-                                                    echo "<td><img id='imgKueh' src='" . $kueh_array[$c] . "' alt='Kueh Order'/></td>";
+                                                    echo "<td><img id='imgKueh".$row."' class='imgKueh' src='".$kueh_array[$c]."' alt='Kueh Order'/></td>";
                                                 } else if ($c == 4) {
                                                     echo "<td>$" . number_format($kueh_array[$c], 2) . "/pc";
                                                 } else if ($c == 6) {
