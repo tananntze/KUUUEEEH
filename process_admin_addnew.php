@@ -11,16 +11,9 @@ $addCategory = $addName = $addDescription = $addPrice = $insertImg = "";
 $cerrorMsg = $nerrorMsg = $derrorMsg = $perrorMsg = $ierrorMsg = ""; //Category, name, description, price, image error messages
 $csuccess = $nsuccess = $dsuccess = $psuccess = $isuccess = true; //Category, name, description, price, image success status
 
-//addCategory - Dont need validate as there is a default value
-//if (empty($_POST["addCategory"])) 
-//{
-//    $cerrorMsg .= "Category is required.<br>";
-//    $csuccess = false;
-//}  
-//else 
-//{ 
-//    $addCategory = sanitize_input($_POST["addCategory"]);
-//}
+//addCategory
+$addCategory = sanitize_input($_POST["addCategory"]);
+
 
 //addName
 if (empty($_POST["addName"])) 
@@ -48,7 +41,7 @@ if (empty($_POST["addDescription"]))
 else 
 {
     $addDescription = sanitize_input($_POST["addDescription"]);
-    if (!preg_match("/^[\w-,.]{10,280}$/", $addDescription))
+    if (!preg_match("/^[\w\-,.]{10,280}$/", $addDescription))
     {
         $derrorMsg .= "Description given is not a valid format.<br>";
         $dsuccess = false;
@@ -75,7 +68,7 @@ else
 
 //reference: https://stackoverflow.com/questions/41517897/move-upload-file-is-failed-to-open-stream-and-unable-to-move-file
 //insert img into database using file path method
-
+//
 //Setting variables
 $maxfilesize = 2048000; //MAX File Size 2MB allowed file size
 $allowed =  array('jpg','jpeg'); //allowed extensions
@@ -139,10 +132,10 @@ if(isset($_POST['submit']))
 //success
 if ($nsuccess && $dsuccess && $psuccess && $isuccess) 
 {
-    //saveFoodItemToDB();
+    saveFoodItemToDB();
     echo "<h2>Your item, </h2>" . $addName . "<h2>have successfully added!!</h2>";
     echo "<br>";
-    echo "<a href ='editadmin.php'><button type='button' class='btn btn-default'>Back to Admin Panel</button></a>";
+    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary'>Back to Admin Panel</button></a>";
 
 } 
 else 
@@ -153,7 +146,7 @@ else
     echo "<p>" . $derrorMsg . "</p>";
     echo "<p>" . $perrorMsg . "</p>";
     echo "<p>" . $ierrorMsg . "</p>";
-    echo "<a href ='editadmin.php'><button type='button' class='btn btn-default'>Back to Admin Panel</button></a>";
+    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary'>Back to Admin Panel</button></a>";
 }
 
 //Helper function that checks input for malicious or unwanted content.
@@ -188,5 +181,25 @@ function saveFoodItemToDB()
     }
 }
 
+?>
 
+<html>
+    <head>
+        <title>Kueh Menu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name ="KUUUEEEH website where you find the best kuehs">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/editadmin.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <script src="js/editadmin.js"></script>
+     </head>
+</html>
