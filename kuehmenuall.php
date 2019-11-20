@@ -78,32 +78,96 @@ and open the template in the editor.
                 header('Location: kuehmenuall.php');    
             }
             ?>
-        <div class="container">
-            <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
-            <img src="img/BannerWhite.png" alt="banner" class="responsive" id="bannerresize">
-        </div>
-        
-        <nav class="nav2">
-            <ul>
-                <li><a href ="#basic">Basic Kuehs</a></li>
-                <li><a href ="#character">Kuehs with Character</a></li>
-                <li><a href ="#heavyweight">Heavyweight Kuehs</a></li>
-            </ul>
-        </nav>
-        
-        <!-- The Basic Kuehs -->
-       <form method="post" action="#">
-        <section>
-            <h1 class="fontheader" id="basic">The Basic Kuehs</h1>
+            
+        <main>
+            <div class="container">
+                <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
+                <img src="img/BannerWhite.png" alt="banner" class="responsive" id="bannerresize">
+            </div>
 
-            <div class="d-flex justify-content-center flex-fill flex-wrap">
-                <?php                    
-                    $conn = connectToDB();
+            <nav class="nav2" aria-label="Menu for Kueh">
+                <ul>
+                    <li><a href ="#basic">Basic Kuehs</a></li>
+                    <li><a href ="#character">Kuehs with Character</a></li>
+                    <li><a href ="#heavyweight">Heavyweight Kuehs</a></li>
+                </ul>
+            </nav>
 
-                    $sql = "SELECT * FROM p1_1.product WHERE category='The Basic Kuehs' AND status='Active'";
-                    $result = $conn->query($sql);
-                    while ($row = $result->fetch_assoc())
-                    {
+            <!-- The Basic Kuehs -->
+           <form method="post" action="#">
+           <section>
+                <h1 class="fontheader" id="basic">The Basic Kuehs</h1>
+
+                <div class="d-flex justify-content-center flex-fill flex-wrap">
+                    <?php                    
+                        $conn = connectToDB();
+
+                        $sql = "SELECT * FROM p1_1.product WHERE category='The Basic Kuehs' AND status='Active'";
+                        $result = $conn->query($sql);
+                        while ($row = $result->fetch_assoc())
+                        {
+                                ?>
+                                <div class="kuehMenu">
+                                    <figure class="imgholder">
+                                        <img class="zoom" src = "<?php echo $row ['image']; ?>" alt = "">
+                                        <figcaption>
+                                            <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
+                                        </figcaption>
+                                    </figure>
+                                    <button class='btn' type='submit' aria-label='Shopping Cart' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart fa-2x'></i></button>
+                                </div>
+                                <?php 
+                        }
+
+                        $result->free_result();
+                        $conn->close();
+                    ?>
+                </div>
+            </section>
+
+            <!-- The Kuehs with Character -->
+            <section>
+                <h1 class="fontheader" id="character">Kuehs with Character</h1>
+
+                <div class="d-flex justify-content-center flex-sm-row flex-column flex-wrap">
+                    <?php
+                        $conn = connectToDB();
+
+                        $sql = "SELECT * FROM p1_1.product WHERE category='Kueh with Character' AND status='Active'";
+                        $result = $conn->query($sql);
+                        while ($row = $result->fetch_assoc())
+                        {             
+                            ?>
+                            <div class="kuehMenu"> 
+                                <figure class="imgholder">
+                                    <img class="zoom" src = "<?php echo $row ['image']; ?>" alt = "">
+                                    <figcaption>
+                                        <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
+                                    </figcaption>
+                                </figure>
+                                <button class='btn' type='submit' aria-label='Shopping Cart' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart fa-2x'></i></button>
+                            </div>
+                    <?php
+                        }
+
+                        $result->free_result();
+                        $conn->close();
+                    ?>
+                </div>
+            </section>
+
+            <!-- The Heavyweight Kuehs -->
+            <section>
+                <h1 class="fontheader" id="heavyweight">The Heavyweight Kuehs</h1>
+
+                <div class="d-flex justify-content-center flex-sm-row flex-column flex-wrap">
+                    <?php
+                        $conn = connectToDB();
+
+                        $sql = "SELECT * FROM p1_1.product WHERE category='The Heavyweight Kuehs' AND status='Active'";
+                        $result = $conn->query($sql);
+                        while ($row = $result->fetch_assoc())
+                        {
                             ?>
                             <div class="kuehMenu">
                                 <figure class="imgholder">
@@ -114,78 +178,17 @@ and open the template in the editor.
                                 </figure>
                                 <button class='btn' type='submit' aria-label='Shopping Cart' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart fa-2x'></i></button>
                             </div>
-                            <?php 
-                    }
+                    <?php
+                        }
 
-                    $result->free_result();
-                    $conn->close();
-                ?>
-            </div>
-        </section>
+                        $result->free_result();
+                        $conn->close();
+                    ?>
+                </div>
+            </section>
+           </form>
 
-        <!-- The Kuehs with Character -->
-        <section>
-            <h1 class="fontheader" id="character">Kuehs with Character</h1>
-
-            <div class="d-flex justify-content-center flex-sm-row flex-column flex-wrap">
-                <?php
-                    $conn = connectToDB();
-
-                    $sql = "SELECT * FROM p1_1.product WHERE category='Kueh with Character' AND status='Active'";
-                    $result = $conn->query($sql);
-                    while ($row = $result->fetch_assoc())
-                    {             
-                        ?>
-                        <div class="kuehMenu"> 
-                            <figure class="imgholder">
-                                <img class="zoom" src = "<?php echo $row ['image']; ?>" alt = "">
-                                <figcaption>
-                                    <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
-                                </figcaption>
-                            </figure>
-                            <button class='btn' type='submit' aria-label='Shopping Cart' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart fa-2x'></i></button>
-                        </div>
-                <?php
-                    }
-
-                    $result->free_result();
-                    $conn->close();
-                ?>
-            </div>
-        </section>
-        
-        <!-- The Heavyweight Kuehs -->
-        <section>
-            <h1 class="fontheader" id="heavyweight">The Heavyweight Kuehs</h1>
-
-            <div class="d-flex justify-content-center flex-sm-row flex-column flex-wrap">
-                <?php
-                    $conn = connectToDB();
-
-                    $sql = "SELECT * FROM p1_1.product WHERE category='The Heavyweight Kuehs' AND status='Active'";
-                    $result = $conn->query($sql);
-                    while ($row = $result->fetch_assoc())
-                    {
-                        ?>
-                        <div class="kuehMenu">
-                            <figure class="imgholder">
-                                <img class="zoom" src = "<?php echo $row ['image']; ?>" alt = "">
-                                <figcaption>
-                                    <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
-                                </figcaption>
-                            </figure>
-                            <button class='btn' type='submit' aria-label='Shopping Cart' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart fa-2x'></i></button>
-                        </div>
-                <?php
-                    }
-
-                    $result->free_result();
-                    $conn->close();
-                ?>
-            </div>
-        </section>
-       </form>
-        
-        <?php include "footer_include.php" ?>
+            <?php include "footer_include.php" ?>
+        </main>
     </body>
 </html>
