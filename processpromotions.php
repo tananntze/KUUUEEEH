@@ -35,6 +35,7 @@
                 $userId = $_SESSION['userId'];
                 $promoId = 1;
                 $sql = $conn->prepare("UPDATE p1_1.promotion SET image=?,startDate =?,endDate =?, user_userId=? WHERE promoID = ?");
+                //UPDATE OF DATABASE 
                 $sql->bind_param('sssii', $file_input, $start_date, $end_date, $userId, $promoId);
                 $sql->execute();
                 $sql->close();
