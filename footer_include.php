@@ -6,7 +6,7 @@
             <p>© 2019 KUUUEEEH</p>
         </div>
         <div class="col-md-4 footer-nav animated fadeInUp">
-            <h4>Menu —</h4>
+            <h3>Menu —</h3>
 
             <div class="col-md-6">
                 <ul class="list">
