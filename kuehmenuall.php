@@ -185,7 +185,7 @@ and open the template in the editor.
             </div>
         </section>
        </form>
+        
+        <?php include "footer_include.php" ?>
     </body>
-    
-    <?php include "footer_include.php" ?>
 </html>

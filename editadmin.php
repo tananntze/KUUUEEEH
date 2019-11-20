@@ -43,7 +43,6 @@ if (!isset($_SESSION['userId'])) {
 
         <!--Admin header and search by category or food name and add food item function-->
         <section class="container standardfont"> 
-            <!--Test Edit Joy pls wake up YA-->
             <h1 class="fontheader" id="editadmin_header">Admin Panel</h1>
 
             <section class="card">
@@ -71,7 +70,6 @@ if (!isset($_SESSION['userId'])) {
 
                             <div class="col-4">
                                 <button type="submit" name="submit" value="search" id="search" class="btn btn-primary" aria-label="Submit Search"><span class="fas fa-search"></span> Search</button>
-<!--                                <a href="editadmin.php" class="btn btn-danger"><span class="fas fa-sync-alt"></span> Clear</a>-->
                             </div>
                         </div>
                     </form>
@@ -83,7 +81,7 @@ if (!isset($_SESSION['userId'])) {
         <aside class="modal fade standardfont" id="addModal">
             <section class="modal-dialog modal-dialog-centered">
                 <section class="modal-content">
-                    <form name = "addform" action="process_admin_addnew.php" onsubmit="return validateAdd()" method="post" enctype="multipart/form-data" novalidate>
+                    <form name = "addform" action="process_admin_addnew.php" onsubmit="return validateAdd()"  method="post" enctype="multipart/form-data">
                         <section class="modal-header">
                             <h4 class="modal-title">Add New Item</h4>
                             <button type="button" class="close" data-dismiss="modal" role="button" aria-label="Close Add New Item">&times;</button>
@@ -100,25 +98,33 @@ if (!isset($_SESSION['userId'])) {
                                 </select>
                             </section>
 
+<<<<<<< HEAD
+                            <section class="form-group">
+=======
                             <section class="form-group">            
-                                <label for="aname">Name</label>
+>>>>>>> bfdea0c98fe125b7bb05eb2a7a9b5a9d48afa4e0
+                                <label for="addName">Name</label>
                                 <input type="text" name="addName" id="addName" class="form-control" placeholder="Enter Name" required pattern="/^[a-zA-Z](?!.* {2,6})[ \w.-]{2,15}$/">
                             </section>
 
                             <section class="form-group">
-                                <label for="adescription">Description</label>
+                                <label for="addDescription">Description</label>
                                 <textarea name="addDescription" id="addDescription" class="form-control" rows="5" placeholder="Enter Description" required pattern="/[\w\s\-,.]{10,160}$/"></textarea>
                             </section>
 
                             <section class="form-group">
-                                <label for="aprice">Price</label>
+                                <label for="addPrice">Price</label>
                                 <input type="text" name="addPrice" id="addPrice" class="form-control" placeholder="Enter Price" required pattern="/^(?=.*[1-9])\d{0,2}(?:\.\d{0,2})?$/">
                             </section>
 
                             <p>Insert Image</p>
                             <section class="custom-file">
                                 <label class="custom-file-label" for="insertImg">Choose file</label>
+<<<<<<< HEAD
+                                <input type="file" class="custom-file-input" name="insertImg" id="insertImg" required accept=".jpg, .jpeg">
+=======
                                 <input type="file" class="custom-file-input" name="insertImg" id="insertImg">
+>>>>>>> bfdea0c98fe125b7bb05eb2a7a9b5a9d48afa4e0
                             </section>
                         </section>
 
@@ -186,7 +192,7 @@ if (!isset($_SESSION['userId'])) {
             <section class="modal fade standardfont" id="editModal">
                 <section class="modal-dialog modal-dialog-centered">
                     <section class="modal-content">
-                        <form action="process_admin_edit.php" method="post" enctype="multipart/form-data">
+                        <form name = "editform" action="process_admin_edit.php" onsubmit="return validateEdit()" method="post" enctype="multipart/form-data">
                             <section class="modal-header">
                                 <h4 class="modal-title">Edit Item</h4>
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -209,6 +215,20 @@ if (!isset($_SESSION['userId'])) {
                                 </section>
 
                                 <section class="form-group">
+<<<<<<< HEAD
+                                    <label for="ename">Name</label>
+                                    <input type="text" name="editName" id="editName" class="form-control" placeholder="Enter Name" required pattern="/^[a-zA-Z](?!.* {2,6})[ \w.-]{2,15}$/">
+                                </section>
+
+                                <section class="form-group">
+                                    <label for="edescription">Description</label>
+                                    <textarea name="editDescription" id="editDescription" class="form-control" rows="5" placeholder="" required pattern="/[\w\s\-,.]{10,160}$/"></textarea>
+                                </section>
+
+                                <section class="form-group">
+                                    <label for="eprice">Price</label>
+                                    <input type="text" name="editPrice" id="editPrice" class="form-control" required pattern="/^(?=.*[1-9])\d{0,2}(?:\.\d{0,2})?$/">
+=======
                                     <label for="editName">Name</label>
                                     <input type="text" name="editName" id="editName" class="form-control" placeholder="Enter Name" required>
                                 </section>
@@ -221,6 +241,7 @@ if (!isset($_SESSION['userId'])) {
                                 <section class="form-group">
                                     <label for="editPrice">Price</label>
                                     <input type="text" name="editPrice" id="editPrice" class="form-control" required>
+>>>>>>> bfdea0c98fe125b7bb05eb2a7a9b5a9d48afa4e0
                                 </section>
 
                                 <section class="form-group">
@@ -235,7 +256,7 @@ if (!isset($_SESSION['userId'])) {
                                 <p>Update Image</p>
                                 <section class="custom-file">
                                     <label class="custom-file-label" for="updateImg">Choose file</label>
-                                    <input type="file" class="custom-file-input" id="updateImg" name="updateImg">
+                                    <input type="file" class="custom-file-input" id="updateImg" name="updateImg" accept=".jpg, .jpeg">
                                 </section>
                             </section>
 
