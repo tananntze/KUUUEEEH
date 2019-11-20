@@ -112,7 +112,7 @@ and open the template in the editor.
                                         <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
                                     </figcaption>
                                 </figure>
-                                <button class='btn' type='submit' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart fa-2x'></i></button>
+                                <button class='btn' type='submit' aria-label='Shopping Cart' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart fa-2x'></i></button>
                             </div>
                             <?php 
                     }
@@ -143,7 +143,7 @@ and open the template in the editor.
                                     <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
                                 </figcaption>
                             </figure>
-                            <button class='btn' type='submit' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart fa-2x'></i></button>
+                            <button class='btn' type='submit' aria-label='Shopping Cart' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart fa-2x'></i></button>
                         </div>
                 <?php
                     }
@@ -174,7 +174,7 @@ and open the template in the editor.
                                     <?php echo $row['name']; ?> ($ <?php echo $row['price']; ?>): <?php echo $row['description']; ?>
                                 </figcaption>
                             </figure>
-                            <button class='btn' type='submit' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart fa-2x'></i></button>
+                            <button class='btn' type='submit' aria-label='Shopping Cart' name='<?php echo $row ['prodId']; ?>'><i class='fa fa-shopping-cart fa-2x'></i></button>
                         </div>
                 <?php
                     }
