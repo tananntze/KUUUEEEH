@@ -64,7 +64,7 @@ if (!isset($_SESSION['userId'])) {
                             <div class="col-2">
                                 <section class="form-group">
                                     <label for="sname">Name</label>
-                                    <input type="text" name="sname" id="sname" class="form-control" placeholder="Enter Name" pattern="^[a-zA-Z](?!.* {2})[ \w.-]{2,}$">
+                                    <input type="text" name="sname" id="sname" class="form-control" placeholder="Enter Name" pattern="^[a-zA-Z](?!.* {2,})[ \w.-]{2,}$">
                                 </section>
                             </div>
 
@@ -98,13 +98,13 @@ if (!isset($_SESSION['userId'])) {
                                 </select>
                             </section>
 
-<<<<<<< HEAD
+
                             <section class="form-group">
-=======
+
                             <section class="form-group">            
->>>>>>> bfdea0c98fe125b7bb05eb2a7a9b5a9d48afa4e0
+
                                 <label for="addName">Name</label>
-                                <input type="text" name="addName" id="addName" class="form-control" placeholder="Enter Name" required pattern="/^[a-zA-Z](?!.* {2,6})[ \w.-]{2,15}$/">
+                                <input type="text" name="addName" id="addName" class="form-control" placeholder="Enter Name" required pattern="/^[a-zA-Z ](?!.*{2,6})[ \w.-]{2,15}$/">
                             </section>
 
                             <section class="form-group">
@@ -114,17 +114,15 @@ if (!isset($_SESSION['userId'])) {
 
                             <section class="form-group">
                                 <label for="addPrice">Price</label>
-                                <input type="text" name="addPrice" id="addPrice" class="form-control" placeholder="Enter Price" required pattern="/^(?=.*[1-9])\d{0,2}(?:\.\d{0,2})?$/">
+                                <input type="text" name="addPrice" id="addPrice" class="form-control" placeholder="Enter Price" required pattern="^(?=.*[1-9])\d{0,2}(?:\.\d{0,2})?$">
                             </section>
 
                             <p>Insert Image</p>
                             <section class="custom-file">
                                 <label class="custom-file-label" for="insertImg">Choose file</label>
-<<<<<<< HEAD
+
                                 <input type="file" class="custom-file-input" name="insertImg" id="insertImg" required accept=".jpg, .jpeg">
-=======
-                                <input type="file" class="custom-file-input" name="insertImg" id="insertImg">
->>>>>>> bfdea0c98fe125b7bb05eb2a7a9b5a9d48afa4e0
+
                             </section>
                         </section>
 
@@ -215,9 +213,9 @@ if (!isset($_SESSION['userId'])) {
                                 </section>
 
                                 <section class="form-group">
-<<<<<<< HEAD
+
                                     <label for="ename">Name</label>
-                                    <input type="text" name="editName" id="editName" class="form-control" placeholder="Enter Name" required pattern="/^[a-zA-Z](?!.* {2,6})[ \w.-]{2,15}$/">
+                                    <input type="text" name="editName" id="editName" class="form-control" placeholder="Enter Name" required pattern="/^[a-zA-Z](?!.*{2,6})[ \w.-]{2,15}$/">
                                 </section>
 
                                 <section class="form-group">
@@ -227,23 +225,8 @@ if (!isset($_SESSION['userId'])) {
 
                                 <section class="form-group">
                                     <label for="eprice">Price</label>
-                                    <input type="text" name="editPrice" id="editPrice" class="form-control" required pattern="/^(?=.*[1-9])\d{0,2}(?:\.\d{0,2})?$/">
-=======
-                                    <label for="editName">Name</label>
-                                    <input type="text" name="editName" id="editName" class="form-control" placeholder="Enter Name" required>
+                                    <input type="text" name="editPrice" id="editPrice" class="form-control" required pattern="^(?=.*[1-9])\d{0,2}(?:\.\d{0,2})?$">
                                 </section>
-
-                                <section class="form-group">
-                                    <label for="editDescription">Description</label>
-                                    <textarea name="editDescription" id="editDescription" class="form-control" rows="5" placeholder="" required></textarea>
-                                </section>
-
-                                <section class="form-group">
-                                    <label for="editPrice">Price</label>
-                                    <input type="text" name="editPrice" id="editPrice" class="form-control" required>
->>>>>>> bfdea0c98fe125b7bb05eb2a7a9b5a9d48afa4e0
-                                </section>
-
                                 <section class="form-group">
                                     <label for="editStatus">Select Status:</label>
                                     <select class="form-control" name="editStatus" id="editStatus" required>

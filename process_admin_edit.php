@@ -48,11 +48,12 @@ else
 {
     $editdescription = sanitize_input($_POST["editDescription"]);
     
-    if (!preg_match("/[\w\s\-,.]{10,160}$/", $editescription))
+    if (!preg_match("/[\w\s\-,.]{10,160}$/", $editdescription))
     {
         $derrorMsg .= "Description given is not a valid format.<br>";
         $dsuccess = false;
     }
+     
 }
 
 //Edit price
@@ -179,7 +180,7 @@ function sanitize_input($data)
 
 //To update data
 function editData() {
-
+   
     global $editCategory, $editName, $editDescription, $editPrice, $errorMsg, $success, $updateProdId, $updateImg;
 
     // Create connection

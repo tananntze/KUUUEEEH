@@ -27,11 +27,11 @@ and open the template in the editor.
             include "header.php";
             global $file_path;
             $conn = connectToDB();
-            $stmt = $conn->prepare("SELECT image FROM p1_1.promotion");
+            $stmt = $conn->prepare("SELECT image FROM p1_1.promotion"); //PREPARED STATEMENTS INCLUDED TO PREVENT SQL INJECTION
             $stmt->execute();
             $result = $stmt->get_result();
             $row_data = $result->fetch_assoc();
-            $file_path = $row_data['image'];
+            $file_path = $row_data['image']; //SELECTION OF IMAGE FROM DATA BASE
             $conn->close();
         ?>
 
