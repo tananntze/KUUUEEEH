@@ -114,7 +114,7 @@ if (!isset($_SESSION['userId'])) {
 
                             <section class="form-group">
                                 <label for="addPrice">Price</label>
-                                <input type="text" name="addPrice" id="addPrice" class="form-control" placeholder="Enter Price" required pattern="/^(?=.*[1-9])\d{0,2}(?:\.\d{0,2})?$/">
+                                <input type="text" name="addPrice" id="addPrice" class="form-control" placeholder="Enter Price" required pattern="^(?=.*[1-9])\d{0,2}(?:\.\d{0,2})?$">
                             </section>
 
                             <p>Insert Image</p>
@@ -122,8 +122,6 @@ if (!isset($_SESSION['userId'])) {
                                 <label class="custom-file-label" for="insertImg">Choose file</label>
 
                                 <input type="file" class="custom-file-input" name="insertImg" id="insertImg" required accept=".jpg, .jpeg">
-
-                                <input type="file" class="custom-file-input" name="insertImg" id="insertImg">
 
                             </section>
                         </section>
