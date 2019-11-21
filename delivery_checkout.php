@@ -20,7 +20,7 @@ and open the template in the editor.
     <body>
         <?php include "header.php";
         if ($_SESSION["totalQty"] == 0) {
-            header("Location: index.php");
+            header("Location: kuehmenuall.php");  
         }
         ?>
 
