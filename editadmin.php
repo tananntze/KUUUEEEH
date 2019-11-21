@@ -104,12 +104,12 @@ if (!isset($_SESSION['userId'])) {
                             <section class="form-group">            
 
                                 <label for="addName">Name</label>
-                                <input type="text" name="addName" id="addName" class="form-control" placeholder="Enter Name" required pattern="/^[a-zA-Z ](?!.*{2,6})[ \w.-]{2,15}$/">
+                                <input type="text" name="addName" id="addName" class="form-control" placeholder="Enter Name" required pattern="/^[a-zA-Z ](?!.*{2,})[ \w.-]{2,}$/" max="15">
                             </section>
 
                             <section class="form-group">
                                 <label for="addDescription">Description</label>
-                                <textarea name="addDescription" id="addDescription" class="form-control" rows="5" placeholder="Enter Description" required pattern="/[\w\s\-,.]{10,160}$/"></textarea>
+                                <textarea name="addDescription" id="addDescription" class="form-control" rows="5" placeholder="Enter Description" required pattern="/[\w\s\-,.]{10,}$/" max="200"></textarea>
                             </section>
 
                             <section class="form-group">
@@ -215,12 +215,12 @@ if (!isset($_SESSION['userId'])) {
                                 <section class="form-group">
 
                                     <label for="ename">Name</label>
-                                    <input type="text" name="editName" id="editName" class="form-control" placeholder="Enter Name" required pattern="/^[a-zA-Z](?!.*{2,6})[ \w.-]{2,15}$/">
+                                    <input type="text" name="editName" id="editName" class="form-control" placeholder="Enter Name" required pattern="/^[a-zA-Z ](?!.*{2,})[ \w.-]{2,}$/" max="15">
                                 </section>
 
                                 <section class="form-group">
                                     <label for="edescription">Description</label>
-                                    <textarea name="editDescription" id="editDescription" class="form-control" rows="5" placeholder="" required pattern="/[\w\s\-,.]{10,160}$/"></textarea>
+                                    <textarea name="editDescription" id="editDescription" class="form-control" rows="5" placeholder="" required pattern="/[\w\s\-,.]{10,}$/" max="200"></textarea>
                                 </section>
 
                                 <section class="form-group">
