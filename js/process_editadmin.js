@@ -62,13 +62,13 @@ function validateAdd()
     var adddesc = document.forms["addform"]["addDescription"].value;
     var addprice = document.forms["addform"]["addPrice"].value;
     
-    if (addname === "" || !(/^[a-zA-Z](?!.* {2,6})[ \w.-]{2,15}$/.test(addname))) 
+    if (addname === "" || !(/^[a-zA-Z](?!.* {2,6})[ \w.-]{2,15}$/.test(addname)) || addname.length > 15) 
     {
         alert("Name is invalid.");
         return false;  
     }
     
-    if (adddesc === "" || !(/[\w\s\-,.]{10,160}$/.test(adddesc))) 
+    if (adddesc === "" || !(/[\w\s\-,.]{10,160}$/.test(adddesc)) || adddesc.length > 200) 
     {
         alert("Description is invalid.");
         return false;  
@@ -88,13 +88,13 @@ function validateEdit()
     var editdesc = document.forms["editform"]["editDescription"].value;
     var editprice = document.forms["editform"]["editPrice"].value;
     
-    if (editname === "" || !(/^[a-zA-Z](?!.* {2,6})[ \w.-]{2,15}$/.test(editname))) 
+    if (editname === "" || !(/^[a-zA-Z](?!.* {2,6})[ \w.-]{2,}$/.test(editname)) | editname.length > 15) 
     {
         alert("Name is invalid.");
         return false;  
     }
     
-    if (editdesc === "" || !(/[\w\s\-,.]{10,160}$/.test(editdesc))) 
+    if (editdesc === "" || !(/[\w\s\-,.]{10,}$/.test(editdesc)) || editdesc.length > 200) 
     {
         alert("Description is invalid.");
         return false;  
