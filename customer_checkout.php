@@ -43,14 +43,14 @@ and open the template in the editor.
                                 <h3 class ="subheader">Step 1: Enter Customer's Details</h3>
                                 <section class="form-group">
                                     <label for="email">*Email address:</label>
-                                    <input class="form-control" id="email" name="email" placeholder="Enter your email address" type="email" required></section>
+                                    <input class="form-control" id="email" name="email" placeholder="Enter your email address" maxLength="100" type="email" required></section>
                                 <section class="form-group">
                                     <label for="first_name">*First Name:</label>
-                                    <input class="form-control" id="first_name" name="first_name" placeholder="Enter your first name" pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
+                                    <input class="form-control" id="first_name" name="first_name" placeholder="Enter your first name" maxLength="50" pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
                                 </section>
                                 <section class="form-group">
                                     <label for="last_name">*Last Name:</label>
-                                    <input class="form-control" id="last_name" name="last_name" placeholder="Enter your last name" pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
+                                    <input class="form-control" id="last_name" name="last_name" placeholder="Enter your last name" maxLength="50" pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
                                 </section>
                                 <section class="form-group">
                                     <label for="mobile_no">*Mobile Number:</label>

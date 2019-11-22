@@ -171,7 +171,7 @@
                                 <p id="subTotal">Subtotal: <?php echo "$" . number_format($_SESSION["subtotal"], 2)?></p>
                                 <p id="delivery">Delivery: <?php echo "$" . number_format($_SESSION["delivery"], 2)?></p>
                                 <p id="totalDel">Total: <?php echo "$" . number_format($_SESSION["total"], 2)?></p>
-                                <a href='process_successful_checkout.php' id='btnHome' class='btn btn-primary btn-block'><span class='fa fa-arrow-left'></span> Return to Orders</a>
+                                <a href='process_successful_checkout.php' id='btnHome' class='btn btn-primary btn-block'><span class='fa fa-arrow-circle-left'></span> Return to Kueh Menu</a>
                                         </section>
                                     </section>
                                 </div>
