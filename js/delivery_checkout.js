@@ -51,17 +51,25 @@ function checkForms() { //this is the function for the form validation
     var expiryDate = new Date(txtExpiryYear + '-' + txtExpiryMonth + '-01'); //this excerpt of code is taken from: https://www.freecodecamp.org/forum/t/trying-to-validate-a-credit-card-expiry-month-against-current-date/191434/2
     var isNotExpired = false;
     if (txtAddress == "") {
+        address.style.borderColor = "red";
         address.setCustomValidity("This is a required field!");
         isAddressValid = false;
-    } else {     
-        address.style.borderColor = "green";
-        address.setCustomValidity("");
-        isAddressValid = true;
+    } else {
+        if (txtAddress.length > 200) {
+            address.style.borderColor = "red";
+            address.setCustomValidity("Please enter your address not exceeding 200 characters!");
+            isAddressValid = false;
+        } else {
+            address.style.borderColor = "green";
+            address.setCustomValidity("");
+            isAddressValid = true;
+        }
     } if (txtPc == "") {
         pc.setCustomValidity("This is a required field!");
         isPcValid = false;
     } else {     
         if (!(chkPostalCodeSyntax(txtPc))) {
+            pc.style.borderColor = "red";
             pc.setCustomValidity("Please enter a proper postal code!");
             isPcValid = false;
         } else {
@@ -73,19 +81,27 @@ function checkForms() { //this is the function for the form validation
         cardName.setCustomValidity("This is a required field!");
         isCardNameValid = false;
     } else {     
-        if (!(chkNameSyntax(txtCardName))) {
-            cardName.setCustomValidity("Please enter a proper name!");
+        if (txtCardName.length > 100) {
+            cardName.style.borderColor = "red";
+            cardName.setCustomValidity("Please enter your card name not exceeding 100 characters!");
             isCardNameValid = false;
         } else {
-            cardName.style.borderColor = "green";
-            cardName.setCustomValidity("");
-            isCardNameValid = true;
+            if (!(chkNameSyntax(txtCardName))) {
+                cardName.style.borderColor = "red";
+                cardName.setCustomValidity("Please enter a proper name!");
+                isCardNameValid = false;
+        } else {
+                cardName.style.borderColor = "green";
+                cardName.setCustomValidity("");
+                isCardNameValid = true;
+            }
         }
     } if (txtCardNum == "") {
         cardNum.setCustomValidity("This is a required field!");
         isCardNumValid = false;
     } else {     
         if (!(chkCardNoSyntax(txtCardNum))) {
+            cardNum.style.borderColor = "red";
             cardNum.setCustomValidity("Please enter a proper card number!");
             isCardNumValid = false;
         } else {
@@ -94,10 +110,12 @@ function checkForms() { //this is the function for the form validation
             isCardNumValid = true;
         }
     } if (txtCCV == "") {
+        cardCCV.style.borderColor = "red";
         cardCCV.setCustomValidity("This is a required field!");
         isCCVValid = false;
     } else {     
         if (!(chkCCVSyntax(txtCCV))) {
+            cardCCV.style.borderColor = "red";
             cardCCV.setCustomValidity("Please enter a proper CCV number!");
             isCCVValid = false;
         } else {

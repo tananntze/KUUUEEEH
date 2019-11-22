@@ -3,10 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-var txtEmail;
-var txtFirstName;
-var txtLastName;
-var txtMobileNo;
 window.onload = function() {
     attachListeners();
 };
@@ -32,37 +28,59 @@ function checkForms() { //this is the function for the form validation
         email.setCustomValidity("This is a required field!");
         isEmailValid = false;
     } else {
-        if (!(chkEmailSyntax(txtEmail))) { //this is to check if the email does not follow the syntax and the textfield will display respective indications of changing border color and showing tooltip to indicate error message
-            email.setCustomValidity("Please enter a proper email address!");
+        if (txtEmail.length > 50) {
+            email.style.borderColor = "red";
+            email.setCustomValidity("Please enter your email not exceeding 100 characters!");
             isEmailValid = false;
-        } else { //this is to indicate that the user has keyed in proper email address and textfield turns green
-            email.style.borderColor = "green";
-            email.setCustomValidity("");
-            isEmailValid = true;
+        } else {
+            if (!(chkEmailSyntax(txtEmail))) { //this is to check if the email does not follow the syntax and the textfield will display respective indications of changing border color and showing tooltip to indicate error message
+                email.style.borderColor = "red";
+                email.setCustomValidity("Please enter a proper email address!");
+                isEmailValid = false;
+            } else { //this is to indicate that the user has keyed in proper email address and textfield turns green
+                email.style.borderColor = "green";
+                email.setCustomValidity("");
+                isEmailValid = true;
+            }
         }
     } if (txtFirstName == "") {
+        firstName.style.borderColor = "red";
         firstName.setCustomValidity("This is a required field!");
         isFirstNameValid = false;
     } else {
-        if (!(chkNameSyntax(txtFirstName))) {
-            firstName.setCustomValidity("Please enter a proper name!");
+        if (txtFirstName.length > 50) {
+            firstName.style.borderColor = "red";
+            firstName.setCustomValidity("Please enter your first name not exceeding 50 characters!");
             isFirstNameValid = false;
         } else {
-            firstName.style.borderColor = "green";
-            firstName.setCustomValidity("");
-            isFirstNameValid = true;
+            if (!(chkNameSyntax(txtFirstName))) {
+                firstName.style.borderColor = "red";
+                firstName.setCustomValidity("Please enter a proper name!");
+                isFirstNameValid = false;
+            }
+            else {
+                firstName.style.borderColor = "green";
+                firstName.setCustomValidity("");
+                isFirstNameValid = true;   
+            }
         }
     } if (txtLastName == "") {
         lastName.setCustomValidity("This is a required field!");
         isLastNameValid = false;
     } else {
-        if (!(chkNameSyntax(txtLastName))) {
-            lastName.setCustomValidity("Please enter a proper name!");
+        if (txtLastName.length > 50) {
+            lastName.style.borderColor = "red";
+            lastName.setCustomValidity("Please enter your last name not exceeding 50 characters!");
             isLastNameValid = false;
         } else {
-            lastName.style.borderColor = "green";
-            lastName.setCustomValidity("");
-            isLastNameValid = true;
+            if (!(chkNameSyntax(txtLastName))) {
+                lastName.setCustomValidity("Please enter a proper name!");
+                isLastNameValid = false;
+            } else {
+                lastName.style.borderColor = "green";
+                lastName.setCustomValidity("");
+                isLastNameValid = true;
+            }
         }
     } if (txtMobileNo == "") {
         mobileNo.setCustomValidity("This is a required field!");

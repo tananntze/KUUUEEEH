@@ -54,7 +54,7 @@ and open the template in the editor.
                                 </section>
                                 <section class="form-group">
                                     <label for="mobile_no">*Mobile Number:</label>
-                                    <input class="form-control" id="mobile_no" name="mobile_no" placeholder="Enter your mobile number" type="tel" maxLength="8" pattern="[0-9]{8}">
+                                    <input class="form-control" id="mobile_no" name="mobile_no" placeholder="Enter your mobile number" maxLength="8" type="tel" pattern="[0-9]{8}">
                                     <button id="btnDetails" type="submit" class="btn btn-block btn-success">Proceed to Delivery Details  <span class="fa fa-arrow-circle-right"></span></button>
                                 </section>
                             </section>

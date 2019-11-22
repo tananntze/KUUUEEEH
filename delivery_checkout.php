@@ -74,7 +74,7 @@ and open the template in the editor.
                                 </section>
                                 <section class="form-group">
                                     <label for="address">*Address:</label>
-                                    <input class="form-control" id="address" name="address" placeholder="Enter your full address" maxLength="100" type="text" required>
+                                    <input class="form-control" id="address" name="address" maxlength="200" placeholder="Enter your full address" type="text" required>
                                 </section>
                                 <section class="form-group">
                                     <label for="postal_code">*Postal Code:</label>
@@ -92,7 +92,7 @@ and open the template in the editor.
                                     </section>
                                     <section class="form-group">
                                         <label for="card_name">*Name Of Card:</label>
-                                        <input class="form-control" id="card_name" name="card_name" placeholder="Enter your name of the card" type="text" maxLength="100" required pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
+                                        <input class="form-control" id="card_name" name="card_name" maxlength="100" placeholder="Enter your name of the card" type="text" required pattern="^[a-zA-Z][0-9a-zA-Z .,'-]*$">
                                     </section>
                                     <section class="form-group">
                                         <label for="card_number">*16-Digit Card Number:</label>

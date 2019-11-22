@@ -37,7 +37,12 @@
                     $errorMsg .= "Delivery Address is required.<br>";     
                     $success = false; 
                 } else {
-                    $address = sanitize_input($_POST["address"]);
+                    if (strlen($_POST["address"]) > 200) {
+                        $errorMsg .= "Address exceeds 200 characters.<br>";         
+                        $success = false;  
+                    } else {
+                        $address = sanitize_input($_POST["address"]);   
+                    }
                 } if (empty($_POST["postal_code"])) {
                     $errorMsg .= "Postal Code is required.<br>";     
                     $success = false; 
@@ -51,10 +56,15 @@
                     $errorMsg .= "Card Name is required.<br>";     
                     $success = false; 
                 } else {
-                    $card_name = sanitize_input($_POST["card_name"]);
-                    if (!preg_match("/^([a-zA-Z' ]+)$/", $card_name)) {
-                        $errorMsg .= "Please enter a proper card name.<br>";     
-                        $success = false; 
+                    if (strlen($_POST["card_name"]) > 100) {
+                        $errorMsg .= "Card name exceeds 100 characters.<br>";         
+                        $success = false;  
+                    } else {
+                        $card_name = sanitize_input($_POST["card_name"]);
+                        if (!preg_match("/^([a-zA-Z' ]+)$/", $card_name)) {
+                            $errorMsg .= "Please enter a proper card name.<br>";     
+                            $success = false; 
+                        }
                     }
                 } if (empty($_POST["card_number"])) {
                     $errorMsg .= "Card Number is required.<br>";     

@@ -22,28 +22,43 @@
                $errorMsg .= "Email is required.<br>";     
                $success = false; 
             } else {    
-                $email = sanitize_input($_POST["email"]);
-                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {         
-                    $errorMsg .= "Invalid email format.";         
-                    $success = false;       
+                if (strlen($_POST["email"]) > 100) {
+                    $errorMsg .= "Email exceeds 100 characters.<br>";         
+                    $success = false;   
+                } else {
+                    $email = sanitize_input($_POST["email"]);
+                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {         
+                        $errorMsg .= "Invalid email format.<br>";         
+                        $success = false;       
+                    }
                 }
             } if (empty($_POST["first_name"])) {
                 $errorMsg .= "First name is required.<br>";     
                 $success = false; 
             } else {
-                $first_name = sanitize_input($_POST["first_name"]);
-                if (!preg_match("/^([a-zA-Z' ]+)$/", $first_name)) {
-                    $errorMsg .= "Please enter a proper first name.<br>";     
-                    $success = false; 
+                if (strlen($_POST["first_name"]) > 50) {
+                    $errorMsg .= "First name exceeds 50 characters.<br>";         
+                    $success = false;   
+                } else {
+                    $first_name = sanitize_input($_POST["first_name"]);
+                    if (!preg_match("/^([a-zA-Z' ]+)$/", $first_name)) {
+                        $errorMsg .= "Please enter a proper first name.<br>";     
+                        $success = false; 
+                    }   
                 }
             } if (empty($_POST["last_name"])) {
                 $errorMsg .= "Last name is required.<br>";     
                 $success = false; 
             } else {
-                $last_name = sanitize_input($_POST["last_name"]);
-                if (!preg_match("/^([a-zA-Z' ]+)$/", $last_name)) {
-                    $errorMsg .= "Please enter a proper last name.<br>";     
-                    $success = false; 
+                if (strlen($_POST["last_name"]) > 50) {
+                    $errorMsg .= "Last name exceeds 50 characters.<br>";         
+                    $success = false;   
+                } else {
+                    $last_name = sanitize_input($_POST["last_name"]);
+                    if (!preg_match("/^([a-zA-Z' ]+)$/", $last_name)) {
+                        $errorMsg .= "Please enter a proper last name.<br>";     
+                        $success = false; 
+                    }   
                 }
             } if (empty($_POST["mobile_no"])) {
                 $errorMsg .= "Mobile Number is required.<br>";     
