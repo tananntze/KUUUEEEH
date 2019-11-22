@@ -17,7 +17,7 @@
             include "dbConfig.php";
             include "initializing_checkout_details.php";  
             if ($_SESSION["totalQty"] == 0) {
-                header("Location: index.php");
+                header("Location: kuehmenuall.php");  
             } else {
                 $address = $postal_code = $deliver_type = $card_type = $card_name = $card_no = $ccv = $exp_month = $exp_year = $exp_date = $errorMsg = ""; 
                 $success = true; 
@@ -111,8 +111,10 @@
                         $sql->execute();
                         $_SESSION["order_id"] = $conn->insert_id;
                         $_SESSION["checkout_successful"] = true;
+                        addCheckDetails($conn);
                         $sql->close();
                         $conn->close();
+                        session_destroy();
                         ?>
                         <section>
                         <div class="container-fluid standardfont" style= 'margin-top:20px'>
@@ -169,7 +171,7 @@
                                 <p id="subTotal">Subtotal: <?php echo "$" . number_format($_SESSION["subtotal"], 2)?></p>
                                 <p id="delivery">Delivery: <?php echo "$" . number_format($_SESSION["delivery"], 2)?></p>
                                 <p id="totalDel">Total: <?php echo "$" . number_format($_SESSION["total"], 2)?></p>
-                                <a href='process_successful_checkout.php' id='btnHome' class='btn btn-primary btn-block'><span class='fa fa-home'></span> Return to Home</a>
+                                <a href='process_successful_checkout.php' id='btnHome' class='btn btn-primary btn-block'><span class='fa fa-arrow-circle-left'></span> Return to Kueh Menu</a>
                                         </section>
                                     </section>
                                 </div>
@@ -177,6 +179,18 @@
                             </div>
                         </section>
                         <?php 
+            }
+            function addCheckDetails($conn) {
+                foreach ($_SESSION["my_orders"] as $row => $kueh_array) {    
+                    if ($conn->connect_error) {             
+                        $errorMsg = "Database error: " . $conn->error;             
+                        $success = false;                                          
+                    } else {
+                        $sql = $conn->prepare("INSERT INTO product_checkout (product_prodId, checkout_details_orderId, customer_email, kueh_quantity) VALUES (?, ?, ?, ?)");
+                        $sql->bind_param("iisi", $_SESSION['my_orders'][$row][0], $_SESSION['order_id'], $_SESSION['customer_email'], $_SESSION['my_orders'][$row][5]);
+                        $sql->execute();   
+                    }
+                }
             }
             function sanitize_input($data) {   
                     $data = trim($data);   

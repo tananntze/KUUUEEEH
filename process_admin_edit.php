@@ -31,7 +31,7 @@ else
 {
     $editname = sanitize_input($_POST["editName"]);
     
-    if (!preg_match("/^[a-zA-Z](?!.* {2,6})[ \w.-]{2,15}$/", $editname)) 
+    if (!preg_match("/^[a-zA-Z](?!.* {2,6})[ \w.-]{2,}$/", $editname) || (strlen($editName) > 15)) 
     {
         $nerrorMsg .= "Name is not valid. It must not contain numbers, special characters or double spaces.<br>";
         $nsuccess = false;

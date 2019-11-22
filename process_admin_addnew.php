@@ -23,10 +23,13 @@ if (empty($_POST["addName"]))
 {
     $nerrorMsg .= "Name is required for the kueh.<br>";
     $nsuccess = false;
-} else {
+} 
+else 
+{
     $addName = sanitize_input($_POST["addName"]);
 
-    if (!preg_match("/^[a-zA-Z](?!.* {2,6})[ \w.-]{2,15}$/", $addName)) {
+    if (!preg_match("/^[a-zA-Z](?!.* {2,6})[ \w.-]{3,}$/", $addName) || (strlen($addName) > 15)) 
+    {
         $nerrorMsg .= "Name is not valid. It must not contain numbers, special characters or double spaces.<br>";
         $nsuccess = false;
     }
@@ -38,7 +41,7 @@ if (empty($_POST["addDescription"])) {
     $dsuccess = false;
 } else {
     $addDescription = sanitize_input($_POST["addDescription"]);
-    if (!preg_match("/[\w\s\-,.]{10,160}$/", $addDescription))
+    if (!preg_match("/[\w\s\-,.]{10,}$/", $addDescription) || (strlen($addName) > 200))
     {
         $derrorMsg .= "Description given is not a valid format.<br>";
         $dsuccess = false;
