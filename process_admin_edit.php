@@ -88,19 +88,14 @@ $maxfilesize = 2048000; //MAX File Size 2MB allowed file size
 $allowed =  array('jpg','jpeg'); //allowed extensions
 $filetype = pathinfo($_FILES['updateImg']['name'], PATHINFO_EXTENSION); //file extension
 
-if(isset($_POST['submit']))
+//validation for image field and uploading file path
+if(isset($_POST['update']))
 {
-    //If there is no files
-    if (empty($_FILES['updateImg']['name']) || $_FILES['updateImg']['name'] = "")
-    {
-        $ierrorMsg .= "Please insert a file.";
-    }
-    
-    //If a file is included
-    else
+    //If the field is not empty
+    if ($_FILES['updateImg']['name'] != "")
     {
         //Ensure the size is less than maxfilesize
-        if (filesize($_FILES['updateImg']['name']) > $maxfilesize)
+        if ($_FILES['updateImg']['size'] > $maxfilesize)
         {
             $ierrorMsg .= "Max file size exceeded. Please upload a smaller file.";
             $isuccess = false;  
@@ -109,7 +104,7 @@ if(isset($_POST['submit']))
         //Ensure only certain file extesions are accepted.
         else if (!in_array($filetype,$allowed))
         {
-            $ierrorMsg .= "File extension not accepted. Please upload a file with either jpg pr jpeg extension.";
+            $ierrorMsg .= "File extension not accepted. Please upload a file with either jpg or jpeg extension.";
             $isuccess = false;  
         }
         
@@ -118,33 +113,28 @@ if(isset($_POST['submit']))
             // Where the file is going to be stored
             if(($_POST['editCategory']) == "Kueh with Character") 
             {
-
-                $target_dir = "img/Kueh with Character/"; //target folder
+                $target_dir = "img/Kueh_with_Character/"; //target folder
             } 
 
             elseif (($_POST['editCategory']) == "The Basic Kuehs") 
             {
-
-                $target_dir = "img/The Basic Kuehs/"; //target folder
-
+                $target_dir = "img/The_Basic_Kuehs/"; //target folder
             } 
 
             else 
             {
-
-                $target_dir = "img/The Heavyweight Kuehs/"; //target folder
-
+                $target_dir = "img/The_Heavyweight_Kuehs/"; //target folder
             }
 
 //Reference: https://stackoverflow.com/questions/41517897/move-upload-file-is-failed-to-open-stream-and-unable-to-move-file
 //insert img into database using file path method
-            $file = $_FILES['insertImg']['name'];//creating file path
+            $file = $_FILES['updateImg']['name'];//creating file path
             $path = pathinfo($file);
             $filename = $path['filename'];
             $ext = $path['extension'];
-            $temp_name = $_FILES['insertImg']['tmp_name'];
+            $temp_name = $_FILES['updateImg']['tmp_name'];
             $path_filename_ext = $target_dir.$filename.".".$ext; 
-            $insertImg = $path_filename_ext; //declaring insertImg = file path 
+            $updateImg = $path_filename_ext; //declaring updateImg = file path 
             move_uploaded_file($temp_name,$path_filename_ext); //move the image into the folder
         }
     }
@@ -156,7 +146,7 @@ if ($nsuccess && $dsuccess && $psuccess && $isuccess)
     editData();
     echo "<h2>You have successfully updated!!</h2>";
     echo "<br>";
-    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary'>Back to Admin Panel</button></a>";
+    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary'>Back to Kueh Panel</button></a>";
 } 
 else 
 {
@@ -166,7 +156,7 @@ else
     echo "<p>" . $derrorMsg . "</p>";
     echo "<p>" . $perrorMsg . "</p>";
     echo "<p>" . $ierrorMsg . "</p>";
-    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary'>Back to Admin Panel</button></a>";
+    echo "<a href ='editadmin.php'><button type='button' class='btn btn-primary'>Back to Kueh Panel</button></a>";
 }
 
 //Helper function that checks input for malicious or unwanted content.
@@ -199,7 +189,8 @@ function editData() {
         $errorMsg = "Connection failed:" . $conn->connect_error;
         $success = false;
     } else {
-        if (($_FILES['updateImg']['name'] != "")) {
+
+        if (($_FILES['updateImg']['name'] != "")){
             $sql = $conn->prepare("UPDATE product SET image= ?, description = ?, category = ?, name = ?, price = ?, status = ? WHERE prodId = ?");
             $sql->bind_param('ssssdsi', $updateImg, $editDescription, $editCategory, $editName, $editPrice, $editStatus, $updateProdId);
             $sql->execute();

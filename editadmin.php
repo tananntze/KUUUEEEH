@@ -17,6 +17,7 @@ if (!isset($_SESSION['userId'])) {
         <title>Kueh Menu</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name ="KUUUEEEH website where you find the best kuehs" content="" property="">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/editadmin.css">
@@ -43,7 +44,7 @@ if (!isset($_SESSION['userId'])) {
 
         <!--Admin header and search by category or food name and add food item function-->
         <section class="container standardfont"> 
-            <h1 class="fontheader" id="editadmin_header">Admin Panel</h1>
+            <h1 class="fontheader" id="editadmin_header">Kueh Panel</h1>
 
             <section class="card">
                 <section class="card-header">
