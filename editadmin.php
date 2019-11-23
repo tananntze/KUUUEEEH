@@ -99,18 +99,15 @@ if (!isset($_SESSION['userId'])) {
                                 </select>
                             </section>
 
-
-                            <section class="form-group">
-
                             <section class="form-group">            
 
                                 <label for="addName">Name</label>
-                                <input type="text" name="addName" id="addName" class="form-control" placeholder="Enter Name" required  maxLength="15" pattern="/^[a-zA-Z ](?!.*{2,})[ \w.-]{2,}$/">
+                                <input type="text" name="addName" id="addName" class="form-control" placeholder="Enter Name" required maxLength="15" pattern="/^[a-zA-Z ](?!.*{2,})[ \w.-]{2,}$/">
                             </section>
 
                             <section class="form-group">
                                 <label for="addDescription">Description</label>
-                                <textarea name="addDescription" id="addDescription" class="form-control" rows="5" placeholder="Enter Description" required  maxLength="200" pattern="/[\w\s\-,.]{10,}$/"></textarea>
+                                <textarea name="addDescription" id="addDescription" class="form-control" rows="5" placeholder="Enter Description" required maxLength="200"></textarea>
                             </section>
 
                             <section class="form-group">
@@ -221,7 +218,7 @@ if (!isset($_SESSION['userId'])) {
 
                                 <section class="form-group">
                                     <label for="editDescription">Description</label>
-                                    <textarea name="editDescription" id="editDescription" class="form-control" rows="5" placeholder="" required maxLength="200" pattern="/[\w\s\-,.]{10,}$/"></textarea>
+                                    <textarea name="editDescription" id="editDescription" class="form-control" rows="5" placeholder="" required maxLength="200"></textarea>
                                 </section>
 
                                 <section class="form-group">
