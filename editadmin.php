@@ -215,17 +215,17 @@ if (!isset($_SESSION['userId'])) {
 
                                 <section class="form-group">
 
-                                    <label for="ename">Name</label>
+                                    <label for="editName">Name</label>
                                     <input type="text" name="editName" id="editName" class="form-control" placeholder="Enter Name" required  maxLength="15" pattern="/^[a-zA-Z ](?!.*{2,})[ \w.-]{2,}$/">
                                 </section>
 
                                 <section class="form-group">
-                                    <label for="edescription">Description</label>
+                                    <label for="editDescription">Description</label>
                                     <textarea name="editDescription" id="editDescription" class="form-control" rows="5" placeholder="" required maxLength="200" pattern="/[\w\s\-,.]{10,}$/"></textarea>
                                 </section>
 
                                 <section class="form-group">
-                                    <label for="eprice">Price</label>
+                                    <label for="editPrice">Price</label>
                                     <input type="text" name="editPrice" id="editPrice" class="form-control" required pattern="^(?=.*[1-9])\d{0,2}(?:\.\d{0,2})?$">
                                 </section>
                                 <section class="form-group">
