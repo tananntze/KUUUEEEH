@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-
+<?php     
+        session_start();
+        if(!isset($_SESSION['userId'])){
+            header("Location: login.php");
+        }
+?>
 <html lang="en" class="header">
      <head>
         <title>Kueh Menu</title>
@@ -55,7 +60,7 @@
         
         <div class="container">
             <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
-            <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
+            <img src="img/BannerWhite.png" alt="Kueh Banner" class="responsive" id="bannerresize">
         </div>
 
         <!--Admin header and search by category or food name and add food item function-->
@@ -69,7 +74,8 @@
             </section>
         </section>  
    
-        <?php          
+        <?php 
+    
         //Helper function that checks input for malicious or unwanted content.
         function sanitize_input($data)
         {
