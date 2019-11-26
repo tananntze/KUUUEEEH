@@ -58,14 +58,14 @@ if (!isset($_SESSION['userId'])) {
                             <div class="col-2">
                                 <section class="form-group">
                                     <label for="scategory" class="formtitle">Category</label>
-                                    <input type="text"  name="scategory"  id="scategory" class="form-control" placeholder="Enter Category" pattern="^[a-zA-Z](?!.* {2})[ \w.-]{2,}$">
+                                    <input type="text"  name="scategory"  id="scategory" class="form-control" placeholder="Enter Category" required pattern="^[a-zA-Z](?!.* {2})[ \w.-]{2,}$">
                                 </section>
                             </div>
 
                             <div class="col-2">
                                 <section class="form-group">
                                     <label for="sname">Name</label>
-                                    <input type="text" name="sname" id="sname" class="form-control" placeholder="Enter Name" pattern="^[a-zA-Z](?!.* {2,})[ \w.-]{2,}$">
+                                    <input type="text" name="sname" id="sname" class="form-control" placeholder="Enter Name" required pattern="^[a-zA-Z](?!.* {2,})[ \w.-]{2,}$">
                                 </section>
                             </div>
 
