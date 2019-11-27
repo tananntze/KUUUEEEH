@@ -88,7 +88,7 @@ function validateEdit()
     var editdesc = document.forms["editform"]["editDescription"].value;
     var editprice = document.forms["editform"]["editPrice"].value;
     
-    if (editname === "" || !(/^[a-zA-Z](?!.* {2,6})[ \w.-]{2,}$/.test(editname)) | editname.length > 15) 
+    if (editname === "" || !(/^[a-zA-Z](?!.* {2,6})[ \w.-]{2,}$/.test(editname)) || editname.length > 15) 
     {
         alert("Name is invalid.");
         return false;  
