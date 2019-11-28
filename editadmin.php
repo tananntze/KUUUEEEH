@@ -34,7 +34,7 @@ if (!isset($_SESSION['userId'])) {
         <script src="js/process_editadmin.js"></script>
     </head>
     
-    <body class="overlay">
+    <body>
         <?php include "adminheader.php" ?>
 
         <div class="container">
