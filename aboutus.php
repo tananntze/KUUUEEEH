@@ -59,7 +59,7 @@ and open the template in the editor.
                         <section class ="col-md-3 text-center">
                             <a href="kuehmenuall.php">
                                 <figure>
-                                   <img class="zoom rounded-circle" id="btnAngKk" src="img/The_Basic_Kuehs/Ang_Ku_Kueh.jpg" alt="Ang Ku Kueh"/>
+                                    <img class="zoom rounded-circle" id="btnAngKk" src="img/The_Basic_Kuehs/Ang_Ku_Kueh.png" alt="Ang Ku Kueh"/>
                                    <figcaption><span>Check Us Out In Our Menus!</span></figcaption>
                                 </figure>
                             </a>
@@ -67,7 +67,7 @@ and open the template in the editor.
                         <section class ="col-md-3 text-center">
                             <a href="kuehmenuall.php">
                                 <figure>
-                                   <img class="zoom rounded-circle" id="btnLapis" src="img/The_Basic_Kuehs/Kueh_Lapis.jpg" alt="Kueh Lapis"/>
+                                   <img class="zoom rounded-circle" id="btnLapis" src="img/The_Basic_Kuehs/Kueh_Lapis.png" alt="Kueh Lapis"/>
                                    <figcaption><span>Check Us Out In Our Menus!</span></figcaption>
                                 </figure>
                             </a>
@@ -83,7 +83,7 @@ and open the template in the editor.
                         <section class ="col-md-3 text-center">
                             <a href="kuehmenuall.php">
                                 <figure>
-                                   <img class="zoom rounded-circle" id="btnPng" src="img/Kueh_with_Character/Png_Kueh.jpg" alt="Png Kueh">
+                                   <img class="zoom rounded-circle" id="btnPng" src="img/Kueh_with_Character/Png_Kueh.png" alt="Png Kueh">
                                    <figcaption><span>Check Us Out In Our Menus!</span></figcaption>
                                 </figure>
                             </a>

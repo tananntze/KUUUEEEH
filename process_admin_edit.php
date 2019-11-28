@@ -84,8 +84,8 @@ $editstatus = sanitize_input($_POST["editStatus"]);
 //insert img into database using file path method
 
 //Setting variables
-$maxfilesize = 2048000; //MAX File Size 2MB allowed file size
-$allowed =  array('jpg','jpeg'); //allowed extensions
+$maxfilesize = 20480000; //MAX File Size 20MB allowed file size
+$allowed =  array('jpg','jpeg','png'); //allowed extensions
 $filetype = pathinfo($_FILES['updateImg']['name'], PATHINFO_EXTENSION); //file extension
 
 //validation for image field and uploading file path

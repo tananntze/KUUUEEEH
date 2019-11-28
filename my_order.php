@@ -31,7 +31,7 @@ and open the template in the editor.
                 $_SESSION["total"] -= $_SESSION["my_orders"][$row][4];
                 $_SESSION["kueh".$kueh_id."_qty"]--;
                 if ($_SESSION["kueh".$kueh_id."_qty"] == 0) {
-                    //delete the row from the tbale if the specified kueh quantity is 0
+                    //delete the row from the table if the specified kueh quantity is 0
                     unset($_SESSION["my_orders"][$row]);
                     $_SESSION["my_orders"] = array_values($_SESSION["my_orders"]); 
                 } else {
