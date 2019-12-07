@@ -55,7 +55,7 @@
         
         <div class="container">
             <!--The animated kueh images for the banner are taken and credited by ladyironchef: Beginner’s Guide to Kuehs – 9 Traditional Kuehs You Must Try https://www.ladyironchef.com/2015/08/guide-traditional-kueh/-->
-            <img src="img/Banner - White.png" alt="Kueh Banner" class="responsive" id="bannerresize">
+            <img src="img/BannerWhite.png" alt="Kueh Banner" class="responsive" id="bannerresize">
         </div>
 
         <!--Admin header and search by category or food name and add food item function-->
