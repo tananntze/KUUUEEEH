@@ -136,13 +136,13 @@ getCheckoutDetails();
                 <div class="form-group">
                     <label for="status">Status</label>
                     <select class="form-control" name="status" id="status">
-                        <option value="Not Delivered" <?php if ($deliver_type == "Not Delivered") {
+                        <option value="Not Delivered" <?php if ($status == "Not Delivered") {
                                                             echo " selected='selected'";
                                                         } ?>>Not Delivered</option>
-                        <option value="Delivering" <?php if ($deliver_type == "Delivering") {
+                        <option value="Delivering" <?php if ($status == "Delivering") {
                                                         echo " selected='selected'";
                                                     } ?>>Delivering</option>
-                        <option value="Delivered" <?php if ($deliver_type == "Delivered") {
+                        <option value="Delivered" <?php if ($status == "Delivered") {
                                                         echo " selected='selected'";
                                                     } ?>>Delivered</option>
                     </select>

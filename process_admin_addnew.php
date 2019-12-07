@@ -66,8 +66,8 @@ if (empty($_POST["addPrice"])) {
 //References: https://stackoverflow.com/questions/10456113/php-check-file-extension-in-upload-form
 //https://www.php.net/manual/en/function.filesize.php
 //Setting variables
-$maxfilesize = 2048000; //MAX File Size 2MB allowed file size
-$allowed =  array('jpg','jpeg'); //allowed extensions
+$maxfilesize = 20480000; //MAX File Size 2MB allowed file size
+$allowed =  array('jpg','jpeg','png'); //allowed extensions
 $filetype = pathinfo($_FILES['insertImg']['name'], PATHINFO_EXTENSION);
 
 if(isset($_POST['submit']))

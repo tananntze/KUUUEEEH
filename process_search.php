@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-
+<?php     
+        session_start();
+        if(!isset($_SESSION['userId'])){
+            header("Location: login.php");
+        }
+?>
 <html lang="en" class="header">
      <head>
         <title>Kueh Menu</title>
@@ -69,7 +74,8 @@
             </section>
         </section>  
    
-        <?php          
+        <?php 
+    
         //Helper function that checks input for malicious or unwanted content.
         function sanitize_input($data)
         {
